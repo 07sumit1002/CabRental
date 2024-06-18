@@ -341,7 +341,7 @@ body {
 
 footer {
     background-color: #141414;
-    color: #999;
+    color:#141414;
     padding: 40px 20px;
 }
 
@@ -381,13 +381,13 @@ footer {
 }
 
 .footer-column ul li a {
-    color: #999;
+    color: #141414;
     text-decoration: none;
     transition: color 0.3s;
 }
 
 .footer-column ul li a:hover {
-    color: #fff;
+    color:#999;
 }
 
 .language-selector {
