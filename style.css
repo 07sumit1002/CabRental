@@ -9,7 +9,7 @@
     list-style: none;
     text-decoration: none;
     font-family: "Poppins", sans-serif;
-    background-color: rgb(238, 239, 241);;
+    background-color: rgb(255, 254, 254);;
 }
 .root{
     --main-color:#b02f18;
@@ -40,7 +40,7 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: #eeeff1;
+    background: #ffffff;
     padding: 15px 100px;
 }
 .logo img {
@@ -56,21 +56,36 @@ header{
 .navbar a{
     font-size: 1rem;
     padding: 10px 20px;
-    color: #444;
-    font-weight: 500;
+    color: #4a3b3b;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 14px;
+    color: rgb(15, 3, 3);
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s, outline 0.3s;
+    
 }
 .navbar a ::after{
     content: '';
     width: 0;
     height: 3px;
-    background: red;
+    background: rgb(175, 193, 247);;
     position: absolute;
     bottom: -4px;
     left: 0;
     transition: 0.5s;
+    text-decoration: none;
 }
+
 .navbar a:hover{
-    background: rgb(231, 223, 223);
+    background: rgb(175, 193, 247);
+    text-emphasis: none;
+    text-decoration: none;
+    outline: none;
+    
+
 }
 #menu-icon{
     font-size: 24px;
@@ -90,6 +105,7 @@ header{
 }
 .header-btn .sign-in:hover{
     background: red;
+    text-decoration: none;
 }
 .header-btn .sign-up{
     background: #474fa1;
@@ -214,7 +230,7 @@ header{
 }
 .ride .ride-container .bx:hover{
     background: red;
-    color: #eeeff1;
+    color: #101b30;
 }
 .services-container{
     display: grid;
@@ -306,34 +322,59 @@ header{
 }
 .form{
     padding: 1rem 1rem 1rem 1rem;  
-    margin-top: 3.5rem;  
+    margin-top: 15px;
+      
 }
 
 form {
     width: 400px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #f2f2f2;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
 }
+
 label {
     display: block;
     margin-bottom: 10px;
     font-size: 18px;
+    color: #333333;
 }
-  input[type="text"], input[type="email"], input[type="tel"] {
+
+input[type="text"], input[type="email"], input[type="tel"] {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     margin-bottom: 20px;
     font-size: 16px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
 }
+
+input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus {
+    border-color: #0066cc;
+    outline: none;
+}
+
 input[type="submit"] {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     font-size: 18px;
-    background-color: #4CAF50;
+    background-color: #0066cc;
     color: white;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
+
+input[type="submit"]:hover {
+    background-color: #004c99;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
