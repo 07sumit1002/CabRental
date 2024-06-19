@@ -43,9 +43,10 @@ header{
     background: #eeeff1;
     padding: 15px 100px;
 }
-.logo img{
-    width: 40px;
-}
+.logo img {
+    width: 60px;
+    border-radius: 10px; /* This creates 10px rounded corners */
+  }
 .navbar{
     display: flex;
 }
