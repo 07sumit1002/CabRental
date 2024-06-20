@@ -8,8 +8,8 @@ html{
     scroll-behavior: smooth;
 }
 body{
-    background: #080808;
-    color: #fff;
+    background: lightcyan;
+    color: black;
 }
 
 .contact-left{
@@ -35,20 +35,24 @@ body{
     text-decoration: none;
     font-size: 30px;
     margin-right: 15px;
-    color: #ababab;
+    color: blue;
     display: inline-block;
     transition: transform 0.5s;
 }
 .social-icon a:hover{
-    color: #ff004f;
+    color: yellowgreen;
     transform: translateY(-5px);
 }
 .btn.btn2{
     display: inline-block;
-    background: #ff004f;
+    background: blueviolet;
     border-radius: 14px;
     color: white;
 }
+.btn.btn2:hover{
+    background-color: #ff004f;
+}
+
 .contact-right form{
     width: 100%;
 }
@@ -56,7 +60,7 @@ form input, form textarea{
     width: 100%;
     border: 0;
     outline: none;
-    background: #262626;
+    background: rgb(232, 210, 238);
     padding: 15px;
     margin: 15px 0;
     color: #fff;
