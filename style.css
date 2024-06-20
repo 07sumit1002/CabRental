@@ -126,6 +126,142 @@ header{
     align-items: center;
     grid-template-columns: repeat(2,lfr);
 }
+ .how-it-works {
+    padding: 60px 0;
+    background-color: #fff;
+    text-align: center;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.section-description {
+    font-size: 1.5em;
+    margin-bottom: 40px;
+    color: #555;
+}
+
+.steps {
+    position: relative;
+    margin: 0 auto;
+    width: 60%;
+}
+
+.step {
+    background-color: #f1f1f1;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: left;
+    position: relative;
+    width: 100%;
+}
+
+.step:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.step-content {
+    display: flex;
+    align-items: center;
+}
+
+.step-icon {
+    margin-right: 20px;
+    flex-shrink: 0;
+}
+
+.step-icon img {
+    width: 60px;
+    height: 60px;
+}
+
+.step-details {
+    flex-grow: 1;
+}
+
+.step-title {
+    font-size: 1.25em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.step-description {
+    font-size: 1em;
+    color: #666;
+    line-height: 1.5em;
+}
+
+.steps::before, .steps::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    background-color: #ccc;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    z-index: -1;
+}
+
+.step::after {
+    content: '';
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 2px solid #ccc;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.step:nth-child(odd)::after {
+    left: 100%;
+    transform: translate(-50%, -50%);
+    border-left: 2px solid #ccc;
+}
+
+.step:nth-child(even)::after {
+    left: 0;
+    transform: translate(-50%, -50%);
+    border-right: 2px solid #ccc;
+}
+
+.step:nth-child(odd)::before, .step:nth-child(even)::before {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 2px;
+    background-color: #ccc;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: -1;
+}
+
+.step:nth-child(odd)::before {
+    left: 50%;
+}
+
+.step:nth-child(even)::before {
+    left: 0;
+    transform: translateX(50%);
+} 
+
+
+ 
+
 .carweb img{
     left: 1400px;
     width: 100%;
