@@ -525,7 +525,119 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-}
+}#testimonials {
+    padding: 50px 0;
+    background-color: #fff;
+    text-align: center;
+  }
+  
+  #testimonials .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  #testimonials h2 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  #testimonials h2 span {
+    color: #f74c4c;
+  }
+  
+  .reviews {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .review {
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 350px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .review:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  }
+  
+  .review-content {
+    padding: 20px;
+    background-color: #fff;
+    text-align: center;
+  }
+  
+  .review-content p {
+    margin: 0 0 10px;
+    font-size: 1em;
+    color: #666;
+  }
+  
+  .review-content .review-author {
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .review-image {
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .review-image img {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+  }
+  
+  .view-all {
+    background-color: #f74c4c;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    margin-top: 10px;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .view-all:hover {
+    background-color: #d94343;
+  }
+  
+  @media (max-width: 768px) {
+    .reviews {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .review {
+      width: 80%;
+      max-width: none;
+    }
+  
+    .review-content {
+      padding: 15px;
+    }
+  
+    .review-image img {
+      width: 60px;
+      height: 60px;
+    }
+  }
+  
 
 footer {
     background-color: #e6e7e9;
