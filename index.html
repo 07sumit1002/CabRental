@@ -1,216 +1,315 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE-edge">
-        <meta name="viewprot" content="width=device-width, initial-scale=1.0">
-        <title>CabRental</title>
-        <!-- Link to CSS -->
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
-    </head>
-    <body>
-        <!-- Header -->
-        <header>
-            <a href="#" class="logo"><img src="img/logo.png" alt=""></a>
-            <div class="bx bx-menu" id="menu-icon"></div>
-            <ul class="navbar">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="ride.html">Ride</a></li>
-                <li><a href="serv.html">Services</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="review.html">Reviews</a></li>
-                <li><a href="Contact us/contact.html">Contact</a></li>
-            </ul>
-            <div class="header-btn">
-                <a href="#" class="sign-up">Admin</a>
-            </div>
-        </header>
-        <!-- Home -->
-        <section class="home" id="home">
-            <div class="text">
-                <h1><br>Want to <span>Share</span> or <span>Rent</span> <br>a cab.</h1>
-                <p>Wherever you're going, there's a carpool that will<br>
-                    get you there for less.</p>
-                <div class="carweb">
-                    <img src="img/Car Website – 1@2x.png" alt="">
-                </div>
-            </div>
-            <div class="form-container">
-                <form action="anonimous.php" method="post">
-                    <div class="input-box">
-                        <span>From <span> MUJ Hostel</span> To</span>
-                        <input type="search" name="search" id="search" placeholder="Search Places">
-                    </div>
-                    <div class="input-box">
-                        <span>Travelling Date</span>
-                        <input type="date" name="dat" id="dat">
-                    </div>
-                    <div class="input-box">
-                        <span>Depart. Time</span>
-                        <input type="time" name="tim" id="tim">
-                    </div>
-                    <input type="submit" name="submit" id="submit" class="btn">
-                </form>
-            </div>
-        </section>
-        <section class="how-it-works">
-            <div class="container">
-                <h2 class="section-title">HOW IT WORKS</h2>
-                <p class="section-description">Share/Rent a Car in 3 Easy Steps</p>
-                <div class="steps">
-                    <div class="step">
-                        <div class="step-content">
-                            <div class="step-icon">
-                                <img src="logo2.png" alt="Icon 1">
-                            </div>
-                            <div class="step-details">
-                                <h3 class="step-title">Step 1</h3>
-                                <p class="step-description">Depart. Time</p>
-                                <p>Choose a convenient departure time for your journey. We offer flexible timings to accommodate your schedule.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="step">
-                        <div class="step-content">
-                            <div class="step-icon">
-                                <img src="logo1 (1).png" alt="Icon 2">
-                            </div>
-                            <div class="step-details">
-                                <h3 class="step-title">Step 2</h3>
-                                <p class="step-description">Choose a location</p>
-                                <p>Select your starting point and destination. We provide a wide range of locations to choose from for your convenience.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="step">
-                        <div class="step-content">
-                            <div class="step-icon">
-                                <img src="logo3.png" alt="Icon 3">
-                            </div>
-                            <div class="step-details">
-                                <h3 class="step-title">Step 3</h3>
-                                <p class="step-description">Travelling Date</p>
-                                <p>Pick your preferred travel date to complete the booking process. Ensure the date fits your plan for a smooth journey.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-      
-        <section class="services" id="services">
-            <div class="heading">
-                <span>Best Services</span>
-                <h1>Explore Out Top Deals <br> From Top Rated Deaalers</h1>
-            </div>
-            <div class="services-container">
-                <div class="box">
-                    <div class="box-img">
-                        <img src="img/car1.jpg" alt="">
-                    </div>
-                    <p>2017</p>
-                    <h3>2018 Honda Civic</h3>
-                    <h2>Rs.850 | Rs.850 <span>/day</span></h2>
-                    <a href="#" class="btn">Rent Now</a>
-                </div>
-                <div class="box">
-                    <div class="box-img">
-                        <img src="img/car2.jpg" alt="">
-                    </div>
-                    <p>2017</p>
-                    <h3>2018 Honda Civic</h3>
-                    <h2>Rs.850 | Rs.850 <span>/day</span></h2>
-                    <a href="#" class="btn">Rent Now</a>
-                </div>
-                <div class="box">
-                    <div class="box-img">
-                        <img src="img/car3.jpg" alt="">
-                    </div>
-                    <p>2017</p>
-                    <h3>2018 Honda Civic</h3>
-                    <h2>Rs.850 | Rs.3850 <span>/day</span></h2>
-                    <a href="#" class="btn">Rent Now</a>
-                </div>
-                <div class="box">
-                    <div class="box-img">
-                        <img src="img/car4.jpg" alt="">
-                    </div>
-                    <p>2017</p>
-                    <h3>2018 Honda Civic</h3>
-                    <h2>Rs.850 | Rs.2850 <span>/day</span></h2>
-                    <a href="#" class="btn">Rent Now</a>
-                </div>
-                <div class="box">
-                    <div class="box-img">
-                        <img src="img/car5.jpg" alt="">
-                    </div>
-                    <p>2017</p>
-                    <h3>2018 Honda Civic</h3>
-                    <h2>Rs.850 | Rs.1850 <span>/day</span></h2>
-                    <a href="#" class="btn">Rent Now</a>
-                </div>
-                <div class="box">
-                    <div class="box-img">
-                        <img src="img/car6.jpg" alt="">
-                    </div>
-                    <p>2017</p>
-                    <h3>2018 Honda Civic</h3>
-                    <h2>Rs.850 | Rs.850 <span>/day</span></h2>
-                    <a href="#" class="btn">Rent Now</a>
-                </div>
-            </div>
-        </section>
-        <!-- About -->
-        <section class="about" id="about">
-            <div class="heading">
-                <span>About Us</span>
-                <h1>Get to know more about our company, our mission, and our commitment to providing the best cab rental services.</h1>
-            </div>
-        </section>
-        <footer>
-            <div class="footer-container">
-                <div class="call-us">
-                    <p>Questions? Call 000-080-000-000</p>
-                </div>
-                <div class="footer-links">
-                    <div class="footer-column">
-                        <ul>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">Privacy</a></li>
-                            <li><a href="#">Services</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-column">
-                        <ul>
-                            <li><a href="#">Help Center</a></li>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">Cookies Preferences</a></li>
-                            <li><a href="#">Legal Notices</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-column">
-                        <ul>
-                            <li><a href="#">Account</a></li>
-                            <li><a href="#">Contact Us</a></li>
-                            <li><a href="#">Corporate Information</a></li>
-                            <li><a href="#">Pricing</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-column">
-                        <ul>
-                            <li><a href="#">Media Center</a></li>
-                            <li><a href="#">Terms of Use</a></li>
-                            <li><a href="Contact us/contact.html">Contact Us</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </footer>
 
-       
-        <!-- Link to JS -->
-        <script src="main.js"></script> 
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewprot" content="width=device-width, initial-scale=1.0">
+    <title>CabRental</title>
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper@11.1.4/swiper-bundle.min.css" />
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- custom css link -->
+    <script src="https://kit.fontawesome.com/2815a7015d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Contact us/style.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <a href="#" class="logo"><img src="img/logo.png" alt=""></a>
+        <div class="bx bx-menu" id="menu-icon"></div>
+        <ul class="navbar">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="ride.html">Ride</a></li>
+            <li><a href="serv.html">Services</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="review.html">Reviews</a></li>
+            <li><a href="#contact us">Contact</a></li>
+        </ul>
+        <div class="header-btn">
+            <a href="#" class="sign-up">Admin</a>
+        </div>
+    </header>
+    <!-- Home -->
+    <section class="home" id="home">
+        <div class="text">
+            <h1><br>Want to <span>Share</span> or <span>Rent</span> <br>a cab.</h1>
+            <p>Wherever you're going, there's a carpool that will<br>
+                get you there for less.</p>
+            <div class="carweb">
+                <img src="img/Car Website – 1@2x.png" alt="">
+            </div>
+        </div>
+        <div class="form-container">
+            <form action="anonimous.php" method="post">
+                <div class="input-box">
+                    <span>From <span> MUJ Hostel</span> To</span>
+                    <input type="search" name="search" id="search" placeholder="Search Places">
+                </div>
+                <div class="input-box">
+                    <span>Travelling Date</span>
+                    <input type="date" name="dat" id="dat">
+                </div>
+                <div class="input-box">
+                    <span>Depart. Time</span>
+                    <input type="time" name="tim" id="tim">
+                </div>
+                <input type="submit" name="submit" id="submit" class="btn">
+            </form>
+        </div>
+    </section>
+    <!-- Ride-->
+    <section class="ride" id="ride">
+        <div class="heading">
+            <span>How It Works</span>
+            <h1>Share/Rent <i class='bx bx-taxi'></i> in 3 Easy Steps</h1>
+        </div><br>
+        <div class="ride-container">
+            <i class="bx bxs-map"></i>
+            <h2>Choose a location</h2>
+            <p>Lorem ipsu Possimus, doloremque. Aspernatur alias neque</p>
+        </div>
+        <div class="ride-container">
+            <i class='bx bxs-calendar'></i>
+            <h2>Travelling Date</h2>
+            <p>Lorem ipsu Possimus, doloremque. Aspernatur alias neque</p>
+        </div>
+        <div class="ride-container">
+            <i class='bx bx-time'></i>
+            <h2>Depart. Time</h2>
+            <p>Lorem ipsu Possimus, doloremque. Aspernatur alias neque</p>
+        </div>
+    </section>
+    <!-- Services -->
+    <section class="services" id="services">
+        <div class="heading">
+            <span>Best Services</span>
+            <h1>Explore Out Top Deals <br> From Top Rated Deaalers</h1>
+        </div>
+        <div class="services-container">
+            <div class="box">
+                <div class="box-img">
+                    <img src="img/car1.jpg" alt="">
+                </div>
+                <p>2017</p>
+                <h3>2018 Honda Civic</h3>
+                <h2>Rs.850 | Rs.850 <span>/day</span></h2>
+                <a href="#" class="btn">Rent Now</a>
+            </div>
+            <div class="box">
+                <div class="box-img">
+                    <img src="img/car2.jpg" alt="">
+                </div>
+                <p>2017</p>
+                <h3>2018 Honda Civic</h3>
+                <h2>Rs.850 | Rs.850 <span>/day</span></h2>
+                <a href="#" class="btn">Rent Now</a>
+            </div>
+            <div class="box">
+                <div class="box-img">
+                    <img src="img/car3.jpg" alt="">
+                </div>
+                <p>2017</p>
+                <h3>2018 Honda Civic</h3>
+                <h2>Rs.850 | Rs.3850 <span>/day</span></h2>
+                <a href="#" class="btn">Rent Now</a>
+            </div>
+            <div class="box">
+                <div class="box-img">
+                    <img src="img/car4.jpg" alt="">
+                </div>
+                <p>2017</p>
+                <h3>2018 Honda Civic</h3>
+                <h2>Rs.850 | Rs.2850 <span>/day</span></h2>
+                <a href="#" class="btn">Rent Now</a>
+            </div>
+            <div class="box">
+                <div class="box-img">
+                    <img src="img/car5.jpg" alt="">
+                </div>
+                <p>2017</p>
+                <h3>2018 Honda Civic</h3>
+                <h2>Rs.850 | Rs.1850 <span>/day</span></h2>
+                <a href="#" class="btn">Rent Now</a>
+            </div>
+            <div class="box">
+                <div class="box-img">
+                    <img src="img/car6.jpg" alt="">
+                </div>
+                <p>2017</p>
+                <h3>2018 Honda Civic</h3>
+                <h2>Rs.850 | Rs.850 <span>/day</span></h2>
+                <a href="#" class="btn">Rent Now</a>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="review" id="review">
+
+        <h1 class="heading"> Client's testimonials </h1>
+
+        <div class="swiper review-slider" data-aos="zoom-in">
+
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide slide">
+                    <img src="img/pic-1.png" alt="">
+                    <h3>Noah Lee</h3>
+                    <p>"Excellent service from start to finish. The driver was friendly and drove safely. I reached my
+                        destination on time and in comfort. Highly recommended for anyone visiting!"</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <img src="img/pic-2.png" alt="">
+                    <h3>Sophia Rossi</h3>
+                    <p>"Great experience with this cab rental. The booking was straightforward, and the driver was
+                        punctual and friendly. The car was very comfortable. Highly recommend!"</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <img src="img/pic-3.png" alt="">
+                    <h3>Olivia Davis</h3>
+                    <p>"Top-notch service! The driver arrived on time, and the ride was smooth and comfortable. The
+                        customer service was exceptional. I will definitely use this cab service again."</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-full-alt"></i>
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <img src="img/pic-4.png" alt="">
+                    <h3>Emma Brown</h3>
+                    <p>"Brilliant service! The cab arrived on time, and the driver was very courteous. I appreciated the
+                        smooth and efficient ride. Will definitely use this service again when I return."</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="swiper-pagination"></div>
+
+        </div>
+
+    </section>
+
+    <section class="contact us" id="contact us">
+
+        <div id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="contact-left">
+                        <h1 class="sub-title">Contact Me</h1>
+
+                        <div class="social-icon">
+                            <a href="#" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                            <a href="#" target="_blank"><i class="fa-brands fa-twitter-square"></i></a>
+                            <a href="#" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                        </div>
+
+                    </div>
+                    <div class="contact-right">
+                        <form name="submit-to-google-sheet">
+                            <input type="text" name="Name" placeholder="Your Name" required>
+                            <input type="email" name="Email" placeholder="Your Email" required>
+                            <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                            <button type="submit" class="btn btn2">Submit</button>
+                        </form>
+                        <span id="msg"></span>
+                    </div>
+                </div>
+            </div>
+
+
+    </section>
+
+
+
+    <!-- About -->
+    <section class="about" id="about">
+        <div class="heading">
+            <span>About Us</span>
+            <h1>Get to know more about our company, our mission, and our commitment to providing the best cab rental
+                services.</h1>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-container">
+            <div class="call-us">
+                <p>Questions? Call 000-080-000-000</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Privacy</a></li>
+                        <li><a href="#">Services</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Cookies Preferences</a></li>
+                        <li><a href="#">Legal Notices</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="#">Account</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Corporate Information</a></li>
+                        <li><a href="#">Pricing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="#">Media Center</a></li>
+                        <li><a href="#">Terms of Use</a></li>
+                        <li><a href="Contact us/contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Link to JS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <script src="main.js"></script>
+</body>
+
 </html>
