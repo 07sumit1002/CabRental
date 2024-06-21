@@ -428,6 +428,10 @@ body {
     flex-wrap: wrap;
     gap: 20px;
   }
+
+.review-text{
+    background-color: white;
+}
   
   .review {
     background-color: #f0f0f0;
