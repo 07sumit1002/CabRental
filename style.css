@@ -459,6 +459,7 @@ body {
   .review-content .review-author {
     color: #333;
     font-weight: bold;
+    background-color: white;
   }
   
   .review-image {
