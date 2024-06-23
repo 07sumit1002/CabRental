@@ -6,108 +6,135 @@
     <title>CabRental Services</title>
     <style>
         body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    margin: 0;
-    padding: 0;
-}
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
 
-header {
-    background-color: #ff0000;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-}
+        header {
+            background-color: #ff0000;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
 
-header h1 {
-    margin: 0;
-    font-size: 2rem;
-}
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
 
-.container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    padding: 20px;
-}
+        nav {
+            background-color: #333;
+            padding: 10px 0;
+        }
 
-.card {
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    margin: 20px;
-    display: flex;
-    flex-direction: column;
-}
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
 
-.card-header {
-    background-color: #d14941;
-    color: #fff;
-    padding: 10px;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
-    text-align: center;
-}
+        nav ul li {
+            margin: 0 15px;
+        }
 
-.card-header h2 {
-    margin: 0;
-    font-size: 1.5rem;
-}
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
 
-.card-body {
-    padding: 20px;
-    flex: 1;
-}
+        nav ul li a:hover {
+            color: #ff0000;
+        }
 
-.description {
-    font-size: 1rem;
-    line-height: 1.5;
-    color: #555;
-}
+        .container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
 
-.key-features {
-    margin-top: 10px;
-    padding-left: 20px;
-}
+        .card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            margin: 20px;
+            display: flex;
+            flex-direction: column;
+        }
 
-.key-features li {
-    list-style-type: disc;
-    margin-bottom: 5px;
-}
+        .card-header {
+            background-color: #d14941;
+            color: #fff;
+            padding: 10px;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            text-align: center;
+        }
 
-.card-footer {
-    background-color: #f0f0f0;
-    padding: 10px;
-    text-align: center;
-    border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px;
-}
+        .card-header h2 {
+            margin: 0;
+            font-size: 1.5rem;
+        }
 
-.cta-button {
-    display: inline-block;
-    background-color: #ef8467;
-    color: #fff;
-    text-decoration: none;
-    padding: 8px 16px;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
+        .card-body {
+            padding: 20px;
+            flex: 1;
+        }
 
-.cta-button:hover {
-    background-color: #ea3427;
-}
+        .description {
+            font-size: 1rem;
+            line-height: 1.5;
+            color: #555;
+        }
 
-footer {
-    text-align: center;
-    padding: 10px 0;
-    background-color: #f7776e;
-    color: #fff;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-}
+        .key-features {
+            margin-top: 10px;
+            padding-left: 20px;
+        }
 
+        .key-features li {
+            list-style-type: disc;
+            margin-bottom: 5px;
+        }
+
+        .card-footer {
+            background-color: #f0f0f0;
+            padding: 10px;
+            text-align: center;
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: #ef8467;
+            color: #fff;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #ea3427;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #f7776e;
+            color: #fff;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
     </style>
 </head>
 <body>
@@ -115,9 +142,19 @@ footer {
         <h1>CabRental Services</h1>
     </header>
 
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#city-transfers">City Transfers</a></li>
+            <li><a href="#hourly-rentals">Hourly Rentals</a></li>
+            <li><a href="#special-occasions">Special Occasions</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+    </nav>
+
     <main class="container">
         <!-- City Transfers Service Card -->
-        <div class="card">
+        <div class="card" id="city-transfers">
             <div class="card-header">
                 <h2>City Transfers</h2>
             </div>
@@ -136,7 +173,7 @@ footer {
         </div>
 
         <!-- Hourly Rentals Service Card -->
-        <div class="card">
+        <div class="card" id="hourly-rentals">
             <div class="card-header">
                 <h2>Hourly Rentals</h2>
             </div>
@@ -155,7 +192,7 @@ footer {
         </div>
 
         <!-- Special Occasions Service Card -->
-        <div class="card">
+        <div class="card" id="special-occasions">
             <div class="card-header">
                 <h2>Special Occasions</h2>
             </div>
