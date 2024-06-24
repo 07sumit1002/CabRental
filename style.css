@@ -228,7 +228,7 @@ header {
 }
 
 .ride {
-    display: grid;
+    display: flex;
     align-items: center;
     grid-template-columns: repeat(auto-fit, minmax(250px, auto));
     gap: 1rem;
