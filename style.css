@@ -227,11 +227,13 @@ header {
 }
 
 .ride {
-  display: grid;
-  align-items: center;
-  grid-template-columns: repeat(auto-fit, minmax(250px, auto));
-  gap: 1rem;
-  margin-top: 2rem;
+
+    display: flex;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+    gap: 1rem;
+    margin-top: 2rem;
+
 }
 
 .ride .ride-container {
