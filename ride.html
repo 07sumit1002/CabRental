@@ -1,112 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE-edge">
-        <meta name="viewprot" content="width=device-width, initial-scale=1.0">
-        <title>Cabshare</title>
-        <!-- Link to CSS -->
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" >
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-        <style>
-            /* For screens smaller than 576px (extra small devices) */
-            @media (max-width: 575.98px) {
-            .form {
-                width: 90%;
-                margin: 0 auto;
-            }
-            h1 {
-                font-size: 1.5rem;
-                margin-left: 30%;
-            }
-            }
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE-edge" />
+    <meta name="viewprot" content="width=device-width, initial-scale=1.0" />
+    <title>Cabshare</title>
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      crossorigin="anonymous"
+    />
+    <style>
+      /* For screens smaller than 576px (extra small devices) */
+      @media (max-width: 575.98px) {
+        .form {
+          width: 90%;
+          margin: 0 auto;
+        }
+        h1 {
+          font-size: 1.5rem;
+          margin-left: 30%;
+        }
+      }
 
-            /* For screens between 576px and 767.98px (small devices) */
-            @media (min-width: 576px) and (max-width: 767.98px) {
-            .form {
-                width: 70%;
-                margin: 0 auto;
-            }
-            h1 {
-                font-size: 1.8rem;
-                margin-left: 25%;
-            }
-            }
+      /* For screens between 576px and 767.98px (small devices) */
+      @media (min-width: 576px) and (max-width: 767.98px) {
+        .form {
+          width: 70%;
+          margin: 0 auto;
+        }
+        h1 {
+          font-size: 1.8rem;
+          margin-left: 25%;
+        }
+      }
 
-            /* For screens between 768px and 991.98px (medium devices) */
-            @media (min-width: 768px) and (max-width: 991.98px) {
-            .form {
-                width: 60%;
-                margin: 0 auto;
-            }
-            h1 {
-                font-size: 2rem;
-                margin-left: 20%;
-            }
-            }
+      /* For screens between 768px and 991.98px (medium devices) */
+      @media (min-width: 768px) and (max-width: 991.98px) {
+        .form {
+          width: 60%;
+          margin: 0 auto;
+        }
+        h1 {
+          font-size: 2rem;
+          margin-left: 20%;
+        }
+      }
 
-            /* For screens between 992px and 1199.98px (large devices) */
-            @media (min-width: 992px) and (max-width: 1199.98px) {
-            .form {
-                width: 50%;
-                margin: 0 auto;
-            }
-            h1 {
-                font-size: 2.2rem;
-                margin-left: 15%;
-            }
-            }
+      /* For screens between 992px and 1199.98px (large devices) */
+      @media (min-width: 992px) and (max-width: 1199.98px) {
+        .form {
+          width: 50%;
+          margin: 0 auto;
+        }
+        h1 {
+          font-size: 2.2rem;
+          margin-left: 15%;
+        }
+      }
 
-            /* For screens 1200px and larger (extra large devices) */
-            @media (min-width: 1200px) {
-            .form {
-                width: 40%;
-                margin: 0 auto;
-            }
-            h1 {
-                font-size: 2.5rem;
-                margin-left: 10%;
-            }
-            }
-
-        </style>
-    </head>
-    <body class="col-md-12">
-        <script src="main.js"></script>
-        <!-- Header -->
-        <header style="display: flex !important;">
-            <a href="#" class="logo"><img src="img/logo.png" alt=""></a>
-            <div class="bx bx-menu" id="menu-icon"></div>
-            <ul class="navbar">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="ride.html">Ride</a></li>
-                <li><a href="serv.html">Services</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="review.html">Reviews</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-            <div class="header-btn">
-                <a href="#" class="sign-up">Admin</a>
-            </div>
-        </header>          
-        <div class="form">
-            <h1 style="display: block; margin-top: 100px; margin-left: 4%; margin-right: 4%; font-size: 2rem; font-weight: 600;">Rider's_Details</h1>
-            <form name="myForm" action="submit.php" method="post" onsubmit="return validateForm()">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name"><br><br>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email"><br><br>
-                <label for="tel">Contact:</label>
-                <input type="tel" id="tel" name="tel"><br><br>
-                <label for="location">Location:</label>
-                <input type="location" id="location" name="location"><br><br>
-                <label for="time">Time:</label>
-                <input type="time" name="time" id="time"><br><br>
-                <label for="date">Date:</label>
-                <input type="date" name="date" id="date"><br><br>
-                <input type="submit" value="Submit" name="submit">
-            </form>
-        </div>   
-    </body>
+      /* For screens 1200px and larger (extra large devices) */
+      @media (min-width: 1200px) {
+        .form {
+          width: 40%;
+          margin: 0 auto;
+        }
+        h1 {
+          font-size: 2.5rem;
+          margin-left: 10%;
+        }
+      }
+    </style>
+  </head>
+  <body class="col-md-12">
+    <script src="main.js"></script>
+    <!-- Header -->
+    <header style="display: flex !important">
+      <a href="#" class="logo"><img src="img/logo.png" alt="" /></a>
+      <div class="bx bx-menu" id="menu-icon"></div>
+      <ul class="navbar">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="ride.html">Ride</a></li>
+        <li><a href="serv.html">Services</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="review.html">Reviews</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="header-btn">
+        <a href="#" class="sign-up">Admin</a>
+      </div>
+    </header>
+    <div class="form">
+      <h1
+        style="
+          display: block;
+          margin-top: 100px;
+          margin-left: 4%;
+          margin-right: 4%;
+          font-size: 2rem;
+          font-weight: 600;
+        "
+      >
+        Rider's_Details
+      </h1>
+      <form
+        name="myForm"
+        action="submit.php"
+        method="post"
+        onsubmit="return validateForm()"
+      >
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" /><br /><br />
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" /><br /><br />
+        <label for="tel">Contact:</label>
+        <input type="tel" id="tel" name="tel" /><br /><br />
+        <label for="location">Location:</label>
+        <input type="location" id="location" name="location" /><br /><br />
+        <label for="time">Time:</label>
+        <input type="time" name="time" id="time" /><br /><br />
+        <label for="date">Date:</label>
+        <input type="date" name="date" id="date" /><br /><br />
+        <input type="submit" value="Submit" name="submit" />
+      </form>
+    </div>
+  </body>
 </html>
