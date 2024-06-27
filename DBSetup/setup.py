@@ -63,10 +63,17 @@ def main():
 def setup_database_from_scratch():
     print(Fore.YELLOW + "\nSetting up database from scratch...\n" + Fore.RESET)
 
-    db_config = {
-        'user': 'root',
-        'host': 'localhost'
-    }
+    if passwd != "":
+        db_config = {
+            'user': 'root',
+            'host': 'localhost',
+            'password': passwd
+        }
+    else:
+        db_config = {
+            'user': 'root',
+            'host': 'localhost'
+        }
 
     dbname = "carpool1"
     table_name = "ride"
@@ -148,4 +155,5 @@ def reset_database():
     print(Fore.GREEN + "Database Reset complete." + Fore.RESET)
 
 if __name__ == "__main__":
+    passwd = input(Fore.YELLOW + "Enter your MySQL Password: " + Fore.RESET) 
     main()
