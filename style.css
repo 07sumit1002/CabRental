@@ -47,7 +47,85 @@ header{
     width: 60px;
     border-radius: 10px; /* This creates 10px rounded corners */
   }
-.navbar{
+  ------------------------------------------
+
+  header nav {
+    padding: 20px 40px 20px 100px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    border-bottom: 1px solid #1e1e1e;
+}
+
+header nav .nav-right {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header nav .nav-right a {
+    text-decoration: none;
+    color: #1e1e1e;
+    margin-right: 40px;
+    position: relative;
+}
+
+header nav .nav-right a:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -30px;
+    width: 0;
+    height: 2px;
+    background: #1e1e1e;
+    transition: width .3s ease-in-out;
+}
+
+header nav .nav-right a:hover:after {
+    width: 70%;
+}
+
+header nav .nav-right a.active:after {
+    width: 70%;
+}
+
+header nav .nav-right .header-btn > div {
+    background: #eeeff1;
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    border-radius: 50px;
+}
+
+header nav .nav-right .header-btn > div input {
+    background: transparent;
+    border: none;
+    outline:none;
+    font-size: 16px;
+    color: #fff;
+}
+.sign-up {
+    padding: 8px 30px;
+    border: 1px solid transparent;
+    border-radius: 50px;
+    outline: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all .5s ease-in-out;
+}
+
+.sign-up {
+   background: transparent;
+   color: #eeeff1;
+   border-color: #ff0001; 
+}
+
+.sign-up:hover {
+  /* background: #ffffff;*/
+    background: #ff0001;
+    color: #121212;
+}
+/*.navbar{
     display: flex;
 }
 .navbar li{
@@ -98,7 +176,7 @@ header{
 }
 .header-btn .sign-up:hover{
     background: rgb(211, 10, 10);
-}
+}*/
 .home {
     width: 100%;
     min-height: 100vh;
