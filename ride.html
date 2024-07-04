@@ -2,11 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE-edge" />
-    <meta name="viewprot" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cabshare</title>
     <!-- Link to CSS -->
-    <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css"
@@ -18,73 +17,154 @@
       crossorigin="anonymous"
     />
     <style>
-      /* For screens smaller than 576px (extra small devices) */
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f8f9fa;
+      }
+
+      header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 5px 3px;
+        background-color: #00162d;
+        color: #fff;
+        height: 50px;
+      }
+
+      .logo img {
+        max-width: 150px;
+        height: 40px;
+      }
+
+      .navbar {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .navbar li {
+        margin-left: 20px;
+      }
+
+      .navbar a {
+        text-decoration: none;
+        color: #fff;
+        font-weight: 500;
+        padding: 10px 15px;
+        border-radius: 5px;
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
+
+      .navbar a:hover {
+        background-color: #007bff;
+        color: #fff;
+      }
+
+      .header-btn a {
+        background-color: #007bff;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+      }
+
+      .header-btn a:hover {
+        background-color: #0056b3;
+      }
+
+      .form {
+        max-width: 600px;
+        margin: 100px auto;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+      }
+
+      h1 {
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 2rem;
+        font-weight: 600;
+      }
+
+      label {
+        font-weight: bold;
+      }
+
+      input[type="submit"] {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 100%;
+        transition: background-color 0.3s ease;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #0056b3;
+      }
+
       @media (max-width: 575.98px) {
         .form {
           width: 90%;
-          margin: 0 auto;
         }
+
         h1 {
           font-size: 1.5rem;
-          margin-left: 30%;
         }
       }
 
-      /* For screens between 576px and 767.98px (small devices) */
       @media (min-width: 576px) and (max-width: 767.98px) {
         .form {
           width: 70%;
-          margin: 0 auto;
         }
+
         h1 {
           font-size: 1.8rem;
-          margin-left: 25%;
         }
       }
 
-      /* For screens between 768px and 991.98px (medium devices) */
       @media (min-width: 768px) and (max-width: 991.98px) {
         .form {
           width: 60%;
-          margin: 0 auto;
         }
+
         h1 {
           font-size: 2rem;
-          margin-left: 20%;
         }
       }
 
-      /* For screens between 992px and 1199.98px (large devices) */
       @media (min-width: 992px) and (max-width: 1199.98px) {
         .form {
           width: 50%;
-          margin: 0 auto;
         }
+
         h1 {
           font-size: 2.2rem;
-          margin-left: 15%;
         }
       }
 
-      /* For screens 1200px and larger (extra large devices) */
       @media (min-width: 1200px) {
         .form {
           width: 40%;
-          margin: 0 auto;
         }
+
         h1 {
           font-size: 2.5rem;
-          margin-left: 10%;
         }
       }
     </style>
   </head>
-  <body class="col-md-12">
-    <script src="main.js"></script>
+  <body>
     <!-- Header -->
-    <header style="display: flex !important">
-      <a href="#" class="logo"><img src="img/logo.png" alt="" /></a>
-      <div class="bx bx-menu" id="menu-icon"></div>
+    <header>
+      <a href="#" class="logo"><img src="img/logo.png" alt="Cabshare Logo" /></a>
       <ul class="navbar">
         <li><a href="index.html">Home</a></li>
         <li><a href="ride.html">Ride</a></li>
@@ -97,39 +177,44 @@
         <a href="#" class="sign-up">Admin</a>
       </div>
     </header>
+
+    <!-- Form Section -->
     <div class="form">
-      <h1
-        style="
-          display: block;
-          margin-top: 100px;
-          margin-left: 4%;
-          margin-right: 4%;
-          font-size: 2rem;
-          font-weight: 600;
-        "
-      >
-        Rider's_Details
-      </h1>
+      <h1>Rider's Details</h1>
       <form
         name="myForm"
         action="submit.php"
         method="post"
         onsubmit="return validateForm()"
       >
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" /><br /><br />
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" /><br /><br />
-        <label for="tel">Contact:</label>
-        <input type="tel" id="tel" name="tel" /><br /><br />
-        <label for="location">Location:</label>
-        <input type="location" id="location" name="location" /><br /><br />
-        <label for="time">Time:</label>
-        <input type="time" name="time" id="time" /><br /><br />
-        <label for="date">Date:</label>
-        <input type="date" name="date" id="date" /><br /><br />
+        <div class="mb-3">
+          <label for="name" class="form-label">Name:</label>
+          <input type="text" class="form-control" id="name" name="name" required />
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email:</label>
+          <input type="email" class="form-control" id="email" name="email" required />
+        </div>
+        <div class="mb-3">
+          <label for="tel" class="form-label">Contact:</label>
+          <input type="tel" class="form-control" id="tel" name="tel" required />
+        </div>
+        <div class="mb-3">
+          <label for="location" class="form-label">Location:</label>
+          <input type="text" class="form-control" id="location" name="location" required />
+        </div>
+        <div class="mb-3">
+          <label for="time" class="form-label">Time:</label>
+          <input type="time" class="form-control" id="time" name="time" required />
+        </div>
+        <div class="mb-3">
+          <label for="date" class="form-label">Date:</label>
+          <input type="date" class="form-control" id="date" name="date" required />
+        </div>
         <input type="submit" value="Submit" name="submit" />
       </form>
     </div>
+
+    <script src="main.js"></script>
   </body>
 </html>
