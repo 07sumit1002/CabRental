@@ -4,7 +4,10 @@ document
     const testimonialsContainer = document.getElementById(
       "testimonials-container"
     );
-
+    document.getElementById('bookNow').addEventListener('click', function() {
+      alert('Booking confirmed!');
+  });
+  
     const newTestimonials = [
       {
         text: "I've used many cab services before, but this one is by far the best. Highly recommended!",
