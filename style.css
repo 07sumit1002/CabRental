@@ -740,6 +740,78 @@ footer {
   }
 }
 
+#why-choose-us {
+  padding: 50px 0;
+  color: var(--primary-color);
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.header h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.header h1 {
+  font-size: 36px;
+  color: #000;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.header p {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.find-details {
+  display: inline-block;
+  padding: 15px 30px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.find-details:hover {
+  background-color: #0056b3;
+}
+
+.features {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+.feature {
+  width: 30%;
+  text-align: left;
+}
+
+.feature img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 20px;
+}
+
+.feature h3 {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.feature p {
+  font-size: 14px;
+  color: #666;
+}
+
 /* review */
 .heading {
   font-size: 40px;
