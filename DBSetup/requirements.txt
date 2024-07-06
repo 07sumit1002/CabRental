@@ -1,0 +1,16 @@
+##########################################
+#             REQUIREMENTS               #
+##########################################
+
+
+# -------- Setup Operations -------- #
+colorama
+keyboard
+
+# ---------- Database Connection ---------- #
+mysql-connector-python
+
+
+########################################################
+#    Install using: pip install -r requirements.txt    #
+########################################################

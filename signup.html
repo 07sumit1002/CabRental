@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="login.css"/>
+</head>
+<body>
+    <div class="container">
+        <div class="left-section">
+            <button class="back-button" onclick="window.location.href='index.html'"><img src="img/back_button.png" width="50px" height="50px"/></button>
+            <h1 class="animated-heading">Cab Rental<span class="blinking-cursor">|</span></h1>
+            <p class="description">
+                Welcome to Cab Rental, your go-to platform for sharing or renting a cab effortlessly. Whether you're planning a quick trip across town or a long-distance journey, we provide a convenient and cost-effective solution to meet your travel needs.
+            </p>
+            <form id="signupForm" class="login-form">
+                <input type="text" id="name" placeholder="Name" class="input-field">
+                <input type="text" id="username" placeholder="Username" class="input-field">
+                <input type="email" id="email" placeholder="Email" class="input-field">
+                <input type="password" id="password" placeholder="Password" class="input-field">
+                <button type="submit" class="submit-button">Sign up</button>
+            </form>
+            <p class="already-signed-up">
+                already signed up? <a href="login.html">Login</a>
+            </p>
+        </div>
+        <div class="right-section">
+            <img src="./img/login_1.jpg" alt="car_pics" class="transition-image">
+            <img src="./img/login_2.jpg" alt="car_pics" class="transition-image">
+            <img src="./img/login_3.jpg" alt="car_pics" class="transition-image">
+            <img src="./img/login_4.jpg" alt="car_pics" class="transition-image">
+            <img src="./img/login_5.jpg" alt="car_pics" class="transition-image">
+            <img src="./img/login_6.jpg" alt="car_pics" class="transition-image">
+            <img src="./img/login_7.jpg" alt="car_pics" class="transition-image">
+        </div>
+    </div>
+
+    <script>
+        const images = document.querySelectorAll('.transition-image');
+        let currentImageIndex = 0;
+
+        function showNextImage() {
+            images[currentImageIndex].style.opacity = 0;
+            currentImageIndex = (currentImageIndex + 1) % images.length;
+            images[currentImageIndex].style.opacity = 1;
+        }
+
+        setInterval(showNextImage, 3000);
+    </script>
+</body>
+</html>

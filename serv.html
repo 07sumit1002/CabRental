@@ -1,15 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE-edge">
-        <meta name="viewprot" content="width=device-width, initial-scale=1.0">
-        <title>Cabshare</title>
-        <!-- Link to CSS -->
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
-    </head>
-    <body>
-        
-    </body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CabRental Services</title>
+    <link rel="stylesheet" href="serv.css" />
+    <style>
+      /* Add some basic styling for smooth scrolling */
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>CabRental Services</h1>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#city-transfers">City Transfers</a></li>
+        <li><a href="#hourly-rentals">Hourly Rentals</a></li>
+        <li><a href="#special-occasions">Special Occasions</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ul>
+    </nav>
+    <main>
+      <div id="city-transfers" class="citytransfer">
+        <div class="head1">
+          <h2>City Transfers</h2>
+        </div>
+        <p class="citypara">
+          Our city transfer services ensure convenient and reliable transportation to and from airports, hotels, and various locations within the city. We guarantee punctuality and comfort throughout your journey.
+        </p>
+        <ul class="key-features">
+          <li>Modern fleet of vehicles including sedans, SUVs, and luxury cars</li>
+          <li>Experienced and professional drivers</li>
+          <li>Flexible scheduling to suit your travel plans</li>
+          <li>Competitive pricing and transparent billing</li>
+        </ul>
+        <div class="card-footer">
+          <a href="#" class="cta-button">Book Now</a>
+        </div>
+      </div>
+      
+      <div class="video">
+        <video autoplay muted loop id="background-video">
+          <source src="service.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      
+      <div id="hourly-rentals" class="rentally">
+        <div class="head2">
+          <h2>Hourly Rentals</h2>
+        </div>
+        <p class="hour">
+          Whether you need transportation for a few hours or an entire day, our hourly rental service provides flexibility and peace of mind. Perfect for business meetings, sightseeing tours, or personal errands.
+        </p>
+        <ul class="key-features1">
+          <li>Choose from a variety of vehicles tailored to your needs</li>
+          <li>Customizable routes and stops according to your itinerary</li>
+          <li>Experienced drivers familiar with local routes and attractions</li>
+          <li>Affordable rates with no hidden fees</li>
+        </ul>
+        <div class="card-footer">
+          <a href="#" class="cta-button">Get a Quote</a>
+        </div>
+      </div>
+      
+      <div id="special-occasions" class="specially">
+        <div class="occassion">
+          <h2>Special Occasions</h2>
+        </div>
+        <p class="key-features2">
+          Celebrate your special events in style with our tailored transportation solutions. Whether it's a wedding, anniversary, corporate event, or night out, we ensure a memorable and luxurious experience.
+        </p>
+        <ul class="key-features2">
+          <li>Premium selection of vehicles including limousines and executive vans</li>
+          <li>Personalized service to meet your specific event requirements</li>
+          <li>Professional chauffeurs dressed in attire appropriate for the occasion</li>
+          <li>On-time arrivals and impeccable service from start to finish</li>
+        </ul>
+        <div class="card-footer">
+          <a href="#" class="cta-button">Contact Us</a>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <p>&copy; 2024 CabRental. All rights reserved.</p>
+    </footer>
+  </body>
 </html>
