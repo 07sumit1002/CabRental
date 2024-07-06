@@ -1,6 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewprot" content="width=device-width, initial-scale=1.0">
+        <title>CabRental</title>
+        <!-- Link to CSS -->
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    </head>
+    <body>
+        <!-- Header -->
+        <header>
+            <a href="#" class="logo"><img src="img/logo.png" alt=""></a>
+            <nav> 
+                <div class="nav-right">
+                    <div class="nav-links">
+                        <a href="index.html"class="active">Home</a>
+                        <a href="ride.html">Ride</a>
+                        <a href="serv.html">Services</a>
+                        <a href="about.html">About</a>
+                        <a href="review.html">Reviews</a>
+                        <a href="contact.html">Contact</a>
+                    </div>
+                    <div class="header-btn">
+                        <div>
+                           <a href="#" class="sign-up">Login</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+       <!-- <header>
+            <a href="#" class="logo"><img src="img/logo.png" alt=""></a>
+            <div class="bx bx-menu" id="menu-icon"></div>
+            <ul class="navbar">
+                <li><a href="index.html"class="active">Home</a></li>
+                <li><a href="ride.html">Ride</a></li>
+                <li><a href="serv.html">Services</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="review.html">Reviews</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="header-btn">
+                <a href="#" class="sign-up">Login</a>
+            </div>
+        </header>-->
+        <!-- Home -->
+        <section class="home" id="home">
+            <div class="text">
+                <h1><br>Want to <span>Share</span> or <span>Rent</span> <br>a cab.</h1>
+                <p>Wherever you're going, there's a carpool that will<br>
+                    get you there for less.</p>
+                <div class="carweb">
+                    <img src="img/Car Website – 1@2x.png" alt="">
+                </div>
+            </div>
+            <div class="form-container">
+                <form action="anonimous.php" method="post">
+                    <div class="input-box">
+                        <span>From <span> MUJ Hostel</span> To</span>
+                        <input type="search" name="search" id="search" placeholder="Search Places">
+                    </div>
+                    <div class="input-box">
+                        <span>Travelling Date</span>
+                        <input type="date" name="dat" id="dat">
+                    </div>
+                    <div class="input-box">
+                        <span>Depart. Time</span>
+                        <input type="time" name="tim" id="tim">
+                    </div>
+                    <input type="submit" name="submit" id="submit" class="btn">
+                </form>
+=======
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE-edge">
@@ -45,6 +119,7 @@
                 get you there for less.</p>
             <div class="carweb">
                 <img src="img/Car Website – 1@2x.png" alt="">
+
             </div>
         </div>
         <!-- <div class="form-container">
