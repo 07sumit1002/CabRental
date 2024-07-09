@@ -189,3 +189,67 @@ footer {
   width: 100%;
   bottom: 0;
 }
+
+
+/*Mobile Devices */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.5rem;
+    text-align: center;
+    left: 0;
+  }
+
+  nav {
+    left: 0;
+    top: 0;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  .citytransfer{
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    position: relative;
+    bottom: -500px;
+    /* margin-top: 1000px; */
+  }
+
+
+
+  .specially{
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 76px;
+
+
+  }
+
+
+  .rentally{
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 79px;
+  }
+
+  .video {
+    left: 0;
+    width: 100%;
+  }
+
+  .cta-button {
+    left: 0;
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+  }
+}

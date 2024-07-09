@@ -57,7 +57,7 @@ header {
   }
   ------------------------------------------
 
-  header nav {
+  /* header nav {
     padding: 20px 40px 20px 100px;
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -111,7 +111,7 @@ header nav .nav-right .header-btn > div input {
     outline:none;
     font-size: 16px;
     color: #fff;
-}
+} */
 .sign-up {
     padding: 8px 30px;
     border: 1px solid transparent;
@@ -219,6 +219,52 @@ header nav .nav-right .header-btn > div input {
 
 .navbar a:hover {
   background: rgb(231, 223, 223);
+}
+
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between; /* Adjust alignment as needed */
+  align-items: center;
+  background: #eeeff1; /* Example background color */
+  padding: 15px 100px; /* Example padding */
+}
+
+.navbar ul {
+  display: flex;
+  list-style-type: none;
+}
+
+.navbar li {
+  margin: 0 10px; /* Adjust margin between menu items */
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #1e1e1e; /* Example text color */
+  font-weight: 500;
+  padding: 10px 20px; /* Adjust padding as needed */
+  position: relative;
+}
+
+.navbar a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0;
+  height: 2px;
+  background: #1e1e1e; /* Example underline color */
+  transition: width .3s ease-in-out;
+}
+
+.navbar a:hover::after {
+  width: 100%; /* Adjust width of underline on hover */
+}
+
+.navbar .active::after {
+  width: 100%; /* Adjust width of underline for active link */
 }
 
 #menu-icon {
@@ -997,7 +1043,7 @@ footer {
 
 /* end */
 
-/* FAQ Section */
+FAQ Section */
 .container_1 {
   width: 100%;
   margin: auto;
