@@ -1,6 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewprot" content="width=device-width, initial-scale=1.0">
+        <title>CabRental</title>
+        <!-- Link to CSS -->
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    </head>
+    <body>
+        <!-- Header -->
+<!--         <header>
+            <a href="#" class="logo"><img src="img/logo.png" alt=""></a>
+            <nav> 
+                <div class="nav-right">
+                    <div class="nav-links">
+                        <a href="index.html"class="active">Home</a>
+                        <a href="ride.html">Ride</a>
+                        <a href="serv.html">Services</a>
+                        <a href="about.html">About</a>
+                        <a href="review.html">Reviews</a>
+                        <a href="contact.html">Contact</a>
+                    </div>
+                    <div class="header-btn">
+                        <div>
+                           <a href="#" class="sign-up">Login</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header> -->
+       <header>
+            <a href="#" class="logo"><img src="img/logo.png" alt=""></a>
+            <div class="bx bx-menu" id="menu-icon"></div>
+            <ul class="navbar" style="display: flex;">
+                <li><a href="index.html"class="active">Home</a></li>
+                <li><a href="ride.html">Ride</a></li>
+                <li><a href="serv.html">Services</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="review.html">Reviews</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="header-btn">
+                <a href="#" class="sign-up">Login</a>
+            </div>
+        </header>
+        <!-- Home -->
+        <section class="home" id="home">
+            <div class="text">
+                <h1><br>Want to <span>Share</span> or <span>Rent</span> <br>a cab.</h1>
+                <p>Wherever you're going, there's a carpool that will<br>
+                    get you there for less.</p>
+                <div class="carweb">
+                    <img src="img/Car Website – 1@2x.png" alt="">
+                </div>
+            </div>
+            <div class="form-container">
+                <form action="anonimous.php" method="post">
+                    <div class="input-box">
+                        <span>From <span> MUJ Hostel</span> To</span>
+                        <input type="search" name="search" id="search" placeholder="Search Places">
+                    </div>
+                    <div class="input-box">
+                        <span>Travelling Date</span>
+                        <input type="date" name="dat" id="dat">
+                    </div>
+                    <div class="input-box">
+                        <span>Depart. Time</span>
+                        <input type="time" name="tim" id="tim">
+                    </div>
+                    <input type="submit" name="submit" id="submit" class="btn">
+                </form>
+=======
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE-edge">
@@ -34,7 +108,7 @@
             <li><a href="#contact us">Contact</a></li>
         </ul>
         <div class="header-btn">
-            <a href="#" class="sign-up">Admin</a>
+            <a href="login.html" class="sign-up">Login</a>
         </div>
     </header>
     <!-- Home -->
@@ -45,9 +119,10 @@
                 get you there for less.</p>
             <div class="carweb">
                 <img src="img/Car Website – 1@2x.png" alt="">
+
             </div>
         </div>
-        <div class="form-container">
+        <!-- <div class="form-container">
             <form action="anonimous.php" method="post">
                 <div class="input-box">
                     <span>From <span> MUJ Hostel</span> To</span>
@@ -63,7 +138,48 @@
                 </div>
                 <input type="submit" name="submit" id="submit" class="btn">
             </form>
+        </div> -->
+
+        <div class="booking-form">
+            <div class="form-group">
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName" placeholder="Your Name">
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" placeholder="Telephone">
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="name@example.com">
+            </div>
+            <div class="form-group">
+                <label for="city">City</label>
+                <select id="city">
+                    <option>Select City</option>
+                    <!-- Add more options here -->
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="vehicle">Vehicle</label>
+                <select id="vehicle">
+                    <option>Select Vehicle</option>
+                    <!-- Add more options here -->
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="pickupDate">Pickup Date</label>
+                <input type="date" id="pickupDate">
+            </div>
+            <div class="form-group">
+                <label for="dropoffDate">Drop-off Date</label>
+                <input type="date" id="dropoffDate">
+            </div>
         </div>
+            <div class="form-group">
+                <button id="bookNow">Book Now</button>
+            </div>
+        
     </section>
     <!-- Ride-->
     <section class="ride" id="ride">
@@ -147,6 +263,33 @@
                 <h3>2018 Honda Civic</h3>
                 <h2>Rs.850 | Rs.850 <span>/day</span></h2>
                 <a href="#" class="btn">Rent Now</a>
+            </div>
+        </div>
+    </section>
+    <section id="why-choose-us">
+        <div class="container">
+            <div class="header">
+                <h2>Why Choose Us</h2>
+                <h1>Best valued deals you will ever find</h1>
+                <p>Discover the best deals you'll ever find with our unbeatable offers. We're dedicated to providing you with the best value for your money, so you can enjoy top-quality services and products without breaking the bank. Our deals are designed to give you the ultimate renting experience, so don't miss out on your chance to save big.</p>
+               
+            </div>
+            <div class="features">
+                <div class="feature">
+                    <img src="download.png" alt="Cross Country Drive">
+                    <h3>Cross Country Drive</h3>
+                    <p>Take your driving experience to the next level with our top-notch vehicles for your cross-country adventures.</p>
+                </div>
+                <div class="feature">
+                    <img src="download 2.png" alt="All Inclusive Pricing">
+                    <h3>All Inclusive Pricing</h3>
+                    <p>Get everything you need in one convenient, transparent price with our all-inclusive pricing policy.</p>
+                </div>
+                <div class="feature">
+                    <img src="download 3.png" alt="No Hidden Charges">
+                    <h3>No Hidden Charges</h3>
+                    <p>Enjoy peace of mind with our no hidden charges policy. We believe in transparent and honest pricing.</p>
+                </div>
             </div>
         </div>
     </section>
