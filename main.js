@@ -5,7 +5,6 @@ function validateForm() {
   var location = document.forms["myForm"]["location"].value;
   var time = document.forms["myForm"]["time"].value;
 
-
   if (name == "") {
     alert("Name must be filled out");
     return false;
@@ -44,6 +43,7 @@ AOS.init({
   duration: 800,
   delay: 400
 });
+
 //FAQ SECTION JS STARTING
 const accordions = document.querySelectorAll(".accordion");
 
