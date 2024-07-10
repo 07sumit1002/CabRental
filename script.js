@@ -111,3 +111,24 @@ document
       testimonialsContainer.appendChild(testimonialDiv);
     });
   });
+// JavaScript function to scroll to the top of the page
+function goToTop() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
+}
+
+// Show the button when user scrolls down 20px from the top
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      document.getElementById("goToTopBtn").style.display = "block";
+  } else {
+      document.getElementById("goToTopBtn").style.display = "none";
+  }
+}
+// JavaScript function to scroll to the top of the page
+function goToTop() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
+}
