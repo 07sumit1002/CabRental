@@ -185,11 +185,7 @@ header nav .nav-right .header-btn > div input {
 .header-btn .sign-up:hover{
     background: rgb(211, 10, 10);
 }*/
-=======
-  width: 60px;
-  border-radius: 10px;
-  /* This creates 10px rounded corners */
-}
+
 
 .navbar {
   display: flex;
