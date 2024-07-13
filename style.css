@@ -902,7 +902,10 @@ body {
 
 footer {
   background-color: #e6e7e9;
-  color: #141414;
+  background: #f2f2f2;
+  border:none;
+  box-shadow: none;
+  
   padding: 7px 5px;
 }
 
@@ -1114,3 +1117,80 @@ FAQ Section */
   height: 0;
   transition: height 0.4s ease-in-out;
 }
+/* footer {
+  background-color: #f0f0f0;
+  padding: 10px 0;
+  text-align: center;
+  font-size: 14px;
+
+}
+.copyright {
+  background-color: white;
+  color: orange;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 14px;
+  background: #f2f2f2;
+} */
+/* footer {
+  position: relative;
+  background-color: #f0f0f0;
+  padding: 10px 0;
+  text-align: center;
+  font-size: 14px;
+  color: white;
+} */
+footer{
+  background-color: #fff;
+  /* color:#000; */
+  padding:20px;
+  text-align: center;
+  background: #f2f2f2;
+  border:none;
+
+}
+.copyright {
+  background-color: white;
+  color: #000;
+  text-align: center;
+  /* padding: 10px 0; */
+  font-size: 14px;
+  background: #f2f2f2;
+}
+
+
+#goToTopBtn {
+  display: block;
+  position: fixed;
+  bottom: 90px;
+  left: 50%;
+  
+  transform: translateX(-50%);
+  background-color: #ff4b4b;
+  color: black;
+  border: none;
+  border-radius: 50px;
+  padding: 15px 30px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+  
+  transition: background-color 0.3s, transform 0.3s;
+  animation: floatUpDown 2s infinite ease-in-out;
+}
+.cursor{
+  position :center;
+}
+@keyframes floatUpDown {
+  0%, 100% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-10px);
+  }
+}
+
+#goToTopBtn:hover {
+  background-color: #0056b3;
+}
+
