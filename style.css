@@ -1115,34 +1115,22 @@ FAQ Section */
   transition: height 0.4s ease-in-out;
 }
 
-.arrow {
-  display: inline-block;
-  position: fixed;
-  bottom: 20px;
-  right: 30px;
-
-  border: none;
-  outline: none;
-  background-color:#ff4b4b;
-  color: #ff4b4b;
-  cursor: pointer;
-  padding: 5px;
-  margin-left: 5px;
-  border-radius: 50%;
-
-  /* font-size: 50px; */
-  text-align: center;
-  /* margin-left: 10%;
-  padding-left: 10%; */
-}
-
-.arrow:hover {
-  background-color: #ff4b4b;
-} 
-
 footer p {
   margin: 10px 0 0 0;
   text-align: center;
  
   
+}
+.topbtn{
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  bottom: 11px;
+  right: 29px;
+  text-decoration: none;
+  text-align: center;
+  line-height: 50px;
+  user-select: none;
+  font-size: 22px;
+  border-radius: 50%
 }
