@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper@11.1.4/swiper-bundle.min.css" />
     <!-- font awesome cdn link  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <!-- custom css link -->
     <script src="https://kit.fontawesome.com/2815a7015d.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
@@ -528,8 +529,13 @@
                 <button class="view-all-button" id="view-all-button">View All</button>
             </div>
         </section>
+       
     
     <footer>
+        <div id="topbtn" class="topbtn">
+            <a class="gotopbtn" href="#"><i class="fa-solid fa-angles-up"></i></a>
+        </div>
+     
         <div class="footer-container">
             <div class="call-us">
                 <p>Questions? Call 000-080-000-000</p>
@@ -577,12 +583,8 @@
         <p> &copy; <script>document.write(new Date().getFullYear())</script> CabRental. All rights reserved. | Designed and Developed by Sumit Kumar</p>
          
     </div>
-</footer>
-<div class="arrow">
-    <button id="topButton"><i class="fas fa-arrow-up"></i></button>
 
-</div>
-    </footer>
+</footer>
 
 
     <!-- Link to JS -->
@@ -592,6 +594,25 @@
 
     <script src="main.js"></script>
     <script src="script.js"></script>
+    <script>
+        const topButton = document.getElementById("topbtn");
+        window.onscroll = function () {
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                topButton.style.display = "block";
+            } else {
+                topButton.style.display = "none";
+            }
+        };
+        topButton.onclick = function (event) {
+            event.preventDefault(); 
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'  
+            });
+        };
+    </script>
 </body>
+
+
 
 </html>
