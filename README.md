@@ -1,64 +1,67 @@
-# 🚖 CabRental
+🚖 CabRental
+The CabRental repository is a decentralized vehicle rental platform that provides users with a seamless experience to rent vehicles. It leverages both traditional technologies and Web3 innovations for a secure and modernized booking process.
 
-The Cab Rental repository is a software system that provides a platform for individuals to rent vehicles for transportation. It is designed to offer an easy and seamless experience for users to book a ride.
+📝 Description
+CabRental is a comprehensive vehicle rental platform that allows users to search, book, and manage vehicle rentals. The system is enhanced with Web3 features such as decentralized login using crypto wallets, smart contract-based transactions, and blockchain data handling, providing both flexibility and security.
 
-## 📝 Description
+💻 Technologies Used
+Front-end: HTML, CSS, JavaScript
+Back-end: Node.js, PHP
+Smart Contracts: Solidity
+Blockchain Interaction: MetaMask, Web3.js, Ethers.js
+Database: MySQL
+🌟 Features
+Decentralized Login with MetaMask 🔐: Users can sign in using their crypto wallets instead of traditional login methods.
+User Registration & Authentication 👤: Includes social media and wallet-based authentication options.
+Smart Contract-Based Payments 💰: Payment processing is automated using Solidity smart contracts for secure and transparent transactions.
+Vehicle Search & Booking 🚗: Users can search for vehicles by location, type, and availability with real-time checks.
+Booking Management 🧾: Manage bookings with the flexibility of blockchain-powered tracking and verification.
+Admin Dashboard 👨‍💼: Admins can manage bookings, view analytics, and use blockchain for transaction verification.
+Notifications & Alerts 🔔: Email, SMS, and on-chain notifications for payment confirmations and updates.
+User Feedback and Reviews ⭐: Decentralized storage of reviews and ratings, ensuring transparency and immutability using blockchain.
+🔧 Installation
+To get a local copy up and running, follow these simple steps:
 
-CabRental is a comprehensive vehicle rental platform that allows users to search, book, and manage vehicle rentals. It includes a range of features designed to enhance the user experience, such as real-time availability checks, payment gateway integration, and notifications.
+Clone the repo
 
-## 💻 Technologies Used
+bash
+Copy code
+git clone https://github.com/07sumit1002/CabRental.git
+Navigate to the Folder
 
-- **Front-end**: HTML, CSS, JavaScript
-- **Back-end**: PHP
-- **Database**: MySQL
+bash
+Copy code
+cd CabRental
+Install Dependencies
 
-## 🌟 Features
+bash
+Copy code
+npm install
+composer install
+Set up MetaMask for Wallet Login
 
-- **User Registration & Authentication** 👤: Includes social media single sign-on integration.
-- **Vehicle Search & Booking** 🚗: Users can search for vehicles by location, type, and availability with real-time availability checks.
-- **Booking Management**🧾: Users can manage their bookings easily.
-- **Payment Gateway Integration** 💰: Secure payment options including debit, credit, net banking, and mobile wallets.
-- **Admin Dashboard**👨‍💼: Admins can view all bookings and access analytics & reporting tools.
-- **Notifications & Alerts** 🔔: Email and SMS notifications.
-- **User Feedback and Reviews**: Users can leave feedback and reviews for vehicles and services.
+Ensure users have MetaMask installed for decentralized login.
+Run the Application
 
-## 🔧 Installation
-
-To get a local copy up and running follow these simple steps:
-
-1. **Clone the repo**
-   
-   ```bash
-   git clone https://github.com/07sumit1002/CabRental.git
-   ```
-2. **Navigate to the Folder**
-    
-    ```bash
-    cd CabRental
-    ```
-3. **Install Dependencies**
-    
-    ```bash
-    composer install
-    npm install
-    ```
-4. Run the application
-
-- Ensure your server supports PHP and has MySQL installed.
-- Open the project in your preferred web server (e.g., XAMPP, WAMP).
-- Set the database appropriately
-
-## 🤝 Contributing
+Ensure your server supports PHP and Node.js.
+Open the project in your preferred web server (e.g., XAMPP, WAMP, or Node.js server).
+Set up the database and blockchain connection as per the config file.
+🛠 Web3 Integration Guide
+Smart Contracts: Use Solidity to create rental agreements, payment processing, and loyalty rewards.
+Blockchain Interaction: MetaMask is used for wallet login and Web3.js handles blockchain transactions.
+Backend Services: Node.js manages wallet verification, data requests from the blockchain, and transaction handling.
+🤝 Contributing
 Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are greatly appreciated.
 
-1. Fork the Project
-2. Make you changes in the forked Repository
-3. Commit you changes and push to the forked repository.
-    
-    ```bash
-    git add .
-    git commit -m 'Add some AmazingFeature'
-    git push
-    ```
-4. Open a Pull request with a proper description of the changes that are proposed in the PR.
+Fork the Project
 
+Make your changes in the forked Repository
+
+Commit your changes and push to the forked repository:
+
+bash
+Copy code
+git add .
+git commit -m 'Add some AmazingFeature'
+git push
+Open a Pull Request with a proper description of the changes proposed in the PR.
