@@ -4,12 +4,12 @@ The CabRental repository is a decentralized vehicle rental platform that provide
 📝 Description
 CabRental is a comprehensive vehicle rental platform that allows users to search, book, and manage vehicle rentals. The system is enhanced with Web3 features such as decentralized login using crypto wallets, smart contract-based transactions, and blockchain data handling, providing both flexibility and security.
 
-💻 Technologies Used
-Front-end: HTML, CSS, JavaScript
-Back-end: Node.js, PHP
-Smart Contracts: Solidity
-Blockchain Interaction: MetaMask, Web3.js, Ethers.js
-Database: MySQL
+💻 Technologies Used <br>
+Front-end: HTML, CSS, JavaScript<br>
+Back-end: Node.js, PHP<br>
+Smart Contracts: Solidity<br>
+Blockchain Interaction: MetaMask, Web3.js, Ethers.js<br>
+Database: MySQL<br>
 🌟 Features
 Decentralized Login with MetaMask 🔐: Users can sign in using their crypto wallets instead of traditional login methods.
 User Registration & Authentication 👤: Includes social media and wallet-based authentication options.
