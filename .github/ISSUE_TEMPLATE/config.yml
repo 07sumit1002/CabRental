@@ -1,0 +1,15 @@
+# .github/ISSUE_TEMPLATE/config.yml
+blank_issues_enabled: false
+contact_links:
+  - name: Report a Bug
+    url: https://github.com/07sumit1002/CabRental/issues/new?assignees=&labels=bug&template=bug_report.md
+    about: Help us improve CabRental by reporting a bug.
+  - name: Request a Feature
+    url: https://github.com/07sumit1002/CabRental/issues/new?assignees=&labels=enhancement&template=feature_request.md
+    about: Suggest new features or enhancements.
+  - name: Update Documentation
+    url: https://github.com/07sumit1002/CabRental/issues/new?assignees=&labels=documentation&template=documentation_update.md
+    about: Propose improvements or additions to the documentation.
+  - name: General Inquiry
+    url: https://github.com/07sumit1002/CabRental/issues/new?assignees=&labels=question&template=general_issue.md
+    about: Discuss general topics, questions, or suggestions.
