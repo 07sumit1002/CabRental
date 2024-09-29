@@ -88,21 +88,14 @@ cd CabRental
 
 ### 3. Install Dependencies
 
-- **For Node.js:**
-
   ```bash
-  npm install
-  ```
-
-- **For PHP:**
-
-  ```bash
-  composer install
+  npm install composer
   ```
 
 ### 4. Set Up MetaMask for Wallet Login
 
-Ensure that you have the MetaMask extension installed in your browser for decentralized login functionality.
+- Ensure that you have the MetaMask extension installed in your browser for decentralized login functionality.
+- Run the application
 
 ### 5. Configure the Environment
 
