@@ -1,6 +1,5 @@
 # 🚖 CabRental
 
-[![License](https://img.shields.io/github/license/07sumit1002/CabRental)](https://opensource.org/licenses/MIT)
 [![GitHub Issues](https://img.shields.io/github/issues/07sumit1002/CabRental)](https://github.com/07sumit1002/CabRental/issues)
 [![GitHub Forks](https://img.shields.io/github/forks/07sumit1002/CabRental)](https://github.com/07sumit1002/CabRental/network)
 [![GitHub Stars](https://img.shields.io/github/stars/07sumit1002/CabRental)](https://github.com/07sumit1002/CabRental/stargazers)
