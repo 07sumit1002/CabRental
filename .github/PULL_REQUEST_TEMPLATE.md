@@ -13,13 +13,6 @@ Fixes # (issue)
 - [ ] Breaking change (fix or feature that would cause existing functionality to not work as expected)
 - [ ] Documentation Update
 
-## How Has This Been Tested?
-
-Describe the tests that you ran to verify your changes. Provide instructions so we can reproduce. List any relevant details for your test configuration.
-
-- [ ] Test A
-- [ ] Test B
-
 ## Checklist:
 
 - [ ] My code follows the style guidelines of this project
@@ -30,3 +23,5 @@ Describe the tests that you ran to verify your changes. Provide instructions so 
 - [ ] I have added tests that prove my fix is effective or that my feature works
 - [ ] New and existing unit tests pass locally with my changes
 - [ ] Any dependent changes have been merged and published in downstream modules
+
+## Screenshot of final output/video
