@@ -1,8 +1,9 @@
 # 🚖 CabRental
 
-[![GitHub Issues](https://img.shields.io/github/issues/07sumit1002/CabRental)](https://github.com/07sumit1002/CabRental/issues)
-[![GitHub Forks](https://img.shields.io/github/forks/07sumit1002/CabRental)](https://github.com/07sumit1002/CabRental/network)
-[![GitHub Stars](https://img.shields.io/github/stars/07sumit1002/CabRental)](https://github.com/07sumit1002/CabRental/stargazers)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Last Commit](https://img.shields.io/github/last-commit/07sumit1002/CabRental.svg)](https://github.com/07sumit1002/CabRental/commits/main)
+[![GitHub Issues](https://img.shields.io/github/issues/07sumit1002/CabRental.svg)](https://github.com/07sumit1002/CabRental/issues)
+[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/07sumit1002/CabRental.svg)](https://github.com/07sumit1002/CabRental/pulls)
 
 ## 📝 Table of Contents
 
