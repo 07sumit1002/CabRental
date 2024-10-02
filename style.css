@@ -11,6 +11,7 @@
   text-decoration: none;
   font-family: "Poppins", sans-serif;
   background-color: rgb(238, 239, 241);
+  transition: all 1s ease-in-out;
 }
 
 .root {
@@ -52,10 +53,10 @@ header {
 }
 
 .logo img {
-    width: 60px;
-    border-radius: 10px; /* This creates 10px rounded corners */
-  }
-  ------------------------------------------
+  width: 60px;
+  border-radius: 50px; /* This creates 10px rounded corners */
+}
+------------------------------------------
 
   /* header nav {
     padding: 20px 40px 20px 100px;
@@ -113,26 +114,27 @@ header nav .nav-right .header-btn > div input {
     color: #fff;
 } */
 .sign-up {
-    padding: 8px 30px;
-    border: 1px solid transparent;
-    border-radius: 50px;
-    outline: none;
-    cursor: pointer;
-    font-size: 16px;
-    transition: all .5s ease-in-out;
+  padding: 8px 30px;
+  border: 1px solid transparent;
+  border-radius: 50px;
+  outline: none;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.5s ease-in-out;
 }
 
 .sign-up {
-   background: transparent;
-   color: #eeeff1;
-   border-color: #ff0001; 
+  background: transparent;
+  color: #eeeff1;
+  border-color: #ff0001;
 }
 
-.sign-up:hover {
-  /* background: #ffffff;*/
-    background: #ff0001;
-    color: #121212;
+.contact-right button {
+  background-color: orangered;
+  color: white;
+  border: none;
 }
+
 /*.navbar{
     display: flex;
 }
@@ -186,13 +188,17 @@ header nav .nav-right .header-btn > div input {
     background: rgb(211, 10, 10);
 }*/
 
-
 .navbar {
   display: flex;
 }
 
 .navbar li {
   position: relative;
+}
+
+.navbar li a:hover {
+  color: #ff0000;
+  transition: 0.5s;
 }
 
 .navbar a {
@@ -216,8 +222,6 @@ header nav .nav-right .header-btn > div input {
 .navbar a:hover {
   background: rgb(231, 223, 223);
 }
-
-
 
 .navbar {
   display: flex;
@@ -245,14 +249,14 @@ header nav .nav-right .header-btn > div input {
 }
 
 .navbar a::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   bottom: -3px;
   width: 0;
   height: 2px;
   background: #1e1e1e; /* Example underline color */
-  transition: width .3s ease-in-out;
+  transition: width 0.3s ease-in-out;
 }
 
 .navbar a:hover::after {
@@ -296,7 +300,6 @@ header nav .nav-right .header-btn > div input {
   background: rgb(211, 10, 10);
 }
 
-
 .home {
   width: 100%;
   min-height: 100vh;
@@ -311,7 +314,15 @@ header nav .nav-right .header-btn > div input {
 
 .carweb img {
   left: 1400px;
-  width: 100%;
+  width: 70%;
+}
+.carweb {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+.carweb p {
+  width: 30%;
 }
 
 .text h1 {
@@ -346,11 +357,13 @@ header nav .nav-right .header-btn > div input {
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
   width: 100%;
+  margin-bottom: 2rem;
 }
 
 .form-group {
   display: flex;
   flex-direction: column;
+  text-align: center;
 }
 
 .form-group label {
@@ -385,8 +398,10 @@ header nav .nav-right .header-btn > div input {
 
 #bookNow:hover {
   background-color: orangered;
-    transform: scale(1.1);
-
+  transform: scale(1.05);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 /* .form-container form {
@@ -446,12 +461,12 @@ header nav .nav-right .header-btn > div input {
 
 .heading span {
   font-weight: 500;
-  font-size: 32px;
+  font-size: 2rem;
   text-transform: uppercase;
 }
 
 .heading h1 {
-  font-size: 2rem;
+  font-size: 3rem;
 }
 
 #why-choose-us {
@@ -463,6 +478,7 @@ header nav .nav-right .header-btn > div input {
   width: 80%;
   margin: 0 auto;
   text-align: center;
+  padding: 1rem;
 }
 
 .header h2 {
@@ -505,7 +521,7 @@ header nav .nav-right .header-btn > div input {
 
 .feature {
   width: 30%;
-  text-align: left;
+  text-align: center;
 }
 
 .feature img {
@@ -526,13 +542,12 @@ header nav .nav-right .header-btn > div input {
 }
 
 .ride {
-
-    display: flex;
-    align-items: center;
-    grid-template-columns: repeat(auto-fit, minmax(250px, auto));
-    gap: 1rem;
-    margin-top: 2rem;
-
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+  gap: 1rem;
+  margin-top: 2rem;
 }
 
 .ride .ride-container {
@@ -565,6 +580,7 @@ header nav .nav-right .header-btn > div input {
   overflow: hidden;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s, box-shadow 0.3s;
+  text-align: center;
 }
 .box:hover {
   transform: scale(1.05);
@@ -576,6 +592,26 @@ header nav .nav-right .header-btn > div input {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1rem;
   margin-top: 2rem;
+}
+.sub-title {
+  font-size: 3rem;
+}
+#fb:hover {
+  color: blue;
+}
+#twt {
+  color: lightskyblue;
+}
+#inst {
+  color: #f09433;
+}
+#fb:hover {
+  color: blue;
+}
+
+.contact-right input,
+.contact-right textarea {
+  background-color: #ccc;
 }
 
 .services-container .box {
@@ -861,6 +897,7 @@ body {
 
 .view-all {
   margin-top: 20px;
+  background-color: orangered;
 }
 
 .view-all-button {
@@ -909,6 +946,7 @@ footer {
 .footer-container {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 1rem;
 }
 
 .call-us {
@@ -1039,8 +1077,7 @@ footer {
 
 /* end */
 
-FAQ Section */
-.container_1 {
+FAQ Section */ .container_1 {
   width: 100%;
   margin: auto;
   min-height: 100vh;
@@ -1056,6 +1093,7 @@ FAQ Section */
   width: 100%;
   max-width: 60rem;
   padding: 5rem;
+  margin: auto;
 }
 
 .accordion__title,
@@ -1070,7 +1108,7 @@ FAQ Section */
 
 .accordion {
   border-bottom: 0.1rem solid #dae1f5;
-  padding-bottom: 2rem;
+  padding: 1rem 1rem 2rem 1rem;
   margin-bottom: 3rem;
 }
 
@@ -1118,10 +1156,8 @@ FAQ Section */
 footer p {
   margin: 10px 0 0 0;
   text-align: center;
- 
-  
 }
-.topbtn{
+.topbtn {
   position: fixed;
   width: 50px;
   height: 50px;
@@ -1132,5 +1168,14 @@ footer p {
   line-height: 50px;
   user-select: none;
   font-size: 22px;
-  border-radius: 50%
+  border-radius: 50%;
+}
+
+@media (max-width: 1054px) {
+  header {
+    padding: 15px 40px;
+  }
+}
+.footer-column li a {
+  font-weight: bold;
 }
