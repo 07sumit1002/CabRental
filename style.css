@@ -440,6 +440,11 @@ header nav .nav-right .header-btn > div input {
   background: rgb(211, 15, 15);
 }
 
+.icon{
+  max-width: 4rem;
+  max-height: 4rem;
+}
+
 .heading {
   text-align: center;
 }
@@ -713,6 +718,7 @@ body {
   margin: 0;
   padding: 0;
 }
+
 /* #testimonials {
     padding: 50px 0;
 /*     background-color: #eeeff1; */
@@ -1051,7 +1057,7 @@ FAQ Section */
 
 .accordion__wrapper {
   background-color: #fff;
-  box-shadow: 0px 60px 56px -12px rgba(9, 40, 163, 0.05);
+  box-shadow: 0px 60px 56px -12px rgba(141, 164, 255, 0.05);
   border-radius: 2.5rem;
   width: 100%;
   max-width: 60rem;
