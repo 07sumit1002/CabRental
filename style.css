@@ -55,8 +55,11 @@ header {
     width: 60px;
     border-radius: 10px; /* This creates 10px rounded corners */
   }
-  ------------------------------------------
+  .CabRental_logo img {
+       margin: 9px 30px 0px 0px;
+  }
 
+  ------------------------------------------
   /* header nav {
     padding: 20px 40px 20px 100px;
     display: grid;
