@@ -529,8 +529,97 @@
                 <button class="view-all-button" id="view-all-button">View All</button>
             </div>
         </section>
-       
+
+    <!--mycode-->
+    <footer class="site-footer">
+        <div class="footer-container">
+            
+                <div >
+                    <p>Questions? Call 000-080-000-000</p>
+                    <span><button id="scrollToTopBtn" title="Go to top">Up</button></span>
+                </div>
+ 
+                <br>
+         
+            <div class="footer-row">
+                <!-- First Column -->
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="Contact us/contact.html">Contact Us</a></li>
+                        <li><a href="#">Privacy</a></li>
+                        <li><a href="#">Services</a></li>
+                    </ul>
+                </div>
+                <!-- Second Column -->
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Cookies Preferences</a></li>
+                        <li><a href="#">Legal Notices</a></li>
+                        <li><a href="#">Media Center</a></li>
+                    </ul>
+                </div>
+                <!-- Third Column -->
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="#">Account</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Corporate Information</a></li>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">Terms of Use</a></li>
+                    </ul>
+                </div>
+                
+            </div>
     
+            <!-- Social Media Icons -->
+            <div class="social-media">
+                <a href="#" class="facebook"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="linkedin"><i class="fab fa-linkedin"></i></a>
+            </div>
+            
+    
+            <!-- Horizontal Line -->
+            <hr>
+    
+            <!-- Copyright -->
+            <div class="footer-bottom">
+                <p>&copy; <script>document.write(new Date().getFullYear())</script> Company Name. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // Get the button
+let scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+// Show the button when scrolling down 100px from the top of the document
+window.onscroll = function() {
+  scrollFunction();
+};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+    scrollToTopBtn.style.display = "block";
+  } else {
+    scrollToTopBtn.style.display = "none";
+  }
+}
+
+// Scroll to the top of the document when the user clicks the button
+scrollToTopBtn.onclick = function() {
+  window.scrollTo({top: 0, behavior: 'smooth'}); // Smooth scroll to the top
+};
+
+    </script>
+
+       
+    <!---
     <footer>
         <div id="topbtn" class="topbtn">
             <a class="gotopbtn" href="#"><i class="fa-solid fa-angles-up"></i></a>
@@ -541,7 +630,7 @@
                 <p>Questions? Call 000-080-000-000</p>
         </section>
       
-            <!-- About -->
+
         <section class="about" id="about">
         
             <div class="footer-links">
@@ -579,12 +668,14 @@
             </div>
         </div>
         
-        <!-- <p>© 2024 CabRental. All rights reserved. |    Designed and Developed by Sumit Kumar</p> -->
+      
         <p> &copy; <script>document.write(new Date().getFullYear())</script> CabRental. All rights reserved. | Designed and Developed by Sumit Kumar</p>
          
     </div>
 
 </footer>
+
+-->
 
 
     <!-- Link to JS -->
