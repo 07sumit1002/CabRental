@@ -20,6 +20,48 @@
   --gradient: linear-gradient(#fe5b3d, #ffac38);
 }
 
+.about .row{
+  display: flex;
+  align-items: center;
+  gap: 8rem;
+  padding: 2rem 0;
+  padding-bottom: 3rem;
+}
+
+.about .row .video-container{
+  flex: 1 1 40rem;
+  position: relative;
+}
+
+.about .row .video-container video{
+  width: 100%;
+  border: 1.5rem solid #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1);
+  height: auto;
+  object-fit: cover;
+}
+
+.about .row .content{
+  flex:1 1 40rem;
+}
+
+.about .row .content h3{
+  font-size: 3rem;
+  color: #333;
+}
+
+.about .row .content .text-wrapper {
+  display: flex; /* Use flexbox for text */
+  gap: 1rem; /* Space between paragraphs */
+}
+
+.about .row .content .text-wrapper p {
+  font-size: 1.5rem; /* Adjust paragraph size as needed */
+  color: #999;
+  line-height: 1.5;
+}
+
 /*Custom Scroll Bar */
 html::-webkit-scrollbar {
   width: 0.5rem;
