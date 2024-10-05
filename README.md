@@ -9,9 +9,7 @@
 
 ---
 
-![CabRental Banner](https://via.placeholder.com/1200x400.png?text=CabRental+-+Decentralized+Vehicle+Rental+Platform)  
-*Replace the above placeholder with an actual banner image that highlights the platform.*
-
+![CabRental Banner](https://files.oaiusercontent.com/file-wDMnazXHbMBWLvOZriIheG36?se=2024-10-05T14%3A31%3A01Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D4ada165f-ec7e-4e50-bbab-726fe0dbfc1c.webp&sig=huNnI6YbT6hkQBMAaws0ByChllJDQb0/VCePqjq68Fk%3D)  
 ---
 
 ## 📝 **Table of Contents**
@@ -32,8 +30,7 @@
 
 **CabRental** is a cutting-edge decentralized vehicle rental platform designed to give users a seamless and secure way to rent vehicles. By integrating **Web3 technologies**, CabRental ensures enhanced privacy, security, and flexibility with **crypto-wallet authentication** and **smart contract-based transactions**. All the features, from login to booking management, are decentralized and blockchain-powered, making the user experience smooth, transparent, and tamper-proof.
 
-![Web3 Rental](https://via.placeholder.com/600x300.png?text=Decentralized+Rental+Platform)  
-*Replace this with a screenshot of the platform showing its interface or dashboard.*
+![Web3 Rental](https://files.oaiusercontent.com/file-3vRtOVQ6VXFOIvjeHEuIF03Q?se=2024-10-05T14%3A32%3A33Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3Dc15e91ce-61b7-482c-987c-66d9adaab9f6.webp&sig=xWHU67zr8OrTQulaEn1HgJP1NHx6jn6ibQTTGg4vEiQ%3D)  
 
 ---
 
