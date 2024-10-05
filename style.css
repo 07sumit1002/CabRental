@@ -531,10 +531,26 @@ header nav .nav-right .header-btn > div input {
     align-items: center;
     grid-template-columns: repeat(auto-fit, minmax(250px, auto));
     gap: 1rem;
-    margin-top: 2rem;
+    margin-top: 0rem;
 
 }
-
+.ride span{
+  font-size: 40px;
+  font-weight: 800;
+}
+.ride h1{
+  font-size: 30px;
+  font-weight: 500;
+  color: rgb(211, 15, 15);
+}
+.ride h2{
+  font-size: 30px;
+  font-family:Arial, Helvetica, sans-serif;
+}
+.ride p{
+  font-size: 18px;
+  padding-top: 20px;
+}
 .ride .ride-container {
   text-align: center;
   padding: 20px;
