@@ -1,74 +1,67 @@
-# 🚖 CabRental
+# 🚖 **CabRental**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Last Commit](https://img.shields.io/github/last-commit/07sumit1002/CabRental.svg)](https://github.com/07sumit1002/CabRental/commits/main)
 [![GitHub Issues](https://img.shields.io/github/issues/07sumit1002/CabRental.svg)](https://github.com/07sumit1002/CabRental/issues)
 [![GitHub Pull Requests](https://img.shields.io/github/issues-pr/07sumit1002/CabRental.svg)](https://github.com/07sumit1002/CabRental/pulls)
+[![Platform](https://img.shields.io/badge/platform-Web%20%26%20Blockchain-green.svg)](#)
+[![Technologies](https://img.shields.io/badge/Tech-HTML%20%7C%20CSS%20%7C%20JS%20%7C%20Node.js%20%7C%20Solidity-blue.svg)](#)
 
-## 📝 Table of Contents
+---
 
-- [🚖 CabRental](#-cabrental)
-  - [📝 Description](#-description)
-  - [🌟 Features](#-features)
-  - [💻 Technologies Used](#-technologies-used)
-  - [🔧 Installation](#-installation)
-  - [🛠 Web3 Integration Guide](#-web3-integration-guide)
-  - [📚 Usage](#-usage)
-  - [🤝 Contributing](#-contributing)
-  - [📄 License](#-license)
-  - [📫 Contact](#-contact)
+![CabRental Banner](https://via.placeholder.com/1200x400.png?text=CabRental+-+Decentralized+Vehicle+Rental+Platform)  
+*Replace the above placeholder with an actual banner image that highlights the platform.*
 
-## 📝 Description
+---
 
-**CabRental** is a decentralized vehicle rental platform that offers users a seamless and secure experience for renting vehicles. By integrating traditional technologies with cutting-edge Web3 innovations, CabRental ensures a modernized and trustworthy booking process. Key Web3 features include decentralized login via crypto wallets, smart contract-based transactions, and blockchain data handling, enhancing both flexibility and security.
+## 📝 **Table of Contents**
 
-## 🌟 Features
+- [📝 Description](#-description)
+- [🌟 Features](#-features)
+- [💻 Technologies Used](#-technologies-used)
+- [🔧 Installation](#-installation)
+- [🛠 Web3 Integration Guide](#-web3-integration-guide)
+- [📚 Usage](#-usage)
+- [🤝 Contributing](#-contributing)
+- [📄 License](#-license)
+- [📫 Contact](#-contact)
 
-- **Decentralized Login with MetaMask 🔐**  
-  Users can sign in using their crypto wallets instead of traditional login methods, enhancing security and privacy.
+---
 
-- **User Registration & Authentication 👤**  
-  Supports both social media and wallet-based authentication options for versatile user access.
+## 📝 **Description**
 
-- **Smart Contract-Based Payments 💰**  
-  Automated payment processing using Solidity smart contracts ensures secure and transparent transactions.
+**CabRental** is a cutting-edge decentralized vehicle rental platform designed to give users a seamless and secure way to rent vehicles. By integrating **Web3 technologies**, CabRental ensures enhanced privacy, security, and flexibility with **crypto-wallet authentication** and **smart contract-based transactions**. All the features, from login to booking management, are decentralized and blockchain-powered, making the user experience smooth, transparent, and tamper-proof.
 
-- **Vehicle Search & Booking 🚗**  
-  Users can search for vehicles by location, type, and availability with real-time checks for a smooth booking experience.
+![Web3 Rental](https://via.placeholder.com/600x300.png?text=Decentralized+Rental+Platform)  
+*Replace this with a screenshot of the platform showing its interface or dashboard.*
 
-- **Booking Management 🧾**  
-  Manage bookings with blockchain-powered tracking and verification for enhanced reliability.
+---
 
-- **Admin Dashboard 👨‍💼**  
-  Admins can manage bookings, view analytics, and verify transactions using blockchain technology.
+## 🌟 **Features**
 
-- **Notifications & Alerts 🔔**  
-  Receive email, SMS, and on-chain notifications for payment confirmations and updates.
+| Feature                         | Description |
+|----------------------------------|-------------|
+| **Decentralized Login** 🔐       | Secure login using MetaMask or any Web3-compatible wallet. |
+| **Smart Contract Payments** 💰   | Rental payments and refunds are handled via Ethereum smart contracts for full transparency. |
+| **Vehicle Search & Booking** 🚗  | Search for vehicles by location and type with real-time availability. |
+| **Admin Dashboard** 👨‍💼          | Admins can manage all bookings, view usage analytics, and verify transactions. |
+| **Notifications & Alerts** 🔔   | Get email, SMS, and on-chain notifications for bookings and payments. |
+| **User Feedback & Reviews** ⭐  | Transparent, immutable, and decentralized reviews stored on the blockchain. |
 
-- **User Feedback and Reviews ⭐**  
-  Decentralized storage of reviews and ratings ensures transparency and immutability using blockchain.
+Include feature-related visuals here:
+- **Vehicle Search Example:** A screenshot showing how a user searches for vehicles.
+- **Smart Contract Payments:** A diagram showcasing the blockchain interaction for payment processing.
 
-## 💻 Technologies Used
+---
 
-- **Front-end:**  
-  - HTML  
-  - CSS  
-  - JavaScript
+## 💻 **Technologies Used**
 
-- **Back-end:**  
-  - Node.js  
-  - PHP
+| **Frontend**             | **Backend**            | **Blockchain**           | **Database**     |
+|--------------------------|------------------------|--------------------------|------------------|
+| HTML, CSS, JavaScript     | Node.js, PHP           | Solidity, Web3.js, Ethers.js | MySQL           |
+| Bootstrap                 | Express.js             | MetaMask Integration      |                  |
 
-- **Smart Contracts:**  
-  - Solidity
-
-- **Blockchain Interaction:**  
-  - MetaMask  
-  - Web3.js  
-  - Ethers.js
-
-- **Database:**  
-  - MySQL
+---
 
 ## 🔧 Installation
 
@@ -115,43 +108,63 @@ cd CabRental
 
 - **Access the Application:**  
   Navigate to `http://localhost/CabRental` (or your configured local server URL) in your web browser.
-
-## 🛠 Web3 Integration Guide
+## 🛠 **Web3 Integration Guide**
 
 ### **Smart Contracts**
 
-- **Language:** Solidity  
-- **Purpose:** Create rental agreements, handle payment processing, and manage loyalty rewards.
+- Written in **Solidity** to handle booking agreements, payments, and refunds automatically.
+- Deployed on **Ethereum** for enhanced security.
 
-### **Blockchain Interaction**
+### **Blockchain Transactions**
 
-- **Wallet Integration:** MetaMask is used for decentralized wallet login.
-- **Library:** Web3.js handles all blockchain transactions and interactions.
+- Wallet authentication via **MetaMask** allows decentralized login.
+- **Web3.js** and **Ethers.js** are used to interact with the smart contracts for seamless blockchain operations.
 
-### **Backend Services**
+![MetaMask Wallet Connection](https://via.placeholder.com/500x300.png?text=MetaMask+Login+Prompt)  
+*Replace with an actual screenshot of MetaMask wallet login screen.*
 
-- **Runtime:** Node.js  
-- **Functions:**  
-  - Manage wallet verification  
-  - Handle data requests from the blockchain  
-  - Process transactions securely
+---
 
-## 📚 Usage
+## 📚 **Usage**
 
-1. **User Registration:**  
-   Users can register and authenticate using their preferred method (social media or crypto wallet).
+### **User Registration & Authentication:**
 
-2. **Search & Book Vehicles:**  
-   Utilize the search feature to find available vehicles based on location, type, and availability.
+- Users can register via social media or crypto wallets like **MetaMask** for enhanced security.
 
-3. **Manage Bookings:**  
-   View and manage your bookings through the user dashboard, with real-time updates and blockchain verification.
+![MetaMask Login](https://via.placeholder.com/500x300.png?text=MetaMask+Login)  
+*Replace this with an actual screenshot of MetaMask wallet login screen.*
 
-4. **Admin Management:**  
-   Admins can oversee all bookings, analyze usage data, and verify transactions through the admin dashboard.
+---
 
-5. **Receive Notifications:**  
-   Stay informed with real-time notifications regarding your bookings and payments.
+### **Search and Book a Vehicle:**
+
+- Use the search feature to find available vehicles based on your location and preferences.
+
+![Search and Book](https://via.placeholder.com/500x300.png?text=Search+and+Book+a+Vehicle)  
+*Replace this placeholder with a screenshot showing how users search and book vehicles.*
+
+---
+
+### **Manage Bookings:**
+
+- View booking details and cancel or modify bookings with real-time updates on the blockchain.
+
+![Manage Bookings](https://via.placeholder.com/500x300.png?text=Manage+Bookings)  
+*Replace this placeholder with screenshots showing how bookings are managed by the user.*
+
+---
+
+### **Receive Alerts & Notifications:**
+
+- Get notifications via **SMS**, **email**, and **on-chain updates** for bookings, payments, and cancellations.
+
+---
+
+### **Admin Dashboard:**
+
+- Admins can manage all bookings, analyze platform usage, and verify blockchain transactions.
+
+---
 
 ## 🤝 Contributing
 
