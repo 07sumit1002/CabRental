@@ -220,6 +220,20 @@ header nav .nav-right .header-btn > div input {
   background: rgb(231, 223, 223);
 }
 
+/*
+Added hover and color changes in footer 
+*/
+li a {
+  color: inherit;  /* Default color (will inherit the parent's color) */
+  text-decoration: none;  /* Removes underline from the link */
+  transition: color 0.3s ease;  /* Adds a smooth transition effect */
+}
+
+li a:hover {
+  color: rgb(182, 170, 170);  /* Changes the text color to black on hover */
+}
+
+
 
 
 .navbar {
