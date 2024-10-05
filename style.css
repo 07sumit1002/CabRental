@@ -1069,9 +1069,10 @@ FAQ Section */
 }
 
 .accordion {
-  border-bottom: 0.1rem solid #dae1f5;
+  border-bottom: 0.5rem solid #dae1f5;
   padding-bottom: 2rem;
   margin-bottom: 3rem;
+  border-radius: 30px;
 }
 
 .accordion__header {
@@ -1095,8 +1096,9 @@ FAQ Section */
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  color: #fff;
+  color:black;
   flex-shrink: 0;
+  font-weight: 900;
 }
 
 .accordion__question {
