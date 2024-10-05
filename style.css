@@ -59,8 +59,17 @@ header {
        margin: 9px 30px 0px 0px;
   }
 
-  ------------------------------------------
+
   /* header nav {
+
+  width: 60px;
+  border-radius: 60px;
+   This creates 10px rounded corners 
+}*/
+
+
+/* header nav {
+
     padding: 20px 40px 20px 100px;
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -116,26 +125,27 @@ header nav .nav-right .header-btn > div input {
     color: #fff;
 } */
 .sign-up {
-    padding: 8px 30px;
-    border: 1px solid transparent;
-    border-radius: 50px;
-    outline: none;
-    cursor: pointer;
-    font-size: 16px;
-    transition: all .5s ease-in-out;
+  padding: 8px 30px;
+  border: 1px solid transparent;
+  border-radius: 50px;
+  outline: none;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all .5s ease-in-out;
 }
 
 .sign-up {
-   background: transparent;
-   color: #eeeff1;
-   border-color: #ff0001; 
+  background: transparent;
+  color: #eeeff1;
+  border-color: #ff0001;
 }
 
 .sign-up:hover {
   /* background: #ffffff;*/
-    background: #ff0001;
-    color: #121212;
+  background: #ff0001;
+  color: #121212;
 }
+
 /*.navbar{
     display: flex;
 }
@@ -220,14 +230,31 @@ header nav .nav-right .header-btn > div input {
   background: rgb(231, 223, 223);
 }
 
+/*
+Added hover and color changes in footer 
+*/
+li a {
+  color: inherit;  /* Default color (will inherit the parent's color) */
+  text-decoration: none;  /* Removes underline from the link */
+  transition: color 0.3s ease;  /* Adds a smooth transition effect */
+}
+
+li a:hover {
+  color: rgb(182, 170, 170);  /* Changes the text color to black on hover */
+}
+
+
 
 
 .navbar {
   display: flex;
-  justify-content: space-between; /* Adjust alignment as needed */
+  justify-content: space-between;
+  /* Adjust alignment as needed */
   align-items: center;
-  background: #eeeff1; /* Example background color */
-  padding: 15px 100px; /* Example padding */
+  background: #eeeff1;
+  /* Example background color */
+  padding: 15px 100px;
+  /* Example padding */
 }
 
 .navbar ul {
@@ -236,14 +263,17 @@ header nav .nav-right .header-btn > div input {
 }
 
 .navbar li {
-  margin: 0 10px; /* Adjust margin between menu items */
+  margin: 0 10px;
+  /* Adjust margin between menu items */
 }
 
 .navbar a {
   text-decoration: none;
-  color: #1e1e1e; /* Example text color */
+  color: #1e1e1e;
+  /* Example text color */
   font-weight: 500;
-  padding: 10px 20px; /* Adjust padding as needed */
+  padding: 10px 20px;
+  /* Adjust padding as needed */
   position: relative;
 }
 
@@ -254,16 +284,19 @@ header nav .nav-right .header-btn > div input {
   bottom: -3px;
   width: 0;
   height: 2px;
-  background: #1e1e1e; /* Example underline color */
+  background: #1e1e1e;
+  /* Example underline color */
   transition: width .3s ease-in-out;
 }
 
 .navbar a:hover::after {
-  width: 100%; /* Adjust width of underline on hover */
+  width: 100%;
+  /* Adjust width of underline on hover */
 }
 
 .navbar .active::after {
-  width: 100%; /* Adjust width of underline for active link */
+  width: 100%;
+  /* Adjust width of underline for active link */
 }
 
 #menu-icon {
@@ -340,6 +373,7 @@ header nav .nav-right .header-btn > div input {
   margin-right: 1rem;
   cursor: pointer;
 }
+
 .booking-form {
   background-color: #ffffff;
   padding: 20px;
@@ -388,7 +422,7 @@ header nav .nav-right .header-btn > div input {
 
 #bookNow:hover {
   background-color: orangered;
-    transform: scale(1.1);
+  transform: scale(1.1);
 
 }
 
@@ -441,6 +475,11 @@ header nav .nav-right .header-btn > div input {
 
 .form-container form .btn:hover {
   background: rgb(211, 15, 15);
+}
+
+.icon{
+  max-width: 4rem;
+  max-height: 4rem;
 }
 
 .heading {
@@ -530,11 +569,11 @@ header nav .nav-right .header-btn > div input {
 
 .ride {
 
-    display: flex;
-    align-items: center;
-    grid-template-columns: repeat(auto-fit, minmax(250px, auto));
-    gap: 1rem;
-    margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+  gap: 1rem;
+  margin-top: 2rem;
 
 }
 
@@ -569,6 +608,7 @@ header nav .nav-right .header-btn > div input {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s, box-shadow 0.3s;
 }
+
 .box:hover {
   transform: scale(1.05);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
@@ -716,6 +756,7 @@ body {
   margin: 0;
   padding: 0;
 }
+
 /* #testimonials {
     padding: 50px 0;
 /*     background-color: #eeeff1; */
@@ -995,6 +1036,7 @@ footer {
 .heading {
   font-size: 40px;
 }
+
 .review .review-slider {
   box-shadow: var(--box-shadow);
 }
@@ -1042,8 +1084,7 @@ footer {
 
 /* end */
 
-FAQ Section */
-.container_1 {
+FAQ Section */ .container_1 {
   width: 100%;
   margin: auto;
   min-height: 100vh;
@@ -1054,7 +1095,7 @@ FAQ Section */
 
 .accordion__wrapper {
   background-color: #fff;
-  box-shadow: 0px 60px 56px -12px rgba(9, 40, 163, 0.05);
+  box-shadow: 0px 60px 56px -12px rgba(141, 164, 255, 0.05);
   border-radius: 2.5rem;
   width: 100%;
   max-width: 60rem;
@@ -1072,9 +1113,10 @@ FAQ Section */
 }
 
 .accordion {
-  border-bottom: 0.1rem solid #dae1f5;
+  border-bottom: 0.5rem solid #dae1f5;
   padding-bottom: 2rem;
   margin-bottom: 3rem;
+  border-radius: 30px;
 }
 
 .accordion__header {
@@ -1098,8 +1140,9 @@ FAQ Section */
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  color: #fff;
+  color:black;
   flex-shrink: 0;
+  font-weight: 900;
 }
 
 .accordion__question {
@@ -1121,10 +1164,11 @@ FAQ Section */
 footer p {
   margin: 10px 0 0 0;
   text-align: center;
- 
-  
+
+
 }
-.topbtn{
+
+.topbtn {
   position: fixed;
   width: 50px;
   height: 50px;
@@ -1136,4 +1180,141 @@ footer p {
   user-select: none;
   font-size: 22px;
   border-radius: 50%
+}
+
+
+/* Here are the styles for the theme toggel  */
+.theme-switch {
+  display: inline-block;
+  width: 60px;
+  height: 30px;
+  border-radius: 30px;
+  background: linear-gradient(49deg, #ffffff, #0644ff);
+  position: relative;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+  vertical-align: middle;
+}
+
+.theme-switch::before {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 24px;
+  height: 24px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: left 0.3s ease-in-out, background-image 0.3s ease-in-out;
+  background-image: url('Assets/moon.png');
+}
+
+.theme-switch.dark-theme {
+  background: linear-gradient(82deg, #4d1fff, #ffffff);
+}
+
+.theme-switch.dark-theme::before {
+  left: 33px;
+  background-image: url('Assets/sun.png');
+}
+/* Index..html dark styles */
+.dark-mode * {
+  color: white;
+  background-color: black;
+}
+
+.dark-mode .navbar a {
+  color: white;
+  background: rgb(0, 0, 0);
+}
+
+.dark-mode .navbar::after {
+  color: #ffffff;
+  background: white;
+}
+
+.dark-mode .navbar a:hover {
+  background: rgb(0, 0, 0);
+}
+
+.dark-mode .header-btn .sign-up {
+  background: #ff0624;
+  color: #fff;
+  border-radius: 0.5rem;
+}
+.dark-mode .header-btn .sign-up:hover {
+  background: #474fa1;
+}
+.dark-mode .carweb{
+  content: url("Car\ Website\ dark\ –\ 1@2x.png\ .png");
+  left: 1400px;
+  width: 100%;
+}
+.dark-mode .ride .ride-container .bx {
+  background: #000000;
+}
+.dark-mode .services-container .box {
+  box-shadow: 1px 4px 41px rgb(200 99 99);
+}
+.dark-mode .services-container .box  h2{
+  color: #474fa0;
+}
+.dark-mode .services-container .box  .btn{
+  background: rgb(211, 15, 15);
+}
+.dark-mode .services-container .box .btn:hover {
+  background: #474fa0;
+}
+.dark-mode #why-choose-us {
+  padding: 50px 0;
+  background-color: #000000;
+}
+.dark-mode .header h2 {
+  font-size: 24px;
+  color: #fff1f1;
+  margin-bottom: 10px;
+}
+.dark-mode .header h1 {
+  color: #fff1f1;
+}
+.dark-mode .header p {
+  color: #fff1f1;
+}
+.dark-mode .feature h3 {
+  color: #ffebeb;
+}
+.dark-mode .feature p {
+  color: #ffebeb;
+}
+.dark-mode .accordion__title, .faq h1{
+  color: #b1c4fa;
+}
+.dark-mode .accordion__wrapper{
+  box-shadow: 11px 1px 56px 0px rgb(153 173 255 / 95%);
+}
+.dark-mode [class^="ri-"], [class*=" ri-"] {
+  color: white;
+  background-color: black;
+}
+.dark-mode .accordion__header:hover {
+  background-color: #000000;
+}
+.dark-mode input[type="text"], input[type="email"], input[type="tel"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  color: white;
+  background: white;
+}
+.dark-mode .contact-right {
+  border-radius: 30px;
+  background: whitesmoke;
+}
+.dark-mode .testimonial {
+  box-shadow: -1px -1px 20px 5px rgb(255 80 80);
+}
+.dark-mode .footer-column ul li a {
+  color: #fff6f6;
 }
