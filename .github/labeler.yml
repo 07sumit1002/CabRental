@@ -1,0 +1,17 @@
+# .github/labeler.yml
+bug:
+  - "**bug**"
+  - "**fix**"
+  - "**error**"
+  - "**issue**"
+
+enhancement:
+  - "**feature**"
+  - "**enhancement**"
+  - "**add**"
+  - "**improve**"
+
+documentation:
+  - "**docs**"
+  - "**documentation**"
+  - "**readme**"
