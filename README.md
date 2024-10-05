@@ -9,7 +9,7 @@
 
 ---
 
-![CabRental Banner](https://files.oaiusercontent.com/file-wDMnazXHbMBWLvOZriIheG36?se=2024-10-05T14%3A31%3A01Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D4ada165f-ec7e-4e50-bbab-726fe0dbfc1c.webp&sig=huNnI6YbT6hkQBMAaws0ByChllJDQb0/VCePqjq68Fk%3D)  
+![CabRental Banner](https://files.oaiusercontent.com/file-E72nIXce4E1497vZoiZtGNTy?se=2024-10-05T14%3A35%3A16Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3Dff26116f-77dd-4e15-aee3-e867ef6fb7ac.webp&sig=HxDYb89JqJfRzXkedNoeoM9lt1eR7lOHwBwmwSBOZRI%3D)  
 ---
 
 ## 📝 **Table of Contents**
@@ -117,9 +117,7 @@ cd CabRental
 - Wallet authentication via **MetaMask** allows decentralized login.
 - **Web3.js** and **Ethers.js** are used to interact with the smart contracts for seamless blockchain operations.
 
-![MetaMask Wallet Connection](https://via.placeholder.com/500x300.png?text=MetaMask+Login+Prompt)  
-*Replace with an actual screenshot of MetaMask wallet login screen.*
-
+![MetaMask Wallet Connection](https://files.oaiusercontent.com/file-QyUAqocqj49rEEefvhalq9cF?se=2024-10-05T14%3A41%3A11Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3Dac428c5a-a433-4e8f-a5bd-54d007480062.webp&sig=yX9OkeQ1m8CXkHEoRXOD1K1%2BQh%2Big4EsWvhyt5t3T%2BU%3D) 
 ---
 
 ## 📚 **Usage**
@@ -127,28 +125,16 @@ cd CabRental
 ### **User Registration & Authentication:**
 
 - Users can register via social media or crypto wallets like **MetaMask** for enhanced security.
-
-![MetaMask Login](https://via.placeholder.com/500x300.png?text=MetaMask+Login)  
-*Replace this with an actual screenshot of MetaMask wallet login screen.*
-
 ---
 
 ### **Search and Book a Vehicle:**
 
 - Use the search feature to find available vehicles based on your location and preferences.
-
-![Search and Book](https://via.placeholder.com/500x300.png?text=Search+and+Book+a+Vehicle)  
-*Replace this placeholder with a screenshot showing how users search and book vehicles.*
-
 ---
 
 ### **Manage Bookings:**
 
 - View booking details and cancel or modify bookings with real-time updates on the blockchain.
-
-![Manage Bookings](https://via.placeholder.com/500x300.png?text=Manage+Bookings)  
-*Replace this placeholder with screenshots showing how bookings are managed by the user.*
-
 ---
 
 ### **Receive Alerts & Notifications:**
@@ -162,6 +148,7 @@ cd CabRental
 - Admins can manage all bookings, analyze platform usage, and verify blockchain transactions.
 
 ---
+![](https://files.oaiusercontent.com/file-iMGfRqXcT2UQ2czdvFJESwZN?se=2024-10-05T14%3A42%3A46Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3Dd9fbe6b9-67ec-4319-ae9f-e7f0ccef6f27.webp&sig=uYSddLInzeEpKTzu%2BMUDSZfsMueae9VhaUAT9O/AFQw%3D)
 
 ## 🤝 Contributing
 
