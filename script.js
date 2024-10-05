@@ -135,3 +135,43 @@ window.onscroll = function() {scrollFunction()};
       testimonialsContainer.appendChild(testimonialDiv);
     });
   });
+  const themeSwitch = document.getElementById('theme-switch'); // Ensure this matches your HTML button's ID
+  const body = document.body;
+  const header = document.querySelector('header');
+  const footer = document.querySelector('footer');
+  
+  // Function to enable dark mode
+  function enableDarkMode() {
+    themeSwitch.classList.add('dark-theme'); // Update the switch appearance
+      body.classList.add('dark-mode');
+      header.classList.add('dark-mode');
+      footer.classList.add('dark-mode');
+  }
+  
+  // Function to disable dark mode
+  function disableDarkMode() {
+    themeSwitch.classList.remove('dark-theme'); // Update the switch appearance
+      body.classList.remove('dark-mode');
+      header.classList.remove('dark-mode');
+      footer.classList.remove('dark-mode');
+  }
+  
+  // Event listener for dark mode toggle button
+  themeSwitch.addEventListener('click', () => {
+      if (body.classList.contains('dark-mode')) {
+        localStorage.removeItem('dark-mode'); // Remove from local storage
+          disableDarkMode(); // Switch to light mode
+      } else {
+          enableDarkMode(); // Switch to dark mode
+          localStorage.setItem('dark-mode', 'enabled'); // Save in local storage
+      }
+  });
+  
+  // Optional: Check the initial mode on page load
+  if (localStorage.getItem('dark-mode') === 'enabled') {
+      enableDarkMode();
+  }
+  
+  document.addEventListener('DOMContentLoaded', () => {
+      console.log("Welcome to ML Fusion Lab!");
+  });
