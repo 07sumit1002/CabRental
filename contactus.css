@@ -60,9 +60,29 @@ section {
   color: #FFF;
 }
 
+
+.back-button {
+  position: absolute;
+  top: 20px;
+  left: 40px;
+  background: rgb(240, 240, 240);
+  border: none;
+  color:rgb(240, 240, 240);
+  padding: 0px;
+  font-size: 0px;
+  cursor: pointer;
+  border-radius: 35%;
+  transition: background-color 0.3s, color 0.3s, transform 0.3s;
+  z-index: 1;
+}
+
+.back-button:hover {
+  transform: scale(1.25);
+  color: #000000; /* Yellow */
+}
 .row  {
   display: flex;
-  flwx-wrap: wrap;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
 }
