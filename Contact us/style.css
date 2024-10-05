@@ -84,3 +84,11 @@ form .btn2{
 .copyright i{
     color: #ff004f;
 }
+footer {
+    background-color: #c3dbce;
+    color: rgb(64, 32, 140);
+    padding: 20px; /* Adjust padding for footer */
+    text-align: center;
+    font-family: Arial, sans-serif;
+    width: 100%;
+}

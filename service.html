@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+    <link rel="icon" href="img/logo1.png" type="image/png">
+    <!-- MUI Link -->
+    <link href="https://cdn.jsdelivr.net/npm/@mui/material@5.0.0-alpha.50/dist/material.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/@mui/material@5.0.0-alpha.50/dist/material.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;               /* Enable flexbox layout */
+            flex-direction: column;      /* Arrange items in a column */
+            min-height: 100vh;          /* Full height of the viewport */
+        }
+
+        .service-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+            padding-top: 120px;
+            flex: 1;                    /* Allow this section to grow */
+        }
+
+        .service-box {
+            background: #f7f7f7;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-box:hover {
+            transform: translateY(-10px);
+        }
+
+        .service-box img {
+            max-width: 80%;
+            height: auto;
+            margin-bottom: 10px;
+            border-radius: 10px;
+        }
+
+        .service-box h2 {
+            color: #333;
+        }
+
+        .service-box ul {
+            text-align: left;
+            padding-left: 20px;
+            list-style-type: none;
+        }
+
+        .service-box ul li {
+            position: relative;
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        .service-box ul li::before {
+            content: '✔️';
+            position: absolute;
+            left: -25px;
+            color: #ff4081;
+        }
+
+        .book-now-btn {
+            background-color: #ff4081;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .book-now-btn:hover {
+            background-color: #ff80ab;
+        }
+
+        .mui-dialog .MuiDialog-paper {
+            padding: 20px;
+        }
+
+        .mui-dialog-title {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .form-input {
+            display: block;
+            width: 100%;
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+
+        footer {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .intro {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .gif-section {
+            text-align: center;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <a href="#" class="logo"><img src="img/logo.png" alt=""></a>
+        <div class="bx bx-menu" id="menu-icon"></div>
+        <ul class="navbar">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="ride.html">Ride</a></li>
+            <li><a href="service.html">Services</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="review.html">Reviews</a></li>
+            <li><a href="contactus.html">Contact</a></li>
+        </ul>
+        <div class="header-btn">
+            <a href="login.html" class="sign-up">Login</a>
+        </div>
+    </header>
+
+   <!-- Intro Section with Text First -->
+<div class="intro" style="margin-top: 100px;"> <!-- Adjust margin as needed -->
+    <h2>Welcome to Our Car Service</h2>
+    <p>We offer a wide range of transportation services to meet your needs. Our focus is on safety, comfort, and affordability, making every journey a delightful experience.</p>
+</div>
+<div class="gif-section">
+    <img src="img/family-w.gif" alt="Family Car Service">
+</div>
+
+
+
+    <!-- Services Section -->
+    <div class="service-container">
+        <!-- Pink Cab for Women -->
+        <div class="service-box">
+            <img src="img/pink-w.jpg" alt="Pink Cab">
+            <h2>Pink Cab for Women</h2>
+            <ul>
+                <li>Female drivers</li>
+                <li>Safe city travels</li>
+                <li>Affordable fares</li>
+                <li>24/7 service</li>
+                <li>Real-time tracking</li>
+            </ul>
+            <button class="book-now-btn" onclick="openBookingForm('Pink Cab for Women')">Book Now</button>
+        </div>
+
+        <!-- City Travels -->
+        <div class="service-box">
+            <img src="img/taxi-w.avif" alt="City Travels">
+            <h2>City Travels</h2>
+            <ul>
+                <li>Comfortable rides</li>
+                <li>Multiple destinations</li>
+                <li>Real-time tracking</li>
+                <li>Instant bookings</li>
+                <li>Professional drivers</li>
+            </ul>
+            <button class="book-now-btn" onclick="openBookingForm('City Travels')">Book Now</button>
+        </div>
+
+        <!-- Special Occasions -->
+        <div class="service-box">
+            <img src="img/special-w.jpg" alt="Special Occasions">
+            <h2>Special Occasions</h2>
+            <ul>
+                <li>Luxury cabs</li>
+                <li>Decorated rides</li>
+                <li>Special packages</li>
+                <li>Exclusive deals</li>
+                <li>Professional drivers</li>
+            </ul>
+            <button class="book-now-btn" onclick="openBookingForm('Special Occasions')">Book Now</button>
+        </div>
+    </div>
+
+    <!-- Additional Content Section with GIF -->
+    <div class="gif-section">
+        <img src="img/girl-w.gif" alt="Girl with Cab Service">
+    </div>
+    <div class="intro">
+        <h2>Reliable Services Just for You</h2>
+        <p>We understand that every trip is unique, which is why we cater to various needs, ensuring you have the best experience with us. Book your next ride with us today!</p>
+    </div>
+
+    <!-- Services Section Continued -->
+    <div class="service-container">
+        <!-- Hourly Rentals -->
+        <div class="service-box">
+            <img src="img/rental-w.jpg" alt="Hourly Rentals">
+            <h2>Hourly Rentals</h2>
+            <ul>
+                <li>Affordable hourly rates</li>
+                <li>Multiple stops</li>
+                <li>Flexible bookings</li>
+                <li>24/7 availability</li>
+                <li>Professional service</li>
+            </ul>
+            <button class="book-now-btn" onclick="openBookingForm('Hourly Rentals')">Book Now</button>
+        </div>
+
+        <!-- App for Taxi Booking -->
+        <div class="service-box">
+            <img src="img/app-w.jpg" alt="App for Taxi Booking">
+            <h2>App for Taxi Booking</h2>
+            <ul>
+                <li>Easy booking</li>
+                <li>Real-time tracking</li>
+                <li>Multiple payment options</li>
+                <li>24/7 customer support</li>
+                <li>Download our app for exclusive deals</li>
+            </ul>
+            <button class="book-now-btn" onclick="notifyAppDownload()">Download App</button>
+        </div>
+
+        <!-- 24/7 Service -->
+        <div class="service-box">
+            <img src="img/24-w.jpg" alt="24/7 Service">
+            <h2>24/7 Service</h2>
+            <ul>
+                <li>Available around the clock</li>
+                <li>Fast response time</li>
+                <li>Professional drivers</li>
+                <li>Real-time tracking</li>
+                <li>Reliable service anytime</li>
+            </ul>
+            <button class="book-now-btn" onclick="openBookingForm('24/7 Service')">Book Now</button>
+        </div>
+    </div>
+
+    <!-- Final GIF Section -->
+    <div class="gif-section">
+        <img src="img/boy-w.gif" alt="Ride with Us">
+    </div>
+    <div class="intro">
+        <h2>Join Us for an Amazing Ride Experience!</h2>
+        <p>Your comfort is our priority! Experience the best in transportation with our dedicated services. We are committed to providing the best rides at the best prices.</p>
+    </div>
+
+    <!-- MUI Dialog for Booking Form -->
+    <dialog id="bookingFormDialog" class="mui-dialog">
+        <div class="mui-dialog-title">
+            <h3>Book Now</h3>
+            <button onclick="closeBookingForm()">X</button>
+        </div>
+        <form id="bookingForm">
+            <input type="text" id="name" class="form-input" placeholder="Name" required>
+            <input type="tel" id="phone" class="form-input" placeholder="Phone Number" required>
+            <input type="text" id="pickup" class="form-input" placeholder="Pickup Location" required>
+            <input type="text" id="drop" class="form-input" placeholder="Drop Location" required>
+            <input type="date" id="date" class="form-input" required>
+            <button type="submit" class="book-now-btn">Submit</button>
+        </form>
+    </dialog>
+
+    <script>
+        function openBookingForm(serviceType) {
+            document.getElementById('bookingFormDialog').showModal();
+            document.getElementById('bookingForm').onsubmit = function (event) {
+                event.preventDefault();
+                const driverDetails = "Driver's name: John Doe, Phone: +1234567890"; // You can customize this as needed
+                alert('Booking confirmed for ' + serviceType + '!\n' + driverDetails + '\nHappy Journey!');
+                closeBookingForm();
+            };
+        }
+    
+        function closeBookingForm() {
+            document.getElementById('bookingFormDialog').close();
+        }
+    
+        function notifyAppDownload() {
+            alert('Download our app for exclusive deals!');
+        }
+    </script>
+    
+
+
+<footer style="background-color: #c3dbce; color: rgb(64, 32, 140); padding: 20px; text-align: center; font-family: Arial, sans-serif; display: flex; justify-content: space-between; align-items: stretch; width: 100%; font-size: 16px;"> <!-- Increased the font-size -->
+    <!-- Left Side: Contact Info -->
+    <div style="text-align: left; flex: 1; display: flex; flex-direction: column; justify-content: space-between;">
+        <h3 style="color: #40208c; margin-bottom: 10px; padding-left: 15px; font-size: 18px;">Quick Links</h3> <!-- Increased h3 font-size -->
+        <div style="font-size: 14px;"> <!-- Base font-size for links and paragraphs -->
+            <a href="contactus.html" style="color: #ff4081; text-decoration: none; display: block; margin: 5px 0; font-size: 16px;"> <!-- Increased font-size for links -->
+                <i class="fas fa-phone" style="margin-right: 5px; padding-left: 15px"></i> Contact Us
+            </a>
+            <p style="margin: 0; font-size: 14px; padding-left: 15px">Feel free to reach us for more details.</p>
+
+            <a href="ride.html" style="color: #ff4081; text-decoration: none; display: block; margin: 5px 0; font-size: 16px;">
+                <i class="fas fa-taxi" style="margin-right: 5px; padding-left: 15px"></i> Ride
+            </a>
+            <p style="margin: 0; font-size: 14px; padding-left: 15px">Find a ride that's right for you.</p>
+
+            <a href="review.html" style="color: #ff4081; text-decoration: none; display: block; margin: 5px 0; font-size: 16px;">
+                <i class="fas fa-star" style="margin-right: 5px; padding-left: 15px"></i> Reviews
+            </a>
+            <p style="margin: 0; font-size: 14px; padding-left: 15px">Check out what our customers say.</p>
+
+            <a href="about.html" style="color: #ff4081; text-decoration: none; display: block; margin: 5px 0; font-size: 16px;">
+                <i class="fas fa-info-circle" style="margin-right: 5px; padding-left: 15px"></i> About
+            </a>
+            <p style="margin: 0; font-size: 14px; padding-left: 15px">Learn more about our services.</p>
+        </div>
+    </div>
+
+    <!-- Center Section: Copyright and Details -->
+    <div style="text-align: center; flex: 1; display: flex; flex-direction: column; justify-content: center;">
+        <p style="margin: 0; font-size: 16px;">&copy; <script>document.write(new Date().getFullYear())</script> CabRental. All rights reserved.</p>
+        <p style="font-size: 14px; margin-top: 10px;">Our mission is to provide the best cab services for all your travel needs, whether it’s city transfers or special occasions.</p>
+    </div>
+
+    <!-- Right Side: Social Media Links with Animations -->
+    <div style="flex: 1; text-align: right; display: flex; flex-direction: column; justify-content: space-between;">
+        <h3 style="color: #40208c; margin-bottom: 10px; padding-right: 20px; padding-top: 10px; font-size: 18px;">Follow Us On</h3>
+        <div style="margin-right: 10px;">
+            <a href="https://facebook.com" target="_blank" style="color: #3b5998; margin: 0 10px; font-size: 24px; text-decoration: none; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://twitter.com" target="_blank" style="color: #00acee; margin: 0 10px; font-size: 24px; text-decoration: none; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://instagram.com" target="_blank" style="color: #e1306c; margin: 0 10px; font-size: 24px; text-decoration: none; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://linkedin.com" target="_blank" style="color: #0e76a8; margin: 0 10px; font-size: 24px; text-decoration: none; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://youtube.com" target="_blank" style="color: #FF0000; margin: 0 10px; font-size: 24px; text-decoration: none; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'">
+                <i class="fab fa-youtube"></i>
+            </a>
+        </div>
+    </div>
+</footer>
+
+<!-- Add Font Awesome CDN for icons -->
+<script src="https://kit.fontawesome.com/2815a7015d.js" crossorigin="anonymous"></script>
+
+
+
+</body>
+
+</html>
