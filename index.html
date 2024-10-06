@@ -738,38 +738,42 @@
             </div>
         </div>
         
-        <!-- <p>© 2024 CabRental. All rights reserved. |    Designed and Developed by Sumit Kumar</p> -->
-        <p> &copy; <script>document.write(new Date().getFullYear())</script> CabRental. All rights reserved. | Designed and Developed by Sumit Kumar</p>
-         
-    </div>
+        
+           <!-- <p>© 2024 CabRental. All rights reserved. |    Designed and Developed by Sumit Kumar</p> -->
+        <p> &copy;
+            <script>document.write(new Date().getFullYear())</script> CabRental. All rights reserved. | Designed and
+            Developed by Sumit Kumar
+        </p>
 
-</footer>
+        </div>
+
+        </footer>
 
 
-    <!-- Link to JS -->
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <!-- Link to JS -->
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
-    <script src="main.js"></script>
-    <script src="script.js"></script>
-    <script>
-        const topButton = document.getElementById("topbtn");
-        window.onscroll = function () {
-            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-                topButton.style.display = "block";
-            } else {
-                topButton.style.display = "none";
-            }
-        };
-        topButton.onclick = function (event) {
-            event.preventDefault(); 
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'  
-            });
-        };
-    </script>
+        <script src="main.js"></script>
+        <script src="script.js"></script>
+        <script>
+            const topButton = document.getElementById("topbtn");
+            window.onscroll = function () {
+                if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                    topButton.style.display = "block";
+                } else {
+                    topButton.style.display = "none";
+                }
+            };
+            topButton.onclick = function (event) {
+                event.preventDefault();
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            };
+        </script>
     <button id="toggle-theme-button">Toggle Dark Mode</button>
 </body>
 

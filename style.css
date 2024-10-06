@@ -1186,11 +1186,7 @@ footer p {
 
 }
 
-
-
-
 .topbtn {
-
   position: fixed;
   width: 50px;
   height: 50px;
@@ -1341,59 +1337,40 @@ footer p {
   color: #fff6f6;
 }
 
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #fff;
-    position: relative;
+.booking-form .form-group input,
+.booking-form .form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: var(--input-bg-color);
+    color: var(--input-text-color);
+    transition: background-color 0.3s, color 0.3s;
 }
 
-.navbar {
-    display: flex;
-    list-style: none;
+/* Dark mode styles */
+body.dark-mode {
+    --input-bg-color: #333;
+    --input-text-color: #fff;
 }
 
-.header-btn {
-    margin-left: 20px;
+body:not(.dark-mode) {
+    --input-bg-color: #fff;
+    --input-text-color: #000;
 }
 
-.header-btn .sign-up {
-    padding: 10px 20px;
-    background-color: #000;
+/* Additional dark mode styles for input fields */
+body.dark-mode .booking-form .form-group input,
+body.dark-mode .booking-form .form-group select {
+    background-color: #333;
     color: #fff;
-    border-radius: 5px;
-    text-decoration: none;
+    border-color: #555;
 }
 
-@media (max-width: 768px) {
-    header {
-        flex-wrap: wrap;
-    }
-
-    .navbar {
-        display: none; }
-
-    #menu-icon {
-        display: block; 
-        font-size: 24px;
-        cursor: pointer;
-    }
-
-    .header-btn {
-        display: block;
-        margin: 10px 0;
-        text-align: center; 
-    }
-
-  
-    #menu-icon.active + .navbar {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        text-align: center;
-    }
+body.dark-mode .booking-form .form-group input::placeholder,
+body.dark-mode .booking-form .form-group select::placeholder {
+    color: #aaa;
 }
 /* Light mode (default styles) */
 body {
