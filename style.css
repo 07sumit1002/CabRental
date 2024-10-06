@@ -1395,11 +1395,17 @@ header {
         text-align: center;
     }
 }
+/* Light mode (default styles) */
+body {
+  background-color: #ffffff;
+  color: #000000;
+}
+
 .headings {
   text-align: center;
   margin: 20px 0;
   padding: 10px;
-  background-color: #f5f5f5;
+  /* background-color: #f5f5f5; */
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -1416,12 +1422,13 @@ header {
   color: #333;
   margin: 0;
 }
+
 .holidayintro {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   padding: 20px;
-  background-color: #f9f9f9;
+  /* background-color: #f9f9f9; */
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin: 20px 0;
@@ -1457,27 +1464,30 @@ header {
   font-size: 1em;
   cursor: pointer;
   transition: background-color 0.3s;
+  position: relative;
+  margin-top: 29px;
 }
 
 .holidayintro button:hover {
   background-color: #0056b3;
 }
+
 .trendingHolidays {
   display: flex;
-  flex-wrap: nowrap; /* Ensure all items are in a single row */
+  flex-wrap: nowrap;
   justify-content: space-around;
   padding: 20px;
-  background-color: #f9f9f9;
+  /* background-color: #f9f9f9; */
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin: 20px 0;
-  overflow-x: auto; /* Allow horizontal scrolling if needed */
+  overflow-x: auto;
 }
 
 .city {
-  flex: 0 0 300px; /* Fixed width for each city element */
+  flex: 0 0 300px;
   margin: 15px;
-  background-color: #fff;
+  /* background-color: #fff; */
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
@@ -1490,14 +1500,14 @@ header {
 
 .cityimage img {
   width: 100%;
-  height: 200px; /* Set a fixed height for all images */
-  object-fit: cover; /* Ensure the image covers the area without distortion */
+  height: 200px;
+  object-fit: cover;
   border-bottom: 1px solid #ddd;
 }
 
 .cityinfo {
   padding: 15px;
-  text-align: justify; /* Justify the text */
+  text-align: justify;
 }
 
 .cityinfo h1 {
@@ -1510,7 +1520,7 @@ header {
   font-size: 1em;
   color: #666;
   margin: 10px 0;
-  text-align: justify; /* Justify the text */
+  text-align: justify;
 }
 
 .cityinfo .btn {
@@ -1528,19 +1538,20 @@ header {
 .cityinfo .btn:hover {
   background-color: #0056b3;
 }
+
 .allcityRoadtrips {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 columns */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
   padding: 20px;
-  background-color: #f9f9f9;
+  /* background-color: #f9f9f9; */
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin: 20px 0;
 }
 
 .othercity {
-  background-color: #fff;
+  /* background-color: #fff; */
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
@@ -1555,9 +1566,10 @@ header {
 
 .othercityImage img {
   width: 100%;
-  height: 150px; /* Set a fixed height for all images */
-  object-fit: cover; /* Ensure the image covers the area without distortion */
+  height: 150px;
+  object-fit: cover;
   border-bottom: 1px solid #ddd;
+  border-radius: 8px;
 }
 
 .othercity h3 {
@@ -1570,4 +1582,83 @@ header {
   font-size: 1em;
   color: #666;
   margin: 10px 0;
+}
+
+
+body[data-theme="dark"] {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+body[data-theme="dark"] .headings {
+  background-color: #000; /* Set background to black */
+  border: 2px  white;
+  border-radius: 8px;
+}
+
+body[data-theme="dark"] .headings span {
+  color: #ffffff;
+  border: 2px  white;
+
+}
+
+body[data-theme="dark"] .headings h1 {
+  color: #f5f5f5;
+  border: 2px  white;
+
+}
+
+/* Update the holiday section background to black */
+body[data-theme="dark"] .holidayintro {
+  background-color: #000; /* Set to black */
+  border: 2px solid white;
+  border: 2px  white;
+  border-radius: 8px;
+}
+
+body[data-theme="dark"] .holidayintro label {
+  color: #f5f5f5;
+}
+
+body[data-theme="dark"] .holidayintro input,
+body[data-theme="dark"] .holidayintro select {
+  background-color: #444;
+  border-color: #555;
+  color: white;
+}
+
+body[data-theme="dark"] .trendingHolidays {
+  background-color: #000; /* Set to black */
+}
+
+body[data-theme="dark"] .city {
+  background-color: #222; /* Slightly lighter than black for contrast */
+}
+
+body[data-theme="dark"] .cityinfo h1 {
+  color: #f5f5f5;
+}
+
+body[data-theme="dark"] .cityinfo p {
+  color: #bbb;
+}
+
+body[data-theme="dark"] .cityinfo .btn {
+  background-color: #0056b3;
+}
+
+body[data-theme="dark"] .allcityRoadtrips {
+  background-color: #000; /* Set to black */
+}
+
+body[data-theme="dark"] .othercity {
+  background-color: #222; /* Slightly lighter than black for contrast */
+}
+
+body[data-theme="dark"] .othercity h3 {
+  color: #f5f5f5;
+}
+
+body[data-theme="dark"] .othercity p {
+  color: #bbb;
 }

@@ -175,47 +175,9 @@ window.onscroll = function() {scrollFunction()};
   document.addEventListener('DOMContentLoaded', () => {
       console.log("Welcome to ML Fusion Lab!");
   });
-  document.addEventListener("DOMContentLoaded", function() {
-    // Functionality for "Back to Top" button
-    const topButton = document.getElementById("topbtn");
-    window.onscroll = function () {
-        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-            topButton.style.display = "block";
-        } else {
-            topButton.style.display = "none";
-        }
-    };
-    topButton.onclick = function (event) {
-        event.preventDefault(); 
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'  
-        });
-    };
+  const toggleDarkMode = () => {
+    document.body.dataset.theme = document.body.dataset.theme === "dark" ? "light" : "dark";
+};
 
-    // Functionality for Holiday Packages
-    const searchButton = document.getElementById("search");
-    searchButton.addEventListener("click", function() {
-        const sourceCity = document.getElementById("sourceCity").value;
-        const days = document.getElementById("days").value;
-        const pickupDate = document.getElementById("pickupDate").value;
-
-        if (!sourceCity || !days || !pickupDate) {
-            alert("Please fill in all fields.");
-            return;
-        }
-
-        alert(`Searching for holiday packages from ${sourceCity} for ${days} days starting on ${pickupDate}.`);
-        // Add your search logic here
-    });
-
-    const viewDetailsButtons = document.querySelectorAll(".city .btn");
-    viewDetailsButtons.forEach(button => {
-        button.addEventListener("click", function(event) {
-            event.preventDefault();
-            const cityName = this.closest(".city").querySelector("h1").innerText;
-            alert(`Viewing details for ${cityName}.`);
-            // Add your view details logic here
-        });
-    });
-});
+// Add this function to a button click event
+document.getElementById("toggle-theme-button").addEventListener("click", toggleDarkMode);
