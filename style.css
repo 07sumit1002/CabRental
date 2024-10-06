@@ -1342,6 +1342,34 @@ footer p {
 .dark-mode .footer-column ul li a {
   color: #fff6f6;
 }
+@media (prefers-color-scheme: dark) {
+  :root {
+    --main-color: #b02f18;
+    --second-color: #ffac38;
+    --text-color: #e0e0e0;
+    --gradient: linear-gradient(#fe5b3d, #ffac38);
+    --background-color: #121212;
+    --card-background-color: #1e1e1e;
+    --button-background-color: #1a73e8;
+    --button-hover-background-color: #135ab6;
+    --border-color: #444;
+    --box-shadow-color: rgba(255, 255, 255, 0.1);
+  }
+}
+
+/*Custom Scroll Bar */
+html::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+html::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: rgb(220, 215, 215);
+  border-radius: 5rem;
+}
 .headings {
   text-align: center;
   margin: 20px 0;
@@ -1565,4 +1593,16 @@ footer p {
     width: 100%;
     text-align: center;
   }
+}
+.dark-mode .contact-right {
+  border-radius: 30px;
+  background: whitesmoke;
+}
+
+.dark-mode .testimonial {
+  box-shadow: -1px -1px 20px 5px rgb(255 80 80);
+}
+
+.dark-mode .footer-column ul li a {
+  color: #fff6f6;
 }
