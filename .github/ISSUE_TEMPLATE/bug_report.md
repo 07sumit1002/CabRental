@@ -1,12 +1,4 @@
 ---
-name: Bug report
-about: Create a report to help us improve
-title: ''
-labels: ''
-assignees: ''
-
----
-
 name: Bug report 🐞
 description: File a bug report
 title: "[Bug]: "
@@ -55,3 +47,4 @@ body:
           required: false
         - label: "I'm willing to provide further clarification or assistance if needed."
           required: false
+--- 
