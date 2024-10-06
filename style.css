@@ -1336,3 +1336,39 @@ footer p {
 .dark-mode .footer-column ul li a {
   color: #fff6f6;
 }
+
+.booking-form .form-group input,
+.booking-form .form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: var(--input-bg-color);
+    color: var(--input-text-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    --input-bg-color: #333;
+    --input-text-color: #fff;
+}
+
+body:not(.dark-mode) {
+    --input-bg-color: #fff;
+    --input-text-color: #000;
+}
+
+/* Additional dark mode styles for input fields */
+body.dark-mode .booking-form .form-group input,
+body.dark-mode .booking-form .form-group select {
+    background-color: #333;
+    color: #fff;
+    border-color: #555;
+}
+
+body.dark-mode .booking-form .form-group input::placeholder,
+body.dark-mode .booking-form .form-group select::placeholder {
+    color: #aaa;
+}
