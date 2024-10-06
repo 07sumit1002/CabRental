@@ -1372,11 +1372,6 @@ body.dark-mode .booking-form .form-group input::placeholder,
 body.dark-mode .booking-form .form-group select::placeholder {
     color: #aaa;
 }
-/* Light mode (default styles) */
-body {
-  background-color: #ffffff;
-  color: #000000;
-}
 
 .headings {
   text-align: center;
