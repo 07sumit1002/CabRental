@@ -1336,3 +1336,58 @@ footer p {
 .dark-mode .footer-column ul li a {
   color: #fff6f6;
 }
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    position: relative;
+}
+
+.navbar {
+    display: flex;
+    list-style: none;
+}
+
+.header-btn {
+    margin-left: 20px;
+}
+
+.header-btn .sign-up {
+    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-wrap: wrap;
+    }
+
+    .navbar {
+        display: none; }
+
+    #menu-icon {
+        display: block; 
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    .header-btn {
+        display: block;
+        margin: 10px 0;
+        text-align: center; 
+    }
+
+  
+    #menu-icon.active + .navbar {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+}
