@@ -18,6 +18,12 @@
   --second-color: #ffac38;
   --text-color: #444;
   --gradient: linear-gradient(#fe5b3d, #ffac38);
+  --background-color: #f9f9f9;
+  --card-background-color: #fff;
+  --button-background-color: #007bff;
+  --button-hover-background-color: #0056b3;
+  --border-color: #ddd;
+  --box-shadow-color: rgba(0, 0, 0, 0.1);
 }
 
 /*Custom Scroll Bar */
@@ -569,7 +575,7 @@ li a:hover {
 
 .ride {
 
-  
+
     display: flex;
     align-items: center;
     grid-template-columns: repeat(auto-fit, minmax(250px, auto));
