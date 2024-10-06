@@ -18,12 +18,6 @@
   --second-color: #ffac38;
   --text-color: #444;
   --gradient: linear-gradient(#fe5b3d, #ffac38);
-  --background-color: #f9f9f9;
-  --card-background-color: #fff;
-  --button-background-color: #007bff;
-  --button-hover-background-color: #0056b3;
-  --border-color: #ddd;
-  --box-shadow-color: rgba(0, 0, 0, 0.1);
 }
 
 /*Custom Scroll Bar */
@@ -1192,7 +1186,11 @@ footer p {
 
 }
 
+
+
+
 .topbtn {
+
   position: fixed;
   width: 50px;
   height: 50px;
@@ -1342,33 +1340,60 @@ footer p {
 .dark-mode .footer-column ul li a {
   color: #fff6f6;
 }
-@media (prefers-color-scheme: dark) {
-  :root {
-    --main-color: #b02f18;
-    --second-color: #ffac38;
-    --text-color: #e0e0e0;
-    --gradient: linear-gradient(#fe5b3d, #ffac38);
-    --background-color: #121212;
-    --card-background-color: #1e1e1e;
-    --button-background-color: #1a73e8;
-    --button-hover-background-color: #135ab6;
-    --border-color: #444;
-    --box-shadow-color: rgba(255, 255, 255, 0.1);
-  }
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    position: relative;
 }
 
-/*Custom Scroll Bar */
-html::-webkit-scrollbar {
-  width: 0.5rem;
+.navbar {
+    display: flex;
+    list-style: none;
 }
 
-html::-webkit-scrollbar-track {
-  background: transparent;
+.header-btn {
+    margin-left: 20px;
 }
 
-html::-webkit-scrollbar-thumb {
-  background: rgb(220, 215, 215);
-  border-radius: 5rem;
+.header-btn .sign-up {
+    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-wrap: wrap;
+    }
+
+    .navbar {
+        display: none; }
+
+    #menu-icon {
+        display: block; 
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    .header-btn {
+        display: block;
+        margin: 10px 0;
+        text-align: center; 
+    }
+
+  
+    #menu-icon.active + .navbar {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
 }
 .headings {
   text-align: center;
@@ -1439,18 +1464,18 @@ html::-webkit-scrollbar-thumb {
 }
 .trendingHolidays {
   display: flex;
-  flex-wrap: nowrap; 
+  flex-wrap: nowrap; /* Ensure all items are in a single row */
   justify-content: space-around;
   padding: 20px;
   background-color: #f9f9f9;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin: 20px 0;
-  overflow-x: auto; 
+  overflow-x: auto; /* Allow horizontal scrolling if needed */
 }
 
 .city {
-  flex: 0 0 300px; 
+  flex: 0 0 300px; /* Fixed width for each city element */
   margin: 15px;
   background-color: #fff;
   border-radius: 10px;
@@ -1465,14 +1490,14 @@ html::-webkit-scrollbar-thumb {
 
 .cityimage img {
   width: 100%;
-  height: 200px;
-  object-fit: cover; 
+  height: 200px; /* Set a fixed height for all images */
+  object-fit: cover; /* Ensure the image covers the area without distortion */
   border-bottom: 1px solid #ddd;
 }
 
 .cityinfo {
   padding: 15px;
-  text-align: justify; 
+  text-align: justify; /* Justify the text */
 }
 
 .cityinfo h1 {
@@ -1485,7 +1510,7 @@ html::-webkit-scrollbar-thumb {
   font-size: 1em;
   color: #666;
   margin: 10px 0;
-  text-align: justify; 
+  text-align: justify; /* Justify the text */
 }
 
 .cityinfo .btn {
@@ -1545,64 +1570,4 @@ html::-webkit-scrollbar-thumb {
   font-size: 1em;
   color: #666;
   margin: 10px 0;
-}
-.roadtripIntro {
-  text-align: center;
-  margin: 20px 0;
-  padding: 10px;
-  background-color: #f5f5f5;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.roadtripIntro h2 {
-  font-size: 2em;
-  color: #333;
-  margin-bottom: 10px;
-}
-
-.roadtripIntro p {
-  font-size: 1.2em;
-  color: #666;
-  margin: 0;
-}
-@media (max-width: 768px) {
-  header {
-    flex-wrap: wrap;
-  }
-
-  .navbar {
-    display: none;
-  }
-
-  #menu-icon {
-    display: block;
-    font-size: 24px;
-    cursor: pointer;
-  }
-
-  .header-btn {
-    display: block;
-    margin: 10px 0;
-    text-align: center;
-  }
-
-  #menu-icon.active + .navbar {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    text-align: center;
-  }
-}
-.dark-mode .contact-right {
-  border-radius: 30px;
-  background: whitesmoke;
-}
-
-.dark-mode .testimonial {
-  box-shadow: -1px -1px 20px 5px rgb(255 80 80);
-}
-
-.dark-mode .footer-column ul li a {
-  color: #fff6f6;
 }
