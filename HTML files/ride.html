@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cabshare</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
     <!-- Link to CSS -->
     <link rel="stylesheet" href="/CSS files/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
@@ -228,6 +230,7 @@
         <div class="header-btn">
             <a href="/HTML files/login.html" class="sign-up">Login</a>
         </div>
+        <div class="theme-switch" id="theme-switch"></div>
     </header>
     <div class="form">
         <div class="form-style-10">
@@ -258,6 +261,9 @@
             </form>
         </div>
     </div>
+    <div id="topbtn" class="topbtn">
+        <a class="gotopbtn" href="#"><i class="fa-solid fa-angles-up"></i></a>
+    </div>
     <!-- JavaScript for smooth scroll to top -->
     <script>
         document.getElementById('riderForm').addEventListener('submit', function(event) {
@@ -286,6 +292,7 @@
             }
         });
     </script>
+    <script src="script.js"></script>
     <!-- Footer
     <footer class="footer">
         <div class="footer-container container">

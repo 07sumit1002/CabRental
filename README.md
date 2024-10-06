@@ -1,67 +1,199 @@
-🚖 CabRental
-The CabRental repository is a decentralized vehicle rental platform that provides users with a seamless experience to rent vehicles. It leverages both traditional technologies and Web3 innovations for a secure and modernized booking process.
+# 🚖 **CabRental**
 
-📝 Description
-CabRental is a comprehensive vehicle rental platform that allows users to search, book, and manage vehicle rentals. The system is enhanced with Web3 features such as decentralized login using crypto wallets, smart contract-based transactions, and blockchain data handling, providing both flexibility and security.
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Last Commit](https://img.shields.io/github/last-commit/07sumit1002/CabRental.svg)](https://github.com/07sumit1002/CabRental/commits/main)
+[![GitHub Issues](https://img.shields.io/github/issues/07sumit1002/CabRental.svg)](https://github.com/07sumit1002/CabRental/issues)
+[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/07sumit1002/CabRental.svg)](https://github.com/07sumit1002/CabRental/pulls)
+[![Platform](https://img.shields.io/badge/platform-Web%20%26%20Blockchain-green.svg)](#)
+[![Technologies](https://img.shields.io/badge/Tech-HTML%20%7C%20CSS%20%7C%20JS%20%7C%20Node.js%20%7C%20Solidity-blue.svg)](#)
 
-💻 Technologies Used <br>
-Front-end: HTML, CSS, JavaScript<br>
-Back-end: Node.js, PHP<br>
-Smart Contracts: Solidity<br>
-Blockchain Interaction: MetaMask, Web3.js, Ethers.js<br>
-Database: MySQL<br>
-🌟 Features
-Decentralized Login with MetaMask 🔐: Users can sign in using their crypto wallets instead of traditional login methods.
-User Registration & Authentication 👤: Includes social media and wallet-based authentication options.
-Smart Contract-Based Payments 💰: Payment processing is automated using Solidity smart contracts for secure and transparent transactions.
-Vehicle Search & Booking 🚗: Users can search for vehicles by location, type, and availability with real-time checks.
-Booking Management 🧾: Manage bookings with the flexibility of blockchain-powered tracking and verification.
-Admin Dashboard 👨‍💼: Admins can manage bookings, view analytics, and use blockchain for transaction verification.
-Notifications & Alerts 🔔: Email, SMS, and on-chain notifications for payment confirmations and updates.
-User Feedback and Reviews ⭐: Decentralized storage of reviews and ratings, ensuring transparency and immutability using blockchain.
-🔧 Installation
-To get a local copy up and running, follow these simple steps:
+---
+![CabRental Banner](https://files.oaiusercontent.com/file-E72nIXce4E1497vZoiZtGNTy?se=2024-10-05T14%3A47%3A35Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3Dff26116f-77dd-4e15-aee3-e867ef6fb7ac.webp&sig=L/j24P/8ksOZiXp9XSW7mCs1EKYRokZa%2BQjwzPtzb5s%3D)  
 
-Clone the repo
+---
+## 📝 **Table of Contents**
 
-bash
-Copy code
+- [📝 Description](#-description)
+- [🌟 Features](#-features)
+- [💻 Technologies Used](#-technologies-used)
+- [🔧 Installation](#-installation)
+- [🛠 Web3 Integration Guide](#-web3-integration-guide)
+- [📚 Usage](#-usage)
+- [🤝 Contributing](#-contributing)
+- [📄 License](#-license)
+- [📫 Contact](#-contact)
+
+---
+
+## 📝 **Description**
+
+**CabRental** is a cutting-edge decentralized vehicle rental platform designed to give users a seamless and secure way to rent vehicles. By integrating **Web3 technologies**, CabRental ensures enhanced privacy, security, and flexibility with **crypto-wallet authentication** and **smart contract-based transactions**. All the features, from login to booking management, are decentralized and blockchain-powered, making the user experience smooth, transparent, and tamper-proof.
+
+![Web3 Rental](https://files.oaiusercontent.com/file-3vRtOVQ6VXFOIvjeHEuIF03Q?se=2024-10-05T14%3A32%3A33Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3Dc15e91ce-61b7-482c-987c-66d9adaab9f6.webp&sig=xWHU67zr8OrTQulaEn1HgJP1NHx6jn6ibQTTGg4vEiQ%3D)  
+
+---
+
+## 🌟 **Features**
+
+| Feature                         | Description |
+|----------------------------------|-------------|
+| **Decentralized Login** 🔐       | Secure login using MetaMask or any Web3-compatible wallet. |
+| **Smart Contract Payments** 💰   | Rental payments and refunds are handled via Ethereum smart contracts for full transparency. |
+| **Vehicle Search & Booking** 🚗  | Search for vehicles by location and type with real-time availability. |
+| **Admin Dashboard** 👨‍💼          | Admins can manage all bookings, view usage analytics, and verify transactions. |
+| **Notifications & Alerts** 🔔   | Get email, SMS, and on-chain notifications for bookings and payments. |
+| **User Feedback & Reviews** ⭐  | Transparent, immutable, and decentralized reviews stored on the blockchain. |
+
+Include feature-related visuals here:
+- **Vehicle Search Example:** A screenshot showing how a user searches for vehicles.
+- **Smart Contract Payments:** A diagram showcasing the blockchain interaction for payment processing.
+
+---
+
+## 💻 **Technologies Used**
+
+| **Frontend**             | **Backend**            | **Blockchain**           | **Database**     |
+|--------------------------|------------------------|--------------------------|------------------|
+| HTML, CSS, JavaScript     | Node.js, PHP           | Solidity, Web3.js, Ethers.js | MySQL           |
+| Bootstrap                 | Express.js             | MetaMask Integration      |                  |
+
+---
+
+## 🔧 Installation
+
+Follow these steps to set up a local copy of CabRental:
+
+### 1. Clone the Repository
+
+```bash
 git clone https://github.com/07sumit1002/CabRental.git
-Navigate to the Folder
+```
 
-bash
-Copy code
+### 2. Navigate to the Project Directory
+
+```bash
 cd CabRental
-Install Dependencies
+```
 
-bash
-Copy code
-npm install
-composer install
-Set up MetaMask for Wallet Login
+### 3. Install Dependencies
 
-Ensure users have MetaMask installed for decentralized login.
-Run the Application
+  ```bash
+  npm install composer
+  ```
 
-Ensure your server supports PHP and Node.js.
-Open the project in your preferred web server (e.g., XAMPP, WAMP, or Node.js server).
-Set up the database and blockchain connection as per the config file.
-🛠 Web3 Integration Guide
-Smart Contracts: Use Solidity to create rental agreements, payment processing, and loyalty rewards.
-Blockchain Interaction: MetaMask is used for wallet login and Web3.js handles blockchain transactions.
-Backend Services: Node.js manages wallet verification, data requests from the blockchain, and transaction handling.
-🤝 Contributing
-Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are greatly appreciated.
+### 4. Set Up MetaMask for Wallet Login
 
-Fork the Project
+- Ensure that you have the MetaMask extension installed in your browser for decentralized login functionality.
+- Run the application
 
-Make your changes in the forked Repository
+### 5. Configure the Environment
 
-Commit your changes and push to the forked repository:
+- **Server Requirements:**  
+  Ensure your server supports PHP and Node.js.
 
-bash
-Copy code
-git add .
-git commit -m 'Add some AmazingFeature'
-git push
-Open a Pull Request with a proper description of the changes proposed in the PR.
+- **Database Setup:**  
+  Set up the MySQL database and configure the connection details as specified in the `config` file.
+
+- **Blockchain Connection:**  
+  Configure blockchain connection settings in the `config` file to interact with the smart contracts.
+
+### 6. Run the Application
+
+- **Using a Local Server:**  
+  Open the project in your preferred web server (e.g., XAMPP, WAMP, or a Node.js server).
+
+- **Access the Application:**  
+  Navigate to `http://localhost/CabRental` (or your configured local server URL) in your web browser.
+## 🛠 **Web3 Integration Guide**
+
+### **Smart Contracts**
+
+- Written in **Solidity** to handle booking agreements, payments, and refunds automatically.
+- Deployed on **Ethereum** for enhanced security.
+
+### **Blockchain Transactions**
+
+- Wallet authentication via **MetaMask** allows decentralized login.
+- **Web3.js** and **Ethers.js** are used to interact with the smart contracts for seamless blockchain operations.
+
+![MetaMask Wallet Connection](https://files.oaiusercontent.com/file-QyUAqocqj49rEEefvhalq9cF?se=2024-10-05T14%3A41%3A11Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3Dac428c5a-a433-4e8f-a5bd-54d007480062.webp&sig=yX9OkeQ1m8CXkHEoRXOD1K1%2BQh%2Big4EsWvhyt5t3T%2BU%3D) 
+---
+
+## 📚 **Usage**
+
+### **User Registration & Authentication:**
+
+- Users can register via social media or crypto wallets like **MetaMask** for enhanced security.
+---
+
+### **Search and Book a Vehicle:**
+
+- Use the search feature to find available vehicles based on your location and preferences.
+---
+
+### **Manage Bookings:**
+
+- View booking details and cancel or modify bookings with real-time updates on the blockchain.
+---
+
+### **Receive Alerts & Notifications:**
+
+- Get notifications via **SMS**, **email**, and **on-chain updates** for bookings, payments, and cancellations.
+
+---
+
+### **Admin Dashboard:**
+
+- Admins can manage all bookings, analyze platform usage, and verify blockchain transactions.
+
+---
+![](https://files.oaiusercontent.com/file-iMGfRqXcT2UQ2czdvFJESwZN?se=2024-10-05T14%3A42%3A46Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3Dd9fbe6b9-67ec-4319-ae9f-e7f0ccef6f27.webp&sig=uYSddLInzeEpKTzu%2BMUDSZfsMueae9VhaUAT9O/AFQw%3D)
+
+## 🤝 Contributing
+
+Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+### How to Contribute
+
+1. **Fork the Project**  
+   Click the **Fork** button at the top right of the repository page.
+
+2. **Clone Your Fork**  
+   ```bash
+   git clone https://github.com/your-username/CabRental.git
+   ```
+
+3. **Create a New Branch**  
+   ```bash
+   git checkout -b feature/AmazingFeature
+   ```
+
+4. **Make Your Changes**  
+   Implement your feature or bug fix.
+
+5. **Commit Your Changes**  
+   ```bash
+   git add .
+   git commit -m 'Add some AmazingFeature'
+   ```
+
+6. **Push to Your Fork**  
+   ```bash
+   git push origin feature/AmazingFeature
+   ```
+
+7. **Open a Pull Request**  
+   Navigate to the original repository and open a pull request with a detailed description of your changes.
+
+## 📄 License
+
+This project is licensed under the [MIT License](LICENSE).
+
+## 📫 Contact
+
+For any inquiries or support, please contact:
+
+- **Email:** sumitkumar101984@gmail.com
+- **GitHub:** [@07sumit1002](https://github.com/07sumit1002)
+
+---

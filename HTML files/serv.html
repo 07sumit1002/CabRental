@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CabRental Services</title>
     <link rel="stylesheet" href="/CSS files/serv.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
       /* Add some basic styling for smooth scrolling */
       html {
@@ -89,6 +90,53 @@
     </main>
     <footer>
       <p>&copy; 2024 CabRental. All rights reserved.</p>
+      <style>
+        /* Styling the footer */
+        footer {
+            background-color: #ee6d6d;
+            color: white;
+            text-align: center;
+            padding: 5px;
+            display: flex;  /* Flexbox */
+            justify-content: center;  /* Center horizontally */
+            align-items: center; 
+            position: center;
+            bottom: 0;
+            width: 100%;
+            font-size: 14px;
+            height: 30px;
+            line-height: 30px;
+            transform: translateY(100%);  /* Initially hidden */
+            transition: transform 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);  /* Smooth animation */
+        }
+
+
+        body {
+            margin: 0;
+            padding-bottom: 80px;  /* Space for the footer */
+        }
+    </style>
+      <script>
+       let lastScrollTop = 0;
+        const footer = document.querySelector("footer");
+
+        window.addEventListener("scroll", function() {
+            let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+            if (currentScroll > lastScrollTop) {
+                // Scrolling down - footer should appear smoothly
+                footer.style.transform = "translateY(0)";
+            } else {
+                // Scrolling up - hide the footer smoothly
+                footer.style.transform = "translateY(100%)";
+            }
+
+            lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+        });
+    </script>
     </footer>
+    <div id="topbtn" class="topbtn">
+      <a class="gotopbtn" href="#"><i class="fa-solid fa-angles-up"></i></a>
+  </div>
   </body>
 </html>

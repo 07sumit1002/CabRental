@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE-edge">
     <meta name="viewprot" content="width=device-width, initial-scale=1.0">
     <!-- Favicon -->
-    <link rel="icon" href="/media/favicon.png" type="image/png">
+    <link rel="icon" href="img/logo1.png" type="image/png">
     <title>CabRental</title>
     <!-- Link to CSS -->
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
@@ -16,473 +16,36 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <!-- custom css link -->
     <script src="https://kit.fontawesome.com/2815a7015d.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="/CSS files/style.css">
-    <link rel="stylesheet" href="/CSS files/contact_style.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Contact us/style.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
-    <style>
-        /* Base styles */
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-  background-color: #fff;
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.logo img {
-  height: 50px;
-}
-
-.navbar {
-  display: flex;
-  gap: 20px;
-  list-style: none;
-}
-
-.navbar li a {
-  text-decoration: none;
-  color: #333;
-  padding: 10px 15px;
-  transition: 0.3s ease;
-}
-
-.navbar li a:hover {
-  color: #007bff;
-}
-
-.header-btn .sign-up {
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 5px;
-}
-
-.header-btn .sign-up:hover {
-  background-color: #0056b3;
-}
-
-/* Hide menu icon initially */
-#menu-icon {
-  display: none;
-}
-
-/* Responsive styles for mobile sidebar */
-@media (max-width: 600px) {
-  .navbar {
-    position: fixed;
-    top: 0;
-    left: -250px;
-    width: 250px;
-    height: 100%;
-    background-color: #fff;
-    flex-direction: column;
-    align-items: start;
-    justify-content: flex-start;
-    padding: 20px;
-    transition: 0.3s;
-    z-index: 1000;
-  }
-
-  .navbar.active {
-    left: 0;
-  }
-
-  .navbar li {
-    width: 100%;
-    margin: 20px 0;
-  }
-
-  .navbar li a {
-    display: block;
-    width: 100%;
-    text-align: left;
-    padding: 10px 15px;
-  }
-
-  #menu-icon {
-    display: block;
-    font-size: 28px;
-    cursor: pointer;
-    position: absolute;
-    right: 20px;
-  }
-
-  .close-btn {
-    font-size: 28px;
-    cursor: pointer;
-    margin-left: auto;
-    margin-bottom: 20px;
-  }
-}
-@media only screen and (max-width:600px) {
-    #myimg{
-        display: none;
-    }
-}
-/* General styles */
-.review {
-    padding: 50px 0;
-}
-
-.heading {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-}
-
-.swiper-slide {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
-    border-radius: 10px;
-    transition: transform 0.3s;
-}
-
-.swiper-slide img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin-bottom: 10px;
-}
-
-.swiper-slide h3 {
-    font-size: 1.5rem;
-    margin: 10px 0;
-}
-
-.swiper-slide p {
-    font-size: 1rem;
-    color: #777;
-    margin-bottom: 15px;
-}
-
-.stars i {
-    color: #fbc02d;
-}
-
-/* Hover effect */
-.swiper-slide:hover {
-    transform: scale(1.05);
-}
-
-/* Responsive Styles */
-@media screen and (max-width: 1200px) {
-    .swiper-slide {
-        max-width: 80%;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .heading {
-        font-size: 2rem;
-    }
-
-    .swiper-slide {
-        max-width: 90%;
-        padding: 15px;
-    }
-
-    .swiper-slide h3 {
-        font-size: 1.3rem;
-    }
-
-    .swiper-slide p {
-        font-size: 0.9rem;
-    }
-}
-
-@media screen and (max-width: 576px) {
-    .heading {
-        font-size: 1.8rem;
-    }
-
-    .swiper-slide {
-        max-width: 100%;
-        padding: 10px;
-    }
-
-    .swiper-slide h3 {
-        font-size: 1.2rem;
-    }
-
-    .swiper-slide p {
-        font-size: 0.8rem;
-    }
-}
-
-/* Additional styling for swiper pagination */
-.swiper-pagination {
-    position: relative;
-    bottom: 10px;
-    display: flex;
-    justify-content: center;
-}
-/* General Styles */
-.container_1 {
-    padding: 50px 0;
-}
-
-.accordion__wrapper {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    border-radius: 10px;
-    background-color: #f9f9f9;
-}
-
-.accordion__title {
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-.accordion {
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    background-color: #fff;
-}
-
-.accordion__header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px;
-    cursor: pointer;
-    background-color: #f1f1f1;
-    border-radius: 8px;
-}
-
-.accordion__question {
-    font-size: 1.2rem;
-    font-weight: 600;
-}
-
-.accordion__icon {
-    font-size: 1.5rem;
-    color: #333;
-}
-
-.accordion__content {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease-out;
-    padding: 0 15px;
-}
-
-.accordion__content p {
-    padding: 15px 0;
-    font-size: 1rem;
-    color: #666;
-}
-
-/* Expand accordion on active */
-.accordion.active .accordion__content {
-    max-height: 200px;
-    transition: max-height 0.4s ease-in;
-}
-
-.accordion.active .accordion__icon i {
-    transform: rotate(45deg);
-    transition: transform 0.3s ease;
-}
-
-/* Responsive Styles */
-@media screen and (max-width: 768px) {
-    .accordion__title {
-        font-size: 1.6rem;
-    }
-
-    .accordion__question {
-        font-size: 1.1rem;
-    }
-
-    .accordion__icon {
-        font-size: 1.3rem;
-    }
-
-    .accordion__content p {
-        font-size: 0.95rem;
-    }
-}
-
-@media screen and (max-width: 576px) {
-    .accordion__wrapper {
-        padding: 10px;
-    }
-
-    .accordion__title {
-        font-size: 1.4rem;
-    }
-
-    .accordion__question {
-        font-size: 1rem;
-    }
-
-    .accordion__icon {
-        font-size: 1.2rem;
-    }
-
-    .accordion__content p {
-        font-size: 0.9rem;
-    }
-}
-/* General Styles */
-#contact {
-    padding: 50px 0;
-    background-color: #f9f9f9;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.row {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: wrap;
-}
-
-.contact-left,
-.contact-right {
-    flex: 1;
-    min-width: 300px;
-    margin: 20px;
-}
-
-.sub-title {
-    font-size: 2rem;
-    margin-bottom: 20px;
-    color: #333;
-}
-
-.social-icon a {
-    margin-right: 15px;
-    font-size: 2rem;
-    color: #333;
-}
-
-.social-icon a:hover {
-    color: #007bff;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-}
-
-form input,
-form textarea {
-    width: 100%;
-    margin-bottom: 15px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1rem;
-}
-
-form button {
-    padding: 10px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
-}
-
-form button:hover {
-    background-color: #0056b3;
-}
-
-#msg {
-    margin-top: 10px;
-    color: green;
-    font-size: 1rem;
-}
-
-/* Responsive Styles */
-@media screen and (max-width: 768px) {
-    .row {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .contact-left,
-    .contact-right {
-        max-width: 100%;
-        margin: 0;
-        padding: 20px;
-    }
-
-    .sub-title {
-        font-size: 1.8rem;
-        text-align: center;
-    }
-
-    .social-icon {
-        text-align: center;
-        margin-bottom: 20px;
-    }
-}
-
-@media screen and (max-width: 576px) {
-    .sub-title {
-        font-size: 1.6rem;
-    }
-
-    form input,
-    form textarea {
-        font-size: 0.9rem;
-        padding: 8px;
-    }
-
-    form button {
-        font-size: 0.9rem;
-    }
-}
-
-    </style>
 </head>
 
 <body>
     <!-- Header -->
     <header>
-        <a href="#" class="logo"><img src="/media/logo.png" alt=""></a>
-        <a href="#" class="CabRental_logo"><img src="/media/cabz.png" alt=""></a>
+        <a href="#" class="logo"><img src="img/logo.png" alt=""></a>
         <div class="bx bx-menu" id="menu-icon"></div>
         <ul class="navbar">
-            <li><a href="/HTML files/index.html">Home</a></li>
-            <li><a href="/HTML files/ride.html">Ride</a></li>
-            <li><a href="/HTML files/serv.html">Services</a></li>
-            <li><a href="/HTML files/index.html">About</a></li>
-            <li><a href="/HTML files/review.html">Reviews</a></li>
-            <li><a href="/HTML files/contactus.html">Contact</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="ride.html">Ride</a></li>
+            <li><a href="serv.html">Services</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="review.html">Reviews</a></li>
+            <li><a href="contactus.html">Contact</a></li>
         </ul>
         <div class="header-btn">
-            <a href="/HTML files/login.html" class="sign-up">Login</a>
+            <a href="login.html" class="sign-up">Login</a>
         </div>
-        <div class="theme-switch" id="theme-switch"></div>
     </header>
-    
     <!-- Home -->
-    <section class="home" id="home" >
-        <div class="text text-center" style="background-image: url(img/Car\ Website\ –\ 1@2x.png);">
-            <h1><br>Want to <span>Share</span>  or <span>Rent</span> <br>a cab.</h1>
-            <p>Wherever you're going,there's a carpool that will<br>
+    <section class="home" id="home">
+        <div class="text">
+            <h1><br>Want to <span>Share</span> or <span>Rent</span> <br>a cab.</h1>
+            <p>Wherever you're going, there's a carpool that will<br>
                 get you there for less.</p>
             <div class="carweb">
-                <img src="/media/Car Website.png" alt="">
+                <img src="img/Car Website – 1@2x.png" alt="">
 
             </div>
         </div>
@@ -520,23 +83,15 @@ form button:hover {
             <div class="form-group">
                 <label for="city">City</label>
                 <select id="city">
-                    <option disabled selected>Select City</option>
-                    <option value="Delhi-NCR">Delhi-NCR</option>
-                    <option value="Bangalore">Bangalore</option>
-                    <option value="Mumbai">Mumbai</option>
-                    <option value="Hyderabad">Hyderabad</option>
-                    <option value="Pune">Pune</option>
+                    <option>Select City</option>
+                    <!-- Add more options here -->
                 </select>
             </div>
             <div class="form-group">
                 <label for="vehicle">Vehicle</label>
                 <select id="vehicle">
-                    <option disabled selected>Select Vehicle</option>
-                    <option value="Civic">Honda Civic</option>
-                    <option value="Swift Dzire">Maruti Swift Dzire</option>
-                    <option value="Innova">Toyota Innova</option>
-                    <option value="Creta">Hyundai Creta</option>
-                    <option value="GrandVistara">Maruti Grand Vistara</option>
+                    <option>Select Vehicle</option>
+                    <!-- Add more options here -->
                 </select>
             </div>
             <div class="form-group">
@@ -560,19 +115,19 @@ form button:hover {
             <h1>Share/Rent <i class='bx bx-taxi'></i> in 3 Easy Steps</h1>
         </div><br>
         <div class="ride-container">
-            <i class="bxs-map" ><img class="icon" src="img/map.png" alt="map"></i>
+            <i class="bx bxs-map"></i>
             <h2>Choose a location</h2>
-            <p>Select the Location from where you want to start your journey</p>
+            <p>Lorem ipsu Possimus, doloremque. Aspernatur alias neque</p>
         </div>
         <div class="ride-container">
-            <i class='bxs-calendar'><img class="icon" src="img/timetable.png" alt="map"></i>
+            <i class='bx bxs-calendar'></i>
             <h2>Travelling Date</h2>
-            <p>Select the date of your journey</p>
+            <p>Lorem ipsu Possimus, doloremque. Aspernatur alias neque</p>
         </div>
         <div class="ride-container">
-            <i class=' bx-time'><img class="icon" src="img/alarm-clock.png" alt="map"></i>
+            <i class='bx bx-time'></i>
             <h2>Depart. Time</h2>
-            <p>Select the exact time of your booking</p>
+            <p>Lorem ipsu Possimus, doloremque. Aspernatur alias neque</p>
         </div>
     </section>
     <!-- Services -->
@@ -584,7 +139,7 @@ form button:hover {
         <div class="services-container">
             <div class="box">
                 <div class="box-img">
-                    <img src="/media/car1.jpg" alt="">
+                    <img src="img/car1.jpg" alt="">
                 </div>
                 <p>2017</p>
                 <h3>2018 Honda Civic</h3>
@@ -593,7 +148,7 @@ form button:hover {
             </div>
             <div class="box">
                 <div class="box-img">
-                    <img src="/media/car2.jpg" alt="">
+                    <img src="img/car2.jpg" alt="">
                 </div>
                 <p>2017</p>
                 <h3>2018 Honda Civic</h3>
@@ -602,7 +157,7 @@ form button:hover {
             </div>
             <div class="box">
                 <div class="box-img">
-                    <img src="/media/car3.jpg" alt="">
+                    <img src="img/car3.jpg" alt="">
                 </div>
                 <p>2017</p>
                 <h3>2018 Honda Civic</h3>
@@ -611,7 +166,7 @@ form button:hover {
             </div>
             <div class="box">
                 <div class="box-img">
-                    <img src="/media/car4.jpg" alt="">
+                    <img src="img/car4.jpg" alt="">
                 </div>
                 <p>2017</p>
                 <h3>2018 Honda Civic</h3>
@@ -620,7 +175,7 @@ form button:hover {
             </div>
             <div class="box">
                 <div class="box-img">
-                    <img src="/media/car5.jpg" alt="">
+                    <img src="img/car5.jpg" alt="">
                 </div>
                 <p>2017</p>
                 <h3>2018 Honda Civic</h3>
@@ -629,7 +184,7 @@ form button:hover {
             </div>
             <div class="box">
                 <div class="box-img">
-                    <img src="/media/car6.jpg" alt="">
+                    <img src="img/car6.jpg" alt="">
                 </div>
                 <p>2017</p>
                 <h3>2018 Honda Civic</h3>
@@ -648,17 +203,17 @@ form button:hover {
             </div>
             <div class="features">
                 <div class="feature">
-                    <img src="/media/crosscountry.png" alt="Cross Country Drive">
+                    <img src="download.png" alt="Cross Country Drive">
                     <h3>Cross Country Drive</h3>
                     <p>Take your driving experience to the next level with our top-notch vehicles for your cross-country adventures.</p>
                 </div>
                 <div class="feature">
-                    <img src="/media/inclusive.png" alt="All Inclusive Pricing">
+                    <img src="download 2.png" alt="All Inclusive Pricing">
                     <h3>All Inclusive Pricing</h3>
                     <p>Get everything you need in one convenient, transparent price with our all-inclusive pricing policy.</p>
                 </div>
                 <div class="feature">
-                    <img src="/media/hiddencharges.png" alt="No Hidden Charges">
+                    <img src="download 3.png" alt="No Hidden Charges">
                     <h3>No Hidden Charges</h3>
                     <p>Enjoy peace of mind with our no hidden charges policy. We believe in transparent and honest pricing.</p>
                 </div>
@@ -667,7 +222,7 @@ form button:hover {
     </section>
 
 
-<!--   <section class="review" id="review">
+<!--     <section class="review" id="review">
 
         <h1 class="heading"> Client's testimonials </h1>
 
@@ -737,66 +292,8 @@ form button:hover {
 
         </div>
 
-     </section>  -->
-<!--      <section class="review" id="review"> -->
-<!--         <div class="row">
-            <h1 class="heading"> Customer Reviews </h1>
-    
-            <div class="swiper review-slider" data-aos="zoom-in">
-    
-                <div class="swiper-wrapper">
-    
-                    <div class="swiper-slide slide">
-                        <img src="img/pic-1.png" alt="">
-                        <h3>Noah Lee</h3>
-                        <p>I recently used Cabrental for a weekend trip and was thoroughly impressed. The booking process was seamless, and the website was intuitive and easy to navigate. The car was clean and in excellent condition, and the pick-up and drop-off process was quick and hassle-free. The customer service was exceptional—friendly and helpful staff made the experience even better. Highly recommended!</p>
-                        <div class="stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
-                        </div>
-                    </div>
-    
-                    <div class="swiper-slide slide">
-                        <img src="img/pic-2.png" alt="">
-                        <h3>Sophia Rossi</h3>
-                        <p>I recently used Cabrental for a weekend getaway, and I couldn't be happier with the experience. The website is user-friendly, and I found the perfect car within minutes.</p>
-                        <div class="stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                    </div>
-    
-                    <div class="swiper-slide slide">
-                        <img src="img/pic-3.png" alt="">
-                        <h3>Olivia Davis</h3>
-                        <p>The booking process was straightforward, and I received a confirmation email immediately. When I arrived at the pick-up location, the staff was friendly and efficient. The car was clean, well-maintained, and exactly as described on the website.</p>
-                        <div class="stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-full-alt"></i>
-                        </div>
-                    </div>
-    
-                    <div class="swiper-slide slide">
-                        <img src="img/pic-4.png" alt="">
-                        <h3>Emma Brown</h3>
-                        <p>Returning the car was just as easy, and there were no hidden fees or unexpected charges. I will definitely be using Cabrental again for my future trips. Highly recommended!</p>
-                        <div class="stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
- -->
+     </section> -->
+
     <section class="review" id="review">
 
         <h1 class="heading"> Customer Reviews </h1>
@@ -806,7 +303,7 @@ form button:hover {
             <div class="swiper-wrapper">
 
                 <div class="swiper-slide slide">
-                    <img src="img/rev4.jpeg" alt="">
+                    <img src="img/pic-1.png" alt="">
                     <h3>Noah Lee</h3>
                     <p>I recently used Cabrental for a weekend trip and was thoroughly impressed. The booking process was seamless, and the website was intuitive and easy to navigate. The car was clean and in excellent condition, and the pick-up and drop-off process was quick and hassle-free. The customer service was exceptional—friendly and helpful staff made the experience even better. Highly recommended!</p>
                     <div class="stars">
@@ -819,7 +316,7 @@ form button:hover {
                 </div>
 
                 <div class="swiper-slide slide">
-                    <img src="img/rev3.jpg" alt="">
+                    <img src="img/pic-2.png" alt="">
                     <h3>Sophia Rossi</h3>
                     <p>I recently used Cabrental for a weekend getaway, and I couldn't be happier with the experience. The website is user-friendly, and I found the perfect car within minutes.</p>
                     <div class="stars">
@@ -845,8 +342,8 @@ form button:hover {
                 </div>
 
                 <div class="swiper-slide slide">
-                    <img src="img/rev2.jpg" alt="">
-                    <h3>Rohan Gupta</h3>
+                    <img src="img/pic-4.png" alt="">
+                    <h3>Emma Brown</h3>
                     <p>Returning the car was just as easy, and there were no hidden fees or unexpected charges. I will definitely be using Cabrental again for my future trips. Highly recommended!</p>
                     <div class="stars">
                         <i class="fas fa-star"></i>
@@ -854,21 +351,21 @@ form button:hover {
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
-
                     </div>
-    
                 </div>
-    
-                <div class="swiper-pagination"></div>
-    
+
             </div>
+
+            <div class="swiper-pagination"></div>
+
         </div>
+
     </section>
-    
 
     <section class="faq" id="faq">
         <div class="container_1">
-            <div class="accordion__wrapper>
+            <div class="accordion__wrapper">
+                <h1 class="accordian__title">Frequently Asked Question</h1>
                 <br>
                 <div class="accordion">
                     <div class="accordion__header">
@@ -881,10 +378,10 @@ form button:hover {
                         <p class="accordion__answer">To book a cab, select your location, travel date, and departure time on the homepage, then follow the steps to complete your booking.</p>
                     </div>
                 </div>
-        
+
                 <div class="accordion">
                     <div class="accordion__header">
-                        <h2 class="accordion__question">What services do you offer?</h2>
+                        <h2 class="accordion__question"> What services do you offer?</h2>
                         <span class="accordion__icon">
                             <i id="accordion-icon" class="ri-add-line"></i>
                         </span>
@@ -893,7 +390,7 @@ form button:hover {
                         <p class="accordion__answer">We offer cab sharing and rental services for various locations with a range of vehicles to choose from.</p>
                     </div>
                 </div>
-        
+
                 <div class="accordion">
                     <div class="accordion__header">
                         <h2 class="accordion__question">How much does it cost to rent a cab?</h2>
@@ -905,7 +402,7 @@ form button:hover {
                         <p class="accordion__answer">Rental costs vary depending on the vehicle and rental duration. Prices start at Rs.850 per day.</p>
                     </div>
                 </div>
-        
+
                 <div class="accordion">
                     <div class="accordion__header">
                         <h2 class="accordion__question">How do I contact customer support?</h2>
@@ -917,7 +414,6 @@ form button:hover {
                         <p class="accordion__answer">For assistance, you can call our support line at 000-080-000-000 or use the contact form on our website.</p>
                     </div>
                 </div>
-        
                 <div class="accordion">
                     <div class="accordion__header">
                         <h2 class="accordion__question">Are there any hidden fees?</h2>
@@ -931,7 +427,7 @@ form button:hover {
                 </div>
             </div>
         </div>
-        
+    </section>
 
 
     <section class="contact us" id="contact us">
@@ -944,15 +440,11 @@ form button:hover {
 
                         <div class="social-icon">
                             <a href="#" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-                            <a href="#" target="_blank"><i class="fa-brands fa-square-x-twitter"></i></a>
+                            <a href="#" target="_blank"><i class="fa-brands fa-twitter-square"></i></a>
                             <a href="#" target="_blank"><i class="fa-brands fa-instagram"></i></a>
                             <a href="#" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
+
                     </div>
                     <div class="contact-right">
                         <form name="submit-to-google-sheet">
@@ -965,8 +457,7 @@ form button:hover {
                     </div>
                 </div>
             </div>
-        </div>
-        
+
 
     </section>
 
@@ -1021,17 +512,17 @@ form button:hover {
                 <div class="testimonial">
                     <p>Using Cab Rental has made my life so much easier. The service is top-notch and always reliable.</p>
                     <p class="client">- Alex</p>
-                    <img src="/media/person4.jpeg" alt="Alex" class="client-photo">
+                    <img src="images/images (1).jpeg" alt="Alex" class="client-photo">
                 </div>
                 <div class="testimonial">
                     <p>The best cab rental service I’ve ever used! The drivers are friendly and always on time.</p>
                     <p class="client">- Jordan</p>
-                    <img src="/media/person5.jpeg" alt="Jordan" class="client-photo">
+                    <img src="images/images (2).jpeg" alt="Jordan" class="client-photo">
                 </div>
                 <div class="testimonial">
                     <p>Excellent service! The booking process is seamless, and the cabs are always clean and comfortable.</p>
                     <p class="client">- Taylor</p>
-                    <img src="/media/person6.jpeg" alt="Taylor" class="client-photo">
+                    <img src="images/download (1).jpeg" alt="Taylor" class="client-photo">
                 </div>
             </div>
             <div class="view-all">
@@ -1082,7 +573,7 @@ form button:hover {
                     <ul>
                         <li><a href="#">Media Center</a></li>
                         <li><a href="#">Terms of Use</a></li>
-                        <li><a href="/HTML files/contactus.html">Contact Us</a></li>
+                        <li><a href="Contact us/contact.html">Contact Us</a></li>
                     </ul>
                 </div>
             </div>
@@ -1120,8 +611,6 @@ form button:hover {
             });
         };
     </script>
-
-      
 </body>
 
 
