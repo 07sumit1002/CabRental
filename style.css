@@ -1532,3 +1532,31 @@ footer p {
   color: #666;
   margin: 0;
 }
+@media (max-width: 768px) {
+  header {
+    flex-wrap: wrap;
+  }
+
+  .navbar {
+    display: none;
+  }
+
+  #menu-icon {
+    display: block;
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  .header-btn {
+    display: block;
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  #menu-icon.active + .navbar {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  }
+}
