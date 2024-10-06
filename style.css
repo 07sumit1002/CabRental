@@ -569,7 +569,7 @@ li a:hover {
 
 .ride {
 
-
+  
     display: flex;
     align-items: center;
     grid-template-columns: repeat(auto-fit, minmax(250px, auto));
@@ -1335,4 +1335,200 @@ footer p {
 }
 .dark-mode .footer-column ul li a {
   color: #fff6f6;
+}
+.headings {
+  text-align: center;
+  margin: 20px 0;
+  padding: 10px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.headings span {
+  display: block;
+  font-size: 1.2em;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.headings h1 {
+  font-size: 2.5em;
+  color: #333;
+  margin: 0;
+}
+.holidayintro {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
+}
+
+.holidayintro .form {
+  flex: 1 1 200px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.holidayintro label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+.holidayintro input,
+.holidayintro select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+.holidayintro button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.holidayintro button:hover {
+  background-color: #0056b3;
+}
+.trendingHolidays {
+  display: flex;
+  flex-wrap: nowrap; 
+  justify-content: space-around;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
+  overflow-x: auto; 
+}
+
+.city {
+  flex: 0 0 300px; 
+  margin: 15px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.city:hover {
+  transform: scale(1.05);
+}
+
+.cityimage img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover; 
+  border-bottom: 1px solid #ddd;
+}
+
+.cityinfo {
+  padding: 15px;
+  text-align: justify; 
+}
+
+.cityinfo h1 {
+  font-size: 1.5em;
+  color: #333;
+  margin: 10px 0;
+}
+
+.cityinfo p {
+  font-size: 1em;
+  color: #666;
+  margin: 10px 0;
+  text-align: justify; 
+}
+
+.cityinfo .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.cityinfo .btn:hover {
+  background-color: #0056b3;
+}
+.allcityRoadtrips {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns */
+  gap: 20px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
+}
+
+.othercity {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s;
+  text-align: center;
+  padding: 10px;
+}
+
+.othercity:hover {
+  transform: scale(1.05);
+}
+
+.othercityImage img {
+  width: 100%;
+  height: 150px; /* Set a fixed height for all images */
+  object-fit: cover; /* Ensure the image covers the area without distortion */
+  border-bottom: 1px solid #ddd;
+}
+
+.othercity h3 {
+  font-size: 1.2em;
+  color: #333;
+  margin: 10px 0;
+}
+
+.othercity p {
+  font-size: 1em;
+  color: #666;
+  margin: 10px 0;
+}
+.roadtripIntro {
+  text-align: center;
+  margin: 20px 0;
+  padding: 10px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.roadtripIntro h2 {
+  font-size: 2em;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.roadtripIntro p {
+  font-size: 1.2em;
+  color: #666;
+  margin: 0;
 }
