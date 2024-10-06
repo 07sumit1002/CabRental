@@ -16,6 +16,12 @@
         background-color: #f9f9f9;
         color: #333;
         line-height: 1.6;
+        transition: background-color 0.3s, color 0.3s;
+      }
+
+      body.dark-mode {
+        background-color: #333;
+        color: #f9f9f9;
       }
 
       .navbar {
@@ -28,12 +34,17 @@
         top: 0;
         z-index: 1000;
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.3s;
+      }
+
+      .navbar.dark-mode {
+        background-color: #444;
       }
 
       .navbar .logo {
         font-size: 1.8em;
         font-weight: bold;
-        color: #000000;
+        color: #000;
       }
 
       .navbar ul {
@@ -105,10 +116,18 @@
         text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
       }
 
+      h2.dark-mode {
+        color: #f9f9f9; /* Change h2 color in dark mode */
+      }
+
       p {
         color: #555;
         margin-bottom: 20px;
         text-align: justify; /* Justify text */
+      }
+
+      p.dark-mode {
+        color: #e0e0e0; /* Change paragraph color in dark mode */
       }
 
       ul {
@@ -124,6 +143,11 @@
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1),
           inset 0 1px 3px rgba(255, 255, 255, 0.1);
         transition: transform 0.3s, box-shadow 0.3s;
+      }
+
+      .values-principles ul li.dark-mode {
+        background: linear-gradient(145deg, #444, #555); /* Adjust background for dark mode */
+        color: #f9f9f9; /* Text color for dark mode */
       }
 
       ul li:hover {
@@ -165,14 +189,17 @@
         <li><a href="#company-overview">Company Overview</a></li>
         <li><a href="#mission-vision">Mission & Vision</a></li>
         <li><a href="#values-principles">Values & Principles</a></li>
+        <li>
+          <button id="darkModeToggle" style="cursor: pointer; background: none; border: none; color: #000;">
+            <i class='bx bxs-moon' style='font-size: 1.5em;'></i>
+          </button>
+        </li>
       </ul>
     </nav>
 
     <!-- Hero Section -->
     <section class="hero">
       <h1>About Us</h1>
-
-
     </section>
 
     <div class="container">
@@ -201,17 +228,14 @@
         <h2>Mission and Vision</h2>
         <div class="section-img">
           <img
-            src="https://imgs.search.brave.com/2CAFCbM6U5I6Q03dK-bC8qqqyb_mjrDxo4YGu4-zCnk/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMuZnJlZWltYWdl/cy5jb20vaW1hZ2Vz/L2xhcmdlLXByZXZp/ZXdzLzMxOC9pbi10/aGUtY2FyLTEtMTQ5/NTA3MC5qcGc_Zm10"
-            alt="Mission and Vision Image"
+            src="https://imgs.search.brave.com/q0e8cW8B-XzUbrgZx4qP0ObqkV3g5cPE82Dptj32vVY/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/ZnJlZS1waG90by9w/aG90by1jb250ZW50/LzIwMTkvMDMvbXNo/aXN0LzE1NTM5MDA2/bmF0dXJlcmVpbC9z/bGFkZXJzL3ZhbC9j/YWxlbmRhci5qcGc"
+            alt="Mission Vision Image"
           />
         </div>
         <p>
-          <strong>Mission:</strong> To provide reliable and affordable cab
-          rental services while ensuring exceptional customer experience.
-        </p>
-        <p>
-          <strong>Vision:</strong> To be the leading cab rental company known
-          for innovation, sustainability, and outstanding service.
+          Our mission is to provide safe, efficient, and affordable transportation
+          services to all. We envision a future where everyone has access to
+          reliable transportation, enhancing their mobility and quality of life.
         </p>
       </section>
 
@@ -219,28 +243,44 @@
       <section id="values-principles" class="values-principles">
         <h2>Values and Principles</h2>
         <ul>
-          <li>
-            <strong>Customer First:</strong> We prioritize our customers' needs
-            and strive to exceed their expectations.
-          </li>
-          <li>
-            <strong>Integrity:</strong> We operate with honesty and transparency
-            in all our dealings.
-          </li>
-          <li>
-            <strong>Safety:</strong> We ensure the highest safety standards for
-            our customers and drivers.
-          </li>
-          <li>
-            <strong>Innovation:</strong> We continuously seek innovative
-            solutions to enhance our services.
-          </li>
-          <li>
-            <strong>Sustainability:</strong> We are committed to sustainable
-            practices and reducing our environmental impact.
-          </li>
+          <li>Customer Satisfaction</li>
+          <li>Integrity</li>
+          <li>Safety</li>
+          <li>Innovation</li>
+          <li>Community Engagement</li>
         </ul>
       </section>
     </div>
+
+    <script>
+      // Dark mode toggle functionality
+      const toggleButton = document.getElementById("darkModeToggle");
+      toggleButton.addEventListener("click", () => {
+        document.body.classList.toggle("dark-mode");
+        const navbar = document.querySelector(".navbar");
+        navbar.classList.toggle("dark-mode");
+
+        // Toggle icon
+        const icon = toggleButton.querySelector("i");
+        icon.classList.toggle("bxs-sun");
+        icon.classList.toggle("bxs-moon");
+
+        // Change text colors for dark mode
+        const headings = document.querySelectorAll("h2");
+        headings.forEach((heading) => {
+          heading.classList.toggle("dark-mode");
+        });
+
+        const paragraphs = document.querySelectorAll("p");
+        paragraphs.forEach((paragraph) => {
+          paragraph.classList.toggle("dark-mode");
+        });
+
+        const listItems = document.querySelectorAll(".values-principles ul li");
+        listItems.forEach((item) => {
+          item.classList.toggle("dark-mode");
+        });
+      });
+    </script>
   </body>
 </html>
