@@ -1,31 +1,50 @@
 ---
-name: 🐛 Bug Report
-about: Report a bug to help us improve CabRental
-title: "[BUG]"
-labels: bug
-assignees: ''
----
-
-**Describe the bug**
-> A clear and concise description of what the bug is.
-
-**To Reproduce**
-```
-Explain bug encounter!
-Steps to reproduce the behavior:
-1. Go to '...'
-2. Click on '...'
-3. Scroll down to '...'
-4. See error
-```
-
-**Expected behavior**
-> A clear and concise description of what you expected to happen.
-
-**Screenshots**
-> If applicable, add screenshots to help explain your problem.
-
-**Additional context**
-> Add any other context about the problem here.
-
-
+name: Bug report 🐞
+description: File a bug report
+title: "[Bug]: "
+body:
+  - type: checkboxes
+    id: existing-issue
+    attributes:
+      label: Is there an existing issue for this?
+      description: Please search to see if an issue already exists for the bug you encountered.
+      options:
+        - label: I have searched the existing issues
+          required: true
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: A concise description of what you are experiencing.
+      placeholder: Tell us what you see!
+    validations:
+      required: true
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Add Screenshots
+      description: Add sufficient screenshots to explain your issue.
+  - type: dropdown
+    id: browsers
+    attributes:
+      label: What browsers are you seeing the problem on?
+      multiple: true
+      options:
+        - Firefox
+        - Chrome
+        - Safari
+        - Microsoft Edge
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Record
+      options:
+        - label: "I agree to follow this project's Code of Conduct"
+          required: true
+        - label: "I'm a GSSOC contributor"
+          required: false
+        - label: "I want to work on this issue"
+          required: false
+        - label: "I'm willing to provide further clarification or assistance if needed."
+          required: false
+--- 
