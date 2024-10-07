@@ -493,81 +493,66 @@
     </header>
 
     <!-- Home -->
-    <section class="home" id="home">
-        <div class="text text-center" style="background-image: url(img/Car\ Website\ –\ 1@2x.png);">
-            <h1><br>Want to <span>Share</span> or <span>Rent</span> <br>a cab.</h1>
+    <section class="home" id="home" >
+        <div class=" text text-center" style="background-image: url(img/Car\ Website\ –\ 1@2x.png);">
+            <h1><br>Want to <span>Share</span>  or <span>Rent</span> <br>a cab.</h1>
             <p>Wherever you're going,there's a carpool that will<br>
                 get you there for less.</p>
+        </div>
+        <div class="content-container">
             <div class="carweb">
                 <img src="Car Website – 1@2x.png" alt="">
             </div>
-        </div>
-        <!-- <div class="form-container">
-            <form action="anonimous.php" method="post">
-                <div class="input-box">
-                    <span>From <span> MUJ Hostel</span> To</span>
-                    <input type="search" name="search" id="search" placeholder="Search Places">
+            <div class="booking-form">
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" placeholder="Your Name" required>
                 </div>
-                <div class="input-box">
-                    <span>Travelling Date</span>
-                    <input type="date" name="dat" id="dat">
+                <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" placeholder="Telephone" required>
                 </div>
-                <div class="input-box">
-                    <span>Depart. Time</span>
-                    <input type="time" name="tim" id="tim">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="name@example.com" required>
                 </div>
-                <input type="submit" name="submit" id="submit" class="btn">
-            </form>
-        </div> -->
-
-        <div class="booking-form">
-            <div class="form-group">
-                <label for="fullName">Full Name</label>
-                <input type="text" id="fullName" placeholder="Your Name">
+                <div class="form-group select">
+                    <label for="city">City</label>
+                    <select id="city">
+                        <option disabled selected>Select City</option>
+                        <option value="Delhi-NCR">Delhi-NCR</option>
+                        <option value="Bangalore">Bangalore</option>
+                        <option value="Mumbai">Mumbai</option>
+                        <option value="Hyderabad">Hyderabad</option>
+                        <option value="Pune">Pune</option>
+                    </select>
+                </div>
+                <div class="form-group select">
+                    <label for="vehicle">Vehicle</label>
+                    <select id="vehicle">
+                        <option disabled selected>Select Vehicle</option>
+                        <option value="Civic">Honda Civic</option>
+                        <option value="Swift Dzire">Maruti Swift Dzire</option>
+                        <option value="Innova">Toyota Innova</option>
+                        <option value="Creta">Hyundai Creta</option>
+                        <option value="GrandVistara">Maruti Grand Vistara</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="pickupDate">Pickup Date</label>
+                    <input type="date" id="pickupDate">
+                </div>
+                <div class="form-group">
+                    <label for="dropoffDate">Drop-off Date</label>
+                    <input type="date" id="dropoffDate">
+                </div>
+            
+                <div class="form-group">
+                    <button id="bookNow">Book Now</button>
+                </div>
             </div>
-            <div class="form-group">
-                <label for="phone">Phone</label>
-                <input type="tel" id="phone" placeholder="Telephone">
-            </div>
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" placeholder="name@example.com">
-            </div>
-            <div class="form-group">
-                <label for="city">City</label>
-                <select id="city">
-                    <option disabled selected>Select City</option>
-                    <option value="Delhi-NCR">Delhi-NCR</option>
-                    <option value="Bangalore">Bangalore</option>
-                    <option value="Mumbai">Mumbai</option>
-                    <option value="Hyderabad">Hyderabad</option>
-                    <option value="Pune">Pune</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="vehicle">Vehicle</label>
-                <select id="vehicle">
-                    <option disabled selected>Select Vehicle</option>
-                    <option value="Civic">Honda Civic</option>
-                    <option value="Swift Dzire">Maruti Swift Dzire</option>
-                    <option value="Innova">Toyota Innova</option>
-                    <option value="Creta">Hyundai Creta</option>
-                    <option value="GrandVistara">Maruti Grand Vistara</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="pickupDate">Pickup Date</label>
-                <input type="date" id="pickupDate">
-            </div>
-            <div class="form-group">
-                <label for="dropoffDate">Drop-off Date</label>
-                <input type="date" id="dropoffDate">
-            </div>
+            
         </div>
-        <div class="form-group">
-            <button id="bookNow">Book Now</button>
-        </div>
-
     </section>
     <!-- Ride-->
     <section class="ride" id="ride">
