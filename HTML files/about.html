@@ -38,7 +38,11 @@
       .navbar ul {
         display: flex;
         justify-content: space-around; /* Spacing between links */
+        justify-content: space-around; /* Spacing between links */
         list-style: none;
+        padding: 10px; /* Padding for the group of links */
+        background-color: #e6e4e4; /* Background color for the navbar */
+    }
         padding: 10px; /* Padding for the group of links */
         background-color: #e6e4e4; /* Background color for the navbar */
     }
@@ -46,14 +50,35 @@
     .navbar ul li {
         margin: 0 10px; /* Spacing between individual links */
     }
+    .navbar ul li {
+        margin: 0 10px; /* Spacing between individual links */
+    }
 
+    .navbar ul li a {
+        color: #0c0101;
+        background-color: #e6e4e4;
     .navbar ul li a {
         color: #0c0101;
         background-color: #e6e4e4;
         text-decoration: none;
         border-radius: 5px;
         padding: 10px; /* Padding around each link */
+        padding: 10px; /* Padding around each link */
         transition: background-color 0.3s, transform 0.3s;
+    }
+    .navbar ul li a:hover {
+      background-color: #f7f5f4;
+      transform: scale(1.1);
+      border-bottom: 3px solid black; /* Black underline on hover */
+  }
+    
+    .navbar ul li a:active {
+      border-bottom: 3px solid black; /* Black underline when clicked */
+  }
+
+    .navbar ul li a:focus {
+      border-bottom: 3px solid black; /* Black underline on focus */
+  }
     }
     .navbar ul li a:hover {
       background-color: #f7f5f4;
@@ -71,6 +96,7 @@
 
       .hero {
         height: 60vh;
+        background: url("https://autotrans.com/wp-content/uploads/2021/04/AdobeStock_95320493-2048x1367.jpeg")
         background: url("https://autotrans.com/wp-content/uploads/2021/04/AdobeStock_95320493-2048x1367.jpeg")
           no-repeat center center/cover;
         display: flex;
@@ -98,6 +124,8 @@
         position: relative;
         z-index: 1;
         text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+        color: #e64825;
+        text-align: center;
         color: #e64825;
         text-align: center;
       }
@@ -163,6 +191,37 @@
       .highlight {
         color: #d32f2f;
         font-weight: bold;
+      }
+      .container section {
+        margin-bottom: 50px; /* Space between sections */
+        padding: 20px;
+        border-radius: 5px;
+        border-top: 2px solid #ddd; /* Line between sections */
+      }
+      
+      #company-overview {
+        background-color: #557d80;
+      }
+      
+      #mission-vision {
+        background-color: #d4c6c6;
+      }
+      #company-overview p,
+      #mission-vision p {
+  font-weight: bold;
+  color: #080101;
+}
+
+.about-us-img {
+  width: 1200px; /* Adjust size as needed */
+  height: 400px;
+  border-radius: 10px; /* Optional: Adds rounded corners */
+  position: absolute; /* Positioning the image inside hero */
+  bottom: 10px; /* Adjusts position within the hero section */
+  box-shadow: 0 4px 10px rgba(12, 10, 10, 0.2); /* Adds a shadow for better visibility */
+  right: 80px;
+  z-index: -1; /* Ensures it stays above the overlay */
+}
       }
       .container section {
         margin-bottom: 50px; /* Space between sections */
