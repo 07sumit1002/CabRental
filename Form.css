@@ -1,0 +1,98 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: rgb(238, 239, 241);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container for the entire form */
+.booking-form-container {
+    background-color: #ffe6e1;
+    border: 1px solid #ff665a;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    color: #ff4500;
+    font-size: 14px;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Input fields styling with hover animation */
+input,
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ff665a;
+    border-radius: 4px;
+    background-color: #ffe6e1;
+    color: #333;
+    font-size: 14px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect on input fields */
+input:hover,
+select:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Inputs focus effect */
+input:focus,
+select:focus {
+    border-color: #ff4500;
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 69, 0, 0.3);
+}
+
+/* Button styling */
+button {
+    width: 100%;
+    background-color: #ff4500;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Button hover effect with no animation */
+button:hover {
+    background-color: #e63e00;
+}
+
+.button-group {
+    margin-top: 20px;
+}
+
+/* Optional media queries for responsiveness */
+@media (max-width: 400px) {
+    .booking-form-container {
+        width: 100%;
+        padding: 15px;
+    }
+}
