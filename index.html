@@ -432,37 +432,58 @@
             color: #007bff;
         }
 
-        form {
-            display: flex;
-            flex-direction: column;
+        /*Form styling*/
+        .contact-right {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 40px;
         }
 
-        form input,
-        form textarea {
+        .contact-right h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+
+        .contact-form {
+            background-color: #ffffff;
+            border-radius: 8px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
             width: 100%;
+            padding: 10px;
             margin-bottom: 15px;
-            padding: 10px;
             border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 1rem;
+            border-radius: 4px;
+            background-color: #e0f7fa;
+            color: #333;
         }
 
-        form button {
+        .contact-form button {
+            width: 100%;
             padding: 10px;
-            background-color: #007bff;
-            color: white;
+            background-color: #007bff !important;
+            color: #ffffff;
             border: none;
-            border-radius: 5px;
+            border-radius: 4px;
             cursor: pointer;
-            font-size: 1rem;
+            transition: background 0.3s ease;
         }
 
-        form button:hover {
-            background-color: #0056b3;
+        .contact-form button:hover {
+            background-color: #0567d0 !important;
+            color: #fff;
         }
 
         #msg {
-            margin-top: 10px;
+            margin-top: 15px;
             color: green;
             font-size: 1rem;
         }
@@ -1107,7 +1128,8 @@
 
             </div>
             <div class="contact-right">
-                <form name="submit-to-google-sheet">
+                <h2>Any Queries?</h2>
+                <form name="submit-to-google-sheet" class="contact-form">
                     <input type="text" name="Name" placeholder="Your Name" required>
                     <input type="email" name="Email" placeholder="Your Email" required>
                     <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
