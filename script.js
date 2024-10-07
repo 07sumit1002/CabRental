@@ -3,24 +3,7 @@ document
   .addEventListener("click", ()=>{
     const testimonialsContainer = document.getElementById(
       "testimonials-container"
-  )});
-
-    document.getElementById('bookNow').addEventListener('click', function () {
-      const name=document.getElementById('fullName').value.trim();
-      const phone=document.getElementById('phone').value.trim();
-      const email=document.getElementById('email').value.trim();
-      const city=document.getElementById('city').value.trim();
-      const vehicle=document.getElementById('vehicle').value.trim();
-      const pickupDate=document.getElementById('pickupDate').value.trim();
-      const dropoffDate=document.getElementById('dropoffDate').value.trim();
-
-      if(!name || !phone || !email || !city || !vehicle || !pickupDate || !dropoffDate)
-      {
-        alert('Please fill all fields');
-      }
-      else
-      alert('Booking confirmed!');
-    });
+  );
 
     const newTestimonials = [
       {
@@ -148,10 +131,29 @@ document
 
       testimonialsContainer.appendChild(testimonialDiv);
     });
+
+  });
 const themeSwitch = document.getElementById('theme-switch'); // Ensure this matches your HTML button's ID
 const body = document.body;
 const header = document.querySelector('header');
 const footer = document.querySelector('footer');
+
+document.getElementById('bookNow').addEventListener('click', function () {
+  const name=document.getElementById('fullName').value.trim();
+  const phone=document.getElementById('phone').value.trim();
+  const email=document.getElementById('email').value.trim();
+  const city=document.getElementById('city').value.trim();
+  const vehicle=document.getElementById('vehicle').value.trim();
+  const pickupDate=document.getElementById('pickupDate').value.trim();
+  const dropoffDate=document.getElementById('dropoffDate').value.trim();
+
+  if(!name || !phone || !email || !city || !vehicle || !pickupDate || !dropoffDate)
+  {
+    alert('Please fill all fields');
+  }
+  else
+  alert('Booking confirmed!');
+});
 
 // Function to enable dark mode
 function enableDarkMode() {
