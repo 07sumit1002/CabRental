@@ -12,32 +12,32 @@ document
       {
         text: "I've used many cab services before, but this one is by far the best. Highly recommended!",
         client: "- Emily",
-        imgSrc: "images/download.jpeg",
+        imgSrc: "/media/person1.jpeg",
       },
       {
         text: "Amazing service! The drivers are professional and the cars are always clean.",
         client: "- Chris",
-        imgSrc: "images/istockphoto-1158014305-612x612.jpg",
+        imgSrc: "/media/person11.jpg",
       },
       {
         text: "Super reliable and affordable. I use their service for all my city travels.",
         client: "- Ashley",
-        imgSrc: "images/images (3).jpeg",
+        imgSrc: "/media/person2.jpeg",
       },
       {
         text: "Great experience! The cab arrived on time and the driver was very courteous.",
         client: "- Michael",
-        imgSrc: "images/images (4).jpeg",
+        imgSrc: "/media/person3.jpeg",
       },
       {
         text: "Affordable prices and excellent service. Will definitely use again.",
         client: "- Sarah",
-        imgSrc: "images/images (5).jpeg",
+        imgSrc: "/media/person4.jpeg",
       },
       {
         text: "Fast and reliable service. The app makes booking so easy.",
         client: "- David",
-        imgSrc: "images/images (6).jpeg",
+        imgSrc: "/media/person5.jpeg",
       },
     ];
 
@@ -52,17 +52,17 @@ document
       {
         text: "Using Cab Rental has made my life so much easier. The service is top-notch and always reliable.",
         client: "- Alex",
-        imgSrc: "images/download3.jpeg",
+        imgSrc: "/media/person6.jpeg",
       },
       {
         text: "The best cab rental service I’ve ever used! The drivers are friendly and always on time.",
         client: "- Jordan",
-        imgSrc: "images/images.jpeg",
+        imgSrc: "/media/person7.jpeg",
       },
       {
         text: "Excellent service! The booking process is seamless, and the cabs are always clean and comfortable.",
         client: "- Taylor",
-        imgSrc: "images/images (4).jpeg",
+        imgSrc: "/media/person8.jpeg",
       },
     ];
 
