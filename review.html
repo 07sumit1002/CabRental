@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/logo1.png" type="image/png">
     <title>Cabrental Reviews</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -27,6 +28,35 @@
         .nav-items a:hover {
             color: #6d28d9;
         }
+
+        .navbar ul li:hover a {
+    background-color: #555;
+    transform: scale(1.2); /* Popup effect */
+}
+
+.navbar ul li:hover::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: #00aced;
+    top: 100%;
+    left: 0;
+    transform: scaleX(1);
+    transition: all 0.3s ease;
+}
+
+.navbar ul li::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: transparent;
+    top: 100%;
+    left: 0;
+    transform: scaleX(0);
+    transition: all 0.3s ease;
+}
 
         .card {
             transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -62,10 +92,10 @@
     <nav class="bg-white shadow-md">
         <div class="container mx-auto px-4 nav-container">
             <div class="flex items-center">
-                <img src="img/logo.png" alt="Logo" class="logo">
-                <div class="text-lg font-bold text-purple-800">
+                <a href="index.html"><img src="img/logo.png" alt="Logo" class="logo"></a>
+                <a href="index.html"><div class="text-lg font-bold text-purple-800">
                     Cabrental
-                </div>
+                </div></a>
             </div>
             <div class="nav-items">
                 <a href="index.html" class="text-gray-800 hover:text-purple-800">Home</a>
