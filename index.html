@@ -232,6 +232,44 @@
             justify-content: center;
         }
 
+        /* Navigation button styles */
+
+        .swiper-button-prev,
+        .swiper-button-next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 10;
+            color: var(--primary-color);
+            padding: 30px;
+            width: 25px;
+            height: 25px;
+            background-color: rgba(0, 0, 0, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background 0.3s ease, opacity 0.3s ease;
+        }
+
+        .swiper-button-prev {
+            left: 20px;
+        }
+
+        .swiper-button-next {
+            right: 20px;
+        }
+
+        .swiper-button-prev:hover,
+        .swiper-button-next:hover {
+            background-color: rgba(0, 0, 0, 0.3);
+            opacity: 1;
+
+        }
+
+
+
         /* General Styles */
         .container_1 {
             padding: 50px 0;
@@ -600,7 +638,8 @@
         <div class="services-container">
             <div class="box">
                 <div class="box-img">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMbcTDQfyKWuPH727d_lUKN6tn_tUimpHg4w&s" alt="Maruti Suzuki Ertiga">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMbcTDQfyKWuPH727d_lUKN6tn_tUimpHg4w&s"
+                        alt="Maruti Suzuki Ertiga">
                 </div>
                 <p>2023</p>
                 <h3>Maruti Suzuki Ertiga - 7 Seater</h3>
@@ -618,7 +657,8 @@
             </div>
             <div class="box">
                 <div class="box-img">
-                    <img src="https://imgd.aeplcdn.com/664x374/n/cw/ec/26742/swift-exterior-right-front-three-quarter-2.jpeg?q=80" alt="Maruti Suzuki Swift">
+                    <img src="https://imgd.aeplcdn.com/664x374/n/cw/ec/26742/swift-exterior-right-front-three-quarter-2.jpeg?q=80"
+                        alt="Maruti Suzuki Swift">
                 </div>
                 <p>2018</p>
                 <h3>Maruti Suzuki Swift - 5 Seater</h3>
@@ -627,7 +667,8 @@
             </div>
             <div class="box">
                 <div class="box-img">
-                    <img src="https://imgd-ct.aeplcdn.com/664x415/n/dzet6ra_1421855.jpg?q=80" alt="Toyota Innova Crysta">
+                    <img src="https://imgd-ct.aeplcdn.com/664x415/n/dzet6ra_1421855.jpg?q=80"
+                        alt="Toyota Innova Crysta">
                 </div>
                 <p>2016</p>
                 <h3>Toyota Innova Crysta - 7 Seater</h3>
@@ -636,7 +677,8 @@
             </div>
             <div class="box">
                 <div class="box-img">
-                    <img src="https://stimg.cardekho.com/images/carexteriorimages/630x420/Honda/Honda-City-2011-2013/2754/front-left-side-47.jpg" alt="Honda City">
+                    <img src="https://stimg.cardekho.com/images/carexteriorimages/630x420/Honda/Honda-City-2011-2013/2754/front-left-side-47.jpg"
+                        alt="Honda City">
                 </div>
                 <p>2013</p>
                 <h3>Honda City - 5 Seater</h3>
@@ -892,6 +934,9 @@
                 <div class="swiper-pagination"></div>
 
             </div>
+            <!-- Add Navigation -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
         </div>
     </section>
 
