@@ -4,37 +4,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="stylesheet" href="/CSS files/login.css"/>
+    <title>Register</title>
+    <link rel="stylesheet" href="login.css"/>
 </head>
 <body>
     <div class="container">
         <div class="left-section">
-            <button class="back-button" onclick="window.location.href='index.html'"><img src="/media/back_button.png" width="50px" height="50px"/></button>
+            <button class="back-button" onclick="window.location.href='index.html'"><img src="img/back_button.png" width="50px" height="50px"/></button>
             <h1 class="animated-heading">Cab Rental<span class="blinking-cursor">|</span></h1>
             <p class="description">
                 Welcome to Cab Rental, your go-to platform for sharing or renting a cab effortlessly. Whether you're planning a quick trip across town or a long-distance journey, we provide a convenient and cost-effective solution to meet your travel needs.
             </p>
-            <form id="loginForm" class="login-form" action="/PHP files/register.php">
+            <form id="signupForm" class="login-form" action="register.php">
+                <input type="text" id="name" placeholder="Name" class="input-field">
                 <input type="text" id="username" placeholder="Username" class="input-field">
+                <input type="email" id="email" placeholder="Email" class="input-field">
                 <input type="password" id="password" placeholder="Password" class="input-field">
-                <button type="submit" class="submit-button">Login</button>
+                <button type="submit" class="submit-button">Sign up</button>
             </form>
             <p class="already-signed-up">
-                Not signed up? <a href="/HTML files/signup.html"> Sign In</a>
-            </p>
-            <p class="forgot password">
-                Forgot Password? <a href="/HTML files/forgot-password.html">Click Here</a>
+                already signed up? <a href="login.html">Login</a>
             </p>
         </div>
         <div class="right-section">
-            <img src="/media/login_1.jpg" alt="car_pics" class="transition-image">
-            <img src="/media/login_2.jpg" alt="car_pics" class="transition-image">
-            <img src="/media/login_3.jpg" alt="car_pics" class="transition-image">
-            <img src="/media/login_4.jpg" alt="car_pics" class="transition-image">
-            <img src="/media/login_5.jpg" alt="car_pics" class="transition-image">
-            <img src="/media/login_6.jpg" alt="car_pics" class="transition-image">
-            <img src="/media/login_7.jpg" alt="car_pics" class="transition-image">
+            <img src="./img/login_1.jpg" alt="car_pics" class="transition-image">
+            <img src="./img/login_2.jpg" alt="car_pics" class="transition-image">
+            <img src="./img/login_3.jpg" alt="car_pics" class="transition-image">
+            <img src="./img/login_4.jpg" alt="car_pics" class="transition-image">
+            <img src="./img/login_5.jpg" alt="car_pics" class="transition-image">
+            <img src="./img/login_6.jpg" alt="car_pics" class="transition-image">
+            <img src="./img/login_7.jpg" alt="car_pics" class="transition-image">
         </div>
     </div>
 
