@@ -523,19 +523,19 @@
             <div class="booking-form">
                 <div class="form-group">
                     <label for="fullName">Full Name</label>
-                    <input type="text" id="fullName" placeholder="Your Name">
+                    <input type="text" id="fullName" placeholder="Your Name" required>
                 </div>
                 <div class="form-group">
                     <label for="phone">Phone</label>
-                    <input type="tel" id="phone" placeholder="Telephone">
+                    <input type="tel" id="phone" placeholder="Telephone" required>
                 </div>
                 <div class="form-group">
                     <label for="email">Email</label>
-                    <input type="email" id="email" placeholder="name@example.com">
+                    <input type="email" id="email" placeholder="name@example.com" required>
                 </div>
                 <div class="form-group">
                     <label for="city">City</label>
-                    <select id="city">
+                    <select id="city" required>
                         <option disabled selected>Select City</option>
                         <option value="Delhi-NCR">Delhi-NCR</option>
                         <option value="Bangalore">Bangalore</option>
@@ -546,56 +546,74 @@
                 </div>
                 <div class="form-group">
                     <label for="vehicle">Vehicle</label>
-                    <select id="vehicle">
+                    <select id="vehicle" required>
                         <option disabled selected>Select Vehicle</option>
-                        <option value="Civic">Maruti Suzuki Ertiga - 7 Seater - ₹2500/day</option>
-                        <option value="Swift Dzire">Maruti Suzuki Eeco - 7 Seater - ₹1700/day</option>
-                        <option value="Innova">Maruti Suzuki Swift - 5 Seater - ₹1200/day</option>
-                        <option value="Creta">Toyota Innova Crysta - 7 Seater - ₹4000/day</option>
-                        <option value="GrandVistara">Honda City - 5 Seater - ₹1900/day</option>
-                        <option value="GrandVistara">Tata Indigo - 5 Seater - ₹1200/day</option>
+                        <option value="Civic" data-price="2500">Maruti Suzuki Ertiga - 7 Seater - ₹2500/day</option>
+                        <option value="Swift Dzire" data-price="1700">Maruti Suzuki Eeco - 7 Seater - ₹1700/day</option>
+                        <option value="Innova" data-price="1200">Maruti Suzuki Swift - 5 Seater - ₹1200/day</option>
+                        <option value="Creta" data-price="4000">Toyota Innova Crysta - 7 Seater - ₹4000/day</option>
+                        <option value="GrandVistara" data-price="1900">Honda City - 5 Seater - ₹1900/day</option>
+                        <option value="GrandVistara" data-price="1200">Tata Indigo - 5 Seater - ₹1200/day</option>
                     </select>
                 </div>
                 <div class="form-group">
                     <label for="pickupDate">Pickup Date</label>
                     <input type="date" id="pickupDate" min="" max="" required>
                 </div>
-
-                <script>
-                    document.addEventListener('DOMContentLoaded', function () {
-                        const today = new Date();
-                        const minDate = today.toISOString().split('T')[0]; // Today's date
-                        const maxDate = new Date(today);
-                        maxDate.setDate(today.getDate() + 20); // Date 20 days from today
-                        const maxDateString = maxDate.toISOString().split('T')[0]; // Format as YYYY-MM-DD
-
-                        document.getElementById('pickupDate').setAttribute('min', minDate);
-                        document.getElementById('pickupDate').setAttribute('max', maxDateString);
-                    });
-                </script>
                 <div class="form-group">
                     <label for="dropoffDate">Drop-off Date</label>
                     <input type="date" id="dropoffDate" min="" max="" required>
                 </div>
 
-                <script>
-                    document.addEventListener('DOMContentLoaded', function () {
-                        const today = new Date();
-                        const minDate = today.toISOString().split('T')[0]; // Today's date
-                        document.getElementById('dropoffDate').setAttribute('min', minDate);
+                <div class="form-group">
+                    <label for="totalPrice">Total Price</label>
+                    <input type="text" id="totalPrice" placeholder="Total Price" readonly>
+                </div>
 
-                        // Calculate the max date (30 days from today)
-                        const maxDate = new Date();
-                        maxDate.setDate(today.getDate() + 30);
-                        const maxDateString = maxDate.toISOString().split('T')[0]; // Date in YYYY-MM-DD format
-                        document.getElementById('dropoffDate').setAttribute('max', maxDateString);
-                    });
-                </script>
+                <div class="form-group">
+                    <button id="bookNow">Book Now</button>
+                </div>
             </div>
 
-            <div class="form-group">
-                <button id="bookNow">Book Now</button>
-            </div>
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    const today = new Date();
+                    const minDate = today.toISOString().split('T')[0]; // Today's date
+                    const maxPickupDate = new Date(today);
+                    maxPickupDate.setDate(today.getDate() + 20); // Date 20 days from today
+                    const maxPickupDateString = maxPickupDate.toISOString().split('T')[0]; // Format as YYYY-MM-DD
+                    document.getElementById('pickupDate').setAttribute('min', minDate);
+                    document.getElementById('pickupDate').setAttribute('max', maxPickupDateString);
+
+                    const maxDropoffDate = new Date(today);
+                    maxDropoffDate.setDate(today.getDate() + 30); // Date 30 days from today
+                    const maxDropoffDateString = maxDropoffDate.toISOString().split('T')[0]; // Format as YYYY-MM-DD
+                    document.getElementById('dropoffDate').setAttribute('min', minDate);
+                    document.getElementById('dropoffDate').setAttribute('max', maxDropoffDateString);
+
+                    // Function to calculate total price
+                    function calculateTotalPrice() {
+                        const vehicleSelect = document.getElementById('vehicle');
+                        const pickupDate = new Date(document.getElementById('pickupDate').value);
+                        const dropoffDate = new Date(document.getElementById('dropoffDate').value);
+                        const days = Math.ceil((dropoffDate - pickupDate) / (1000 * 3600 * 24));
+
+                        if (days > 0 && vehicleSelect.value) {
+                            const pricePerDay = parseFloat(vehicleSelect.options[vehicleSelect.selectedIndex].dataset.price);
+                            const totalPrice = pricePerDay * days;
+                            document.getElementById('totalPrice').value = `₹${totalPrice}`;
+                        } else {
+                            document.getElementById('totalPrice').value = '';
+                        }
+                    }
+
+                    // Add event listeners to update the price on vehicle change and date selection
+                    document.getElementById('vehicle').addEventListener('change', calculateTotalPrice);
+                    document.getElementById('pickupDate').addEventListener('change', calculateTotalPrice);
+                    document.getElementById('dropoffDate').addEventListener('change', calculateTotalPrice);
+                });
+            </script>
+
 
         </section>
         <!-- Ride-->
