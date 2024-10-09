@@ -37,6 +37,11 @@ var swiper = new Swiper(".review-slider", {
   },
   pagination: {
     el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next", // Link to the "next" button
+    prevEl: ".swiper-button-prev", // Link to the "prev" button
   },
 });
 AOS.init({
