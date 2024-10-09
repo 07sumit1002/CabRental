@@ -3,29 +3,49 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="img/logo1.png" type="image/png">
     <title>About Us - CabRental</title>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
     />
+    
+    
     <nav class="navbar">
       <div class="logo">
-        <img src="img/cabz.png.png" alt="Logo" class="navbar-logo" />
+        <a href="index.html" class="logo"><img src="img/logo.png" alt=""></a>
+        <a href="index.html"><img src="img/cabz.png.png" alt="Logo" class="navbar-logo" /></a>
     </div>
       <ul>
           <li><a href="index.html">Home</a></li>
-          <li><a href="#company-overview">Company Overview</a></li>
-          <li><a href="#mission-vision">Mission & Vision</a></li>
-          <li><a href="#values-principles">Values & Principles</a></li>
+          <li><a href="ride.html">Ride</a></li>
+          <li><a href="serv.html">Services</a></li>
+          <li><a href="#about.html">About</a></li>
+          <li><a href="review.html">Reviews</a></li>
+          <li><a href="contactus.html">Contact</a></li>
+          <li>
+            <div class="header-btn">
+              <a href="login.html" class="sign-up">Login</a>
+          </div>
+          </li>
+          <li>
+            <div class="theme-switch" id="theme-switch"></div>
+          </li>
       </ul>
   </nav>
   
+  
     <style>
+      .logo img {
+            height: 60px;
+            padding-right: 40px;
+            padding-left: 40px;
+        }
       body {
         font-family: "Poppins", sans-serif;
         margin: 0;
         padding: 0;
-        background-color: #f9f9f9;
+        background-color: #eeeff1;
         color: #333;
         line-height: 1.6;
       }
@@ -34,25 +54,37 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        background-color: #fff;
+        background-color: #eeeff1;
         padding: 20px;
         position: sticky;
         top: 0;
         z-index: 1000;
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        height: 50px;
       }
 
       .navbar ul li a:hover {
         background-color: #8f6883;
         transform: scale(1.1);
       }
-
+      .header-btn .sign-up:hover {
+            background-color: red;
+            border-color: red;
+        }
+        .header-btn .sign-up {
+            padding: 10px 20px;
+            background-color: #007bff;
+            border-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
       .navbar ul {
         display: flex;
         justify-content: space-around; /* Spacing between links */
         list-style: none;
         padding: 10px; /* Padding for the group of links */
-        background-color: #e6e4e4; /* Background color for the navbar */
+        background-color: #eeeff1; /* Background color for the navbar */
     }
 
     .navbar ul li {

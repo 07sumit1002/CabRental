@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/logo1.png" type="image/png">
     <title>Cabshare</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
@@ -188,21 +189,108 @@
               font-size: 18px;
           }
 
-          header {
-              flex-direction: column;
-          }
-
-          .navbar {
-              flex-direction: column;
-              gap: 10px;
-          }
-
           .footer a {
               display: block;
               margin-bottom: 5px;
           }
         }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #eeeff1;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+        }
 
+        .logo img {
+            height: 40px;
+        }
+
+        .navbar {
+            display: flex;
+            gap: 20px;
+            padding-top: 20px;
+            list-style: none;
+        }
+
+        .navbar li a {
+            text-decoration: none;
+            color: #333;
+            padding: 10px 15px;
+            transition: 0.3s ease;
+        }
+
+        .navbar li a:hover {
+            color: #007bff;
+        }
+
+        .header-btn .sign-up {
+            padding: 10px 20px;
+            background-color: #007bff;
+            border-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        
+        .header-btn .sign-up:hover {
+            background-color: red;
+            border-color: red;
+        }
+
+        /* Hide menu icon initially */
+        #menu-icon {
+            display: none;
+        }
+
+        /* Responsive styles for mobile sidebar */
+        @media (max-width: 600px) {
+            .navbar {
+                position: fixed;
+                top: 0;
+                left: -250px;
+                width: 250px;
+                height: 100%;
+                flex-direction: column;
+                align-items: start;
+                justify-content: flex-start;
+                padding: 20px;
+                transition: 0.3s;
+                z-index: 1000;
+            }
+
+            .navbar.active {
+                left: 0;
+            }
+
+            .navbar li {
+                width: 100%;
+                margin: 20px 0;
+            }
+
+            .navbar li a {
+                display: block;
+                width: 100%;
+                text-align: left;
+                padding: 10px 15px;
+            }
+
+            #menu-icon {
+                display: block;
+                font-size: 28px;
+                cursor: pointer;
+                position: absolute;
+                right: 20px;
+            }
+
+            .close-btn {
+                font-size: 28px;
+                cursor: pointer;
+                margin-left: auto;
+                margin-bottom: 20px;
+            }
+        }
 
     </style>
 </head>
@@ -217,7 +305,8 @@
     <script src="main.js"></script>
     <!-- Header -->
     <header style="display: flex !important;">
-        <a href="#" class="logo"><img src="img/logo.png" alt=""></a>
+        <a href="index.html" class="logo"><img src="img/logo.png" alt=""></a>
+        <a href="index.html" class="CabRental_logo"><img src="img/cabz.png.png" alt=""></a>
         <div class="bx bx-menu" id="menu-icon"></div>
         <ul class="navbar">
             <li><a href="index.html">Home</a></li>
