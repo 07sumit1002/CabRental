@@ -333,7 +333,7 @@ li a:hover {
 }
 
 
-.home {
+/*.home {
   width: 100%;
   min-height: 100vh;
   position: relative;
@@ -345,24 +345,52 @@ li a:hover {
   grid-template-columns: repeat(2, lfr);
 }
 
+
+.content-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin: 0 auto;
+  
+}
+
+.carweb {
+
+  display: flex;
+
+  justify-content: center; /* Center the image 
+
+  align-items: center;
+  align-content: flex-start;
+  
+}
+
 .carweb img {
-  left: 1400px;
-  width: 100%;
+  width: 800px;
+  border-radius: 10px;
+  object-fit: cover;
+  image-orientation: inherit;
+ 
 }
 
 .text h1 {
   font-size: 3.5rem;
   letter-spacing: 2px;
+  line-height: 1.2;
+  text-align: left;
 }
 
 .text span {
-  color: red;
+  color: orangered;
 }
 
 .text p {
-  margin: 00.5rem 0 1rem;
-}
-
+  margin: 0.5rem 0 1rem;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  text-align: left;
+}*/
 .app-stores {
   display: flex;
   position: absolute;
@@ -374,20 +402,22 @@ li a:hover {
   cursor: pointer;
 }
 
-.booking-form {
+/*.booking-form {
+  flex-grow: 1;
+  margin: 0 20px; /* Minimal margin 
   background-color: #ffffff;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
-  width: 100%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  width: 500px;
 }
 
 .form-group {
   display: flex;
   flex-direction: column;
+  margin-bottom: 10px;
 }
 
 .form-group label {
@@ -397,34 +427,38 @@ li a:hover {
 
 .form-group input,
 .form-group select {
-  padding: 10px;
-  border: 2px solid orangered;
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #e0e0e0;
   border-radius: 5px;
   font-size: 16px;
+  transition: border-color 0.3s ease-in-out;
 }
 
-.form-group input:focus,
+/*.form-group input:focus,
 .form-group select:focus {
   outline: none;
   border-color: orangered;
-}
+}*/
 
-#bookNow {
+/*#bookNow {
+  width: 100%;
   background-color: orangered;
   color: white;
   padding: 15px;
   border: none;
   border-radius: 5px;
-  font-size: 18px;
+  font-size: 16px;
   cursor: pointer;
-  transition: background-color 0.3s;
-}
+  transition: background-color 0.3s, transform 0.3s;
+} */
 
-#bookNow:hover {
+/*#bookNow:hover {
+
   background-color: orangered;
-  transform: scale(1.1);
+  transform: scale(1.05);
 
-}
+}*/
 
 /* .form-container form {
   display: flex;
@@ -1186,7 +1220,11 @@ footer p {
 
 }
 
+
+
+
 .topbtn {
+
   position: fixed;
   width: 50px;
   height: 50px;
@@ -1265,10 +1303,14 @@ footer p {
   background: #474fa1;
 }
 .dark-mode .carweb{
-  content: url("Car\ Website\ dark\ –\ 1@2x.png\ .png");
-  left: 1400px;
-  width: 100%;
+  content: url("Car\ Website\ dark\ –\ 1@2x.png\.png");  
+  width: 600px;
+  height: 600px; 
+  background-size: cover;
 }
+
+
+
 .dark-mode .ride .ride-container .bx {
   background: #000000;
 }
@@ -1323,8 +1365,16 @@ footer p {
   padding: 10px;
   margin-bottom: 20px;
   font-size: 16px;
-  color: white;
+  color: rgb(6, 0, 0);
   background: white;
+}
+
+
+.dark-mode input[type="date"]{
+  color: rgb(251, 248, 248);
+  background-color: rgb(11, 1, 1);
+  padding: 10px;
+  margin-bottom: 20px;
 }
 .dark-mode .contact-right {
   border-radius: 30px;
@@ -1337,38 +1387,236 @@ footer p {
   color: #fff6f6;
 }
 
-.booking-form .form-group input,
-.booking-form .form-group select {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
-    background-color: var(--input-bg-color);
-    color: var(--input-text-color);
-    transition: background-color 0.3s, color 0.3s;
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    position: relative;
 }
 
-/* Dark mode styles */
-body.dark-mode {
-    --input-bg-color: #333;
-    --input-text-color: #fff;
+.navbar {
+    display: flex;
+    list-style: none;
 }
 
-body:not(.dark-mode) {
-    --input-bg-color: #fff;
-    --input-text-color: #000;
+.header-btn {
+    margin-left: 20px;
 }
 
-/* Additional dark mode styles for input fields */
-body.dark-mode .booking-form .form-group input,
-body.dark-mode .booking-form .form-group select {
-    background-color: #333;
+.header-btn .sign-up {
+    padding: 10px 20px;
+    background-color: #000;
     color: #fff;
-    border-color: #555;
+    border-radius: 5px;
+    text-decoration: none;
 }
 
-body.dark-mode .booking-form .form-group input::placeholder,
-body.dark-mode .booking-form .form-group select::placeholder {
-    color: #aaa;
+@media (max-width: 768px) {
+    header {
+        flex-wrap: wrap;
+    }
+
+    .navbar {
+        display: none; }
+
+    #menu-icon {
+        display: block; 
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    .header-btn {
+        display: block;
+        margin: 10px 0;
+        text-align: center; 
+    }
+
+  
+    #menu-icon.active + .navbar {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
 }
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-weight: bold;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Section Styles */
+.home {
+  width: 100%;
+  max-height: 1200px;
+  display: flex; 
+  flex-direction: column; 
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.text {
+  text-align: center; 
+  margin-bottom: 20px; 
+}
+.text h1 {
+  font-size: 3.5rem;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.text span {
+  color: orangered;
+}
+
+.text p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.content-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  width: 100%;
+  max-width: 1000px; 
+
+}
+
+.carweb {
+  flex: 1; 
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  margin-right: 20px; 
+}
+.carweb img {
+  width: 600px;
+  height: 600px; 
+  border-radius: 10px;
+   
+}
+
+
+.booking-form {
+  flex-grow: 1;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 400px; 
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.form-group label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #e0e0e0;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: border-color 0.3s ease-in-out;
+  margin-bottom: 20px;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: orangered;
+  margin-bottom: 20px;
+}
+
+#bookNow {
+  width: 100%;
+  background-color: orangered;
+  color: white;
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+#bookNow:hover {
+  background-color: orangered;
+  transform: scale(1.05);
+}
+
+
+@media screen and (max-width: 1024px) {
+  .content-container {
+      flex-direction: column;
+      gap: 30px;
+  }
+
+  .carweb img {
+      max-width: 80%;
+  }
+
+  .booking-form {
+      max-width: 90%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .text h1 {
+      font-size: 2.5rem;
+  }
+
+  .text p {
+      font-size: 1rem;
+  }
+
+  .carweb img {
+      max-width: 80%; /* Image will take more space on smaller screens */
+  }
+
+  .booking-form {
+      padding: 30px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .text h1 {
+      font-size: 2rem;
+  }
+
+  .carweb img {
+      max-width: 90%; /* Image will stay responsive */
+  }
+
+  .booking-form {
+      padding: 20px;
+  }
+}
+
