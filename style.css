@@ -1405,12 +1405,14 @@ footer a:hover {
   border-radius: 20px;
 }
 
-.call-us p {
-  font-size: 18px;
+footer .call-us p {
+  font-size: 43x;
   margin-bottom: 20px;
-  color: black; 
+  color: black !important; 
+  background-color: #f39c12; 
+  padding: 10px; 
+  border-radius: 5px; 
 }
-
 
 .footer-links {
   display: flex;
