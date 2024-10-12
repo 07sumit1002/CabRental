@@ -98,25 +98,10 @@
                 <label for="pickupDate">Pickup Date</label>
                 <input type="date" id="pickupDate">
             </div>
-            <script>
-                const today = new Date();
-                const yesterday = new Date(today.setDate(today.getDate())).toISOString().split('T')[0];
-                document.getElementById('pickupDate').setAttribute('min', yesterday);
-              </script>
             <div class="form-group">
                 <label for="dropoffDate">Drop-off Date</label>
                 <input type="date" id="dropoffDate">
             </div>
-            <script>
-                const minDateInput = document.getElementById('pickupDate');
-                const maxDateInput = document.getElementById('dropoffDate');
-                minDateInput.addEventListener('change', function() {
-                    const selectedMinDate = new Date(minDateInput.value);
-                    // Set max date as selected min date 
-                    const maxDate = new Date(selectedMinDate.setDate(selectedMinDate.getDate())).toISOString().split('T')[0];
-                    maxDateInput.setAttribute('min', maxDate); 
-                });
-              </script>
         </div>
             <div class="form-group">
                 <button id="bookNow">Book Now</button>
@@ -625,6 +610,20 @@
                 behavior: 'smooth'  
             });
         };
+            
+        const today = new Date();
+        const yesterday = new Date(today.setDate(today.getDate())).toISOString().split('T')[0];
+        document.getElementById('pickupDate').setAttribute('min', yesterday);
+
+        const minDateInput = document.getElementById('pickupDate');
+        const maxDateInput = document.getElementById('dropoffDate');
+        minDateInput.addEventListener('change', function() {
+            const selectedMinDate = new Date(minDateInput.value);
+            // Set max date as selected min date 
+            const maxDate = new Date(selectedMinDate.setDate(selectedMinDate.getDate())).toISOString().split('T')[0];
+            maxDateInput.setAttribute('min', maxDate); 
+        });
+
     </script>
 </body>
 
