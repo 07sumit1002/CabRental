@@ -1372,3 +1372,110 @@ body.dark-mode .booking-form .form-group input::placeholder,
 body.dark-mode .booking-form .form-group select::placeholder {
     color: #aaa;
 }
+
+
+
+
+
+footer {
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  padding: 20px 0;
+  font-family: 'Arial', sans-serif;
+  border-radius: 20px;
+  
+}
+
+footer a {
+  color: #ecf0f1;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #3498db;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px 0;
+  border-top: 1px solid #7f8c8d;
+  border-radius: 20px;
+}
+
+.call-us p {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: black; 
+}
+
+
+.footer-links {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 15px;
+}
+
+.footer-column {
+  margin-bottom: 20px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column li {
+  margin-bottom: 10px;
+}
+
+.footer-column li a:hover {
+  color: #f39c12;
+}
+
+.footer-column li a {
+  font-size: 14px;
+}
+
+footer p {
+  margin: 0;
+  font-size: 14px;
+  color: black;
+}
+
+footer p:last-child {
+  margin-top: 15px;
+  font-size: 12px;
+  color: #95a5a6;
+}
+
+.gotopbtn {
+  
+ color:blue;
+  display: inline-block;
+  font-size: 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.gotopbtn:hover {
+  background-color: transparent; /* Keep it transparent on hover as well */
+  color: #2980b9; /* Change text/icon color on hover */
+}
+
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .footer-container {
+      flex-direction: column;
+      align-items: center;
+  }
+  .footer-column {
+      width: 100%;
+      text-align: center;
+  }
+}
