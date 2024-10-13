@@ -199,11 +199,6 @@ header nav .nav-right .header-btn > div input {
     background: rgb(211, 10, 10);
 }*/
 
-
-.navbar {
-  display: flex;
-}
-
 .navbar li {
   position: relative;
 }
@@ -299,6 +294,84 @@ li a:hover {
   /* Adjust width of underline for active link */
 }
 
+/* changes------->>>>>>> */
+.side_bar ul{
+  display: inline-block;  
+  height: 350px;
+  left: -1000px;
+  transition: all 0.3s linear;
+  box-shadow: 0 0 5px rgba(6, 4, 4, 0.536);
+  position: fixed;
+  top: 130px;
+  background-color: rgba(245, 247, 250, 0.9);
+  width:190px ;
+  transition:all 0.3s ease-in
+  }
+#check:checked~.side_bar ul {
+  left: 0px;  
+}
+#check{
+  display: none;
+}
+.material-symbols-outlined{
+  background-color: #EEEFF1;
+  color: grey;
+  top: 150px;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  right: 40px;
+  font-size:35px;
+  transition: all 0.2s ease-in;
+}
+span:hover{
+  color:black;
+  width: 45px;
+}
+
+#sideNav1{
+  position:absolute;
+  top: 100px;
+}
+span{
+  position: sticky;
+}
+
+.lists{
+  position:relative;
+  left: -22px;
+  height:40px;
+  width: 170px;
+  cursor: pointer;
+  margin-top: 10px;
+  padding: 2px 0px 2px 2px;
+}
+.lists li a{
+  display: block;
+ color: rgb(6, 7, 10);
+ text-decoration: none;
+ font-size: 22px;
+ width: 160px;
+ font-family: inherit;
+ padding: 2px 160px 2px 2px;
+ height: 100%;
+}
+.lists:hover{
+  box-shadow: 0 0 5px #08111DB3;
+  font: white;
+  color: white;
+  background-color: black;
+}
+@media(max-width:770px){
+  .navbar{
+    display: none;
+  }
+}
+@media(min-width:770px){
+  span.material-symbols-outlined{
+    display: none;
+  }
+}
 #menu-icon {
   font-size: 24px;
   cursor: pointer;
