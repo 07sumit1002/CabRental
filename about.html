@@ -8,198 +8,341 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
     />
+    <nav class="navbar">
+      <div class="logo">
+        <img src="img/cabz.png.png" alt="Logo" class="navbar-logo" />
+    </div>
+      <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#company-overview">Company Overview</a></li>
+          <li><a href="#mission-vision">Mission & Vision</a></li>
+          <li><a href="#values-principles">Values & Principles</a></li>
+          <label class="theme-switch" for="checkbox">
+            <input type="checkbox" id="checkbox" />
+            <div class="slider round"></div>
+        </label>
+      </ul>
+  </nav>
+  
     <style>
-      body {
-        font-family: "Poppins", sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #f9f9f9;
-        color: #333;
-        line-height: 1.6;
-        transition: background-color 0.3s, color 0.3s;
-      }
 
-      body.dark-mode {
-        background-color: #333;
-        color: #f9f9f9;
-      }
+body {
+    transition: background-color 0.5s, color 0.5s;
+}
 
-      .navbar {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background-color: #fff;
-        padding: 20px;
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        transition: background-color 0.3s;
-      }
+.theme-switch-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
 
-      .navbar.dark-mode {
-        background-color: #444;
-      }
+.theme-switch {
+    display: inline-block;
+    height: 34px;
+    position: relative;
+    width: 60px;
+}
 
-      .navbar .logo {
-        font-size: 1.8em;
-        font-weight: bold;
-        color: #000;
-      }
+.theme-switch input {
+    display: none;
+}
 
-      .navbar ul {
-        display: flex;
-        list-style: none;
-        margin: 0;
-        padding: 0;
-      }
+.slider {
+    background-color: #ccc;
+    border-radius: 34px;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: 0.4s;
+}
 
-      .navbar ul li {
-        margin: 0 15px;
-      }
+.slider:before {
+    background-color: white;
+    border-radius: 50%;
+    bottom: 4px;
+    content: "";
+    height: 26px;
+    left: 4px;
+    position: absolute;
+    transition: 0.4s;
+    width: 26px;
+}
 
-      .navbar ul li a {
-        color: #fff;
-        background-color: #db5454;
-        text-decoration: none;
-        padding: 10px 20px;
-        border-radius: 5px;
-        transition: background-color 0.3s, transform 0.3s;
-      }
+/* Toggle effect */
+input:checked + .slider {
+    background-color: #2196F3;
+}
 
-      .navbar ul li a:hover {
-        background-color: #ff0000;
-        transform: scale(1.1);
-      }
+/* Move the slider to the right when checked */
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
 
-      .hero {
-        height: 60vh;
-        background: url("https://imgs.search.brave.com/-7bIPp-CEYjwrZR7VQetEh1seZnEwsW4eGvZMhzZtj4/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/ZnJlZS1waG90by9j/bG9zZS11cC1tZXRh/bGxpYy1jYXJfMjMt/MjE1MTExMzIwNi5q/cGc_c2l6ZT02MjYm/ZXh0PWpwZw")
-          no-repeat center center/cover;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: #fff;
-        text-align: center;
-        position: relative;
-        box-shadow: inset 0 0 10px #000;
-      }
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
 
-      .hero::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: rgba(0, 0, 0, 0.5);
-      }
+/* Custom icon for the dark mode */
+.slider:after {
+    content: '🌙';
+    position: absolute;
+    right: 10px;
+    top: 7px;
+    font-size: 18px;
+    color: #ffffff;
+}
 
-      .hero h1 {
-        font-size: 4em;
-        margin: 0;
-        position: relative;
-        z-index: 1;
-        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
-      }
+input:checked + .slider:after {
+    content: '☀️';
+    position: absolute;
+    left: 10px;
+    color: #000000;
+}
 
-      .container {
-        max-width: 1000px; /* Adjusted for smaller width */
-        margin: 0 auto;
-        padding: 20px 10px; /* Reduced padding */
-      }
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
 
-      h2 {
-        color: #333;
-        margin-bottom: 20px;
-        text-align: center; /* Center-aligned headings */
-        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-      }
+/* Dark mode for navbar */
+body.dark-mode .navbar {
+    background-color: #000000; /* Dark background for navbar */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Darker shadow */
+}
 
-      h2.dark-mode {
-        color: #f9f9f9; /* Change h2 color in dark mode */
-      }
+body.dark-mode .navbar ul {
+    background-color: #000000; /* Dark background for navbar menu */
+}
 
-      p {
-        color: #555;
-        margin-bottom: 20px;
-        text-align: justify; /* Justify text */
-      }
+body.dark-mode .navbar ul li a {
+    color: #ffffff; /* Light text color for navbar links */
+}
 
-      p.dark-mode {
-        color: #e0e0e0; /* Change paragraph color in dark mode */
-      }
+body.dark-mode .navbar ul li a:hover {
+    background-color: #090909; /* Slightly lighter background on hover */
+    color: #ffffff; /* Ensure text color stays light */
+}
 
-      ul {
-        list-style: none;
-        padding: 0;
-      }
+body.dark-mode .navbar ul li a:active,
+body.dark-mode .navbar ul li a:focus {
+    border-bottom: 3px solid white; /* White border for active link */
+}
 
-      .values-principles ul li {
-        background: linear-gradient(145deg, #b8e7af, hsl(129, 28%, 73%));
-        margin: 10px 0;
-        padding: 15px 20px;
-        border-radius: 5px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1),
-          inset 0 1px 3px rgba(255, 255, 255, 0.1);
-        transition: transform 0.3s, box-shadow 0.3s;
-      }
 
-      .values-principles ul li.dark-mode {
-        background: linear-gradient(145deg, #444, #555); /* Adjust background for dark mode */
-        color: #f9f9f9; /* Text color for dark mode */
-      }
 
-      ul li:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2),
-          inset 0 1px 3px rgba(255, 255, 255, 0.3);
-      }
+      
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: #1f1e1e;
+  line-height: 1.6;
+}
 
-      .section-img {
-        margin: 40px 0;
-        text-align: center;
-      }
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
 
-      .section-img img {
-        max-width: 90%; /* Adjusted for smaller width */
-        height: auto;
-        border-radius: 10px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s, box-shadow 0.3s;
-      }
+.navbar ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  padding: 10px;
+  background-color: #e6e4e4;
+}
 
-      .section-img img:hover {
-        transform: scale(1.05);
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-      }
+.navbar ul li {
+  margin: 0 10px;
+}
 
-      .highlight {
-        color: #d32f2f;
-        font-weight: bold;
-      }
+
+/* Light Mode (default) */
+.navbar ul li a {
+    color: #000000; /* Black text */
+    background-color: #ffffff; /* White background */
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 10px;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+.navbar ul li a:hover {
+    background-color: #f7f5f4; /* Slightly different white on hover */
+    color: #000000; /* Keep black text on hover in light mode */
+    transform: scale(1.1);
+}
+
+/* Dark Mode */
+body.dark-mode .navbar ul li a {
+    color: #ffffff; /* White text */
+    background-color: #000000; /* Black background */
+}
+
+body.dark-mode .navbar ul li a:hover {
+    color: #007bff; /* Blue text on hover in dark mode */
+    background-color: #000000; /* Keep black background */
+    transform: scale(1.1);
+}
+
+
+.navbar ul li a:active,
+.navbar ul li a:focus {
+  border-bottom: 3px solid black;
+}
+
+.hero {
+  height: 60vh;
+  background: url("https://autotrans.com/wp-content/uploads/2021/04/AdobeStock_95320493-2048x1367.jpeg")
+    no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  box-shadow: inset 0 0 10px #000;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.hero h1 {
+  font-size: 4em;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+  color: #e64825;
+  text-align: center;
+}
+
+.about-us-img {
+  width: 1200px;
+  height: 400px;
+  border-radius: 10px;
+  position: absolute;
+  bottom: 10px;
+  box-shadow: 0 4px 10px rgba(12, 10, 10, 0.2);
+  right: 80px;
+  z-index: -1;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px 10px;
+}
+
+h2 {
+  color: #333232;
+  margin-bottom: 20px;
+  text-align: center;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+p {
+  color: #555;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.values-principles ul li {
+  background: linear-gradient(145deg, #b8e7af, hsl(129, 28%, 73%));
+  margin: 10px 0;
+  padding: 15px 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1),
+    inset 0 1px 3px rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+ul li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2),
+    inset 0 1px 3px rgba(255, 255, 255, 0.3);
+}
+
+.section-img {
+  margin: 40px 0;
+  text-align: center;
+}
+
+.section-img img {
+  max-width: 90%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.section-img img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.highlight {
+  color: #d32f2f;
+  font-weight: bold;
+}
+
+.container section {
+  margin-bottom: 50px;
+  padding: 20px;
+  border-radius: 5px;
+  border-top: 2px solid #ddd;
+}
+
+#company-overview {
+  background-color: #557d80;
+}
+
+#mission-vision {
+  background-color: #d4c6c6;
+}
+
+#company-overview p,
+#mission-vision p {
+  font-weight: bold;
+  color: #080101;
+}
+
     </style>
   </head>
   <body>
-    <!-- Navbar -->
-    <nav class="navbar">
-      <div class="logo">CabRental</div>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="#company-overview">Company Overview</a></li>
-        <li><a href="#mission-vision">Mission & Vision</a></li>
-        <li><a href="#values-principles">Values & Principles</a></li>
-        <li>
-          <button id="darkModeToggle" style="cursor: pointer; background: none; border: none; color: #000;">
-            <i class='bx bxs-moon' style='font-size: 1.5em;'></i>
-          </button>
-        </li>
-      </ul>
-    </nav>
-
+    
     <!-- Hero Section -->
     <section class="hero">
       <h1>About Us</h1>
+
+
     </section>
 
     <div class="container">
@@ -228,14 +371,17 @@
         <h2>Mission and Vision</h2>
         <div class="section-img">
           <img
-            src="https://imgs.search.brave.com/q0e8cW8B-XzUbrgZx4qP0ObqkV3g5cPE82Dptj32vVY/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/ZnJlZS1waG90by9w/aG90by1jb250ZW50/LzIwMTkvMDMvbXNo/aXN0LzE1NTM5MDA2/bmF0dXJlcmVpbC9z/bGFkZXJzL3ZhbC9j/YWxlbmRhci5qcGc"
-            alt="Mission Vision Image"
+            src="https://imgs.search.brave.com/2CAFCbM6U5I6Q03dK-bC8qqqyb_mjrDxo4YGu4-zCnk/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMuZnJlZWltYWdl/cy5jb20vaW1hZ2Vz/L2xhcmdlLXByZXZp/ZXdzLzMxOC9pbi10/aGUtY2FyLTEtMTQ5/NTA3MC5qcGc_Zm10"
+            alt="Mission and Vision Image"
           />
         </div>
         <p>
-          Our mission is to provide safe, efficient, and affordable transportation
-          services to all. We envision a future where everyone has access to
-          reliable transportation, enhancing their mobility and quality of life.
+          <strong>Mission:</strong> To provide reliable and affordable cab
+          rental services while ensuring exceptional customer experience.
+        </p>
+        <p>
+          <strong>Vision:</strong> To be the leading cab rental company known
+          for innovation, sustainability, and outstanding service.
         </p>
       </section>
 
@@ -243,44 +389,74 @@
       <section id="values-principles" class="values-principles">
         <h2>Values and Principles</h2>
         <ul>
-          <li>Customer Satisfaction</li>
-          <li>Integrity</li>
-          <li>Safety</li>
-          <li>Innovation</li>
-          <li>Community Engagement</li>
+          <li>
+            <strong>Customer First:</strong> We prioritize our customers' needs
+            and strive to exceed their expectations.
+          </li>
+          <li>
+            <strong>Integrity:</strong> We operate with honesty and transparency
+            in all our dealings.
+          </li>
+          <li>
+            <strong>Safety:</strong> We ensure the highest safety standards for
+            our customers and drivers.
+          </li>
+          <li>
+            <strong>Innovation:</strong> We continuously seek innovative
+            solutions to enhance our services.
+          </li>
+          <li>
+            <strong>Sustainability:</strong> We are committed to sustainable
+            practices and reducing our environmental impact.
+          </li>
         </ul>
       </section>
     </div>
+    <!-- Footer -->
+<footer style="background-color: #333; color: #fff; padding: 20px 0;">
+  <div class="container">
+    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+      <div>
+        <h3 style="margin: 0;">CabRental</h3>
+        <p>&copy; 2024 CabRental. All rights reserved.</p>
+      </div>
+      <ul style="list-style: none; display: flex; padding: 0; margin: 0;">
+        <li style="margin-right: 15px;"><a href="#" style="color: #fff; text-decoration: none;">Privacy Policy</a></li>
+        <li style="margin-right: 15px;"><a href="#" style="color: #fff; text-decoration: none;">Terms of Service</a></li>
+        <li style="margin-right: 15px;"><a href="#" style="color: #fff; text-decoration: none;">Contact Us</a></li>
+      </ul>
+      <div>
+        <a href="#" style="color: #fff; margin-right: 10px;"><i class="bx bxl-facebook"></i></a>
+        <a href="#" style="color: #fff; margin-right: 10px;"><i class="bx bxl-twitter"></i></a>
+        <a href="#" style="color: #fff; margin-right: 10px;"><i class="bx bxl-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+const toggleSwitch = document.querySelector('#checkbox');
+const currentTheme = localStorage.getItem('theme');
 
-    <script>
-      // Dark mode toggle functionality
-      const toggleButton = document.getElementById("darkModeToggle");
-      toggleButton.addEventListener("click", () => {
-        document.body.classList.toggle("dark-mode");
-        const navbar = document.querySelector(".navbar");
-        navbar.classList.toggle("dark-mode");
+// Load saved theme
+if (currentTheme) {
+    document.body.classList.add(currentTheme);
 
-        // Toggle icon
-        const icon = toggleButton.querySelector("i");
-        icon.classList.toggle("bxs-sun");
-        icon.classList.toggle("bxs-moon");
+    if (currentTheme === 'dark-mode') {
+        toggleSwitch.checked = true;
+    }
+}
 
-        // Change text colors for dark mode
-        const headings = document.querySelectorAll("h2");
-        headings.forEach((heading) => {
-          heading.classList.toggle("dark-mode");
-        });
+// Toggle between dark and light mode
+toggleSwitch.addEventListener('change', function() {
+    if (this.checked) {
+        document.body.classList.add('dark-mode');
+        localStorage.setItem('theme', 'dark-mode');
+    } else {
+        document.body.classList.remove('dark-mode');
+        localStorage.setItem('theme', 'light-mode');
+    }
+});
 
-        const paragraphs = document.querySelectorAll("p");
-        paragraphs.forEach((paragraph) => {
-          paragraph.classList.toggle("dark-mode");
-        });
-
-        const listItems = document.querySelectorAll(".values-principles ul li");
-        listItems.forEach((item) => {
-          item.classList.toggle("dark-mode");
-        });
-      });
-    </script>
+</script>
   </body>
 </html>
