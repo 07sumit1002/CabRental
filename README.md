@@ -193,7 +193,7 @@ This project is licensed under the [MIT License](LICENSE).
 
 For any inquiries or support, please contact:
 
-- **Email:** <add-email-here>
+- **Email:** sumitkumar101984@gmail.com
 - **GitHub:** [@07sumit1002](https://github.com/07sumit1002)
 
 ---
