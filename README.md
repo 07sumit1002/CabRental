@@ -25,7 +25,7 @@
 </table>
 
 ---
-<img src = "https://github.com/neeru24/Connect_icons/blob/main/Screenshot%202024-10-12%20105220.png" alt = "image">
+<img src = "images/Cab_rental.png.png" alt = "image">
 <img src = "https://github.com/neeru24/Connect_icons/blob/main/Screenshot%202024-10-12%20120929.png" alt = "image">
 
 ---
