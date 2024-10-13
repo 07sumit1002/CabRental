@@ -1,184 +1,332 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CabRental Services</title>
-    <link rel="stylesheet" href="serv.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <style>
-        /* Add some basic styling for smooth scrolling */
-        html {
-            scroll-behavior: smooth;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CabRental Services</title>
+  <link rel="stylesheet" href="serv.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    /* Smooth scrolling for the page */
+    html {
+      scroll-behavior: smooth;
+    }
 
-        /* Light mode styles */
-        body {
-            background-color: white; /* Background color */
-            color: black; /* Text color */
-            margin: 0;
-            padding-bottom: 80px; /* Space for the footer */
-        }
+    /* Theme switcher styles */
+    .theme-switch-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
 
-        nav ul li a {
-            color: black; /* Text color in light mode */
-        }
+    .theme-switch {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+    }
 
-        header {
-            color: black; /* Header text color in light mode */
-        }
+    .theme-switch input {
+      display: none;
+    }
 
-        /* Dark mode styles */
-        body.dark-mode {
-            background-color: #121212; /* Dark background */
-            color: white; /* Light text */
-        }
+    .slider {
+      background-color: #ccc;
+      border-radius: 34px;
+      width: 60px;
+      height: 34px;
+      position: relative;
+      cursor: pointer;
+      transition: 0.4s;
+    }
 
-        body.dark-mode nav ul li a {
-            color: white; /* Text color in dark mode */
-        }
+    .slider:before {
+      content: "";
+      position: absolute;
+      height: 26px;
+      width: 26px;
+      background-color: white;
+      border-radius: 50%;
+      left: 4px;
+      bottom: 4px;
+      transition: 0.4s;
+    }
 
-        body.dark-mode header {
-            color: white; /* Header text color in dark mode */
-        }
+    /* Toggle effect */
+    input:checked+.slider {
+      background-color: #2196F3;
+    }
 
-        /* Styling the footer */
-        footer {
-            background-color: #ee6d6d;
-            color: white;
-            text-align: center;
-            padding: 5px;
-            display: flex; /* Flexbox */
-            justify-content: center; /* Center horizontally */
-            align-items: center;
-            position: center;
-            bottom: 0;
-            width: 100%;
-            font-size: 14px;
-            height: 30px;
-            line-height: 30px;
-            transform: translateY(100%); /* Initially hidden */
-            transition: transform 0.8s cubic-bezier(0.25, 0.8, 0.25, 1); /* Smooth animation */
-        }
+    input:checked+.slider:before {
+      transform: translateX(26px);
+    }
 
-        /* Add more styles for other elements as needed */
-    </style>
+    /* Dark mode styles */
+    body.dark-mode {
+      background-color: #121212;
+      color: #ffffff;
+    }
+
+    /* Header and Navbar */
+    header {
+      background-color: #ffffff;
+      padding: 15px;
+      text-align: center;
+      color: white;
+    }
+
+    nav {
+      background-color: #f7f5f4;
+      padding: 10px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav ul li {
+      display: inline;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #000;
+      padding: 10px 15px;
+      border-radius: 5px;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #007bff;
+    }
+
+    /* Dark mode adjustments */
+    body.dark-mode header,
+    body.dark-mode nav {
+      background-color: #1f1f1f;
+    }
+
+    body.dark-mode nav ul li a {
+      color: #e0e0e0;
+    }
+
+    body.dark-mode nav ul li a:hover {
+      color: #007bff;
+    }
+
+    /* CTA button styles */
+    .cta-button {
+      background-color: #ee6d6d;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .cta-button:hover {
+      background-color: #c54c4c;
+    }
+
+    body.dark-mode .cta-button {
+      background-color: #333;
+      color: #e0e0e0;
+    }
+
+    body.dark-mode .cta-button:hover {
+      background-color: #444;
+      color: #ff4081;
+    }
+
+    /* Footer styles */
+    footer {
+      background-color: #ee6d6d;
+      color: white;
+      text-align: center;
+      padding: 5px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      transition: transform 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+
+    body.dark-mode footer {
+      background-color: #ee6d6d;
+    }
+
+    /* Adjust padding to prevent overlap */
+    body {
+      margin: 0;
+      padding-bottom: 80px;
+    }
+
+    nav {
+      background-color: #f7f5f4;
+      padding: 10px;
+      display: flex;
+      /* Use flexbox */
+      justify-content: center;
+      /* Space items evenly */
+      align-items: center;
+      /* Center items vertically */
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      /* Use flexbox for the list */
+      justify-content: center;
+      /* Space items evenly */
+      padding: 0;
+      margin: 0;
+      flex: 1;
+      /* Allow the list to take available space */
+    }
+
+    nav ul li {
+      display: inline;
+      margin: 0 15px;
+    }
+
+    /* Theme switcher styles */
+    .theme-switch {
+      display: flex;
+      align-items: center;
+      margin-left: 15px;
+      /* Pushes the switch to the right */
+      cursor: pointer;
+    }
+
+    
+
+  </style>
 </head>
+
 <body>
-    <header>
-        <h1>CabRental Services</h1>
-    </header>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#city-transfers">City Transfers</a></li>
-            <li><a href="#hourly-rentals">Hourly Rentals</a></li>
-            <li><a href="#special-occasions">Special Occasions</a></li>
-            <li><a href="contactus.html">Contact Us</a></li>
-            <li>
-                <button id="theme-toggle">
-                    <i class="fa-solid fa-moon"></i> <!-- Moon icon for dark mode -->
-                </button>
-            </li>
-        </ul>
-    </nav>
-    <main>
-        <div id="city-transfers" class="citytransfer">
-            <div class="head1">
-                <h2>City Transfers</h2>
-            </div>
-            <p class="citypara">
-                Our city transfer services ensure convenient and reliable transportation to and from airports, hotels, and various locations within the city. We guarantee punctuality and comfort throughout your journey.
-            </p>
-            <ul class="key-features">
-                <li>Modern fleet of vehicles including sedans, SUVs, and luxury cars</li>
-                <li>Experienced and professional drivers</li>
-                <li>Flexible scheduling to suit your travel plans</li>
-                <li>Competitive pricing and transparent billing</li>
-            </ul>
-            <div class="card-footer">
-                <a href="#" class="cta-button">Book Now</a>
-            </div>
-        </div>
+  <header>
+    <h1>CabRental Services</h1>
+  </header>
 
-        <div class="video">
-            <video autoplay muted loop id="background-video">
-                <source src="service.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-            </video>
-        </div>
+  <nav>
+    <ul>
+      <li>
+        <h1 style="margin: 0; font-size: 1.5em; color: #ec0303;">CabRental Services</h1>
+      </li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#city-transfers">City Transfers</a></li>
+      <li><a href="#hourly-rentals">Hourly Rentals</a></li>
+      <li><a href="#special-occasions">Special Occasions</a></li>
+      <li><a href="contactus.html">Contact Us</a></li>
+      <li>
+        <label class="theme-switch" for="checkbox">
+          <input type="checkbox" id="checkbox" />
+          <span class="slider"></span>
+        </label>
+      </li>
+    </ul>
+  </nav>
 
-        <div id="hourly-rentals" class="rentally">
-            <div class="head2">
-                <h2>Hourly Rentals</h2>
-            </div>
-            <p class="hour">
-                Whether you need transportation for a few hours or an entire day, our hourly rental service provides flexibility and peace of mind. Perfect for business meetings, sightseeing tours, or personal errands.
-            </p>
-            <ul class="key-features1">
-                <li>Choose from a variety of vehicles tailored to your needs</li>
-                <li>Customizable routes and stops according to your itinerary</li>
-                <li>Experienced drivers familiar with local routes and attractions</li>
-                <li>Affordable rates with no hidden fees</li>
-            </ul>
-            <div class="card-footer">
-                <a href="#" class="cta-button">Get a Quote</a>
-            </div>
-        </div>
-
-        <div id="special-occasions" class="specially">
-            <div class="occassion">
-                <h2>Special Occasions</h2>
-            </div>
-            <p class="key-features2">
-                Celebrate your special events in style with our tailored transportation solutions. Whether it's a wedding, anniversary, corporate event, or night out, we ensure a memorable and luxurious experience.
-            </p>
-            <ul class="key-features2">
-                <li>Premium selection of vehicles including limousines and executive vans</li>
-                <li>Personalized service to meet your specific event requirements</li>
-                <li>Professional chauffeurs dressed in attire appropriate for the occasion</li>
-                <li>On-time arrivals and impeccable service from start to finish</li>
-            </ul>
-            <div class="card-footer">
-                <a href="#" class="cta-button">Contact Us</a>
-            </div>
-        </div>
-    </main>
-    <footer>
-        <p>&copy; 2024 CabRental. All rights reserved.</p>
-    </footer>
-    <div id="topbtn" class="topbtn">
-        <a class="gotopbtn" href="#"><i class="fa-solid fa-angles-up"></i></a>
+  <main>
+    <div id="city-transfers" class="citytransfer">
+      <div class="head1">
+        <h2>City Transfers</h2>
+      </div>
+      <p class="citypara">
+        Our city transfer services ensure convenient and reliable transportation to and from airports, hotels, and
+        various locations within the city. We guarantee punctuality and comfort throughout your journey.
+      </p>
+      <ul class="key-features">
+        <li>Modern fleet of vehicles including sedans, SUVs, and luxury cars</li>
+        <li>Experienced and professional drivers</li>
+        <li>Flexible scheduling to suit your travel plans</li>
+        <li>Competitive pricing and transparent billing</li>
+      </ul>
+      <div class="card-footer">
+        <a href="#" class="cta-button">Book Now</a>
+      </div>
     </div>
 
-    <script>
-        let lastScrollTop = 0;
-        const footer = document.querySelector("footer");
+    <div class="video">
+      <video autoplay muted loop id="background-video">
+        <source src="service.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
 
-        window.addEventListener("scroll", function () {
-            let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+    <div id="hourly-rentals" class="rentally">
+      <div class="head2">
+        <h2>Hourly Rentals</h2>
+      </div>
+      <p class="hour">
+        Whether you need transportation for a few hours or an entire day, our hourly rental service provides flexibility
+        and peace of mind. Perfect for business meetings, sightseeing tours, or personal errands.
+      </p>
+      <ul class="key-features1">
+        <li>Choose from a variety of vehicles tailored to your needs</li>
+        <li>Customizable routes and stops according to your itinerary</li>
+        <li>Experienced drivers familiar with local routes and attractions</li>
+        <li>Affordable rates with no hidden fees</li>
+      </ul>
+      <div class="card-footer">
+        <a href="#" class="cta-button">Get a Quote</a>
+      </div>
+    </div>
 
-            if (currentScroll > lastScrollTop) {
-                // Scrolling down - footer should appear smoothly
-                footer.style.transform = "translateY(0)";
-            } else {
-                // Scrolling up - hide the footer smoothly
-                footer.style.transform = "translateY(100%)";
-            }
+    <div id="special-occasions" class="specially">
+      <div class="occassion">
+        <h2>Special Occasions</h2>
+      </div>
+      <p class="key-features2">
+        Celebrate your special events in style with our tailored transportation solutions. Whether it's a wedding,
+        anniversary, corporate event, or night out, we ensure a memorable and luxurious experience.
+      </p>
+      <ul class="key-features2">
+        <li>Premium selection of vehicles including limousines and executive vans</li>
+        <li>Personalized service to meet your specific event requirements</li>
+        <li>Professional chauffeurs dressed in attire appropriate for the occasion</li>
+        <li>On-time arrivals and impeccable service from start to finish</li>
+      </ul>
+      <div class="card-footer">
+        <a href="#" class="cta-button">Contact Us</a>
+      </div>
+    </div>
+  </main>
 
-            lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
-        });
+  <footer>
+    <p>&copy; 2024 CabRental. All rights reserved.</p>
+  </footer>
 
-        // Theme toggle functionality
-        const themeToggleButton = document.getElementById("theme-toggle");
-        themeToggleButton.addEventListener("click", () => {
-            document.body.classList.toggle("dark-mode"); // Toggle dark mode class
+  <!-- JavaScript to handle theme switching -->
+  <script>
+    const toggleSwitch = document.querySelector('#checkbox');
+    const currentTheme = localStorage.getItem('theme');
 
-            // Change the icon based on the theme
-            const icon = themeToggleButton.querySelector("i");
-            icon.classList.toggle("fa-moon"); // Toggle moon icon
-            icon.classList.toggle("fa-sun"); // Toggle sun icon
-        });
-    </script>
+    if (currentTheme) {
+      document.body.classList.add(currentTheme);
+      if (currentTheme === 'dark-mode') {
+        toggleSwitch.checked = true;
+      }
+    }
+
+    toggleSwitch.addEventListener('change', function () {
+      if (this.checked) {
+        document.body.classList.add('dark-mode');
+        localStorage.setItem('theme', 'dark-mode');
+      } else {
+        document.body.classList.remove('dark-mode');
+        localStorage.setItem('theme', 'light-mode');
+      }
+    });
+  </script>
 </body>
+
 </html>
