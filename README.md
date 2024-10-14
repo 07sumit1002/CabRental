@@ -185,6 +185,30 @@ Contributions are what make the open-source community such an amazing place to l
 7. **Open a Pull Request**  
    Navigate to the original repository and open a pull request with a detailed description of your changes.
 
+## Featured In
+
+<table>
+    
+   <tr>
+      <th>Event Logo</th>
+      <th>Event Name</th>
+      <th>Event Description</th>
+   </tr>
+   <tr>
+      <td><img src=".github/assets/gssoc24.png" width="200" height="auto" loading="lazy" alt="GSSoC 24"/></td>
+      <td>GirlScript Summer of Code 2024</td>
+      <td>GirlScript Summer of Code is a three-month-long Open Source Program conducted every summer by GirlScript Foundation. It is an initiative to bring more beginners to Open-Source Software Development.</td>
+   </tr>
+   <tr>
+      <td><img src="./assets/hacktoberfest.png" width="200" height="auto" loading="lazy" alt="Hacktoberfest 2024"/></td>
+      <td>Hacktoberfest 2024</td>
+      <td>Hacktoberfest is a month-long celebration of open source software run by DigitalOcean, GitHub, and Twilio. It encourages contributions to open source projects and promotes a global community of developers.</td>
+      </tr>
+
+</table>
+
+<hr>
+
 ## 📄 License
 
 This project is licensed under the [MIT License](LICENSE).
