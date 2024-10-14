@@ -58,6 +58,27 @@ def main():
         time.sleep(1)
         sys.exit(0)
 
+# Function to securely fetch MySQL password from user with asterisk masking
+def get_mysql_password():
+    print(Fore.YELLOW + "Enter your MySQL Password: " + Fore.RESET, end='', flush=True)
+    password = ''
+    while True:
+        key = keyboard.read_event()
+        if key.event_type == keyboard.KEY_DOWN:
+            if key.name == 'enter':
+                print()  # Move to the next line after pressing enter
+                break
+            elif key.name == 'backspace':
+                if password:
+                    password = password[:-1]  # Remove last character from password
+                    print('\b \b', end='', flush=True)  # Erase the last asterisk
+            elif key.name in ('space', 'tab'):
+                continue  # Ignore space and tab
+            else:
+                password += key.name  # Add the character to the password
+                print('*', end='', flush=True)  # Print an asterisk for masking
+
+    return password
 
 # Placeholder function for setting up database from scratch
 def setup_database_from_scratch():
@@ -155,5 +176,5 @@ def reset_database():
     print(Fore.GREEN + "Database Reset complete." + Fore.RESET)
 
 if __name__ == "__main__":
-    passwd = input(Fore.YELLOW + "Enter your MySQL Password: " + Fore.RESET) 
+    passwd = get_mysql_password()  # Using custom function for password input
     main()
