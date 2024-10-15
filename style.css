@@ -52,21 +52,19 @@ header {
 }
 
 .logo img {
-    width: 60px;
-    border-radius: 10px; /* This creates 10px rounded corners */
-  }
-  .CabRental_logo img {
-       margin: 9px 30px 0px 0px;
-  }
+  width: 60px;
+  border-radius: 10px; /* This creates 10px rounded corners */
+}
+.CabRental_logo img {
+  margin: 9px 30px 0px 0px;
+}
 
-
-  /* header nav {
+/* header nav {
 
   width: 60px;
   border-radius: 60px;
    This creates 10px rounded corners 
 }*/
-
 
 /* header nav {
 
@@ -131,7 +129,7 @@ header nav .nav-right .header-btn > div input {
   outline: none;
   cursor: pointer;
   font-size: 16px;
-  transition: all .5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .sign-up {
@@ -199,7 +197,6 @@ header nav .nav-right .header-btn > div input {
     background: rgb(211, 10, 10);
 }*/
 
-
 .navbar {
   display: flex;
 }
@@ -234,24 +231,21 @@ header nav .nav-right .header-btn > div input {
 Added hover and color changes in footer 
 */
 li a {
-  color: inherit;  /* Default color (will inherit the parent's color) */
-  text-decoration: none;  /* Removes underline from the link */
-  transition: color 0.3s ease;  /* Adds a smooth transition effect */
+  color: inherit; /* Default color (will inherit the parent's color) */
+  text-decoration: none; /* Removes underline from the link */
+  transition: color 0.3s ease; /* Adds a smooth transition effect */
 }
 
 li a:hover {
-  color: rgb(182, 170, 170);  /* Changes the text color to black on hover */
+  color: rgb(182, 170, 170); /* Changes the text color to black on hover */
 }
-
-
-
 
 .navbar {
   display: flex;
   justify-content: space-between;
   /* Adjust alignment as needed */
   align-items: center;
-  background: #eeeff1;
+  /* background: #fff; */
   /* Example background color */
   padding: 15px 100px;
   /* Example padding */
@@ -278,7 +272,7 @@ li a:hover {
 }
 
 .navbar a::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   bottom: -3px;
@@ -286,7 +280,7 @@ li a:hover {
   height: 2px;
   background: #1e1e1e;
   /* Example underline color */
-  transition: width .3s ease-in-out;
+  transition: width 0.3s ease-in-out;
 }
 
 .navbar a:hover::after {
@@ -331,7 +325,6 @@ li a:hover {
 .header-btn .sign-up:hover {
   background: rgb(211, 10, 10);
 }
-
 
 .home {
   width: 100%;
@@ -423,7 +416,6 @@ li a:hover {
 #bookNow:hover {
   background-color: orangered;
   transform: scale(1.1);
-
 }
 
 /* .form-container form {
@@ -477,7 +469,7 @@ li a:hover {
   background: rgb(211, 15, 15);
 }
 
-.icon{
+.icon {
   max-width: 4rem;
   max-height: 4rem;
 }
@@ -568,30 +560,26 @@ li a:hover {
 }
 
 .ride {
-
-
-    display: flex;
-    align-items: center;
-    grid-template-columns: repeat(auto-fit, minmax(250px, auto));
-    gap: 1rem;
-    margin-top: 0rem;
-
-
+  display: flex;
+  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+  gap: 1rem;
+  margin-top: 0rem;
 }
-.ride span{
+.ride span {
   font-size: 40px;
   font-weight: 800;
 }
-.ride h1{
+.ride h1 {
   font-size: 30px;
   font-weight: 500;
   color: rgb(211, 15, 15);
 }
-.ride h2{
+.ride h2 {
   font-size: 30px;
-  font-family:Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
-.ride p{
+.ride p {
   font-size: 18px;
   padding-top: 20px;
 }
@@ -1158,7 +1146,7 @@ FAQ Section */ .container_1 {
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  color:black;
+  color: black;
   flex-shrink: 0;
   font-weight: 900;
 }
@@ -1182,8 +1170,6 @@ FAQ Section */ .container_1 {
 footer p {
   margin: 10px 0 0 0;
   text-align: center;
-
-
 }
 
 .topbtn {
@@ -1197,9 +1183,8 @@ footer p {
   line-height: 50px;
   user-select: none;
   font-size: 22px;
-  border-radius: 50%
+  border-radius: 50%;
 }
-
 
 /* Here are the styles for the theme toggel  */
 .theme-switch {
@@ -1215,7 +1200,7 @@ footer p {
 }
 
 .theme-switch::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 3px;
   left: 3px;
@@ -1225,7 +1210,7 @@ footer p {
   background-repeat: no-repeat;
   background-position: center;
   transition: left 0.3s ease-in-out, background-image 0.3s ease-in-out;
-  background-image: url('Assets/moon.png');
+  background-image: url("Assets/moon.png");
 }
 
 .theme-switch.dark-theme {
@@ -1234,7 +1219,7 @@ footer p {
 
 .theme-switch.dark-theme::before {
   left: 33px;
-  background-image: url('Assets/sun.png');
+  background-image: url("Assets/sun.png");
 }
 /* Index..html dark styles */
 .dark-mode * {
@@ -1264,7 +1249,7 @@ footer p {
 .dark-mode .header-btn .sign-up:hover {
   background: #474fa1;
 }
-.dark-mode .carweb{
+.dark-mode .carweb {
   content: url("Car\ Website\ dark\ –\ 1@2x.png\ .png");
   left: 1400px;
   width: 100%;
@@ -1275,10 +1260,10 @@ footer p {
 .dark-mode .services-container .box {
   box-shadow: 1px 4px 41px rgb(200 99 99);
 }
-.dark-mode .services-container .box  h2{
+.dark-mode .services-container .box h2 {
   color: #474fa0;
 }
-.dark-mode .services-container .box  .btn{
+.dark-mode .services-container .box .btn {
   background: rgb(211, 15, 15);
 }
 .dark-mode .services-container .box .btn:hover {
@@ -1305,20 +1290,24 @@ footer p {
 .dark-mode .feature p {
   color: #ffebeb;
 }
-.dark-mode .accordion__title, .faq h1{
+.dark-mode .accordion__title,
+.faq h1 {
   color: #b1c4fa;
 }
-.dark-mode .accordion__wrapper{
+.dark-mode .accordion__wrapper {
   box-shadow: 11px 1px 56px 0px rgb(153 173 255 / 95%);
 }
-.dark-mode [class^="ri-"], [class*=" ri-"] {
+.dark-mode [class^="ri-"],
+[class*=" ri-"] {
   color: white;
   background-color: black;
 }
 .dark-mode .accordion__header:hover {
   background-color: #000000;
 }
-.dark-mode input[type="text"], input[type="email"], input[type="tel"] {
+.dark-mode input[type="text"],
+input[type="email"],
+input[type="tel"] {
   width: 100%;
   padding: 10px;
   margin-bottom: 20px;
@@ -1339,36 +1328,36 @@ footer p {
 
 .booking-form .form-group input,
 .booking-form .form-group select {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
-    background-color: var(--input-bg-color);
-    color: var(--input-text-color);
-    transition: background-color 0.3s, color 0.3s;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: var(--input-bg-color);
+  color: var(--input-text-color);
+  transition: background-color 0.3s, color 0.3s;
 }
 
 /* Dark mode styles */
 body.dark-mode {
-    --input-bg-color: #333;
-    --input-text-color: #fff;
+  --input-bg-color: #333;
+  --input-text-color: #fff;
 }
 
 body:not(.dark-mode) {
-    --input-bg-color: #fff;
-    --input-text-color: #000;
+  --input-bg-color: #fff;
+  --input-text-color: #000;
 }
 
 /* Additional dark mode styles for input fields */
 body.dark-mode .booking-form .form-group input,
 body.dark-mode .booking-form .form-group select {
-    background-color: #333;
-    color: #fff;
-    border-color: #555;
+  background-color: #333;
+  color: #fff;
+  border-color: #555;
 }
 
 body.dark-mode .booking-form .form-group input::placeholder,
 body.dark-mode .booking-form .form-group select::placeholder {
-    color: #aaa;
+  color: #aaa;
 }
