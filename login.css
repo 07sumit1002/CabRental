@@ -180,8 +180,22 @@ a {
   color: #000000;
   text-decoration: none;
   display: inline-block;
+  .already-signed-up .forgot-password{
+    font-size: 14px;
+    color: #000000;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-decoration: none;
+    gap: 5px; /* Add some space between the text and the link */
 }
-
+a{
+    font-size: 14px;
+    color: blue;  
+    text-decoration: none; 
+    display: inline-block;
+}
 /* .already-signed-up span {
     margin-bottom: 10px;
     font-weight: 600;
