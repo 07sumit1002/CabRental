@@ -15,17 +15,23 @@
   </head>
   <body>
     <header>
-      <h1>CabRental Services</h1>
-    </header>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="#city-transfers">City Transfers</a></li>
-        <li><a href="#hourly-rentals">Hourly Rentals</a></li>
-        <li><a href="#special-occasions">Special Occasions</a></li>
-        <li><a href="contactus.html">Contact Us</a></li>
+      <a href="index.html" class="logo"><img src="img/logo.png" alt=""></a>
+      <a href="index.html" class="CabRental_logo"><img src="img/cabz.png.png" alt=""></a>
+      <div class="bx bx-menu" id="menu-icon"></div>
+      <ul class="navbar">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="ride.html">Ride</a></li>
+          <li><a href="serv.html">Services</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="review.html">Reviews</a></li>
+          <li><a href="contactus.html">Contact</a></li>
       </ul>
-    </nav>
+      <div class="header-btn">
+          <a href="login.html" class="sign-up">Login</a>
+      </div>
+      <div class="theme-switch" id="theme-switch"></div>
+  </header>
+
     <main>
       <div id="city-transfers" class="citytransfer">
         <div class="head1">
@@ -116,7 +122,8 @@
             padding-bottom: 80px;  /* Space for the footer */
         }
     </style>
-    
+      
+    <script src="script.js"></script>
       <script>
        let lastScrollTop = 0;
         const footer = document.querySelector("footer");
