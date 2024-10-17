@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Form.css">
+</head>
+
+<body>
+    <div class="booking-form-container">
+        <div class="booking-form">
+            <div class="form-group">
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName" placeholder="Your Name">
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" placeholder="Telephone">
+            </div>
+            <div class="form-group">
+                <label for="email">Email Id</label>
+                <input type="email" id="email" placeholder="name@example.com">
+            </div>
+            <div class="form-group">
+                <label for="city">City</label>
+                <select id="city">
+                    <option disabled selected>Select City</option>
+                    <option value="Delhi-NCR">Delhi-NCR</option>
+                    <option value="Bangalore">Bangalore</option>
+                    <option value="Mumbai">Mumbai</option>
+                    <option value="Hyderabad">Hyderabad</option>
+                    <option value="Pune">Pune</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="vehicle">Vehicle</label>
+                <select id="vehicle">
+                    <option disabled selected>Select Vehicle</option>
+                    <option value="Civic">Honda Civic</option>
+                    <option value="Swift Dzire">Maruti Swift Dzire</option>
+                    <option value="Innova">Toyota Innova</option>
+                    <option value="Creta">Hyundai Creta</option>
+                    <option value="GrandVistara">Maruti Grand Vistara</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="pickupDate">Pickup Date</label>
+                <input type="date" id="pickupDate">
+            </div>
+            <div class="form-group">
+                <label for="dropoffDate">Drop-off Date</label>
+                <input type="date" id="dropoffDate">
+            </div>
+        </div>
+        <div class="form-group button-group">
+            <button id="bookNow">Book Now</button>
+        </div>
+    </div>
+    
+    <script src="Form.js"></script>
+
+</body>
+
+</html>
