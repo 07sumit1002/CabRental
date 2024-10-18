@@ -470,6 +470,16 @@
                 font-size: 0.9rem;
             }
         }
+        .carweb {
+    margin-top: -45px; /* Adjust this value as needed */
+    /* or */
+    padding-top: 0; /* Ensure there's no top padding */
+}
+
+.carweb img {
+    margin-top: -20px; /* Adjust this value as needed */
+}
+
     </style>
 </head>
 
@@ -497,29 +507,17 @@
     <section class="home" id="home">
         <div class="text text-center" style="background-image: url(img/Car\ Website\ –\ 1@2x.png);">
             <h1><br>Want to <span>Share</span> or <span>Rent</span> <br>a cab.</h1>
-            <p>Wherever you're going,there's a carpool that will<br>
-                get you there for less.</p>
-            <div class="carweb">
-                <img src="Car Website – 1@2x.png" alt="">
+            <div class="carweb h-auto w-auto" style="position: relative; text-align: center;">
+                <p style="position: relative; z-index: 1; color: rgb(0, 0, 0); margin-bottom: -50px;">
+                    Wherever you're going, there's a carpool that will<br>
+                    get you there for less.
+                </p>
+                <img src="Car Website – 1@2x.png" alt="" style="width: 100%; height: auto; display: block; position: absolute; top: 0; left: 0; z-index: 0;">
+
+
             </div>
         </div>
-        <!-- <div class="form-container">
-            <form action="anonimous.php" method="post">
-                <div class="input-box">
-                    <span>From <span> MUJ Hostel</span> To</span>
-                    <input type="search" name="search" id="search" placeholder="Search Places">
-                </div>
-                <div class="input-box">
-                    <span>Travelling Date</span>
-                    <input type="date" name="dat" id="dat">
-                </div>
-                <div class="input-box">
-                    <span>Depart. Time</span>
-                    <input type="time" name="tim" id="tim">
-                </div>
-                <input type="submit" name="submit" id="submit" class="btn">
-            </form>
-        </div> -->
+
 
         <div class="booking-form">
             <div class="form-group">
@@ -690,136 +688,7 @@
     </section>
 
 
-    <!--   <section class="review" id="review">
 
-        <h1 class="heading"> Client's testimonials </h1>
-
-        <div class="swiper review-slider" data-aos="zoom-in">
-
-            <div class="swiper-wrapper">
-
-                <div class="swiper-slide slide">
-                    <img src="img/pic-1.png" alt="">
-                    <h3>Noah Lee</h3>
-                    <p>"Excellent service from start to finish. The driver was friendly and drove safely. I reached my
-                        destination on time and in comfort. Highly recommended for anyone visiting!"</p>
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </div>
-                </div>
-
-                <div class="swiper-slide slide">
-                    <img src="img/pic-2.png" alt="">
-                    <h3>Sophia Rossi</h3>
-                    <p>"Great experience with this cab rental. The booking was straightforward, and the driver was
-                        punctual and friendly. The car was very comfortable. Highly recommend!"</p>
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                </div>
-
-                <div class="swiper-slide slide">
-                    <img src="img/pic-3.png" alt="">
-                    <h3>Olivia Davis</h3>
-                    <p>"Top-notch service! The driver arrived on time, and the ride was smooth and comfortable. The
-                        customer service was exceptional. I will definitely use this cab service again."</p>
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-full-alt"></i>
-                    </div>
-                </div>
-
-                <div class="swiper-slide slide">
-                    <img src="img/pic-4.png" alt="">
-                    <h3>Emma Brown</h3>
-                    <p>"Brilliant service! The cab arrived on time, and the driver was very courteous. I appreciated the
-                        smooth and efficient ride. Will definitely use this service again when I return."</p>
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="swiper-pagination"></div>
-
-        </div>
-
-     </section>  -->
-    <!--      <section class="review" id="review"> -->
-    <!--         <div class="row">
-            <h1 class="heading"> Customer Reviews </h1>
-    
-            <div class="swiper review-slider" data-aos="zoom-in">
-    
-                <div class="swiper-wrapper">
-    
-                    <div class="swiper-slide slide">
-                        <img src="img/pic-1.png" alt="">
-                        <h3>Noah Lee</h3>
-                        <p>I recently used Cabrental for a weekend trip and was thoroughly impressed. The booking process was seamless, and the website was intuitive and easy to navigate. The car was clean and in excellent condition, and the pick-up and drop-off process was quick and hassle-free. The customer service was exceptional—friendly and helpful staff made the experience even better. Highly recommended!</p>
-                        <div class="stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
-                        </div>
-                    </div>
-    
-                    <div class="swiper-slide slide">
-                        <img src="img/pic-2.png" alt="">
-                        <h3>Sophia Rossi</h3>
-                        <p>I recently used Cabrental for a weekend getaway, and I couldn't be happier with the experience. The website is user-friendly, and I found the perfect car within minutes.</p>
-                        <div class="stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                    </div>
-    
-                    <div class="swiper-slide slide">
-                        <img src="img/pic-3.png" alt="">
-                        <h3>Olivia Davis</h3>
-                        <p>The booking process was straightforward, and I received a confirmation email immediately. When I arrived at the pick-up location, the staff was friendly and efficient. The car was clean, well-maintained, and exactly as described on the website.</p>
-                        <div class="stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-full-alt"></i>
-                        </div>
-                    </div>
-    
-                    <div class="swiper-slide slide">
-                        <img src="img/pic-4.png" alt="">
-                        <h3>Emma Brown</h3>
-                        <p>Returning the car was just as easy, and there were no hidden fees or unexpected charges. I will definitely be using Cabrental again for my future trips. Highly recommended!</p>
-                        <div class="stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
- -->
     <section class="review" id="review">
 
         <h1 class="heading"> Customer Reviews </h1>
@@ -1048,7 +917,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="contact-left">
-                            <h1 class="sub-title">Contact Me</h1>
+                            <h1 class="sub-title">Contact Us</h1>
 
                             <div class="social-icon">
                                 <a href="#" target="_blank"><i class="fa-brands fa-facebook"></i></a>
@@ -1089,40 +958,7 @@
             </div>
         </section>
 
-        <!-- <section id="testimonials">
-            <div class="container">
-              <h2>Words from Our Clients <span>Inspiring Testimonials of Satisfaction</span></h2>
-              <div class="reviews">
-                <div class="review">
-                  <div class="review-content">
-                    <p class="review-text">Using Cab Rental has made my life so much easier. The service is top-notch and always reliable.</p>
-                    <p class="review-author">- Alex</p>
-                  </div>
-                  <div class="review-image">
-                    <img src="images (1).jpeg" alt="Alex">
-                  </div>
-                </div>
-                <div class="review">
-                  <div class="review-content">
-                    <p class="review-text">The best cab rental service I’ve ever used! The drivers are friendly and always on time.</p>
-                    <p class="review-author">- Jordan</p>
-                  </div>
-                  <div class="review-image">
-                    <img src="download.jpeg" alt="Jordan">
-                  </div>
-                </div>
-                <div class="review">
-                  <div class="review-content">
-                    <p class="review-text">Excellent service! The booking process is seamless, and the cabs are always clean and comfortable.</p>
-                    <p class="review-author">- Taylor</p>
-                  </div>
-                  <div class="review-image">                  <img src="images.jpeg" alt="Taylor">
-                  </div>
-                </div>
-              </div>
-              <button class="view-all">View All</button>
-            </div>
-          </section> -->
+
         <section class="testimonials">
             <h2>Words from Our Clients <span class="highlight">Inspiring Testimonials of Satisfaction</span></h2>
             <div class="testimonials-container" id="testimonials-container">
