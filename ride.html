@@ -7,7 +7,7 @@
     <link rel="icon" href="img/logo1.png" type="image/png">
     <title>Cabshare</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
+
     <!-- Link to CSS -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
@@ -233,7 +233,7 @@
             text-decoration: none;
             border-radius: 5px;
         }
-        
+
         .header-btn .sign-up:hover {
             background-color: red;
             border-color: red;
@@ -357,11 +357,11 @@
     <script>
         document.getElementById('riderForm').addEventListener('submit', function(event) {
             event.preventDefault(); // Prevent form submission to handle validation
-    
+
             // Check if any fields are empty
             let form = event.target;
             let isValid = true;
-    
+
             form.querySelectorAll('input[type="text"], input[type="email"], input[type="time"], input[type="date"], textarea').forEach(function(input) {
                 if (input.value.trim() === '') {
                     isValid = false;
@@ -370,7 +370,7 @@
                     input.classList.remove('error');
                 }
             });
-    
+
             // If valid, submit the form and redirect
             if (isValid) {
                 // Simulate form submission here (e.g., send data to backend)
@@ -382,33 +382,63 @@
         });
     </script>
     <script src="script.js"></script>
-    <!-- Footer
-    <footer class="footer">
-        <div class="footer-container container">
-            <h2>Cabshare</h2>
-            <div class="footer-box">
-                <h3>Quick Links</h3>
-                <a href="index.html">Home</a>
-                <a href="ride.html">Ride</a>
-                <a href="serv.html">Services</a>
-                <a href="about.html">About</a>
-                <a href="review.html">Reviews</a>
-                <a href="contact.html">Contact</a>
+   
+   <footer>
+            <div id="topbtn" class="topbtn">
+                <a class="gotopbtn" href="#"><i class="fa-solid fa-angles-up"></i></a>
             </div>
-            <div class="footer-box">
-                <h3>Follow Us</h3>
-                <div class="social">
-                    <a href="#"><i class="bx bxl-facebook"></i></a>
-                    <a href="#"><i class="bx bxl-twitter"></i></a>
-                    <a href="#"><i class="bx bxl-instagram"></i></a>
-                    <a href="#"><i class="bx bxl-google"></i></a>
-                    <a href="#"><i class="bx bxl-skype"></i></a>
-                </div>
+
+            <div class="footer-container">
+                <div class="call-us">
+                    <p>Questions? Call 000-080-000-000</p>
+    </section>
+
+    <!-- About -->
+    <section class="about" id="about">
+
+        <div class="footer-links">
+            <div class="footer-column">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Services</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <ul>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Cookies Preferences</a></li>
+                    <li><a href="#">Legal Notices</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <ul>
+                    <li><a href="#">Account</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Corporate Information</a></li>
+                    <li><a href="#">Pricing</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <ul>
+                    <li><a href="#">Media Center</a></li>
+                    <li><a href="#">Terms of Use</a></li>
+                    <li><a href="contactus.html">Contact Us</a></li>
+                </ul>
             </div>
         </div>
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc2z6lnf65V2w4HmoRbHUXaB/91MoZl6fCJVN6eK" crossorigin="anonymous"></script>
+        </div>
+
+        <!-- <p>© 2024 CabRental. All rights reserved. |    Designed and Developed by Sumit Kumar</p> -->
+        <p> &copy;
+            <script>document.write(new Date().getFullYear())</script> CabRental. All rights reserved. | Designed and
+            Developed by Sumit Kumar
+        </p>
+
+        </div>
+
+        </footer>
 </body>
 </html>
