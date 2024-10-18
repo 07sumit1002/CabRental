@@ -578,6 +578,19 @@ li a:hover {
 
 
 }
+@media (max-width : 768px) {
+  .ride{
+    display: flex;
+    flex-direction: column;
+  }
+  section{
+    padding: 50px 20px ;
+  }
+
+  #review{
+    width: 100% !important;
+  }
+}
 .ride span{
   font-size: 40px;
   font-weight: 800;
