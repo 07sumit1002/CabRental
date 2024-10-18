@@ -1,26 +1,40 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
-body {
-    font-family: "Poppins", sans-serif;
-    margin: 0;
-    padding: 0;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    overflow-x: hidden;
-    background-color: #eeeff1;
-  }
-  main{
-    flex: 1;
-  }
 
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #eeeff1;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-    height: 70px;
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  background-color: #eeeff1;
+}
+
+body.dark-mode{
+  background-color: black;
+}
+
+main {
+  flex: 1;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #eeeff1;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  height: 70px;
+}
+
+header.dark-mode{
+  background-color: #262626;
+  ul a{
+    color:white;
+  }
+  box-shadow: 0px 4px 12px rgba(244, 231, 231, 0.872);
 }
 
 .theme-switch {
@@ -59,103 +73,105 @@ body {
 }
 
 .logo img {
-    height: 50px;
-    padding-left: 20px;
-    padding-top: 10px;
+  height: 50px;
+  padding-left: 20px;
+  padding-top: 10px;
 }
-.CabRental_logo img{
+
+.CabRental_logo img {
   padding-top: 20px;
 }
 
 .navbar {
-    display: flex;
-    gap: 20px;
-    padding-top: 5px;
-    list-style: none;
-    font-size: 30;
+  display: flex;
+  gap: 20px;
+  padding-top: 5px;
+  list-style: none;
+  font-size: 30;
 }
 
 .navbar li a {
-    
-    text-decoration: none;
-    font-weight: 500;
-    color: #333;
-    padding: 10px 15px;
-    transition: 0.3s ease;
+
+  text-decoration: none;
+  font-weight: 500;
+  color: #333;
+  padding: 10px 15px;
+  transition: 0.3s ease;
 }
 
 .navbar li a:hover {
-    color: #007bff;
+  color: #007bff;
 }
 
 .header-btn .sign-up {
   padding: 20px;
-    padding: 10px 20px;
-    background-color: #007bff;
-    border-color: #007bff;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  border-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
 }
 
 .header-btn .sign-up:hover {
-    background-color: red;
-    border-color: red;
+  background-color: red;
+  border-color: red;
 }
 
 /* Hide menu icon initially */
 #menu-icon {
-    display: none;
+  display: none;
 }
 
 /* Responsive styles for mobile sidebar */
 @media (max-width: 600px) {
-    .navbar {
-        position: fixed;
-        top: 0;
-        left: -250px;
-        width: 250px;
-        height: 100%;
-        flex-direction: column;
-        align-items: start;
-        justify-content: flex-start;
-        padding: 20px;
-        transition: 0.3s;
-        z-index: 1000;
-    }
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    flex-direction: column;
+    align-items: start;
+    justify-content: flex-start;
+    padding: 20px;
+    transition: 0.3s;
+    z-index: 1000;
+  }
 
-    .navbar.active {
-        left: 0;
-    }
+  .navbar.active {
+    left: 0;
+  }
 
-    .navbar li {
-        width: 100%;
-        margin: 20px 0;
-    }
+  .navbar li {
+    width: 100%;
+    margin: 20px 0;
+  }
 
-    .navbar li a {
-        display: block;
-        width: 100%;
-        text-align: left;
-        padding: 10px 15px;
-    }
+  .navbar li a {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 10px 15px;
+  }
 
-    #menu-icon {
-        display: block;
-        font-size: 28px;
-        cursor: pointer;
-        position: absolute;
-        right: 20px;
-    }
+  #menu-icon {
+    display: block;
+    font-size: 28px;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+  }
 
-    .close-btn {
-        font-size: 28px;
-        cursor: pointer;
-        margin-left: auto;
-        margin-bottom: 20px;
-    }
+  .close-btn {
+    font-size: 28px;
+    cursor: pointer;
+    margin-left: auto;
+    margin-bottom: 20px;
+  }
 }
-  /* nav ul li a:hover {
+
+/* nav ul li a:hover {
     color: #ff0000;
   } */
 
@@ -220,8 +236,9 @@ body {
 
 .key-features1 {
   margin-top: 10px;
-   padding-left: 20px; 
-} 
+  padding-left: 20px;
+}
+
 .rentally {
   padding: 23px;
   flex: 1;
@@ -276,10 +293,11 @@ body {
   justify-content: center;
   align-items: center;
   top: -42px
-  /* position: relative;
+    /* position: relative;
   left: 752px;
   top: -825px; */
 }
+
 footer {
   text-align: center;
   padding: 0px 0;
@@ -313,7 +331,7 @@ footer {
     margin: 10px 0;
   }
 
-  .citytransfer{
+  .citytransfer {
     width: 90%;
     margin-left: 5%;
     margin-right: 5%;
@@ -324,7 +342,7 @@ footer {
 
 
 
-  .specially{
+  .specially {
     width: 90%;
     margin-left: 5%;
     margin-right: 5%;
@@ -334,7 +352,7 @@ footer {
   }
 
 
-  .rentally{
+  .rentally {
     width: 90%;
     margin-left: 5%;
     margin-right: 5%;
@@ -352,7 +370,8 @@ footer {
     display: block;
     text-align: center;
   }
-  .topbtn{
+
+  .topbtn {
     position: fixed;
     width: 50px;
     height: 50px;
