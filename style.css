@@ -1247,6 +1247,11 @@ footer p {
   background: rgb(0, 0, 0);
 }
 
+.dark-mode .text-overlay p{
+  color: white;
+  background: rgb(0, 0, 0);
+}
+
 .dark-mode .navbar::after {
   color: #ffffff;
   background: white;
