@@ -19,6 +19,14 @@ main {
   flex: 1;
 }
 
+main.dark-mode{
+  .citytransfer,.rentally,.specially{
+    background-color: black;
+    color:white;
+    box-shadow: 0px 4px 12px rgba(244, 231, 231, 0.872);
+  }
+}
+
 header {
   display: flex;
   justify-content: space-between;

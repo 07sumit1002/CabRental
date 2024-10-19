@@ -135,7 +135,6 @@
         /* Space for the footer */
       }
     </style>
-    <script src="script.js"></script>
     <script>
       let lastScrollTop = 0;
       const footer = document.querySelector("footer");
@@ -157,18 +156,15 @@
       const themeSwitch = document.getElementById('theme-switch'); // Ensure this matches your HTML button's ID
       const body = document.body;
       const header = document.querySelector("header");
-      const cityTransfer = document.querySelector(".citytransfer");
-      const hourlyRentals = document.querySelector(".rentally");
-      const specialOccasions = document.querySelector(".specially");
+      const main = document.querySelector("main");
+  
 
       // Function to enable dark mode
       function enableDarkMode() {
         themeSwitch.classList.add('dark-theme'); // Update the switch appearance
         body.classList.add('dark-mode');
         header.classList.add('dark-mode');
-        cityTransfer.classList.add('dark-mode');
-        hourlyRentals.classList.add('dark-mode');
-        specialOccasions.classList.add('dark-mode');
+        main.classList.add('dark-mode');
 
       }
 
@@ -177,9 +173,7 @@
         themeSwitch.classList.remove('dark-theme'); // Update the switch appearance
         body.classList.remove('dark-mode');
         header.classList.remove('dark-mode');
-        cityTransfer.classList.remove('dark-mode');
-        hourlyRentals.classList.remove('dark-mode');
-        specialOccasions.classList.remove('dark-mode');
+        main.classList.remove('dark-mode');
 
       }
 
