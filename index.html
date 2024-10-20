@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE-edge">
-    <meta name="viewprot" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Favicon -->
     <link rel="icon" href="img/logo1.png" type="image/png">
     <title>CabRental</title>
@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
     <link rel="stylesheet" href="https://unpkg.com/swiper@11.1.4/swiper-bundle.min.css" />
     <!-- font awesome cdn link  -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <!-- custom css link -->
     <script src="https://kit.fontawesome.com/2815a7015d.js" crossorigin="anonymous"></script>
@@ -31,17 +30,18 @@
             justify-content: space-between;
             align-items: center;
             padding: 10px 20px;
-            background-color: #fff;
+            background-color: #eeeff1;
             box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
         } */
 
         .logo img {
-            height: 50px;
+            height: 40px;
         }
 
         .navbar {
             display: flex;
             gap: 20px;
+            padding-top: 20px;
             list-style: none;
         }
 
@@ -59,13 +59,15 @@
         .header-btn .sign-up {
             padding: 10px 20px;
             background-color: #007bff;
+            border-color: #007bff;
             color: #fff;
             text-decoration: none;
             border-radius: 5px;
         }
 
         .header-btn .sign-up:hover {
-            background-color: #0056b3;
+            background-color: red;
+            border-color: red;
         }
 
         /* Hide menu icon initially */
@@ -81,7 +83,6 @@
                 left: -250px;
                 width: 250px;
                 height: 100%;
-                background-color: #fff;
                 flex-direction: column;
                 align-items: start;
                 justify-content: flex-start;
@@ -474,7 +475,7 @@
 
 <body>
     <!-- Header -->
-    <header >
+    <header>
         <a href="#" class="logo"><img src="img/logo.png" alt=""></a>
         <a href="#" class="CabRental_logo"><img src="img/cabz.png.png" alt=""></a>
         <div class="bx bx-menu" id="menu-icon"></div>

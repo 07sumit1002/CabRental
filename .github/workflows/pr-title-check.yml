@@ -1,0 +1,26 @@
+name: 'PR Title Check'
+
+# All of these are valid PR titles using GitHub issues.
+# Of course one can use different <type> as per conventional commits format
+# https://www.conventionalcommits.org/en/v1.0.0
+#
+# feat(improvement)!: [#123] - My PR title
+# feat!: [#123] - My PR title
+# feat: [#123] - My PR title
+
+on:
+  pull_request:
+    types:
+      - opened
+      - synchronize
+      - edited
+      - reopened
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: Slashgear/action-check-pr-title@v4.3.0
+        with:
+          regexp: '^(?:release|feat|fix|build|chore|ci|docs|style|refactor|perf|test|revert)(?:\(\w+\))?\!?:\s\[#\d+\]\s\-\s.+'
+          helpMessage: "Example: 'feat: [#123] - my title'"
