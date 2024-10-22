@@ -1,0 +1,171 @@
+###html###
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle Filters</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Find Your Vehicle</h1>
+        <div class="filters">
+            <h2>Filters</h2>
+            <form id="filterForm">
+                <div class="filter-group">
+                    <label for="vehicleType">Vehicle Type:</label>
+                    <select id="vehicleType">
+                        <option value="">All</option>
+                        <option value="car">Car</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="priceRange">Price Range:</label>
+                    <input type="range" id="priceRange" min="0" max="500" value="250">
+                    <span id="priceValue">$250</span>
+                </div>
+                <div class="filter-group">
+                    <label for="location">Location:</label>
+                    <select id="location">
+                        <option value="">All Locations</option>
+                        <option value="New York">New York</option>
+                        <option value="Mumbai">Mumbai</option>
+                        <option value="Delhi">Delhi</option>
+                        <option value="Chennai">Chennai</option>
+                        <option value="Bengaluru">Bengaluru</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="rentalDuration">Rental Duration (days):</label>
+                    <input type="number" id="rentalDuration" min="1" value="1">
+                </div>
+                <div class="filter-group">
+                    <label for="userRating">User Ratings:</label>
+                    <select id="userRating">
+                        <option value="">All</option>
+                        <option value="1">1 Star & Up</option>
+                        <option value="2">2 Stars & Up</option>
+                        <option value="3">3 Stars & Up</option>
+                        <option value="4">4 Stars & Up</option>
+                        <option value="5">5 Stars</option>
+                    </select>
+                </div>
+                <button type="button" id="filterButton">Filter</button>
+            </form>
+        </div>
+
+        <div class="results">
+            <h2>Available Vehicles</h2>
+            <div id="vehicleList"></div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
+
+###css##
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    color: #333;
+}
+
+.filters, .results {
+    margin-top: 20px;
+}
+
+.filter-group {
+    margin-bottom: 15px;
+}
+
+.filter-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+#vehicleList {
+    margin-top: 20px;
+}
+
+.vehicle-item {
+    background: #f9f9f9;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+##js##
+document.getElementById('filterButton').addEventListener('click', function() {
+    const vehicleType = document.getElementById('vehicleType').value;
+    const priceRange = document.getElementById('priceRange').value;
+    const location = document.getElementById('location').value;
+    const rentalDuration = document.getElementById('rentalDuration').value;
+    const userRating = document.getElementById('userRating').value;
+
+    // Example vehicle data
+    const vehicles = [
+        { type: 'car', model: 'Honda Civic', price: 250, location: 'New York', duration: 3, rating: 4 },
+        { type: 'car', model: 'Maruti Swift Dzire', price: 150, location: 'Mumbai', duration: 2, rating: 5 },
+        { type: 'car', model: 'Toyota Innova', price: 300, location: 'Delhi', duration: 5, rating: 3 },
+        { type: 'car', model: 'Hyundai Creta', price: 220, location: 'Chennai', duration: 4, rating: 4 },
+        { type: 'car', model: 'Maruti Grand Vitara', price: 200, location: 'Bengaluru', duration: 1, rating: 5 },
+        // Additional vehicles can be added here...
+    ];
+
+    const filteredVehicles = vehicles.filter(vehicle => {
+        return (
+            (vehicleType === '' || vehicle.type === vehicleType) &&
+            vehicle.price <= priceRange &&
+            (location === '' || vehicle.location === location) &&
+            vehicle.duration >= rentalDuration &&
+            (userRating === '' || vehicle.rating >= userRating)
+        );
+    });
+
+    displayVehicles(filteredVehicles);
+});
+
+document.getElementById('priceRange').addEventListener('input', function() {
+    document.getElementById('priceValue').textContent = `$${this.value}`;
+});
+
+function displayVehicles(vehicles) {
+    const vehicleList = document.getElementById('vehicleList');
+    vehicleList.innerHTML = '';
+
+    if (vehicles.length === 0) {
+        vehicleList.innerHTML = '<p>No vehicles found that match your criteria.</p>';
+        return;
+    }
+
+    vehicles.forEach(vehicle => {
+        const vehicleItem = document.createElement('div');
+        vehicleItem.className = 'vehicle-item';
+        vehicleItem.innerHTML = `
+            <strong>Model:</strong> ${vehicle.model}<br>
+            <strong>Type:</strong> ${vehicle.type}<br>
+            <strong>Price:</strong> $${vehicle.price}<br>
+            <strong>Location:</strong> ${vehicle.location}<br>
+            <strong>Duration:</strong> ${vehicle.duration} days<br>
+            <strong>Rating:</strong> ${vehicle.rating} stars
+        `;
+        vehicleList.appendChild(vehicleItem);
+    });
+}
