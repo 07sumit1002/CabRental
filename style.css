@@ -566,10 +566,7 @@ li a:hover {
   gap: 1rem;
   margin-top: 0rem;
 }
-.ride span {
-  font-size: 40px;
-  font-weight: 800;
-}
+
 .ride h1 {
   font-size: 30px;
   font-weight: 500;
@@ -1228,6 +1225,11 @@ footer p {
 }
 
 .dark-mode .navbar a {
+  color: white;
+  background: rgb(0, 0, 0);
+}
+
+.dark-mode .text-overlay p{
   color: white;
   background: rgb(0, 0, 0);
 }
