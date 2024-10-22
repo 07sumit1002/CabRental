@@ -11,6 +11,7 @@
   text-decoration: none;
   font-family: "Poppins", sans-serif;
   background-color: rgb(238, 239, 241);
+  transition: all 1s ease-in-out;
 }
 
 .root {
@@ -52,13 +53,15 @@ header {
 }
 
 .logo img {
-    width: 60px;
+  width: 60px;
+  border-radius: 50px; /* This creates 10px rounded corners */
+}
+ width: 60px;
     border-radius: 10px; /* This creates 10px rounded corners */
   }
   .CabRental_logo img {
        margin: 9px 30px 0px 0px;
   }
-
 
   /* header nav {
 
@@ -131,6 +134,7 @@ header nav .nav-right .header-btn > div input {
   outline: none;
   cursor: pointer;
   font-size: 16px;
+   transition: all 0.5s ease-in-out;
   transition: all .5s ease-in-out;
 }
 
@@ -140,7 +144,11 @@ header nav .nav-right .header-btn > div input {
   border-color: #ff0001;
 }
 
-.sign-up:hover {
+.contact-right button {
+  background-color: orangered;
+  color: white;
+  border: none;
+  .sign-up:hover {
   /* background: #ffffff;*/
   background: #ff0001;
   color: #121212;
@@ -199,13 +207,17 @@ header nav .nav-right .header-btn > div input {
     background: rgb(211, 10, 10);
 }*/
 
-
 .navbar {
   display: flex;
 }
 
 .navbar li {
   position: relative;
+}
+
+.navbar li a:hover {
+  color: #ff0000;
+  transition: 0.5s;
 }
 
 .navbar a {
@@ -230,7 +242,8 @@ header nav .nav-right .header-btn > div input {
   background: rgb(231, 223, 223);
 }
 
-/*
+
+  /*
 Added hover and color changes in footer 
 */
 li a {
@@ -242,7 +255,6 @@ li a {
 li a:hover {
   color: rgb(182, 170, 170);  /* Changes the text color to black on hover */
 }
-
 
 
 
@@ -278,13 +290,15 @@ li a:hover {
 }
 
 .navbar a::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   bottom: -3px;
   width: 0;
   height: 2px;
-  background: #1e1e1e;
+   background: #1e1e1e; /* Example underline color */
+  transition: width 0.3s ease-in-out;
+    background: #1e1e1e;
   /* Example underline color */
   transition: width .3s ease-in-out;
 }
@@ -332,7 +346,6 @@ li a:hover {
   background: rgb(211, 10, 10);
 }
 
-
 .home {
   width: 100%;
   min-height: 100vh;
@@ -347,7 +360,15 @@ li a:hover {
 
 .carweb img {
   left: 1400px;
-  width: 100%;
+  width: 70%;
+}
+.carweb {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+.carweb p {
+  width: 30%;
 }
 
 .text h1 {
@@ -383,11 +404,13 @@ li a:hover {
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
   width: 100%;
+  margin-bottom: 2rem;
 }
 
 .form-group {
   display: flex;
   flex-direction: column;
+  text-align: center;
 }
 
 .form-group label {
@@ -422,8 +445,11 @@ li a:hover {
 
 #bookNow:hover {
   background-color: orangered;
-  transform: scale(1.1);
-
+  transform: scale(1.05);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+   transform: scale(1.1);
 }
 
 /* .form-container form {
@@ -488,12 +514,12 @@ li a:hover {
 
 .heading span {
   font-weight: 500;
-  font-size: 32px;
+  font-size: 2rem;
   text-transform: uppercase;
 }
 
 .heading h1 {
-  font-size: 2rem;
+  font-size: 3rem;
 }
 
 #why-choose-us {
@@ -505,6 +531,7 @@ li a:hover {
   width: 80%;
   margin: 0 auto;
   text-align: center;
+  padding: 1rem;
 }
 
 .header h2 {
@@ -547,7 +574,7 @@ li a:hover {
 
 .feature {
   width: 30%;
-  text-align: left;
+  text-align: center;
 }
 
 .feature img {
@@ -568,14 +595,18 @@ li a:hover {
 }
 
 .ride {
-
-
-    display: flex;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+   display: flex;
     align-items: center;
     grid-template-columns: repeat(auto-fit, minmax(250px, auto));
     gap: 1rem;
     margin-top: 0rem;
-
 
 }
 @media (max-width : 768px) {
@@ -638,6 +669,7 @@ li a:hover {
   overflow: hidden;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s, box-shadow 0.3s;
+  text-align: center;
 }
 
 .box:hover {
@@ -650,6 +682,26 @@ li a:hover {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1rem;
   margin-top: 2rem;
+}
+.sub-title {
+  font-size: 3rem;
+}
+#fb:hover {
+  color: blue;
+}
+#twt {
+  color: lightskyblue;
+}
+#inst {
+  color: #f09433;
+}
+#fb:hover {
+  color: blue;
+}
+
+.contact-right input,
+.contact-right textarea {
+  background-color: #ccc;
 }
 
 .services-container .box {
@@ -936,6 +988,7 @@ body {
 
 .view-all {
   margin-top: 20px;
+  background-color: orangered;
 }
 
 .view-all-button {
@@ -984,6 +1037,7 @@ footer {
 .footer-container {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 1rem;
 }
 
 .call-us {
@@ -1131,6 +1185,7 @@ FAQ Section */ .container_1 {
   width: 100%;
   max-width: 60rem;
   padding: 5rem;
+  margin: auto;
 }
 
 .accordion__title,
@@ -1144,6 +1199,8 @@ FAQ Section */ .container_1 {
 }
 
 .accordion {
+   border-bottom: 0.1rem solid #dae1f5;
+  padding: 1rem 1rem 2rem 1rem;
   border-bottom: 0.5rem solid #dae1f5;
   padding-bottom: 2rem;
   margin-bottom: 3rem;
@@ -1195,10 +1252,8 @@ FAQ Section */ .container_1 {
 footer p {
   margin: 10px 0 0 0;
   text-align: center;
-
-
+  }
 }
-
 .topbtn {
   position: fixed;
   width: 50px;
@@ -1210,7 +1265,16 @@ footer p {
   line-height: 50px;
   user-select: none;
   font-size: 22px;
-  border-radius: 50%
+  border-radius: 50%;
+}
+
+@media (max-width: 1054px) {
+  header {
+    padding: 15px 40px;
+  }
+}
+.footer-column li a {
+  font-weight: bold;
 }
 
 
