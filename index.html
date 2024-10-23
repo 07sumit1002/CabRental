@@ -392,8 +392,8 @@
 
         /* General Styles */
         #contact {
-            padding: 50px 0;
-            background-color: #f9f9f9;
+            padding:  50px 0;
+            margin-top: -9rem;
         }
 
         .container {
@@ -405,15 +405,37 @@
         .row {
             display: flex;
             justify-content: space-between;
+            gap: 13rem;
             align-items: flex-start;
             flex-wrap: wrap;
+        }
+
+        .contact-left{
+            margin-top: 130px;
         }
 
         .contact-left,
         .contact-right {
             flex: 1;
             min-width: 300px;
-            margin: 20px;
+           
+        }
+
+        .line {
+            border: none;
+            height: 1px;
+            background-color: #333; 
+            margin: 20px 0;
+            width: 100%; 
+        }
+
+        .contact-left .line {
+            width: 70%;
+            margin: 20px auto; /* Center the line */
+        }
+
+        .contact-left p{
+            margin-bottom: 60px;
         }
 
         .sub-title {
@@ -492,14 +514,14 @@
         @media screen and (max-width: 768px) {
             .row {
                 flex-direction: column;
+                gap: 1rem;
                 align-items: center;
             }
 
             .contact-left,
             .contact-right {
-                max-width: 100%;
-                margin: 0;
-                padding: 20px;
+                    margin: 20px 0;
+                    margin-left: -7rem;
             }
 
             .sub-title {
@@ -1114,34 +1136,31 @@
                     <div class="row">
                         <div class="contact-left">
                             <h1 class="sub-title">Contact Me</h1>
-
+                            <p>If you have any questions, suggestions, feel free to contact us via the form or through any of the social media platforms below. We are always happy to connect and assist!</p>
+                            <!-- Horizontal line before social icons -->
+                        <hr class="line">
                             <div class="social-icon">
                                 <a href="#" target="_blank"><i class="fa-brands fa-facebook"></i></a>
                                 <a href="#" target="_blank"><i class="fa-brands fa-square-x-twitter"></i></a>
                                 <a href="#" target="_blank"><i class="fa-brands fa-instagram"></i></a>
                                 <a href="#" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
                             </div>
+                              <!-- Horizontal line after social icons -->
+                        <hr class="line">
+                        </div>
+                        <div class="contact-right">
+                            <h2>Any Queries?</h2>
+                            <form name="submit-to-google-sheet" class="contact-form" method="post">
+                                <input type="text" name="Name" placeholder="Your Name" required>
+                                <input type="email" name="Email" placeholder="Your Email" required>
+                                <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                                <button type="submit" class="btn btn2">Submit</button>
+                            </form>
+                            <span id="msg"></span>
                         </div>
                     </div>
                 </div>
             </div>
-
-            </div>
-            <div class="contact-right">
-                <h2>Any Queries?</h2>
-                <form name="submit-to-google-sheet" class="contact-form">
-                    <input type="text" name="Name" placeholder="Your Name" required>
-                    <input type="email" name="Email" placeholder="Your Email" required>
-                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                    <button type="submit" class="btn btn2">Submit</button>
-                </form>
-                <span id="msg"></span>
-            </div>
-            </div>
-            </div>
-            </div>
-
-
         </section>
 
 
