@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE-edge">
-    <meta name="viewprot" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Favicon -->
     <link rel="icon" href="img/logo1.png" type="image/png">
     <title>CabRental</title>
@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
     <link rel="stylesheet" href="https://unpkg.com/swiper@11.1.4/swiper-bundle.min.css" />
     <!-- font awesome cdn link  -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <!-- custom css link -->
     <script src="https://kit.fontawesome.com/2815a7015d.js" crossorigin="anonymous"></script>
@@ -31,17 +30,18 @@
             justify-content: space-between;
             align-items: center;
             padding: 10px 20px;
-            background-color: #fff;
+            background-color: #eeeff1;
             box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
         }
 
         .logo img {
-            height: 50px;
+            height: 40px;
         }
 
         .navbar {
             display: flex;
             gap: 20px;
+            padding-top: 20px;
             list-style: none;
         }
 
@@ -59,6 +59,8 @@
         .header-btn .sign-up {
             padding: 10px 20px;
             background-color: #474fa1;
+            background-color: #007bff;
+            border-color: #007bff;
             color: #fff;
             text-decoration: none;
             border-radius: 5px;
@@ -66,6 +68,8 @@
 
         .header-btn .sign-up:hover {
             background-color: rgb(211, 10, 10);
+            background-color: red;
+            border-color: red;
         }
 
         /* Hide menu icon initially */
@@ -81,7 +85,6 @@
                 left: -250px;
                 width: 250px;
                 height: 100%;
-                background-color: #fff;
                 flex-direction: column;
                 align-items: start;
                 justify-content: flex-start;
@@ -139,98 +142,161 @@
             margin-bottom: 20px;
         }
 
-        .swiper-slide {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            background-color: #fff;
-            border-radius: 10px;
-            transition: transform 0.3s;
-        }
+      /* Main Swiper Slide Styling */
+.swiper-slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
 
-        .swiper-slide img {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            margin-bottom: 10px;
-        }
+.swiper-slide img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
 
-        .swiper-slide h3 {
-            font-size: 1.5rem;
-            margin: 10px 0;
-        }
+.swiper-slide h3 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
 
-        .swiper-slide p {
-            font-size: 1rem;
-            color: #777;
-            margin-bottom: 15px;
-        }
+.swiper-slide p {
+    font-size: 1rem;
+    color: #777;
+    margin-bottom: 15px;
+}
 
-        .stars i {
-            color: #fbc02d;
-        }
+.stars i {
+    color: #fbc02d;
+}
 
-        /* Hover effect */
-        .swiper-slide:hover {
-            transform: scale(1.05);
-        }
+/* Hover effect */
+.swiper-slide:hover {
+    transform: scale(1.05);
+}
 
-        /* Responsive Styles */
-        @media screen and (max-width: 1200px) {
-            .swiper-slide {
-                max-width: 80%;
-            }
-        }
+/* Responsive Styles */
+/* Medium Devices (Up to 1200px) */
+@media screen and (max-width: 1200px) {
+    .swiper-slide {
+        max-width: 100%;
+        padding: 16px;
+    }
+}
 
-        @media screen and (max-width: 768px) {
-            .heading {
-                font-size: 2rem;
-            }
+/* Small Devices (Up to 768px) */
+@media screen and (max-width: 768px) {
+    .heading {
+        font-size: 2rem;
+        text-align: center;
+    }
 
-            .swiper-slide {
-                max-width: 90%;
-                padding: 15px;
-            }
+    .swiper-slide {
+        max-width: 100%;
+        padding: 12px;
+    }
 
-            .swiper-slide h3 {
-                font-size: 1.3rem;
-            }
+    .swiper-slide img {
+        width: 80px;
+        height: 80px;
+    }
 
-            .swiper-slide p {
-                font-size: 0.9rem;
-            }
-        }
+    .swiper-slide h3 {
+        font-size: 1.2rem;
+        margin: 8px 0;
+    }
 
-        @media screen and (max-width: 576px) {
-            .heading {
-                font-size: 1.8rem;
-            }
+    .swiper-slide p {
+        font-size: 0.9rem;
+        margin-bottom: 10px;
+    }
+}
 
-            .swiper-slide {
-                max-width: 100%;
-                padding: 10px;
-            }
+/* Extra Small Devices (Up to 576px) */
+@media screen and (max-width: 576px) {
+    .heading {
+        font-size: 1.5rem;
+        text-align: center;
+    }
 
-            .swiper-slide h3 {
-                font-size: 1.2rem;
-            }
+    .swiper-slide {
+        max-width: 100%;
+        padding: 10px;
+    }
 
-            .swiper-slide p {
-                font-size: 0.8rem;
-            }
-        }
+    .swiper-slide img {
+        width: 70px;
+        height: 70px;
+    }
 
-        /* Additional styling for swiper pagination */
-        .swiper-pagination {
-            position: relative;
-            bottom: 10px;
-            display: flex;
-            justify-content: center;
-        }
+    .swiper-slide h3 {
+        font-size: 1rem;
+        margin: 8px 0;
+    }
+
+    .swiper-slide p {
+        font-size: 0.85rem;
+    }
+}
+
+/* Ultra Small Devices (Up to 400px) */
+@media screen and (max-width: 400px) {
+    .heading {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    .swiper-slide {
+        max-width: 100%;
+        padding: 8px;
+    }
+
+    .swiper-slide img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .swiper-slide h3 {
+        font-size: 0.9rem;
+        margin: 5px 0;
+    }
+
+    .swiper-slide p {
+        font-size: 0.75rem;
+    }
+}
+
+/* Additional styling for swiper pagination */
+.swiper-pagination {
+    position: relative;
+    bottom: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Additional responsive pagination size adjustments */
+@media screen and (max-width: 768px) {
+    .swiper-pagination-bullet {
+        width: 10px;
+        height: 10px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .swiper-pagination-bullet {
+        width: 8px;
+        height: 8px;
+    }
+}
+
 
         /* General Styles */
         .container_1 {
@@ -469,14 +535,74 @@
                 font-size: 0.9rem;
             }
         }
-    </style>
-</head>
+                    /* General Container Styling */
+            /* General Container Styling */
+.home .container {
+    position: relative; /* To position the text overlay relative to the container */
+}
+
+/* Image Container */
+.image-container {
+    position: relative;
+    width: 100%;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+
+/* Text Overlay Styling */
+.text-overlay {
+    position: absolute;
+    top: 30%;
+    left: 5%;
+    width: 40%; /* Adjust width of the text block */
+    transform: translateY(-20%);
+    color: #333; /* Adjust text color to fit the background */
+}
+
+.text-overlay h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #e63946; /* Optional color for the header */
+}
+
+.text-overlay p {
+    margin-bottom: 20px;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Responsive for Smaller Screens */
+@media (max-width: 768px) {
+    .text-overlay {
+        width: 90%; /* Wider text block for smaller screens */
+        left: 5%;
+        top: 30%; /* Adjust the positioning for mobile */
+    }
+
+    .text-overlay h2 {
+        font-size: 28px;
+    }
+
+    .text-overlay p {
+        font-size: 16px;
+    }
+    
+}
+            
+        </style>
+    </head>
 
 <body>
     <!-- Header -->
     <header>
-        <a href="#" class="logo"><img src="img/logo.png" alt=""></a>
-        <a href="#" class="CabRental_logo"><img src="img/cabz.png.png" alt=""></a>
+        <a href="index.html" class="logo"><img src="img/logo.png" alt=""></a>
+        <a href="index.html" class="CabRental_logo"><img src="img/cabz.png.png" alt=""></a>
         <div class="bx bx-menu" id="menu-icon"></div>
         <ul class="navbar">
             <li><a href="index.html">Home</a></li>
@@ -498,8 +624,16 @@
             <h1><br>Want to <span>Share</span> or <span>Rent</span> <br>a cab.</h1>
             <p>Wherever you're going,there's a carpool that will<br>
                 get you there for less.</p>
-            <div class="carweb">
+            <div class="container">
+                <div class="carweb">
                 <img src="Car Website – 1@2x.png" alt="">
+                </div>
+                <div class="text-overlay">
+                    <h2>Your Trusted </h2>
+                    <h2>Cab Rental Service</h2>
+                    <p>Our cab rental service is designed to provide you with a seamless, safe, and comfortable travel experience. Whether you're heading to a business meeting, exploring the city, or need a reliable ride to the airport, we've got you covered with our fleet of modern, well-maintained vehicles.</p>
+                    <p>Our mission is to provide safe, reliable, and affordable transportation solutions that cater to individual and corporate needs. We prioritize customer satisfaction and strive to set the benchmark for cab rental services.</p>
+                </div>
             </div>
         </div>
         <!-- <div class="form-container">
