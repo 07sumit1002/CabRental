@@ -1,0 +1,80 @@
+{
+  "name": "composer",
+  "description": "Run and compose async tasks. Easily define groups of tasks to run in series or parallel.",
+  "version": "4.1.0",
+  "homepage": "https://github.com/doowb/composer",
+  "author": "Brian Woodward (https://github.com/doowb)",
+  "contributors": [
+    "Brian Woodward (https://twitter.com/doowb)",
+    "Jon Schlinkert (http://twitter.com/jonschlinkert)"
+  ],
+  "repository": "doowb/composer",
+  "bugs": {
+    "url": "https://github.com/doowb/composer/issues"
+  },
+  "license": "MIT",
+  "files": [
+    "index.js",
+    "lib"
+  ],
+  "main": "index.js",
+  "engines": {
+    "node": ">=8"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "dependencies": {
+    "pretty-time": "^1.1.0",
+    "use": "^3.1.1"
+  },
+  "devDependencies": {
+    "gulp-format-md": "^1.0.0",
+    "minimist": "^1.2.0",
+    "mocha": "^5.2.0",
+    "through2": "^2.0.3"
+  },
+  "keywords": [
+    "async",
+    "await",
+    "build",
+    "build-system",
+    "compose",
+    "composer",
+    "composition",
+    "control",
+    "flow",
+    "run",
+    "system",
+    "task",
+    "workflow"
+  ],
+  "verb": {
+    "toc": true,
+    "layout": "default",
+    "data": {
+      "author": {
+        "linkedin": "woodwardbrian",
+        "twitter": "doowb"
+      }
+    },
+    "tasks": [
+      "readme"
+    ],
+    "plugins": [
+      "gulp-format-md"
+    ],
+    "related": {
+      "list": [
+        "enquirer",
+        "assemble",
+        "generate",
+        "update",
+        "verb"
+      ]
+    },
+    "lint": {
+      "reflinks": true
+    }
+  }
+}

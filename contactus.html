@@ -11,10 +11,9 @@
       <link rel="stylesheet" href="./css/demo.css">
       <script src="https://kit.fontawesome.com/c32adfdcda.js" crossorigin="anonymous"></script>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
    </head>
    <body>
-    <button class="back-button" onclick="window.location.href='index.html'"><img src="img/back_button.png" width="60px" height="60px"/></button>
+      <button class="back-button" onclick="window.location.href='index.html'"><img src="img/back_button.png" width="60px" height="60px"/></button>
       <header class="cd__intro">
          <div class="cd__action">
             <a href="https://www.codehim.com/html5-css3/contact-us-page-design-in-html-cod" class="cd__btn back"></a>
@@ -23,84 +22,99 @@
 
       <main class="cd__main">
          <section>
-    
-    <div class="section-header">
-      <div class="container">
-        <h2>Contact Us</h2>
-        <p>
-            At Car Rental Service we are here to assist you with all your car rental needs. Whether you have questions about our services, need help with a reservation, or want to provide feedback, our team is ready to help. Reach out to us via phone, email, or by filling out the contact form below. We look forward to hearing from you and ensuring your car rental experience is smooth and enjoyable.
+            <div class="section-header">
+               <div class="container">
+                  <h2>Contact Us</h2>
+                  <p>
+                     At Car Rental Service we are here to assist you with all your car rental needs. Whether you have questions about our services, need help with a reservation, or want to provide feedback, our team is ready to help. Reach out to us via phone, email, or by filling out the contact form below. We look forward to hearing from you and ensuring your car rental experience is smooth and enjoyable.
+                     Feel free to customize it further to better fit your specific needs!
+                  </p>
+               </div>
+            </div>
 
-Feel free to customize it further to better fit your specific needs!
-        </p>
-      </div>
-    </div>
-    
-    <div class="container">
-      <div class="row">
-        
-        <div class="contact-info">
-          <div class="contact-info-item">
-            <div class="contact-info-icon">
-              <i class="fas fa-home"></i>
+            <div class="container">
+               <div class="row">
+                  <div class="contact-info">
+                     <div class="contact-info-item">
+                        <div class="contact-info-icon">
+                           <i class="fas fa-home"></i>
+                        </div>
+                        <div class="contact-info-content">
+                           <h4>Address</h4>
+                           <p><br/></p>
+                        </div>
+                     </div>
+
+                     <div class="contact-info-item">
+                        <div class="contact-info-icon">
+                           <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-info-content">
+                           <h4>Phone</h4>
+                           <p></p>
+                        </div>
+                     </div>
+
+                     <div class="contact-info-item">
+                        <div class="contact-info-icon">
+                           <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-info-content">
+                           <h4>Email</h4>
+                           <p></p>
+                        </div>
+                     </div>
+                  </div>
+
+                  <div class="contact-form">
+                     <form action="" id="contact-form">
+                        <h2>Send Message</h2>
+                        <div class="input-box">
+                           <input type="text" required="true" name="">
+                           <span>Full Name</span>
+                        </div>
+
+                        <div class="input-box">
+                           <input type="email" required="true" name="">
+                           <span>Email</span>
+                        </div>
+
+                        <div class="input-box">
+                           <textarea required="true" name=""></textarea>
+                           <span>Type your Message...</span>
+                        </div>
+
+                        <div class="input-box">
+                           <input type="submit" value="Send" name="">
+                        </div>
+                     </form>
+                  </div>
+               </div>
             </div>
-            
-            <div class="contact-info-content">
-              <h4>Address</h4>
-              <p> <br/></p>
-            </div>
-          </div>
-          
-          <div class="contact-info-item">
-            <div class="contact-info-icon">
-              <i class="fas fa-phone"></i>
-            </div>
-            
-            <div class="contact-info-content">
-              <h4>Phone</h4>
-              <p></p>
-            </div>
-          </div>
-          
-          <div class="contact-info-item">
-            <div class="contact-info-icon">
-              <i class="fas fa-envelope"></i>
-            </div>
-            
-            <div class="contact-info-content">
-              <h4>Email</h4>
-             <p></p>
-            </div>
-          </div>
-        </div>
-        
-        <div class="contact-form">
-          <form action="" id="contact-form">
-            <h2>Send Message</h2>
-            <div class="input-box">
-              <input type="text" required="true" name="">
-              <span>Full Name</span>
-            </div>
-            
-            <div class="input-box">
-              <input type="email" required="true" name="">
-              <span>Email</span>
-            </div>
-            
-            <div class="input-box">
-              <textarea required="true" name=""></textarea>
-              <span>Type your Message...</span>
-            </div>
-            
-            <div class="input-box">
-              <input type="submit" value="Send" name="">
-            </div>
-          </form>
-        </div>
-        
-      </div>
-    </div>
-  </section>
+         </section>
       </main>
-      <script src="./js/contactus.js"></script>
+
+      <!-- Success message box -->
+      <div id="success-message" style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%, -50%); background-color:rgba(0, 255, 0, 0.7); color:#fff; padding:20px; border-radius:10px; font-size:16px; text-align:center; z-index:1000;">
+         Thank you! We are absolutely committed to making you a happy customer.<br/> We will read your feedback and take it seriously.
+      </div>
+
+      <script>
+         document.getElementById("contact-form").addEventListener("submit", function(event) {
+             event.preventDefault(); // Prevent form from refreshing the page
+
+             // Show the success message
+             var successMessage = document.getElementById("success-message");
+             successMessage.style.display = "block";
+
+             // Hide the success message after 5 seconds
+             setTimeout(function() {
+                 successMessage.style.display = "none";
+             }, 5000);
+
+             // Clear form fields
+             this.reset();
+         });
+      </script>
    </body>
 </html>
