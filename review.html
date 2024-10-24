@@ -207,23 +207,23 @@
 
     <!-- Review Form Modal -->
     <div id="reviewModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
-        <div class="bg-white rounded-lg p-6 w-full max-w-lg">
-            <div class="flex justify-between items-center mb-4">
-                <h2 class="text-xl font-bold">Leave a Review</h2>
-                <button id="closeModal" class="text-gray-600 hover:text-gray-900">&times;</button>
+        <div class="bg-white rounded-lg p-4 sm:p-8 w-full max-w-lg m-4 sm:m-8 shadow-lg transition-transform duration-300 scale-95 hover:scale-100">
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="text-xl sm:text-2xl font-semibold text-gray-800">Leave a Review</h2>
+                <button id="closeModal" class="text-gray-600 hover:text-gray-900 text-3xl transition-transform duration-200 transform hover:scale-110">&times;</button>
             </div>
-            <form>
-                <div class="mb-4">
-                    <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
-                    <input type="text" id="name" class="mt-1 p-2 border border-gray-300 rounded-md w-full" required>
+            <form method="post">
+                <div class="mb-5">
+                    <label for="name" class="block text-sm font-semibold text-gray-800">Name</label>
+                    <input type="text" id="name" class="mt-2 p-2 sm:p-3 border border-gray-300 rounded-lg w-full focus:border-purple-500 focus:outline-none focus:ring-1 focus:ring-purple-500" placeholder="Enter your name" required>
                 </div>
-                <div class="mb-4">
-                    <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
-                    <input type="email" id="email" class="mt-1 p-2 border border-gray-300 rounded-md w-full" required>
+                <div class="mb-5">
+                    <label for="email" class="block text-sm font-semibold text-gray-800">Email</label>
+                    <input type="email" id="email" class="mt-2 p-2 sm:p-3 border border-gray-300 rounded-lg w-full focus:border-purple-500 focus:outline-none focus:ring-1 focus:ring-purple-500" placeholder="Enter your email" required>
                 </div>
-                <div class="mb-4">
-                    <label for="rating" class="block text-sm font-medium text-gray-700">Rating</label>
-                    <select id="rating" class="mt-1 p-2 border border-gray-300 rounded-md w-full" required>
+                <div class="mb-5">
+                    <label for="rating" class="block text-sm font-semibold text-gray-800">Rating</label>
+                    <select id="rating" class="mt-2 p-2 sm:p-3 border border-gray-300 rounded-lg w-full focus:border-purple-500 focus:outline-none focus:ring-1 focus:ring-purple-500" required>
                         <option value="5">★★★★★ - 5 Stars</option>
                         <option value="4">★★★★☆ - 4 Stars</option>
                         <option value="3">★★★☆☆ - 3 Stars</option>
@@ -231,18 +231,18 @@
                         <option value="1">★☆☆☆☆ - 1 Star</option>
                     </select>
                 </div>
-                <div class="mb-4">
-                    <label for="review" class="block text-sm font-medium text-gray-700">Review</label>
-                    <textarea id="review" class="mt-1 p-2 border border-gray-300 rounded-md w-full" rows="4" required></textarea>
+                <div class="mb-5">
+                    <label for="review" class="block text-sm font-semibold text-gray-800">Review</label>
+                    <textarea id="review" class="mt-2 p-2 sm:p-3 border border-gray-300 rounded-lg w-full focus:border-purple-500 focus:outline-none focus:ring-1 focus:ring-purple-500" rows="4" placeholder="Write your review here..." required></textarea>
                 </div>
                 <div class="flex justify-end">
-                    <button type="button" class="bg-gray-500 text-white px-4 py-2 rounded shadow hover:bg-gray-600 mr-2"
-                        id="cancelButton">Cancel</button>
-                    <button type="submit" class="bg-purple-500 text-white px-4 py-2 rounded shadow hover:bg-purple-600">Submit</button>
+                    <button type="button" class="bg-gray-500 text-white px-4 py-2 sm:px-6 sm:py-3 rounded-lg shadow hover:bg-gray-600 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 mr-2" id="cancelButton">Cancel</button>
+                    <button type="submit" class="bg-purple-600 text-white px-4 py-2 sm:px-6 sm:py-3 rounded-lg shadow hover:bg-purple-700 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2">Submit</button>
                 </div>
             </form>
         </div>
     </div>
+    
     <footer class="bg-gray-800 text-white py-6">
       <div class="container mx-auto text-center">
           <p class="mb-2">© 2024 Cabrental. All rights reserved.</p>
