@@ -140,98 +140,199 @@
             margin-bottom: 20px;
         }
 
-        .swiper-slide {
+      /* Main Swiper Slide Styling */
+.swiper-slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.swiper-slide img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.swiper-slide h3 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+.swiper-slide p {
+    font-size: 1rem;
+    color: #777;
+    margin-bottom: 15px;
+}
+
+.stars i {
+    color: #fbc02d;
+}
+
+/* Hover effect */
+.swiper-slide:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive Styles */
+/* Medium Devices (Up to 1200px) */
+@media screen and (max-width: 1200px) {
+    .swiper-slide {
+        max-width: 100%;
+        padding: 16px;
+    }
+}
+
+/* Small Devices (Up to 768px) */
+@media screen and (max-width: 768px) {
+    .heading {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .swiper-slide {
+        max-width: 100%;
+        padding: 12px;
+    }
+
+    .swiper-slide img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .swiper-slide h3 {
+        font-size: 1.2rem;
+        margin: 8px 0;
+    }
+
+    .swiper-slide p {
+        font-size: 0.9rem;
+        margin-bottom: 10px;
+    }
+}
+
+/* Extra Small Devices (Up to 576px) */
+@media screen and (max-width: 576px) {
+    .heading {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .swiper-slide {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    .swiper-slide img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .swiper-slide h3 {
+        font-size: 1rem;
+        margin: 8px 0;
+    }
+
+    .swiper-slide p {
+        font-size: 0.85rem;
+    }
+}
+
+/* Ultra Small Devices (Up to 400px) */
+@media screen and (max-width: 400px) {
+    .heading {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    .swiper-slide {
+        max-width: 100%;
+        padding: 8px;
+    }
+
+    .swiper-slide img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .swiper-slide h3 {
+        font-size: 0.9rem;
+        margin: 5px 0;
+    }
+
+    .swiper-slide p {
+        font-size: 0.75rem;
+    }
+}
+
+/* Additional styling for swiper pagination */
+.swiper-pagination {
+    position: relative;
+    bottom: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Additional responsive pagination size adjustments */
+@media screen and (max-width: 768px) {
+    .swiper-pagination-bullet {
+        width: 10px;
+        height: 10px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .swiper-pagination-bullet {
+        width: 8px;
+        height: 8px;
+    }
+}
+
+
+        /* Navigation button styles */
+
+        .swiper-button-prev,
+        .swiper-button-next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 10;
+            color: var(--primary-color);
+            padding: 30px;
+            width: 25px;
+            height: 25px;
+            background-color: rgba(0, 0, 0, 0.1);
+            border-radius: 50%;
             display: flex;
-            flex-direction: column;
             align-items: center;
             justify-content: center;
-            text-align: center;
-            padding: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            background-color: #fff;
-            border-radius: 10px;
-            transition: transform 0.3s;
+            cursor: pointer;
+            transition: background 0.3s ease, opacity 0.3s ease;
         }
 
-        .swiper-slide img {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            margin-bottom: 10px;
+        .swiper-button-prev {
+            left: 20px;
         }
 
-        .swiper-slide h3 {
-            font-size: 1.5rem;
-            margin: 10px 0;
+        .swiper-button-next {
+            right: 20px;
         }
 
-        .swiper-slide p {
-            font-size: 1rem;
-            color: #777;
-            margin-bottom: 15px;
+        .swiper-button-prev:hover,
+        .swiper-button-next:hover {
+            background-color: rgba(0, 0, 0, 0.3);
+            opacity: 1;
+
         }
 
-        .stars i {
-            color: #fbc02d;
-        }
 
-        /* Hover effect */
-        .swiper-slide:hover {
-            transform: scale(1.05);
-        }
-
-        /* Responsive Styles */
-        @media screen and (max-width: 1200px) {
-            .swiper-slide {
-                max-width: 80%;
-            }
-        }
-
-        @media screen and (max-width: 768px) {
-            .heading {
-                font-size: 2rem;
-            }
-
-            .swiper-slide {
-                max-width: 90%;
-                padding: 15px;
-            }
-
-            .swiper-slide h3 {
-                font-size: 1.3rem;
-            }
-
-            .swiper-slide p {
-                font-size: 0.9rem;
-            }
-        }
-
-        @media screen and (max-width: 576px) {
-            .heading {
-                font-size: 1.8rem;
-            }
-
-            .swiper-slide {
-                max-width: 100%;
-                padding: 10px;
-            }
-
-            .swiper-slide h3 {
-                font-size: 1.2rem;
-            }
-
-            .swiper-slide p {
-                font-size: 0.8rem;
-            }
-        }
-
-        /* Additional styling for swiper pagination */
-        .swiper-pagination {
-            position: relative;
-            bottom: 10px;
-            display: flex;
-            justify-content: center;
-        }
 
         /* General Styles */
         .container_1 {
@@ -355,8 +456,8 @@
 
         /* General Styles */
         #contact {
-            padding: 50px 0;
-            background-color: #f9f9f9;
+            padding:  50px 0;
+            margin-top: -9rem;
         }
 
         .container {
@@ -368,15 +469,37 @@
         .row {
             display: flex;
             justify-content: space-between;
+            gap: 13rem;
             align-items: flex-start;
             flex-wrap: wrap;
+        }
+
+        .contact-left{
+            margin-top: 130px;
         }
 
         .contact-left,
         .contact-right {
             flex: 1;
             min-width: 300px;
-            margin: 20px;
+           
+        }
+
+        .line {
+            border: none;
+            height: 1px;
+            background-color: #333; 
+            margin: 20px 0;
+            width: 100%; 
+        }
+
+        .contact-left .line {
+            width: 70%;
+            margin: 20px auto; /* Center the line */
+        }
+
+        .contact-left p{
+            margin-bottom: 60px;
         }
 
         .sub-title {
@@ -394,6 +517,7 @@
         .social-icon a:hover {
             color: #007bff;
         }
+/* <<<<<<< ui-changes */
     /* -------------------------Improve booking form css---------------------------------------------- */
         .booking-form{
             display: flex;
@@ -403,34 +527,61 @@
         form {
             display: flex;
             flex-direction: column;
+
+
+        /*Form styling*/
+        .contact-right {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 40px;
         }
 
-        form input,
-        form textarea {
+        .contact-right h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+
+        .contact-form {
+            background-color: #ffffff;
+            border-radius: 8px;
+/* >>>>>>> main */
+        }
+
+        .contact-form input,
+        .contact-form textarea {
             width: 100%;
+            padding: 10px;
             margin-bottom: 15px;
-            padding: 10px;
             border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 1rem;
+            border-radius: 4px;
+            background-color: #e0f7fa;
+            color: #333;
         }
 
-        form button {
+        .contact-form button {
+            width: 100%;
             padding: 10px;
-            background-color: #007bff;
-            color: white;
+            background-color: #007bff !important;
+            color: #ffffff;
             border: none;
-            border-radius: 5px;
+            border-radius: 4px;
             cursor: pointer;
-            font-size: 1rem;
+            transition: background 0.3s ease;
         }
 
-        form button:hover {
-            background-color: #0056b3;
+        .contact-form button:hover {
+            background-color: #0567d0 !important;
+            color: #fff;
         }
 
         #msg {
-            margin-top: 10px;
+            margin-top: 15px;
             color: green;
             font-size: 1rem;
         }
@@ -439,14 +590,14 @@
         @media screen and (max-width: 768px) {
             .row {
                 flex-direction: column;
+                gap: 1rem;
                 align-items: center;
             }
 
             .contact-left,
             .contact-right {
-                max-width: 100%;
-                margin: 0;
-                padding: 20px;
+                    margin: 20px 0;
+                    margin-left: -7rem;
             }
 
             .sub-title {
@@ -475,8 +626,68 @@
                 font-size: 0.9rem;
             }
         }
-    </style>
-</head>
+                    /* General Container Styling */
+            /* General Container Styling */
+.home .container {
+    position: relative; /* To position the text overlay relative to the container */
+}
+
+/* Image Container */
+.image-container {
+    position: relative;
+    width: 100%;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+
+/* Text Overlay Styling */
+.text-overlay {
+    position: absolute;
+    top: 30%;
+    left: 5%;
+    width: 40%; /* Adjust width of the text block */
+    transform: translateY(-20%);
+    color: #333; /* Adjust text color to fit the background */
+}
+
+.text-overlay h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #e63946; /* Optional color for the header */
+}
+
+.text-overlay p {
+    margin-bottom: 20px;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Responsive for Smaller Screens */
+@media (max-width: 768px) {
+    .text-overlay {
+        width: 90%; /* Wider text block for smaller screens */
+        left: 5%;
+        top: 30%; /* Adjust the positioning for mobile */
+    }
+
+    .text-overlay h2 {
+        font-size: 28px;
+    }
+
+    .text-overlay p {
+        font-size: 16px;
+    }
+    
+}
+            
+        </style>
+    </head>
 
 <body>
     <!-- Header -->
@@ -504,8 +715,16 @@
             <h1><br>Want to <span>Share</span> or <span>Rent</span> <br>a cab.</h1>
             <p>Wherever you're going,there's a carpool that will<br>
                 get you there for less.</p>
-            <div class="carweb">
+            <div class="container">
+                <div class="carweb">
                 <img src="Car Website – 1@2x.png" alt="">
+                </div>
+                <div class="text-overlay">
+                    <h2>Your Trusted </h2>
+                    <h2>Cab Rental Service</h2>
+                    <p>Our cab rental service is designed to provide you with a seamless, safe, and comfortable travel experience. Whether you're heading to a business meeting, exploring the city, or need a reliable ride to the airport, we've got you covered with our fleet of modern, well-maintained vehicles.</p>
+                    <p>Our mission is to provide safe, reliable, and affordable transportation solutions that cater to individual and corporate needs. We prioritize customer satisfaction and strive to set the benchmark for cab rental services.</p>
+                </div>
             </div>
         </div>
         <!-- <div class="form-container">
@@ -606,7 +825,8 @@
         <div class="services-container">
             <div class="box">
                 <div class="box-img">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMbcTDQfyKWuPH727d_lUKN6tn_tUimpHg4w&s" alt="Maruti Suzuki Ertiga">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMbcTDQfyKWuPH727d_lUKN6tn_tUimpHg4w&s"
+                        alt="Maruti Suzuki Ertiga">
                 </div>
                 <p>2023</p>
                 <h3>Maruti Suzuki Ertiga - 7 Seater</h3>
@@ -624,7 +844,8 @@
             </div>
             <div class="box">
                 <div class="box-img">
-                    <img src="https://imgd.aeplcdn.com/664x374/n/cw/ec/26742/swift-exterior-right-front-three-quarter-2.jpeg?q=80" alt="Maruti Suzuki Swift">
+                    <img src="https://imgd.aeplcdn.com/664x374/n/cw/ec/26742/swift-exterior-right-front-three-quarter-2.jpeg?q=80"
+                        alt="Maruti Suzuki Swift">
                 </div>
                 <p>2018</p>
                 <h3>Maruti Suzuki Swift - 5 Seater</h3>
@@ -633,7 +854,8 @@
             </div>
             <div class="box">
                 <div class="box-img">
-                    <img src="https://imgd-ct.aeplcdn.com/664x415/n/dzet6ra_1421855.jpg?q=80" alt="Toyota Innova Crysta">
+                    <img src="https://imgd-ct.aeplcdn.com/664x415/n/dzet6ra_1421855.jpg?q=80"
+                        alt="Toyota Innova Crysta">
                 </div>
                 <p>2016</p>
                 <h3>Toyota Innova Crysta - 7 Seater</h3>
@@ -642,7 +864,8 @@
             </div>
             <div class="box">
                 <div class="box-img">
-                    <img src="https://stimg.cardekho.com/images/carexteriorimages/630x420/Honda/Honda-City-2011-2013/2754/front-left-side-47.jpg" alt="Honda City">
+                    <img src="https://stimg.cardekho.com/images/carexteriorimages/630x420/Honda/Honda-City-2011-2013/2754/front-left-side-47.jpg"
+                        alt="Honda City">
                 </div>
                 <p>2013</p>
                 <h3>Honda City - 5 Seater</h3>
@@ -919,6 +1142,9 @@
                 <div class="swiper-pagination"></div>
 
             </div>
+            <!-- Add Navigation -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
         </div>
     </section>
 
@@ -1075,33 +1301,31 @@
                     <div class="row">
                         <div class="contact-left">
                             <h1 class="sub-title">Contact Me</h1>
-
+                            <p>If you have any questions, suggestions, feel free to contact us via the form or through any of the social media platforms below. We are always happy to connect and assist!</p>
+                            <!-- Horizontal line before social icons -->
+                        <hr class="line">
                             <div class="social-icon">
                                 <a href="#" target="_blank"><i class="fa-brands fa-facebook"></i></a>
                                 <a href="#" target="_blank"><i class="fa-brands fa-square-x-twitter"></i></a>
                                 <a href="#" target="_blank"><i class="fa-brands fa-instagram"></i></a>
                                 <a href="#" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
                             </div>
+                              <!-- Horizontal line after social icons -->
+                        <hr class="line">
+                        </div>
+                        <div class="contact-right">
+                            <h2>Any Queries?</h2>
+                            <form name="submit-to-google-sheet" class="contact-form" method="post">
+                                <input type="text" name="Name" placeholder="Your Name" required>
+                                <input type="email" name="Email" placeholder="Your Email" required>
+                                <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                                <button type="submit" class="btn btn2">Submit</button>
+                            </form>
+                            <span id="msg"></span>
                         </div>
                     </div>
                 </div>
             </div>
-
-            </div>
-            <div class="contact-right">
-                <form name="submit-to-google-sheet">
-                    <input type="text" name="Name" placeholder="Your Name" required>
-                    <input type="email" name="Email" placeholder="Your Email" required>
-                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                    <button type="submit" class="btn btn2">Submit</button>
-                </form>
-                <span id="msg"></span>
-            </div>
-            </div>
-            </div>
-            </div>
-
-
         </section>
 
 

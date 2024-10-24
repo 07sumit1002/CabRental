@@ -578,6 +578,19 @@ li a:hover {
 
 
 }
+@media (max-width : 768px) {
+  .ride{
+    display: flex;
+    flex-direction: column;
+  }
+  section{
+    padding: 50px 20px ;
+  }
+
+  #review{
+    width: 100% !important;
+  }
+}
 .ride span{
   font-size: 40px;
   font-weight: 800;
@@ -1127,7 +1140,7 @@ FAQ Section */ .container_1 {
   font-weight: 700;
   color: #242e4c;
   text-align: center;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
 }
 
 .accordion {
@@ -1243,6 +1256,11 @@ footer p {
 }
 
 .dark-mode .navbar a {
+  color: white;
+  background: rgb(0, 0, 0);
+}
+
+.dark-mode .text-overlay p{
   color: white;
   background: rgb(0, 0, 0);
 }
