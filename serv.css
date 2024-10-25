@@ -1,26 +1,26 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
 body {
-    font-family: "Poppins", sans-serif;
-    margin: 0;
-    padding: 0;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    overflow-x: hidden;
-    background-color: #eeeff1;
-  }
-  main{
-    flex: 1;
-  }
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  background-color: #eeeff1;
+}
+main {
+  flex: 1;
+}
 
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #eeeff1;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-    height: 70px;
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #eeeff1;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  height: 70px;
 }
 
 .theme-switch {
@@ -36,106 +36,104 @@ body {
 }
 
 .logo img {
-    height: 50px;
-    padding-left: 20px;
-    padding-top: 10px;
+  height: 50px;
+  padding-left: 20px;
+  padding-top: 10px;
 }
-.CabRental_logo img{
+.CabRental_logo img {
   padding-top: 20px;
 }
 
 .navbar {
-    display: flex;
-    gap: 20px;
-    padding-top: 5px;
-    list-style: none;
-    font-size: 30;
+  display: flex;
+  gap: 20px;
+  padding-top: 5px;
+  list-style: none;
+  font-size: 30;
 }
 
 .navbar li a {
-    
-    text-decoration: none;
-    font-weight: 500;
-    color: #333;
-    padding: 10px 15px;
-    transition: 0.3s ease;
+  text-decoration: none;
+  font-weight: 500;
+  color: #333;
+  padding: 10px 15px;
+  transition: 0.3s ease;
 }
 
 .navbar li a:hover {
-    color: #007bff;
+  color: #007bff;
 }
 
 .header-btn .sign-up {
   padding: 20px;
-    padding: 10px 20px;
-    background-color: #007bff;
-    border-color: #007bff;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  border-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
 }
 
 .header-btn .sign-up:hover {
-    background-color: red;
-    border-color: red;
+  background-color: red;
+  border-color: red;
 }
 
 /* Hide menu icon initially */
 #menu-icon {
-    display: none;
+  display: none;
 }
 
 /* Responsive styles for mobile sidebar */
 @media (max-width: 600px) {
-    .navbar {
-        position: fixed;
-        top: 0;
-        left: -250px;
-        width: 250px;
-        height: 100%;
-        flex-direction: column;
-        align-items: start;
-        justify-content: flex-start;
-        padding: 20px;
-        transition: 0.3s;
-        z-index: 1000;
-    }
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    flex-direction: column;
+    align-items: start;
+    justify-content: flex-start;
+    padding: 20px;
+    transition: 0.3s;
+    z-index: 1000;
+  }
 
-    .navbar.active {
-        left: 0;
-    }
+  .navbar.active {
+    left: 0;
+  }
 
-    .navbar li {
-        width: 100%;
-        margin: 20px 0;
-    }
+  .navbar li {
+    width: 100%;
+    margin: 20px 0;
+  }
 
-    .navbar li a {
-        display: block;
-        width: 100%;
-        text-align: left;
-        padding: 10px 15px;
-    }
+  .navbar li a {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 10px 15px;
+  }
 
-    #menu-icon {
-        display: block;
-        font-size: 28px;
-        cursor: pointer;
-        position: absolute;
-        right: 20px;
-    }
+  #menu-icon {
+    display: block;
+    font-size: 28px;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+  }
 
-    .close-btn {
-        font-size: 28px;
-        cursor: pointer;
-        margin-left: auto;
-        margin-bottom: 20px;
-    }
+  .close-btn {
+    font-size: 28px;
+    cursor: pointer;
+    margin-left: auto;
+    margin-bottom: 20px;
+  }
 }
-  /* nav ul li a:hover {
-    color: #ff0000;
+/* nav ul li a:hover {
+   color: #ff0000;
   } */
-
 .key-features {
   margin-top: 10px;
   padding-left: 20px;
@@ -152,16 +150,16 @@ body {
 }
 
 .citytransfer {
-  padding: 23px;
+  padding: 25px;
   flex: 1;
   margin: 34px;
   font-size: 1rem;
   line-height: 1.5;
   color: #555;
-  padding: 10px 20px 20px 10px;
+  padding: 10px 20px 20px 25px;
   background-color: #fff;
-  border-radius: 22px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 25px;
+  box-shadow: rgba(139, 140, 140, 0.696) 3px 3px 5px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 5px 1px inset;
   width: 572px;
   max-width: 522px;
   margin: 20px 0;
@@ -180,7 +178,7 @@ body {
   text-decoration: none;
   padding: 8px 16px;
   border-radius: 5px;
-  transition: background-color 0.3s;
+  transition: background-color 1s;
   position: relative;
 }
 
@@ -197,8 +195,8 @@ body {
 
 .key-features1 {
   margin-top: 10px;
-   padding-left: 20px; 
-} 
+  padding-left: 20px;
+}
 .rentally {
   padding: 23px;
   flex: 1;
@@ -252,7 +250,7 @@ body {
   position: relative;
   justify-content: center;
   align-items: center;
-  top: -42px
+  top: -42px;
   /* position: relative;
   left: 752px;
   top: -825px; */
@@ -266,7 +264,6 @@ footer {
   width: 100%;
   bottom: 0;
 }
-
 
 /*Mobile Devices */
 @media (max-width: 600px) {
@@ -290,7 +287,7 @@ footer {
     margin: 10px 0;
   }
 
-  .citytransfer{
+  .citytransfer {
     width: 90%;
     margin-left: 5%;
     margin-right: 5%;
@@ -299,19 +296,14 @@ footer {
     /* margin-top: 1000px; */
   }
 
-
-
-  .specially{
+  .specially {
     width: 90%;
     margin-left: 5%;
     margin-right: 5%;
     margin-top: 76px;
-
-
   }
 
-
-  .rentally{
+  .rentally {
     width: 90%;
     margin-left: 5%;
     margin-right: 5%;
@@ -329,7 +321,7 @@ footer {
     display: block;
     text-align: center;
   }
-  .topbtn{
+  .topbtn {
     position: fixed;
     width: 50px;
     height: 50px;
@@ -340,6 +332,6 @@ footer {
     line-height: 50px;
     user-select: none;
     font-size: 22px;
-    border-radius: 50%
+    border-radius: 50%;
   }
 }
