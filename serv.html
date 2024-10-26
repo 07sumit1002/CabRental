@@ -1,11 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cabrental Reviews</title>
     <script src="https://cdn.tailwindcss.com"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="img/logo1.png" type="image/png">
+    <title>CabRental Services</title>
+    <link rel="stylesheet" href="serv.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <style>
         .nav-container {
             display: flex;
@@ -54,7 +63,7 @@
             color: #fbbf24;
         }
     </style>
-</head>
+  </head>
 
 <body class="bg-gray-100 font-sans leading-normal tracking-normal">
 
@@ -78,6 +87,56 @@
             <div>
                 <button class="bg-purple-500 text-white px-4 py-2 rounded shadow hover:bg-purple-600" onclick="window.location.href='login.html'">Login</button>
             </div>
+=======
+  </head>
+  <body>
+    <header>
+      <a href="index.html" class="logo"><img src="img/logo.png" alt=""></a>
+      <a href="index.html" class="CabRental_logo"><img src="img/cabz.png.png" alt=""></a>
+      <div class="bx bx-menu" id="menu-icon"></div>
+      <ul class="navbar">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="ride.html">Ride</a></li>
+          <li><a href="serv.html">Services</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="review.html">Reviews</a></li>
+          <li><a href="contactus.html">Contact</a></li>
+      </ul>
+      <div class="header-btn">
+          <a href="login.html" class="sign-up">Login</a>
+      </div>
+      <div class="theme-switch" id="theme-switch"></div>
+  </header>
+
+    <main>
+      <div id="city-transfers" class="citytransfer">
+        <div class="head1">
+          <h2>City Transfers</h2>
+        </div>
+        <p class="citypara">
+          Our city transfer services ensure convenient and reliable transportation to and from airports, hotels, and various locations within the city. We guarantee punctuality and comfort throughout your journey.
+        </p>
+        <ul class="key-features">
+          <li>Modern fleet of vehicles including sedans, SUVs, and luxury cars</li>
+          <li>Experienced and professional drivers</li>
+          <li>Flexible scheduling to suit your travel plans</li>
+          <li>Competitive pricing and transparent billing</li>
+        </ul>
+        <div class="card-footer">
+          <a href="#" class="cta-button">Book Now</a>
+        </div>
+      </div>
+      
+      <div class="video">
+        <video autoplay muted loop id="background-video">
+          <source src="service.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      
+      <div id="hourly-rentals" class="rentally">
+        <div class="head2">
+          <h2>Hourly Rentals</h2>
         </div>
     </nav>
 
@@ -230,6 +289,7 @@
             document.getElementById('reviewModal').classList.remove('hidden');
         });
 
+
         document.getElementById('closeModal').addEventListener('click', function () {
             document.getElementById('reviewModal').classList.add('hidden');
         });
@@ -244,6 +304,29 @@
             // Process form data and close modal
             document.getElementById('reviewModal').classList.add('hidden');
             alert('Thank you for your review!');
+
+        body {
+            margin: 0;
+            padding-bottom: 80px;  /* Space for the footer */
+        }
+    </style>
+    <script src="script.js"></script>
+      <script>
+       let lastScrollTop = 0;
+        const footer = document.querySelector("footer");
+
+        window.addEventListener("scroll", function() {
+            let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+            if (currentScroll > lastScrollTop) {
+                // Scrolling down - footer should appear smoothly
+                footer.style.transform = "translateY(0)";
+            } else {
+                // Scrolling up - hide the footer smoothly
+                footer.style.transform = "translateY(100%)";
+            }
+
+            lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
         });
     </script>
 </body>

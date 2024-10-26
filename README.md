@@ -1,35 +1,44 @@
 # 🚖 **CabRental**
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Last Commit](https://img.shields.io/github/last-commit/07sumit1002/CabRental.svg)](https://github.com/07sumit1002/CabRental/commits/main)
-[![GitHub Issues](https://img.shields.io/github/issues/07sumit1002/CabRental.svg)](https://github.com/07sumit1002/CabRental/issues)
-[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/07sumit1002/CabRental.svg)](https://github.com/07sumit1002/CabRental/pulls)
-[![Platform](https://img.shields.io/badge/platform-Web%20%26%20Blockchain-green.svg)](#)
-[![Technologies](https://img.shields.io/badge/Tech-HTML%20%7C%20CSS%20%7C%20JS%20%7C%20Node.js%20%7C%20Solidity-blue.svg)](#)
+🚗 CabRental is a **decentralized vehicle rental platform** using **Web3** for enhanced privacy, security, and flexibility. With crypto-wallet authentication 🔐 and smart contract-based transactions 📜, it offers a seamless, transparent, and tamper-proof rental experience.
+
+
+<table align="center">
+    <thead align="center">
+        <tr border: 2px;>
+            <td><b>🌟 Stars</b></td>
+            <td><b>🍴 Forks</b></td>
+            <td><b>🐛 Issues</b></td>
+            <td><b>🔔 Open PRs</b></td>
+            <td><b>🔕 Close PRs</b></td>
+        </tr>
+     </thead>
+    <tbody>
+         <tr>
+            <td><img alt="Stars" src="https://img.shields.io/github/stars/07sumit1002/CabRental?style=flat&logo=github"/></td>
+             <td><img alt="Forks" src="https://img.shields.io/github/forks/07sumit1002/CabRental?style=flat&logo=github"/></td>
+            <td><img alt="Issues" src="https://img.shields.io/github/issues/07sumit1002/CabRental?style=flat&logo=github"/></td>
+            <td><img alt="Open Pull Requests" src="https://img.shields.io/github/issues-pr/07sumit1002/CabRental?style=flat&logo=github"/></td>
+           <td><img alt="Close Pull Requests" src="https://img.shields.io/github/issues-pr-closed/07sumit1002/CabRental?style=flat&color=critical&logo=github"/></td>
+        </tr>
+    </tbody>
+</table>
 
 ---
-![CabRental Banner](https://files.oaiusercontent.com/file-E72nIXce4E1497vZoiZtGNTy?se=2024-10-05T14%3A47%3A35Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3Dff26116f-77dd-4e15-aee3-e867ef6fb7ac.webp&sig=L/j24P/8ksOZiXp9XSW7mCs1EKYRokZa%2BQjwzPtzb5s%3D)  
+<img src = "images/Cab_rental.png.png" alt = "image">
+<img src = "images/canRental2.png.png" alt = "image">
 
 ---
 ## 📝 **Table of Contents**
 
-- [📝 Description](#-description)
-- [🌟 Features](#-features)
-- [💻 Technologies Used](#-technologies-used)
-- [🔧 Installation](#-installation)
-- [🛠 Web3 Integration Guide](#-web3-integration-guide)
-- [📚 Usage](#-usage)
-- [🤝 Contributing](#-contributing)
-- [📄 License](#-license)
-- [📫 Contact](#-contact)
-
----
-
-## 📝 **Description**
-
-**CabRental** is a cutting-edge decentralized vehicle rental platform designed to give users a seamless and secure way to rent vehicles. By integrating **Web3 technologies**, CabRental ensures enhanced privacy, security, and flexibility with **crypto-wallet authentication** and **smart contract-based transactions**. All the features, from login to booking management, are decentralized and blockchain-powered, making the user experience smooth, transparent, and tamper-proof.
-
-![Web3 Rental](https://files.oaiusercontent.com/file-3vRtOVQ6VXFOIvjeHEuIF03Q?se=2024-10-05T14%3A32%3A33Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3Dc15e91ce-61b7-482c-987c-66d9adaab9f6.webp&sig=xWHU67zr8OrTQulaEn1HgJP1NHx6jn6ibQTTGg4vEiQ%3D)  
+- 🌟 [Features](#-features)
+- 💻 [Technologies Used](#-technologies-used)
+- 🔧 [Installation](#-installation)
+- 🛠 [Web3 Integration Guide](#-web3-integration-guide)
+- 📚 [Usage](#-usage)
+- 🤝 [Contributing](#-contributing)
+- 📄 [License](#-license)
+- 📫 [Contact](#-contact)
 
 ---
 
@@ -116,7 +125,6 @@ cd CabRental
 - Wallet authentication via **MetaMask** allows decentralized login.
 - **Web3.js** and **Ethers.js** are used to interact with the smart contracts for seamless blockchain operations.
 
-![MetaMask Wallet Connection](https://files.oaiusercontent.com/file-QyUAqocqj49rEEefvhalq9cF?se=2024-10-05T14%3A41%3A11Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3Dac428c5a-a433-4e8f-a5bd-54d007480062.webp&sig=yX9OkeQ1m8CXkHEoRXOD1K1%2BQh%2Big4EsWvhyt5t3T%2BU%3D) 
 ---
 
 ## 📚 **Usage**
@@ -145,10 +153,8 @@ cd CabRental
 ### **Admin Dashboard:**
 
 - Admins can manage all bookings, analyze platform usage, and verify blockchain transactions.
-
 ---
 ![](https://files.oaiusercontent.com/file-iMGfRqXcT2UQ2czdvFJESwZN?se=2024-10-05T14%3A42%3A46Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3Dd9fbe6b9-67ec-4319-ae9f-e7f0ccef6f27.webp&sig=uYSddLInzeEpKTzu%2BMUDSZfsMueae9VhaUAT9O/AFQw%3D)
-
 ## 🤝 Contributing
 
 Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
@@ -185,6 +191,9 @@ Contributions are what make the open-source community such an amazing place to l
 7. **Open a Pull Request**  
    Navigate to the original repository and open a pull request with a detailed description of your changes.
 
+## Contributors 🤩
+<img src="https://contrib.rocks/image?repo=07sumit1002/CabRental" />
+
 ## 📄 License
 
 This project is licensed under the [MIT License](LICENSE).
@@ -197,3 +206,9 @@ For any inquiries or support, please contact:
 - **GitHub:** [@07sumit1002](https://github.com/07sumit1002)
 
 ---
+
+## ⭐ Star the Repo!
+
+If you find this project useful and would like to support the project, please consider giving it a ⭐ star on GitHub! Your support helps us grow and improve. Thank you! 🙌
+
+### Keep learning and exploring! 🚀
