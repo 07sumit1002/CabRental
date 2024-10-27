@@ -47,8 +47,8 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #ffffff;
-  padding: 10px 10px;
+  background: #eeeff1;
+  padding: 15px 100px;
 }
 
 .logo img {
@@ -56,7 +56,7 @@ header {
     border-radius: 10px; /* This creates 10px rounded corners */
   }
   .CabRental_logo img {
-       margin: 9px 5px 0px 0px;
+       margin: 9px 30px 0px 0px;
   }
 
 
@@ -211,7 +211,7 @@ header nav .nav-right .header-btn > div input {
 .navbar a {
   font-size: 1rem;
   padding: 10px 20px;
-
+  color: #444;
   font-weight: 500;
 }
 
@@ -240,7 +240,7 @@ li a {
 }
 
 li a:hover {
-  color: rgb(216, 62, 62);  /* Changes the text color to black on hover */
+  color: rgb(182, 170, 170);  /* Changes the text color to black on hover */
 }
 
 
@@ -251,9 +251,9 @@ li a:hover {
   justify-content: space-between;
   /* Adjust alignment as needed */
   align-items: center;
-  background: #ffffff;
+  background: #eeeff1;
   /* Example background color */
-  padding: 10px 10px;
+  padding: 15px 100px;
   /* Example padding */
 }
 
@@ -270,17 +270,14 @@ li a:hover {
 .navbar a {
   text-decoration: none;
   color: #1e1e1e;
-  background-color: rgba(255, 101, 36, 0.833);
-  border: 0px transparent black;
-  border-radius: 8px;
   /* Example text color */
-  font-weight: 600;
+  font-weight: 500;
   padding: 10px 20px;
   /* Adjust padding as needed */
   position: relative;
 }
 
-/* .navbar a::after {
+.navbar a::after {
   content: '';
   position: absolute;
   left: 0;
@@ -289,8 +286,8 @@ li a:hover {
   height: 2px;
   background: #1e1e1e;
   /* Example underline color */
-  /* transition: width .3s ease-in-out; */
-
+  transition: width .3s ease-in-out;
+}
 
 .navbar a:hover::after {
   width: 100%;
@@ -316,13 +313,13 @@ li a:hover {
 }
 
 .header-btn .sign-in {
-  background: #474fa1;
+  background: #475fa0;
   color: #fff;
   border-radius: 0.5rem;
 }
 
 .header-btn .sign-in:hover {
-  background: rgb(211, 10, 10);
+  background: red;
 }
 
 .header-btn .sign-up {
