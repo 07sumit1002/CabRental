@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="img/logo1.png" type="image/png">
     <title>Cabshare</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <!-- Link to CSS -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <style>
         /* Media queries for responsiveness */
         @media (max-width: 575.98px) {
@@ -19,76 +23,91 @@
                 width: 90%;
                 margin: 0 auto;
             }
+
             h1 {
                 font-size: 1.5rem;
                 margin-left: 30%;
             }
         }
+
         @media (min-width: 576px) and (max-width: 767.98px) {
             .form {
                 width: 70%;
                 margin: 0 auto;
             }
+
             h1 {
                 font-size: 1.8rem;
                 margin-left: 25%;
             }
         }
+
         @media (min-width: 768px) and (max-width: 991.98px) {
             .form {
                 width: 60%;
                 margin: 0 auto;
             }
+
             h1 {
                 font-size: 2rem;
                 margin-left: 20%;
             }
         }
+
         @media (min-width: 992px) and (max-width: 1199.98px) {
             .form {
                 width: 50%;
                 margin: 0 auto;
             }
+
             h1 {
                 font-size: 2.2rem;
                 margin-left: 15%;
             }
         }
+
         @media (min-width: 1200px) {
             .form {
                 width: 40%;
                 margin: 0 auto;
             }
+
             h1 {
                 font-size: 2.5rem;
                 margin-left: 10%;
             }
         }
+
         .video-container {
             position: relative;
         }
+
         section {
             display: flex;
             flex-direction: column;
             align-items: center;
             padding: 110px 100px;
         }
+
         @media (max-width: 1000px) {
             section {
                 padding: 100px 50px;
             }
         }
+
         @media (max-width: 600px) {
             section {
                 padding: 123px 30px;
             }
         }
+
         .form-style-10 .inner-wrap {
             padding: 30px;
             background: #F8F8F8;
             border-radius: 6px;
             margin-bottom: 15px;
         }
+
         .form-style-10 h1 {
             background: #80057c;
             padding: 20px 30px 15px 30px;
@@ -98,17 +117,20 @@
             text-shadow: 1px 1px 3px rgba(214, 84, 175, 0.12);
             font: normal 30px 'Bitter', serif;
         }
-        .form-style-10 h1 > span {
+
+        .form-style-10 h1>span {
             display: block;
             margin-top: 2px;
             font: 13px Arial, Helvetica, sans-serif;
         }
+
         .form-style-10 label {
             display: block;
             font: 13px Arial, Helvetica, sans-serif;
             color: #888;
             margin-bottom: 15px;
         }
+
         .form-style-10 input[type="text"],
         .form-style-10 input[type="date"],
         .form-style-10 input[type="datetime"],
@@ -128,11 +150,13 @@
             border: 2px solid #fff;
             box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.33);
         }
+
         .form-style-10 .section {
             font: normal 20px 'Bitter', serif;
             color: #000000;
             margin-bottom: 5px;
         }
+
         .form-style-10 .section span {
             background: #bc2bbc;
             padding: 5px 10px;
@@ -144,6 +168,7 @@
             color: #fff;
             margin-top: -3px;
         }
+
         .form-style-10 input[type="button"],
         .form-style-10 input[type="submit"] {
             background: #91279b;
@@ -155,11 +180,13 @@
             border: 1px solid #760f41;
             font-size: 15px;
         }
+
         .form-style-10 input[type="button"]:hover,
         .form-style-10 input[type="submit"]:hover {
             background: #7b033f;
             box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.28);
         }
+
         .form-style-10 .privacy-policy {
             float: right;
             width: 250px;
@@ -171,29 +198,30 @@
 
 
         @media (max-width: 575.98px) {
-          .form {
-              width: 100%;
-              padding: 10px;
-          }
+            .form {
+                width: 100%;
+                padding: 10px;
+            }
 
-          .form-style-10 {
-              margin: 30px auto;
-              padding: 20px;
-          }
+            .form-style-10 {
+                margin: 30px auto;
+                padding: 20px;
+            }
 
-          .form-style-10 h1 {
-              font-size: 24px;
-          }
+            .form-style-10 h1 {
+                font-size: 24px;
+            }
 
-          .form-style-10 .section {
-              font-size: 18px;
-          }
+            .form-style-10 .section {
+                font-size: 18px;
+            }
 
-          .footer a {
-              display: block;
-              margin-bottom: 5px;
-          }
+            .footer a {
+                display: block;
+                margin-bottom: 5px;
+            }
         }
+
         header {
             display: flex;
             justify-content: space-between;
@@ -233,7 +261,7 @@
             text-decoration: none;
             border-radius: 5px;
         }
-        
+
         .header-btn .sign-up:hover {
             background-color: red;
             border-color: red;
@@ -291,9 +319,9 @@
                 margin-bottom: 20px;
             }
         }
-
     </style>
 </head>
+
 <body class="col-md-12">
     <section>
         <video autoplay muted loop id="background-video">
@@ -302,87 +330,91 @@
         </video>
     </section>
     <div class="video-container">
-    <script src="main.js"></script>
-    <!-- Header -->
-    <header style="display: flex !important;">
-        <a href="index.html" class="logo"><img src="img/logo.png" alt=""></a>
-        <a href="index.html" class="CabRental_logo"><img src="img/cabz.png.png" alt=""></a>
-        <div class="bx bx-menu" id="menu-icon"></div>
-        <ul class="navbar">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="ride.html">Ride</a></li>
-            <li><a href="serv.html">Services</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="review.html">Reviews</a></li>
-            <li><a href="contactus.html">Contact</a></li>
-        </ul>
-        <div class="header-btn">
-            <a href="login.html" class="sign-up">Login</a>
+        <script src="main.js"></script>
+        <!-- Header -->
+        <header style="display: flex !important;">
+            <a href="index.html" class="logo"><img src="img/logo.png" alt=""></a>
+            <a href="index.html" class="CabRental_logo"><img src="img/cabz.png.png" alt=""></a>
+            <div class="bx bx-menu" id="menu-icon"></div>
+            <ul class="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="ride.html">Ride</a></li>
+                <li><a href="serv.html">Services</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="review.html">Reviews</a></li>
+                <li><a href="contactus.html">Contact</a></li>
+            </ul>
+            <div class="header-btn">
+                <a href="login.html" class="sign-up">Login</a>
+            </div>
+            <div class="theme-switch" id="theme-switch"></div>
+        </header>
+        <div class="form">
+            <div class="form-style-10">
+                <h1>Rider Details!<span></span></h1>
+                <form id="riderForm">
+                    <div class="section"><span>1</span>First Name & Address</div>
+                    <div class="inner-wrap">
+                        <label>Your Full Name <input type="text" name="field1" /></label>
+                        <label>Address <textarea name="field2"></textarea></label>
+                    </div>
+                    <div class="section"><span>2</span>Email & Phone</div>
+                    <div class="inner-wrap">
+                        <label>Email Address <input type="email" name="field3" /></label>
+                        <label>Phone Number <input type="text" name="field4" /></label>
+                    </div>
+                    <div class="section"><span>3</span>Location & Time</div>
+                    <div class="inner-wrap">
+                        <label>Location <input type="text" name="field5" /></label>
+                        <label>Time <input type="time" name="time" id="time" /></label>
+                        <label>Date <input type="date" name="date" id="date" /></label>
+                    </div>
+                    <div class="button-section">
+                        <input type="submit" value="Submit" />
+                        <span class="privacy-policy">
+                            <input type="checkbox" name="field7">You agree to our Terms and Policy.
+                        </span>
+                    </div>
+                </form>
+            </div>
         </div>
-        <div class="theme-switch" id="theme-switch"></div>
-    </header>
-    <div class="form">
-        <div class="form-style-10">
-            <h1>Rider Details!<span></span></h1>
-            <form id="riderForm">
-                <div class="section"><span>1</span>First Name & Address</div>
-                <div class="inner-wrap">
-                    <label>Your Full Name <input type="text" name="field1" /></label>
-                    <label>Address <textarea name="field2"></textarea></label>
-                </div>
-                <div class="section"><span>2</span>Email & Phone</div>
-                <div class="inner-wrap">
-                    <label>Email Address <input type="email" name="field3" /></label>
-                    <label>Phone Number <input type="text" name="field4" /></label>
-                </div>
-                <div class="section"><span>3</span>Location & Time</div>
-                <div class="inner-wrap">
-                    <label>Location <input type="text" name="field5" /></label>
-                    <label>Time <input type="time" name="time" id="time" /></label>
-                    <label>Date <input type="date" name="date" id="date" /></label>
-                </div>
-                <div class="button-section">
-                    <input type="submit" value="Submit" />
-                    <span class="privacy-policy">
-                        <input type="checkbox" name="field7">You agree to our Terms and Policy.
-                    </span>
-                </div>
-            </form>
+        <div id="topbtn" class="topbtn">
+            <a class="gotopbtn" href="#"><i class="fa-solid fa-angles-up"></i></a>
         </div>
-    </div>
-    <div id="topbtn" class="topbtn">
-        <a class="gotopbtn" href="#"><i class="fa-solid fa-angles-up"></i></a>
-    </div>
-    <!-- JavaScript for smooth scroll to top -->
-    <script>
-        document.getElementById('riderForm').addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent form submission to handle validation
-    
-            // Check if any fields are empty
-            let form = event.target;
-            let isValid = true;
-    
-            form.querySelectorAll('input[type="text"], input[type="email"], input[type="time"], input[type="date"], textarea').forEach(function(input) {
-                if (input.value.trim() === '') {
-                    isValid = false;
-                    input.classList.add('error');
+        <!-- JavaScript for smooth scroll to top -->
+        <script>
+            document.getElementById('riderForm').addEventListener('submit', function (event) {
+                event.preventDefault(); // Prevent form submission to handle validation
+
+                // Check if any fields are empty
+                let form = event.target;
+                let isValid = true;
+
+                form.querySelectorAll('input[type="text"], input[type="email"], input[type="time"], input[type="date"], textarea').forEach(function (input) {
+                    if (input.value.trim() === '') {
+                        isValid = false;
+                        input.classList.add('error');
+                    } else {
+                        input.classList.remove('error');
+                    }
+                });
+
+                // If valid, submit the form and redirect
+                if (isValid) {
+                    // Simulate form submission here (e.g., send data to backend)
+                    alert('Form submitted successfully!');
+                    window.location.href = 'index.html'; // Redirect to homepage
                 } else {
-                    input.classList.remove('error');
+                    alert('Please fill out all required fields.');
                 }
             });
-    
-            // If valid, submit the form and redirect
-            if (isValid) {
-                // Simulate form submission here (e.g., send data to backend)
-                alert('Form submitted successfully!');
-                window.location.href = 'index.html'; // Redirect to homepage
-            } else {
-                alert('Please fill out all required fields.');
+
+            // Optional: Check the initial mode on page load
+            if (localStorage.getItem('dark-mode') === 'enabled') {
+                enableDarkMode();
             }
-        });
-    </script>
-    <script src="script.js"></script>
-    <!-- Footer
+        </script>
+        <!-- Footer
     <footer class="footer">
         <div class="footer-container container">
             <h2>Cabshare</h2>
@@ -409,6 +441,8 @@
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc2z6lnf65V2w4HmoRbHUXaB/91MoZl6fCJVN6eK" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc2z6lnf65V2w4HmoRbHUXaB/91MoZl6fCJVN6eK" crossorigin="anonymous"></script>-->
+        <script src="script.js"></script>
 </body>
+
 </html>

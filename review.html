@@ -15,6 +15,14 @@
             height: 80px;
         }
 
+        nav.dark-mode {
+            background-color: black;
+
+            .nav-items a {
+                color: white;
+            }
+        }
+
         .nav-items {
             flex-grow: 1;
             text-align: center;
@@ -30,33 +38,34 @@
         }
 
         .navbar ul li:hover a {
-    background-color: #555;
-    transform: scale(1.2); /* Popup effect */
-}
+            background-color: #555;
+            transform: scale(1.2);
+            /* Popup effect */
+        }
 
-.navbar ul li:hover::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 4px;
-    background-color: #00aced;
-    top: 100%;
-    left: 0;
-    transform: scaleX(1);
-    transition: all 0.3s ease;
-}
+        .navbar ul li:hover::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 4px;
+            background-color: #00aced;
+            top: 100%;
+            left: 0;
+            transform: scaleX(1);
+            transition: all 0.3s ease;
+        }
 
-.navbar ul li::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 4px;
-    background-color: transparent;
-    top: 100%;
-    left: 0;
-    transform: scaleX(0);
-    transition: all 0.3s ease;
-}
+        .navbar ul li::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 4px;
+            background-color: transparent;
+            top: 100%;
+            left: 0;
+            transform: scaleX(0);
+            transition: all 0.3s ease;
+        }
 
         .card {
             transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -65,6 +74,15 @@
         .card:hover {
             transform: translateY(-10px);
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .card.dark-mode {
+            background-color: black;
+            box-shadow: 0px 4px 12px rgba(244, 231, 231, 0.872);
+
+            p {
+                color: white;
+            }
         }
 
         .logo {
@@ -83,6 +101,45 @@
         .rating-star {
             color: #fbbf24;
         }
+
+        .theme-switch {
+            display: inline-block;
+            width: 60px;
+            height: 30px;
+            border-radius: 30px;
+            background: linear-gradient(49deg, #ffffff, #0644ff);
+            position: relative;
+            cursor: pointer;
+            transition: background 0.3s ease-in-out;
+            vertical-align: middle;
+        }
+
+        .theme-switch::before {
+            content: '';
+            position: absolute;
+            top: 3px;
+            left: 3px;
+            width: 24px;
+            height: 24px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            transition: left 0.3s ease-in-out, background-image 0.3s ease-in-out;
+            background-image: url('Assets/moon.png');
+        }
+
+        .theme-switch.dark-theme {
+            background: linear-gradient(82deg, #4d1fff, #ffffff);
+        }
+
+        .theme-switch.dark-theme::before {
+            left: 33px;
+            background-image: url('Assets/sun.png');
+        }
+
+        .review-section.dark-mode {
+            background-color: black;
+        }
     </style>
 </head>
 
@@ -93,9 +150,11 @@
         <div class="container mx-auto px-4 nav-container">
             <div class="flex items-center">
                 <a href="index.html"><img src="img/logo.png" alt="Logo" class="logo"></a>
-                <a href="index.html"><div class="text-lg font-bold text-purple-800">
-                    Cabrental
-                </div></a>
+                <a href="index.html">
+                    <div class="text-lg font-bold text-purple-800">
+                        Cabrental
+                    </div>
+                </a>
             </div>
             <div class="nav-items">
                 <a href="index.html" class="text-gray-800 hover:text-purple-800">Home</a>
@@ -104,9 +163,11 @@
                 <a href="about.html" class="text-gray-800 hover:text-purple-800">About</a>
                 <a href="review.html" class="text-gray-800 hover:text-purple-800">Reviews</a>
                 <a href="contactus.html" class="text-gray-800 hover:text-purple-800">Contact</a>
+                <div class="theme-switch" id="theme-switch"></div>
             </div>
             <div>
-                <button class="bg-purple-500 text-white px-4 py-2 rounded shadow hover:bg-purple-600" onclick="window.location.href='login.html'">Login</button>
+                <button class="bg-purple-500 text-white px-4 py-2 rounded shadow hover:bg-purple-600"
+                    onclick="window.location.href='login.html'">Login</button>
             </div>
         </div>
     </nav>
@@ -116,12 +177,13 @@
         <div class="container mx-auto text-center">
             <h1 class="text-4xl font-bold mb-2">Cabrental Reviews</h1>
             <p class="text-lg mb-6">Read what our customers have to say about our car rental service!</p>
-            <button id="reviewButton" class="bg-white text-purple-800 px-4 py-2 rounded shadow hover:bg-gray-200">Leave a Review</button>
+            <button id="reviewButton" class="bg-white text-purple-800 px-4 py-2 rounded shadow hover:bg-gray-200">Leave
+                a Review</button>
         </div>
     </section>
 
     <!-- Reviews Section -->
-    <section class="container mx-auto px-4 py-16">
+    <section class="review-section mx-auto px-16 py-16">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <!-- Review Cards -->
             <div class="bg-white p-6 rounded-lg shadow-lg card">
@@ -132,9 +194,12 @@
                         <p class="text-gray-600">March 25, 2024</p>
                     </div>
                 </div>
-                <p class="text-gray-800 mb-4">The car rental service was excellent! The car was in perfect condition, and the process was smooth and hassle-free.</p>
+                <p class="text-gray-800 mb-4">The car rental service was excellent! The car was in perfect condition,
+                    and the process was smooth and hassle-free.</p>
                 <div class="text-yellow-500">
-                    <span class="mr-1 rating-star">★</span><span class="mr-1 rating-star">★</span><span class="mr-1 rating-star">★</span><span class="mr-1 rating-star">★</span><span class="rating-star">★</span>
+                    <span class="mr-1 rating-star">★</span><span class="mr-1 rating-star">★</span><span
+                        class="mr-1 rating-star">★</span><span class="mr-1 rating-star">★</span><span
+                        class="rating-star">★</span>
                 </div>
             </div>
             <div class="bg-white p-6 rounded-lg shadow-lg card">
@@ -145,22 +210,28 @@
                         <p class="text-gray-600">April 10, 2024</p>
                     </div>
                 </div>
-                <p class="text-gray-800 mb-4">Great service and friendly staff! I will definitely rent a car from Cabrental again in the future.</p>
+                <p class="text-gray-800 mb-4">Great service and friendly staff! I will definitely rent a car from
+                    Cabrental again in the future.</p>
                 <div class="text-yellow-500">
-                    <span class="mr-1 rating-star">★</span><span class="mr-1 rating-star">★</span><span class="mr-1 rating-star">★</span><span class="mr-1 rating-star">★</span><span>☆</span>
+                    <span class="mr-1 rating-star">★</span><span class="mr-1 rating-star">★</span><span
+                        class="mr-1 rating-star">★</span><span class="mr-1 rating-star">★</span><span>☆</span>
                 </div>
             </div>
             <div class="bg-white p-6 rounded-lg shadow-lg card">
                 <div class="flex items-center mb-4">
-                    <img class="w-12 h-12 rounded-full mr-4" src="./images/istockphoto-1158014305-612x612.jpg" alt="User Avatar">
+                    <img class="w-12 h-12 rounded-full mr-4" src="./images/istockphoto-1158014305-612x612.jpg"
+                        alt="User Avatar">
                     <div>
                         <p class="text-xl font-bold">Mark Wilson</p>
                         <p class="text-gray-600">May 5, 2024</p>
                     </div>
                 </div>
-                <p class="text-gray-800 mb-4">I had an amazing experience with Cabrental. The car was clean and the booking process was seamless.</p>
+                <p class="text-gray-800 mb-4">I had an amazing experience with Cabrental. The car was clean and the
+                    booking process was seamless.</p>
                 <div class="text-yellow-500">
-                    <span class="mr-1 rating-star">★</span><span class="mr-1 rating-star">★</span><span class="mr-1 rating-star">★</span><span class="mr-1 rating-star">★</span><span class="rating-star">★</span>
+                    <span class="mr-1 rating-star">★</span><span class="mr-1 rating-star">★</span><span
+                        class="mr-1 rating-star">★</span><span class="mr-1 rating-star">★</span><span
+                        class="rating-star">★</span>
                 </div>
             </div>
             <div class="bg-white p-6 rounded-lg shadow-lg card">
@@ -171,9 +242,12 @@
                         <p class="text-gray-600">June 14, 2024</p>
                     </div>
                 </div>
-                <p class="text-gray-800 mb-4">I love the convenience of renting a car from Cabrental. Their service is always reliable and efficient.</p>
+                <p class="text-gray-800 mb-4">I love the convenience of renting a car from Cabrental. Their service is
+                    always reliable and efficient.</p>
                 <div class="text-yellow-500">
-                    <span class="mr-1 rating-star">★</span><span class="mr-1 rating-star">★</span><span class="mr-1 rating-star">★</span><span class="mr-1 rating-star">★</span><span class="rating-star">★</span>
+                    <span class="mr-1 rating-star">★</span><span class="mr-1 rating-star">★</span><span
+                        class="mr-1 rating-star">★</span><span class="mr-1 rating-star">★</span><span
+                        class="rating-star">★</span>
                 </div>
             </div>
             <div class="bg-white p-6 rounded-lg shadow-lg card">
@@ -184,9 +258,12 @@
                         <p class="text-gray-600">July 20, 2024</p>
                     </div>
                 </div>
-                <p class="text-gray-800 mb-4">Cabrental has been my go-to car rental service for years. They always provide top-notch service and quality cars.</p>
+                <p class="text-gray-800 mb-4">Cabrental has been my go-to car rental service for years. They always
+                    provide top-notch service and quality cars.</p>
                 <div class="text-yellow-500">
-                    <span class="mr-1 rating-star">★</span><span class="mr-1 rating-star">★</span><span class="mr-1 rating-star">★</span><span class="mr-1 rating-star">★</span><span class="rating-star">★</span>
+                    <span class="mr-1 rating-star">★</span><span class="mr-1 rating-star">★</span><span
+                        class="mr-1 rating-star">★</span><span class="mr-1 rating-star">★</span><span
+                        class="rating-star">★</span>
                 </div>
             </div>
             <div class="bg-white p-6 rounded-lg shadow-lg card">
@@ -197,9 +274,11 @@
                         <p class="text-gray-600">August 15, 2024</p>
                     </div>
                 </div>
-                <p class="text-gray-800 mb-4">The customer service at Cabrental is outstanding! They go above and beyond to ensure a great experience.</p>
+                <p class="text-gray-800 mb-4">The customer service at Cabrental is outstanding! They go above and beyond
+                    to ensure a great experience.</p>
                 <div class="text-yellow-500">
-                    <span class="mr-1 rating-star">★</span><span class="mr-1 rating-star">★</span><span class="mr-1 rating-star">★</span><span class="mr-1 rating-star">★</span><span>☆</span>
+                    <span class="mr-1 rating-star">★</span><span class="mr-1 rating-star">★</span><span
+                        class="mr-1 rating-star">★</span><span class="mr-1 rating-star">★</span><span>☆</span>
                 </div>
             </div>
         </div>
@@ -233,26 +312,28 @@
                 </div>
                 <div class="mb-4">
                     <label for="review" class="block text-sm font-medium text-gray-700">Review</label>
-                    <textarea id="review" class="mt-1 p-2 border border-gray-300 rounded-md w-full" rows="4" required></textarea>
+                    <textarea id="review" class="mt-1 p-2 border border-gray-300 rounded-md w-full" rows="4"
+                        required></textarea>
                 </div>
                 <div class="flex justify-end">
                     <button type="button" class="bg-gray-500 text-white px-4 py-2 rounded shadow hover:bg-gray-600 mr-2"
                         id="cancelButton">Cancel</button>
-                    <button type="submit" class="bg-purple-500 text-white px-4 py-2 rounded shadow hover:bg-purple-600">Submit</button>
+                    <button type="submit"
+                        class="bg-purple-500 text-white px-4 py-2 rounded shadow hover:bg-purple-600">Submit</button>
                 </div>
             </form>
         </div>
     </div>
     <footer class="bg-gray-800 text-white py-6">
-      <div class="container mx-auto text-center">
-          <p class="mb-2">© 2024 Cabrental. All rights reserved.</p>
-          <div class="flex justify-center space-x-4">
-              <a href="#" class="hover:text-purple-500">Privacy Policy</a>
-              <a href="#" class="hover:text-purple-500">Terms of Service</a>
-              <a href="contactus.html" class="hover:text-purple-500">Contact Us</a>
-          </div>
-      </div>
-  </footer>
+        <div class="container mx-auto text-center">
+            <p class="mb-2">© 2024 Cabrental. All rights reserved.</p>
+            <div class="flex justify-center space-x-4">
+                <a href="#" class="hover:text-purple-500">Privacy Policy</a>
+                <a href="#" class="hover:text-purple-500">Terms of Service</a>
+                <a href="contactus.html" class="hover:text-purple-500">Contact Us</a>
+            </div>
+        </div>
+    </footer>
 
     <script>
         // JavaScript to handle modal functionality
@@ -275,6 +356,47 @@
             document.getElementById('reviewModal').classList.add('hidden');
             alert('Thank you for your review!');
         });
+
+        const themeSwitch = document.getElementById('theme-switch');
+        const nav = document.querySelector("nav");
+        const reviewSection = document.querySelector(".review-section");
+        const card = document.querySelector(".card");
+
+        // Function to enable dark mode
+        function enableDarkMode() {
+            themeSwitch.classList.add('dark-theme'); // Update the switch appearance
+            nav.classList.add('dark-mode');
+            reviewSection.classList.add('dark-mode');
+            document.querySelectorAll('.card').forEach(card => {
+                card.classList.add('dark-mode');
+            });
+        }
+
+        // Function to disable dark mode
+        function disableDarkMode() {
+            themeSwitch.classList.remove('dark-theme'); // Update the switch appearance
+            nav.classList.remove('dark-mode');
+            reviewSection.classList.remove('dark-mode');
+            document.querySelectorAll('.card').forEach(card => {
+                card.classList.remove('dark-mode');
+            });
+        }
+
+        // Event listener for dark mode toggle button
+        themeSwitch.addEventListener('click', () => {
+            if (themeSwitch.classList.contains('dark-theme')) {
+                localStorage.removeItem('dark-mode'); // Remove from local storage
+                disableDarkMode(); // Switch to light mode
+            } else {
+                enableDarkMode(); // Switch to dark mode
+                localStorage.setItem('dark-mode', 'enabled'); // Save in local storage
+            }
+        });
+
+        // Check the initial mode on page load
+        if (localStorage.getItem('dark-mode') === 'enabled') {
+            enableDarkMode();
+        }
     </script>
 </body>
 
