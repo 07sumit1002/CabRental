@@ -1342,7 +1342,7 @@ footer p {
   margin-bottom: 20px;
   font-size: 16px;
   color: white;
-  background: white;
+  background: rgb(232, 210, 238);
 }
 .dark-mode .contact-right {
   border-radius: 30px;
