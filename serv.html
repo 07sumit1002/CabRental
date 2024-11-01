@@ -1,225 +1,245 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="img/logo1.png" type="image/png">
-    <title>CabRental Services</title>
-    <link rel="stylesheet" href="serv.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <style>
-      /* Add some basic styling for smooth scrolling */
-      html {
-        scroll-behavior: smooth;
-      }
-      .circle {
-            height: 18px;
-            width: 18px;
-            border-radius: 24px;
-            background-color: #ff0000;
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: 1000; /* Ensure the trail is above everything */
-            pointer-events: none; /* Prevent the circles from interfering with mouse events */
-        }
 
-    </style>
-  </head>
-  <body>
-    <header>
-      <a href="index.html" class="logo"><img src="img/logo.png" alt=""></a>
-      <a href="index.html" class="CabRental_logo"><img src="img/cabz.png.png" alt=""></a>
-      <div class="bx bx-menu" id="menu-icon"></div>
-      <ul class="navbar">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="ride.html">Ride</a></li>
-          <li><a href="serv.html">Services</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="review.html">Reviews</a></li>
-          <li><a href="contactus.html">Contact</a></li>
-      </ul>
-      <div class="header-btn">
-          <a href="login.html" class="sign-up">Login</a>
-      </div>
-      <div class="theme-switch" id="theme-switch"></div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="img/logo1.png" type="image/png">
+  <title>CabRental Services</title>
+  <link rel="stylesheet" href="serv.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    /* Add some basic styling for smooth scrolling */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .circle {
+      height: 18px;
+      width: 18px;
+      border-radius: 24px;
+      background-color: #ff0000;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      /* Ensure the trail is above everything */
+      pointer-events: none;
+      /* Prevent the circles from interfering with mouse events */
+    }
+
+    /* Centering the video and adding padding */
+    .video-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 20px;
+      /* Add padding from top and sides */
+    }
+
+    /* Flexbox for services */
+    .services-container {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px;
+      /* Space around the services */
+      gap: 20px;
+      /* Space between services */
+    }
+
+    .service-card {
+      flex: 1;
+      /* Allow cards to grow and fill space equally */
+      padding: 20px;
+      border: 1px solid #ccc;
+      /* Optional styling for the card */
+      border-radius: 8px;
+      /* Optional styling for rounded corners */
+      background: #f9f9f9;
+      /* Optional background color */
+      text-align: center;
+      /* Center text in cards */
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <a href="index.html" class="logo"><img src="img/logo.png" alt=""></a>
+    <a href="index.html" class="CabRental_logo"><img src="img/cabz.png" alt=""></a>
+    <div class="bx bx-menu" id="menu-icon"></div>
+    <ul class="navbar">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="ride.html">Ride</a></li>
+      <li><a href="serv.html">Services</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="review.html">Reviews</a></li>
+      <li><a href="contactus.html">Contact</a></li>
+    </ul>
+    <div class="header-btn">
+      <a href="login.html" class="sign-up">Login</a>
+    </div>
+    <div class="theme-switch" id="theme-switch"></div>
   </header>
-  <!-- 20 circle elements -->
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
 
-    <main>
-      <div id="city-transfers" class="citytransfer">
-        <div class="head1">
-          <h2>City Transfers</h2>
-        </div>
-        <p class="citypara">
-          Our city transfer services ensure convenient and reliable transportation to and from airports, hotels, and various locations within the city. We guarantee punctuality and comfort throughout your journey.
-        </p>
-        <ul class="key-features">
-          <li>Modern fleet of vehicles including sedans, SUVs, and luxury cars</li>
-          <li>Experienced and professional drivers</li>
-          <li>Flexible scheduling to suit your travel plans</li>
-          <li>Competitive pricing and transparent billing</li>
-        </ul>
-        <div class="card-footer">
-          <a href="#" class="cta-button">Book Now</a>
-        </div>
-      </div>
-      
-      <div class="video">
-        <video autoplay muted loop id="background-video">
-          <source src="service.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-      </div>
-      
-      <div id="hourly-rentals" class="rentally">
-        <div class="head2">
-          <h2>Hourly Rentals</h2>
-        </div>
-        <p class="hour">
-          Whether you need transportation for a few hours or an entire day, our hourly rental service provides flexibility and peace of mind. Perfect for business meetings, sightseeing tours, or personal errands.
-        </p>
-        <ul class="key-features1">
-          <li>Choose from a variety of vehicles tailored to your needs</li>
-          <li>Customizable routes and stops according to your itinerary</li>
-          <li>Experienced drivers familiar with local routes and attractions</li>
-          <li>Affordable rates with no hidden fees</li>
-        </ul>
-        <div class="card-footer">
-          <a href="#" class="cta-button">Get a Quote</a>
-        </div>
-      </div>
-      
-      <div id="special-occasions" class="specially">
-        <div class="occassion">
-          <h2>Special Occasions</h2>
-        </div>
-        <p class="key-features2">
-          Celebrate your special events in style with our tailored transportation solutions. Whether it's a wedding, anniversary, corporate event, or night out, we ensure a memorable and luxurious experience.
-        </p>
-        <ul class="key-features2">
-          <li>Premium selection of vehicles including limousines and executive vans</li>
-          <li>Personalized service to meet your specific event requirements</li>
-          <li>Professional chauffeurs dressed in attire appropriate for the occasion</li>
-          <li>On-time arrivals and impeccable service from start to finish</li>
-        </ul>
-        <div class="card-footer">
-          <a href="#" class="cta-button">Contact Us</a>
-        </div>
-      </div>
-    </main>
-    <footer>
-      <p>&copy; 2024 CabRental. All rights reserved.</p>
-      <style>
-        /* Styling the footer */
-        footer {
-            background-color: #ee6d6d;
-            color: white;
-            text-align: center;
-            padding: 5px;
-            display: flex;  /* Flexbox */
-            justify-content: center;  /* Center horizontally */
-            align-items: center; 
-            position: center;
-            bottom: 0;
-            width: 100%;
-            font-size: 14px;
-            height: 30px;
-            line-height: 30px;
-            transform: translateY(100%);  /* Initially hidden */
-            transition: transform 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);  /* Smooth animation */
-        }
+  <!-- Centered Video Section -->
+  <div class="video-container">
+    <video autoplay muted loop id="background-video">
+      <source src="service.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
 
+  <!-- Services Section -->
+  <div class="services-container">
+    <div class="service-card" id="city-transfers">
+      <h2>City Transfers</h2>
+      <p>Our city transfer services ensure convenient and reliable transportation to and from airports, hotels, and
+        various locations within the city. We guarantee punctuality and comfort throughout your journey.</p>
+      <ul class="key-features">
+        <li>Modern fleet of vehicles including sedans, SUVs, and luxury cars</li>
+        <li>Experienced and professional drivers</li>
+        <li>Flexible scheduling to suit your travel plans</li>
+        <li>Competitive pricing and transparent billing</li>
+      </ul>
+      <div class="card-footer">
+        <a href="#" class="cta-button">Book Now</a>
+      </div>
+    </div>
 
-        body {
-            margin: 0;
-            padding-bottom: 80px;  /* Space for the footer */
-        }
+    <div class="service-card" id="hourly-rentals">
+      <h2>Hourly Rentals</h2>
+      <p>Whether you need transportation for a few hours or an entire day, our hourly rental service provides
+        flexibility and peace of mind. Perfect for business meetings, sightseeing tours, or personal errands.</p>
+      <ul class="key-features1">
+        <li>Choose from a variety of vehicles tailored to your needs</li>
+        <li>Customizable routes and stops according to your itinerary</li>
+        <li>Experienced drivers familiar with local routes and attractions</li>
+        <li>Affordable rates with no hidden fees</li>
+      </ul>
+      <div class="card-footer">
+        <a href="#" class="cta-button">Get a Quote</a>
+      </div>
+    </div>
+
+    <div class="service-card" id="special-occasions">
+      <h2>Special Occasions</h2>
+      <p>Celebrate your special events in style with our tailored transportation solutions. Whether it's a wedding,
+        anniversary, corporate event, or night out, we ensure a memorable and luxurious experience.</p>
+      <ul class="key-features2">
+        <li>Premium selection of vehicles including limousines and executive vans</li>
+        <li>Personalized service to meet your specific event requirements</li>
+        <li>Professional chauffeurs dressed in attire appropriate for the occasion</li>
+        <li>On-time arrivals and impeccable service from start to finish</li>
+      </ul>
+      <div class="card-footer">
+        <a href="#" class="cta-button">Contact Us</a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2024 CabRental. All rights reserved.</p>
+    <style>
+      /* Styling the footer */
+      footer {
+        background-color: #ee6d6d;
+        color: white;
+        text-align: center;
+        padding: 5px;
+        display: flex;
+        /* Flexbox */
+        justify-content: center;
+        /* Center horizontally */
+        align-items: center;
+        position: center;
+        bottom: 0;
+        width: 100%;
+        font-size: 14px;
+        height: 30px;
+        line-height: 30px;
+        transform: translateY(100%);
+        /* Initially hidden */
+        transition: transform 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
+        /* Smooth animation */
+      }
+
+      body {
+        margin: 0;
+        padding-bottom: 80px;
+        /* Space for the footer */
+      }
     </style>
     <script src="script.js"></script>
-      <script>
-       let lastScrollTop = 0;
-        const footer = document.querySelector("footer");
+    <script>
+      let lastScrollTop = 0;
+      const footer = document.querySelector("footer");
 
-        window.addEventListener("scroll", function() {
-            let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+      window.addEventListener("scroll", function () {
+        let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
 
-            if (currentScroll > lastScrollTop) {
-                // Scrolling down - footer should appear smoothly
-                footer.style.transform = "translateY(0)";
-            } else {
-                // Scrolling up - hide the footer smoothly
-                footer.style.transform = "translateY(100%)";
-            }
+        if (currentScroll > lastScrollTop) {
+          // Scrolling down - footer should appear smoothly
+          footer.style.transform = "translateY(0)";
+        } else {
+          // Scrolling up - hide the footer smoothly
+          footer.style.transform = "translateY(100%)";
+        }
 
-            lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
-        });
+        lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+      });
     </script>
-    </footer>
-    <div id="topbtn" class="topbtn">
-      <a class="gotopbtn" href="#"><i class="fa-solid fa-angles-up"></i></a>
+  </footer>
+  <div id="topbtn" class="topbtn">
+    <a class="gotopbtn" href="#"><i class="fa-solid fa-angles-up"></i></a>
   </div>
   <script>
     const coords = { x: 0, y: 0 };
     const circles = document.querySelectorAll(".circle");
-    
+
     // Assign initial positions to the circles
     circles.forEach(function (circle) {
-        circle.x = 0;
-        circle.y = 0;
+      circle.x = 0;
+      circle.y = 0;
     });
 
     window.addEventListener("mousemove", function (e) {
-        // Use pageX and pageY to account for scroll distance
-        coords.x = e.pageX;
-        coords.y = e.pageY;
+      // Use pageX and pageY to account for scroll distance
+      coords.x = e.pageX;
+      coords.y = e.pageY;
     });
 
     function animateCircles() {
-        let x = coords.x;
-        let y = coords.y;
+      let x = coords.x;
+      let y = coords.y;
 
-        circles.forEach(function (circle, index) {
-            circle.style.left = x - 12 + "px";
-            circle.style.top = y - 12 + "px";
-            circle.style.scale = (circles.length - index) / circles.length;
+      circles.forEach(function (circle, index) {
+        circle.style.left = x - 12 + "px";
+        circle.style.top = y - 12 + "px";
+        circle.style.scale = (circles.length - index) / circles.length;
 
-            circle.x = x;
-            circle.y = y;
+        circle.x = x;
+        circle.y = y;
 
-            const nextCircle = circles[index + 1] || circles[0];
-            x += (nextCircle.x - x) * 0.3;
-            y += (nextCircle.y - y) * 0.3;
-        });
+        const nextCircle = circles[index + 1] || circles[0];
+        const nextX = nextCircle.x;
+        const nextY = nextCircle.y;
 
-        requestAnimationFrame(animateCircles);
+        // Smooth movement towards the cursor
+        circle.x += (nextX - circle.x) * 0.05;
+        circle.y += (nextY - circle.y) * 0.05;
+
+        circle.style.left = circle.x + "px";
+        circle.style.top = circle.y + "px";
+      });
+
+      requestAnimationFrame(animateCircles);
     }
 
     animateCircles();
-</script>
+  </script>
+</body>
 
-  </body>
 </html>
