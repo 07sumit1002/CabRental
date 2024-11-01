@@ -22,7 +22,73 @@ body {
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
     height: 70px;
 }
+/* Ensure the body has no extra margin */
+body {
+  margin: 0;
+  padding-bottom: 80px;
+  /* Space for the footer */
+}
 
+/* Slider styles */
+.slider {
+  overflow: hidden;
+  width: 100%;
+  max-width: 800px;
+  /* Set a max width for the slider */
+  margin: 0 auto;
+  /* Center the slider */
+}
+
+.slider-container {
+  display: flex;
+  transition: transform 0.5s ease;
+  /* Flexbox for vertical arrangement */
+  flex-direction: column;
+  align-items: center;
+  /* Center items */
+}
+
+.service-box {
+  background-color: rgba(255, 255, 255, 0.9);
+  /* Light background for visibility */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  margin: 10px;
+  /* Margin for spacing between boxes */
+  width: 100%;
+  /* Full width for the box */
+  max-width: 400px;
+  /* Set a max width for the boxes */
+  text-align: center;
+  /* Center text */
+}
+
+.card-footer {
+  margin-top: 10px;
+}
+
+.footer {
+  background-color: #ee6d6d;
+  color: white;
+  text-align: center;
+  padding: 5px;
+  display: flex;
+  /* Flexbox */
+  justify-content: center;
+  /* Center horizontally */
+  align-items: center;
+  position: center;
+  bottom: 0;
+  width: 100%;
+  font-size: 14px;
+  height: 30px;
+  line-height: 30px;
+  transform: translateY(100%);
+  /* Initially hidden */
+  transition: transform 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
+  /* Smooth animation */
+}
 .theme-switch {
   display: inline-block;
   width: 60px;
@@ -175,13 +241,18 @@ body {
 
 .cta-button {
   display: inline-block;
+    /* Inline-block to apply padding and margin */
   background-color: #ef8467;
+    /* Button background color */
   color: #fff;
+    /* Button text color */
   text-decoration: none;
+    /* Remove underline from link */
   padding: 8px 16px;
+    /* Button padding */
   border-radius: 5px;
+    /* Rounded corners */
   transition: background-color 0.3s;
-  position: relative;
 }
 
 .video {
