@@ -55,7 +55,9 @@ header {
     width: 60px;
     border-radius: 10px; /* This creates 10px rounded corners */
   }
-  .CabRental_logo img {
+  .cabRentalLogo img {
+    height: 60px;
+    width: 220px;
        margin: 9px 30px 0px 0px;
   }
 
