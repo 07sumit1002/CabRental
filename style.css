@@ -1359,7 +1359,7 @@ footer p {
 .booking-form .form-group select {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #333;
     border-radius: 4px;
     font-size: 16px;
     background-color: var(--input-bg-color);
@@ -1388,5 +1388,5 @@ body.dark-mode .booking-form .form-group select {
 
 body.dark-mode .booking-form .form-group input::placeholder,
 body.dark-mode .booking-form .form-group select::placeholder {
-    color: #aaa;
+    color: #333;
 }
