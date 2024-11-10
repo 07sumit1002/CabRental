@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="img/logo1.png" type="image/png">
     <title>CabRental Services</title>
     <link rel="stylesheet" href="serv.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -11,6 +12,18 @@
       html {
         scroll-behavior: smooth;
       }
+      .circle {
+            height: 18px;
+            width: 18px;
+            border-radius: 24px;
+            background-color: #ff0000;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1000; /* Ensure the trail is above everything */
+            pointer-events: none; /* Prevent the circles from interfering with mouse events */
+        }
+
     </style>
   <style>
           /* circle styles */
@@ -29,17 +42,47 @@
     </head>
   <body>
     <header>
-      <h1>CabRental Services</h1>
-    </header>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="#city-transfers">City Transfers</a></li>
-        <li><a href="#hourly-rentals">Hourly Rentals</a></li>
-        <li><a href="#special-occasions">Special Occasions</a></li>
-        <li><a href="contactus.html">Contact Us</a></li>
+      <a href="index.html" class="logo"><img src="img/logo.png" alt=""></a>
+      <a href="index.html" class="CabRental_logo"><img src="img/cabz.png.png" alt=""></a>
+      <div class="bx bx-menu" id="menu-icon"></div>
+      <ul class="navbar">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="ride.html">Ride</a></li>
+          <li><a href="serv.html">Services</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="review.html">Reviews</a></li>
+          <li><a href="contactus.html">Contact</a></li>
       </ul>
-    </nav>
+      <div class="header-btn">
+          <a href="login.html" class="sign-up">Login</a>
+      </div>
+      <div class="theme-switch" id="theme-switch"></div>
+  </header>
+  <!-- 20 circle elements -->
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+
     <main>
       <div id="city-transfers" class="citytransfer">
         <div class="head1">
@@ -130,6 +173,7 @@
             padding-bottom: 80px;  /* Space for the footer */
         }
     </style>
+    <script src="script.js"></script>
       <script>
        let lastScrollTop = 0;
         const footer = document.querySelector("footer");
@@ -152,6 +196,7 @@
     <div id="topbtn" class="topbtn">
       <a class="gotopbtn" href="#"><i class="fa-solid fa-angles-up"></i></a>
   </div>
+ harsh
   
 <!-- Circles -->
 <div class="circle"></div>
@@ -223,4 +268,58 @@
   </script>
 
 </body>
+
+  <script>
+    const coords = { x: 0, y: 0 };
+    const circles = document.querySelectorAll(".circle");
+    
+    // Assign initial positions to the circles
+    circles.forEach(function (circle) {
+        circle.x = 0;
+        circle.y = 0;
+    });
+
+    window.addEventListener("mousemove", function (e) {
+        // Use pageX and pageY to account for scroll distance
+        coords.x = e.pageX;
+        coords.y = e.pageY;
+    });
+
+    function animateCircles() {
+        let x = coords.x;
+        let y = coords.y;
+
+        circles.forEach(function (circle, index) {
+            circle.style.left = x - 12 + "px";
+            circle.style.top = y - 12 + "px";
+            circle.style.scale = (circles.length - index) / circles.length;
+
+            circle.x = x;
+            circle.y = y;
+
+            const nextCircle = circles[index + 1] || circles[0];
+            x += (nextCircle.x - x) * 0.3;
+            y += (nextCircle.y - y) * 0.3;
+        });
+
+        requestAnimationFrame(animateCircles);
+    }
+
+    animateCircles();
+</script>
+<script>
+  window.embeddedChatbotConfig = {
+  chatbotId: "2zn6LCEiOl1sZnaTGnPqp",
+  domain: "www.chatbase.co"
+  }
+  </script>
+  <script
+  src="https://www.chatbase.co/embed.min.js"
+  chatbotId="2zn6LCEiOl1sZnaTGnPqp"
+  domain="www.chatbase.co"
+  defer>
+  </script>
+
+  </body>
+ main
 </html>

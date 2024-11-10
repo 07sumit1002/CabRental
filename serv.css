@@ -7,65 +7,131 @@ body {
     display: flex;
     flex-direction: column;
     overflow-x: hidden;
+    background-color: #eeeff1;
   }
   main{
     flex: 1;
   }
 
-header {
-  color: #000000;
-  text-align: left;
-
-  padding: 20px 0;
-}
-
-header h1 {
-  margin: 0;
-  font-size: 2rem;
-  position: relative;
-  left: 34px;
-}
-
-nav {
-   padding:0px 0;
-    position: relative;
-    left: 55px;
-    top: -55px;
-   
-  
-  }
-
-  nav ul {
-
-    list-style: none;
-    margin:0;
-    padding: 0;
+  header {
     display: flex;
-    justify-content: center;
-   
-  }
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #eeeff1;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    height: 70px;
+}
 
-  nav ul li {
-    margin: 0 20px;
+.theme-switch {
+  display: inline-block;
+  width: 60px;
+  height: 30px;
+  border-radius: 30px;
+  background: linear-gradient(49deg, #ffffff, #0644ff);
+  position: relative;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+  vertical-align: middle;
+}
 
-  }
+.logo img {
+    height: 50px;
+    padding-left: 20px;
+    padding-top: 10px;
+}
+.CabRental_logo img{
+  padding-top: 20px;
+}
 
-  nav a:hover {
-    background: rgb(231, 223, 223);
-    padding-block:6px;
-    padding-inline: 9px;
-    border-radius: 2px;
-  }
+.navbar {
+    display: flex;
+    gap: 20px;
+    padding-top: 5px;
+    list-style: none;
+    font-size: 30;
+}
 
-  nav ul li a {
-    color: #000000;
+.navbar li a {
+    
     text-decoration: none;
-    font-size: 1rem;
-    transition: color 0.3s;
-    padding-block:6px;
-    padding-inline: 9px;
-  }
+    font-weight: 500;
+    color: #333;
+    padding: 10px 15px;
+    transition: 0.3s ease;
+}
 
+.navbar li a:hover {
+    color: #007bff;
+}
+
+.header-btn .sign-up {
+  padding: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    border-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.header-btn .sign-up:hover {
+    background-color: red;
+    border-color: red;
+}
+
+/* Hide menu icon initially */
+#menu-icon {
+    display: none;
+}
+
+/* Responsive styles for mobile sidebar */
+@media (max-width: 600px) {
+    .navbar {
+        position: fixed;
+        top: 0;
+        left: -250px;
+        width: 250px;
+        height: 100%;
+        flex-direction: column;
+        align-items: start;
+        justify-content: flex-start;
+        padding: 20px;
+        transition: 0.3s;
+        z-index: 1000;
+    }
+
+    .navbar.active {
+        left: 0;
+    }
+
+    .navbar li {
+        width: 100%;
+        margin: 20px 0;
+    }
+
+    .navbar li a {
+        display: block;
+        width: 100%;
+        text-align: left;
+        padding: 10px 15px;
+    }
+
+    #menu-icon {
+        display: block;
+        font-size: 28px;
+        cursor: pointer;
+        position: absolute;
+        right: 20px;
+    }
+
+    .close-btn {
+        font-size: 28px;
+        cursor: pointer;
+        margin-left: auto;
+        margin-bottom: 20px;
+    }
+}
   /* nav ul li a:hover {
     color: #ff0000;
   } */

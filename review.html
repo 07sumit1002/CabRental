@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/logo1.png" type="image/png">
     <title>Cabrental Reviews</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -27,6 +28,46 @@
         .nav-items a:hover {
             color: #6d28d9;
         }
+
+        .navbar ul li:hover a {
+    background-color: #555;
+    transform: scale(1.2); /* Popup effect */
+}
+.circle {
+            height: 18px;
+            width: 18px;
+            border-radius: 24px;
+            background-color: #ff0000;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1000; /* Ensure the trail is above everything */
+            pointer-events: none; /* Prevent the circles from interfering with mouse events */
+        }
+
+.navbar ul li:hover::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: #00aced;
+    top: 100%;
+    left: 0;
+    transform: scaleX(1);
+    transition: all 0.3s ease;
+}
+
+.navbar ul li::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: transparent;
+    top: 100%;
+    left: 0;
+    transform: scaleX(0);
+    transition: all 0.3s ease;
+}
 
         .card {
             transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -71,15 +112,40 @@
     </head>
 
 <body class="bg-gray-100 font-sans leading-normal tracking-normal">
+    <!-- 20 circle elements -->
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
 
     <!-- Navbar -->
     <nav class="bg-white shadow-md">
         <div class="container mx-auto px-4 nav-container">
             <div class="flex items-center">
-                <img src="img/logo.png" alt="Logo" class="logo">
-                <div class="text-lg font-bold text-purple-800">
+                <a href="index.html"><img src="img/logo.png" alt="Logo" class="logo"></a>
+                <a href="index.html"><div class="text-lg font-bold text-purple-800">
                     Cabrental
-                </div>
+                </div></a>
             </div>
             <div class="nav-items">
                 <a href="index.html" class="text-gray-800 hover:text-purple-800">Home</a>
@@ -191,23 +257,23 @@
 
     <!-- Review Form Modal -->
     <div id="reviewModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
-        <div class="bg-white rounded-lg p-6 w-full max-w-lg">
-            <div class="flex justify-between items-center mb-4">
-                <h2 class="text-xl font-bold">Leave a Review</h2>
-                <button id="closeModal" class="text-gray-600 hover:text-gray-900">&times;</button>
+        <div class="bg-white rounded-lg p-4 sm:p-8 w-full max-w-lg m-4 sm:m-8 shadow-lg transition-transform duration-300 scale-95 hover:scale-100">
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="text-xl sm:text-2xl font-semibold text-gray-800">Leave a Review</h2>
+                <button id="closeModal" class="text-gray-600 hover:text-gray-900 text-3xl transition-transform duration-200 transform hover:scale-110">&times;</button>
             </div>
-            <form>
-                <div class="mb-4">
-                    <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
-                    <input type="text" id="name" class="mt-1 p-2 border border-gray-300 rounded-md w-full" required>
+            <form method="post">
+                <div class="mb-5">
+                    <label for="name" class="block text-sm font-semibold text-gray-800">Name</label>
+                    <input type="text" id="name" class="mt-2 p-2 sm:p-3 border border-gray-300 rounded-lg w-full focus:border-purple-500 focus:outline-none focus:ring-1 focus:ring-purple-500" placeholder="Enter your name" required>
                 </div>
-                <div class="mb-4">
-                    <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
-                    <input type="email" id="email" class="mt-1 p-2 border border-gray-300 rounded-md w-full" required>
+                <div class="mb-5">
+                    <label for="email" class="block text-sm font-semibold text-gray-800">Email</label>
+                    <input type="email" id="email" class="mt-2 p-2 sm:p-3 border border-gray-300 rounded-lg w-full focus:border-purple-500 focus:outline-none focus:ring-1 focus:ring-purple-500" placeholder="Enter your email" required>
                 </div>
-                <div class="mb-4">
-                    <label for="rating" class="block text-sm font-medium text-gray-700">Rating</label>
-                    <select id="rating" class="mt-1 p-2 border border-gray-300 rounded-md w-full" required>
+                <div class="mb-5">
+                    <label for="rating" class="block text-sm font-semibold text-gray-800">Rating</label>
+                    <select id="rating" class="mt-2 p-2 sm:p-3 border border-gray-300 rounded-lg w-full focus:border-purple-500 focus:outline-none focus:ring-1 focus:ring-purple-500" required>
                         <option value="5">★★★★★ - 5 Stars</option>
                         <option value="4">★★★★☆ - 4 Stars</option>
                         <option value="3">★★★☆☆ - 3 Stars</option>
@@ -215,18 +281,18 @@
                         <option value="1">★☆☆☆☆ - 1 Star</option>
                     </select>
                 </div>
-                <div class="mb-4">
-                    <label for="review" class="block text-sm font-medium text-gray-700">Review</label>
-                    <textarea id="review" class="mt-1 p-2 border border-gray-300 rounded-md w-full" rows="4" required></textarea>
+                <div class="mb-5">
+                    <label for="review" class="block text-sm font-semibold text-gray-800">Review</label>
+                    <textarea id="review" class="mt-2 p-2 sm:p-3 border border-gray-300 rounded-lg w-full focus:border-purple-500 focus:outline-none focus:ring-1 focus:ring-purple-500" rows="4" placeholder="Write your review here..." required></textarea>
                 </div>
                 <div class="flex justify-end">
-                    <button type="button" class="bg-gray-500 text-white px-4 py-2 rounded shadow hover:bg-gray-600 mr-2"
-                        id="cancelButton">Cancel</button>
-                    <button type="submit" class="bg-purple-500 text-white px-4 py-2 rounded shadow hover:bg-purple-600">Submit</button>
+                    <button type="button" class="bg-gray-500 text-white px-4 py-2 sm:px-6 sm:py-3 rounded-lg shadow hover:bg-gray-600 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 mr-2" id="cancelButton">Cancel</button>
+                    <button type="submit" class="bg-purple-600 text-white px-4 py-2 sm:px-6 sm:py-3 rounded-lg shadow hover:bg-purple-700 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2">Submit</button>
                 </div>
             </form>
         </div>
     </div>
+    
     <footer class="bg-gray-800 text-white py-6">
       <div class="container mx-auto text-center">
           <p class="mb-2">© 2024 Cabrental. All rights reserved.</p>
@@ -260,6 +326,7 @@
             alert('Thank you for your review!');
         });
     </script>
+ harsh
 
 <!-- Circles -->
 <div class="circle"></div>
@@ -329,6 +396,59 @@
     
     animateCircles();
   </script>
+
+     <script>
+        const coords = { x: 0, y: 0 };
+        const circles = document.querySelectorAll(".circle");
+        
+        // Assign initial positions to the circles
+        circles.forEach(function (circle) {
+            circle.x = 0;
+            circle.y = 0;
+        });
+
+        window.addEventListener("mousemove", function (e) {
+            // Use pageX and pageY to account for scroll distance
+            coords.x = e.pageX;
+            coords.y = e.pageY;
+        });
+
+        function animateCircles() {
+            let x = coords.x;
+            let y = coords.y;
+
+            circles.forEach(function (circle, index) {
+                circle.style.left = x - 12 + "px";
+                circle.style.top = y - 12 + "px";
+                circle.style.scale = (circles.length - index) / circles.length;
+
+                circle.x = x;
+                circle.y = y;
+
+                const nextCircle = circles[index + 1] || circles[0];
+                x += (nextCircle.x - x) * 0.3;
+                y += (nextCircle.y - y) * 0.3;
+            });
+
+            requestAnimationFrame(animateCircles);
+        }
+
+        animateCircles();
+    </script>
+    <script>
+        window.embeddedChatbotConfig = {
+        chatbotId: "2zn6LCEiOl1sZnaTGnPqp",
+        domain: "www.chatbase.co"
+        }
+        </script>
+        <script
+        src="https://www.chatbase.co/embed.min.js"
+        chatbotId="2zn6LCEiOl1sZnaTGnPqp"
+        domain="www.chatbase.co"
+        defer>
+        </script>
+
+ main
 
 </body>
 

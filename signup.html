@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/logo1.png" type="image/png">
     <title>Register</title>
     <link rel="stylesheet" href="login.css"/>
+ harsh
 <style>
           /* circle styles */
           .circle {
@@ -21,7 +23,48 @@
           }
         </style>  
     </head>
+
+    <style>
+        .circle {
+            height: 18px;
+            width: 18px;
+            border-radius: 24px;
+            background-color: #ff0000;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1000; /* Ensure the trail is above everything */
+            pointer-events: none; /* Prevent the circles from interfering with mouse events */
+        }
+    </style>
+</head>
+ main
 <body>
+    <!-- 20 circle elements -->
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+
     <div class="container">
         <div class="left-section">
             <button class="back-button" onclick="window.location.href='index.html'"><img src="img/back_button.png" width="50px" height="50px"/></button>
@@ -63,6 +106,7 @@
 
         setInterval(showNextImage, 3000);
     </script>
+ harsh
 
 <!-- Circles -->
 <div class="circle"></div>
@@ -132,6 +176,47 @@
     
     animateCircles();
   </script>
+
+    <script>
+        const coords = { x: 0, y: 0 };
+        const circles = document.querySelectorAll(".circle");
+        
+        // Assign initial positions to the circles
+        circles.forEach(function (circle) {
+            circle.x = 0;
+            circle.y = 0;
+        });
+
+        window.addEventListener("mousemove", function (e) {
+            // Use pageX and pageY to account for scroll distance
+            coords.x = e.pageX;
+            coords.y = e.pageY;
+        });
+
+        function animateCircles() {
+            let x = coords.x;
+            let y = coords.y;
+
+            circles.forEach(function (circle, index) {
+                circle.style.left = x - 12 + "px";
+                circle.style.top = y - 12 + "px";
+                circle.style.scale = (circles.length - index) / circles.length;
+
+                circle.x = x;
+                circle.y = y;
+
+                const nextCircle = circles[index + 1] || circles[0];
+                x += (nextCircle.x - x) * 0.3;
+                y += (nextCircle.y - y) * 0.3;
+            });
+
+            requestAnimationFrame(animateCircles);
+        }
+
+        animateCircles();
+    </script>
+
+ main
 
 </body>
 </html>

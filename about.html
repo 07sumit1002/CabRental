@@ -3,56 +3,100 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="img/logo1.png" type="image/png">
     <title>About Us - CabRental</title>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
     />
+    
+    
     <nav class="navbar">
       <div class="logo">
-        <img src="img/cabz.png.png" alt="Logo" class="navbar-logo" />
+        <a href="index.html" class="logo"><img src="img/logo.png" alt=""></a>
+        <a href="index.html"><img src="img/cabz.png.png" alt="Logo" class="navbar-logo" /></a>
     </div>
       <ul>
           <li><a href="index.html">Home</a></li>
-          <li><a href="#company-overview">Company Overview</a></li>
-          <li><a href="#mission-vision">Mission & Vision</a></li>
-          <li><a href="#values-principles">Values & Principles</a></li>
+          <li><a href="ride.html">Ride</a></li>
+          <li><a href="serv.html">Services</a></li>
+          <li><a href="#about.html">About</a></li>
+          <li><a href="review.html">Reviews</a></li>
+          <li><a href="contactus.html">Contact</a></li>
+          <li>
+            <div class="header-btn">
+              <a href="login.html" class="sign-up">Login</a>
+          </div>
+          </li>
+          <li>
+            <div class="theme-switch" id="theme-switch"></div>
+          </li>
       </ul>
   </nav>
   
+  
     <style>
+      .logo img {
+            height: 60px;
+            padding-right: 40px;
+            padding-left: 40px;
+        }
       body {
         font-family: "Poppins", sans-serif;
         margin: 0;
         padding: 0;
-        background-color: #f9f9f9;
+        background-color: #eeeff1;
         color: #333;
         line-height: 1.6;
       }
+      .circle {
+            height: 18px;
+            width: 18px;
+            border-radius: 24px;
+            background-color: #ff0000;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1000; /* Ensure the trail is above everything */
+            pointer-events: none; /* Prevent the circles from interfering with mouse events */
+        }
+
 
       .navbar {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        background-color: #fff;
+        background-color: #eeeff1;
         padding: 20px;
         position: sticky;
         top: 0;
         z-index: 1000;
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        height: 50px;
       }
 
       .navbar ul li a:hover {
         background-color: #8f6883;
         transform: scale(1.1);
       }
-
+      .header-btn .sign-up:hover {
+            background-color: red;
+            border-color: red;
+        }
+        .header-btn .sign-up {
+            padding: 10px 20px;
+            background-color: #007bff;
+            border-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
       .navbar ul {
         display: flex;
         justify-content: space-around; /* Spacing between links */
         list-style: none;
         padding: 10px; /* Padding for the group of links */
-        background-color: #e6e4e4; /* Background color for the navbar */
+        background-color: #eeeff1; /* Background color for the navbar */
     }
 
     .navbar ul li {
@@ -223,6 +267,31 @@
         </style>  
     </head>
   <body>
+    <!-- 20 circle elements -->
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+
     
     <!-- Hero Section -->
     <section class="hero">
@@ -319,6 +388,7 @@
     </div>
   </div>
 </footer>
+ harsh
   
 <!-- Circles -->
 <div class="circle"></div>
@@ -365,10 +435,30 @@
 
     // animation function to move the circles:
     function animateCircles() {
+
+<script>
+  const coords = { x: 0, y: 0 };
+  const circles = document.querySelectorAll(".circle");
+  
+  // Assign initial positions to the circles
+  circles.forEach(function (circle) {
+      circle.x = 0;
+      circle.y = 0;
+  });
+
+  window.addEventListener("mousemove", function (e) {
+      // Use pageX and pageY to account for scroll distance
+      coords.x = e.pageX;
+      coords.y = e.pageY;
+  });
+
+  function animateCircles() {
+ main
       let x = coords.x;
       let y = coords.y;
 
       circles.forEach(function (circle, index) {
+ harsh
        
 
         circle.style.left = x - 12 + "px";
@@ -390,4 +480,38 @@
   </script>
 
 </body>
+
+          circle.style.left = x - 12 + "px";
+          circle.style.top = y - 12 + "px";
+          circle.style.scale = (circles.length - index) / circles.length;
+
+          circle.x = x;
+          circle.y = y;
+
+          const nextCircle = circles[index + 1] || circles[0];
+          x += (nextCircle.x - x) * 0.3;
+          y += (nextCircle.y - y) * 0.3;
+      });
+
+      requestAnimationFrame(animateCircles);
+  }
+
+  animateCircles();
+</script>]
+<script>
+  window.embeddedChatbotConfig = {
+  chatbotId: "2zn6LCEiOl1sZnaTGnPqp",
+  domain: "www.chatbase.co"
+  }
+  </script>
+  <script
+  src="https://www.chatbase.co/embed.min.js"
+  chatbotId="2zn6LCEiOl1sZnaTGnPqp"
+  domain="www.chatbase.co"
+  defer>
+  </script>
+
+
+  </body>
+ main
 </html>
