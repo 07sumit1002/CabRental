@@ -52,7 +52,7 @@ header {
 }
 
 .logo img {
-    width: 60px;
+    width: 120px;
     border-radius: 10px; /* This creates 10px rounded corners */
   }
   .CabRental_logo img {
@@ -421,8 +421,9 @@ li a:hover {
 }
 
 #bookNow:hover {
-  background-color: orangered;
-  transform: scale(1.1);
+  background-color: green;
+  transform: scale(1.02);
+  content: "Confirming Booking";
 
 }
 
@@ -706,7 +707,7 @@ li a:hover {
 }
 
 .services-container .box .btn:hover {
-  background-color: #b02f18;
+  background-color: lightseagreen;
 }
 
 .form-container1 form {
@@ -1106,7 +1107,7 @@ footer {
 
 .review .review-slider .slide .stars i {
   font-size: 2rem;
-  color: var(--main-color);
+  color: gold;
 }
 
 .swiper-pagination-bullet-active {

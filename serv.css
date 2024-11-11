@@ -312,9 +312,10 @@ footer {
 
 
   .rentally{
-    width: 90%;
-    margin-left: 5%;
-    margin-right: 5%;
+    position: absolute;
+    width: 90px;
+    margin-left: 100px;
+    margin-right: 20px;
     margin-top: 79px;
   }
 
@@ -328,6 +329,7 @@ footer {
     margin: 0 auto;
     display: block;
     text-align: center;
+    color: lightseagreen;
   }
   .topbtn{
     position: fixed;
