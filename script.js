@@ -137,7 +137,7 @@ const themeSwitch = document.getElementById('theme-switch'); // Ensure this matc
 const body = document.body;
 const header = document.querySelector('header');
 const footer = document.querySelector('footer');
-
+const CabRental_logo = document.getElementById('CabRental_logo');
 document.getElementById('bookNow').addEventListener('click', function () {
   const name=document.getElementById('fullName').value.trim();
   const phone=document.getElementById('phone').value.trim();
@@ -155,13 +155,22 @@ document.getElementById('bookNow').addEventListener('click', function () {
   alert('Booking confirmed!');
 });
 
+
+// Paths for light and dark mode logos
+
+const lightModeCabRental_logo = 'img/cabz.png';
+const darkModeCabRental_logo = 'img/cabz-dark.png'; // New dark mode logo for CabRental
+
 // Function to enable dark mode
 function enableDarkMode() {
   themeSwitch.classList.add('dark-theme'); // Update the switch appearance
   body.classList.add('dark-mode');
   header.classList.add('dark-mode');
   footer.classList.add('dark-mode');
+  CabRental_logo.src = darkModeCabRental_logo;
+  console.log('Dark mode enabled: Logo changed to dark mode logo.'); // Switch to dark mode CabRental logo
 }
+
 
 // Function to disable dark mode
 function disableDarkMode() {
@@ -169,11 +178,13 @@ function disableDarkMode() {
   body.classList.remove('dark-mode');
   header.classList.remove('dark-mode');
   footer.classList.remove('dark-mode');
+  CabRental_logo.src = lightModeCabRental_logo; 
 }
+
 
 // Event listener for dark mode toggle button
 themeSwitch.addEventListener('click', () => {
-  if (body.classList.contains('dark-mode')) {
+  if (body.classList .contains('dark-mode')) {
     localStorage.removeItem('dark-mode'); // Remove from local storage
     disableDarkMode(); // Switch to light mode
   } else {

@@ -42,6 +42,8 @@ body {
 }
 .CabRental_logo img{
   padding-top: 20px;
+  height: 60px;
+    width: 220px;
 }
 
 .navbar {
