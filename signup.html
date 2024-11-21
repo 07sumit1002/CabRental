@@ -49,33 +49,38 @@
 
     <div class="container">
         <div class="left-section">
-            <button class="back-button" onclick="window.location.href='index.html'"><img src="img/back_button.png" width="50px" height="50px"/></button>
+            <button class="back-button" onclick="window.location.href='index.html'">
+                <img src="img/back_button.png" width="50" height="50" alt="Back to Home"/>
+            </button>
             <h1 class="animated-heading">Cab Rental<span class="blinking-cursor">|</span></h1>
             <p class="description">
                 Welcome to Cab Rental, your go-to platform for sharing or renting a cab effortlessly. Whether you're planning a quick trip across town or a long-distance journey, we provide a convenient and cost-effective solution to meet your travel needs.
             </p>
-            <form id="signupForm" class="login-form" action="register.php">
-                <input type="text" id="name" placeholder="Name" class="input-field">
-                <input type="text" id="username" placeholder="Username" class="input-field">
-                <input type="email" id="email" placeholder="Email" class="input-field">
-                <input type="password" id="password" placeholder="Password" class="input-field">
+            <form id="signupForm" class="login-form" action="register.php" method="POST">
+                <input type="text" id="name" name="name" placeholder="Name" class="input-field" required aria-label="Name">
+                <input type="text" id="username" name="username" placeholder="Username" class="input-field" required aria-label="Username">
+                <input type="email" id="email" name="email" placeholder="Email" class="input-field" required aria-label="Email">
+                <input type="password" id="password" name="password" placeholder="Password" class="input-field" required aria-label="Password">
                 <button type="submit" class="submit-button">Sign up</button>
             </form>
             <p class="already-signed-up">
-                already signed up? <a href="login.html">Login</a>
+                Already signed up? <a href="login.html">Login</a>
             </p>
         </div>
+        
         <div class="right-section">
-            <img src="./img/login_1.jpg" alt="car_pics" class="transition-image">
-            <img src="./img/login_2.jpg" alt="car_pics" class="transition-image">
-            <img src="./img/login_3.jpg" alt="car_pics" class="transition-image">
-            <img src="./img/login_4.jpg" alt="car_pics" class="transition-image">
-            <img src="./img/login_5.jpg" alt="car_pics" class="transition-image">
-            <img src="./img/login_6.jpg" alt="car_pics" class="transition-image">
-            <img src="./img/login_7.jpg" alt="car_pics" class="transition-image">
+            <!-- Using unique alt text for each image to improve accessibility -->
+            <img src="./img/login_1.jpg" alt="Image of a cab rental car 1" class="transition-image">
+            <img src="./img/login_2.jpg" alt="Image of a cab rental car 2" class="transition-image">
+            <img src="./img/login_3.jpg" alt="Image of a cab rental car 3" class="transition-image">
+            <img src="./img/login_4.jpg" alt="Image of a cab rental car 4" class="transition-image">
+            <img src="./img/login_5.jpg" alt="Image of a cab rental car 5" class="transition-image">
+            <img src="./img/login_6.jpg" alt="Image of a cab rental car 6" class="transition-image">
+            <img src="./img/login_7.jpg" alt="Image of a cab rental car 7" class="transition-image">
         </div>
     </div>
 
+    <!-- JavaScript for image transition -->
     <script>
         const images = document.querySelectorAll('.transition-image');
         let currentImageIndex = 0;
